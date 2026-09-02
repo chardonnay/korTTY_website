@@ -1,0 +1,3594 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete reference for korTTY — every feature, setting and tool of the cross-platform JavaFX SSH client, explained in detail.">
+      
+      
+        <meta name="author" content="korTTY">
+      
+      
+        <link rel="canonical" href="https://chardonnay.github.io/korTTY/guide/en/features/snippets.html">
+      
+      
+        <link rel="prev" href="file-browser.html">
+      
+      
+        <link rel="next" href="jobscheduler.html">
+      
+      
+        
+          <link rel="alternate" href="../en" hreflang="en">
+        
+          <link rel="alternate" href="../de" hreflang="de">
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Snippet manager - korTTY Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+        <script>/* iframe-worker shim (vendored, offline) */
+"use strict";(()=>{function c(s,n){parent.postMessage(s,n||"*")}function d(...s){return s.reduce((n,e)=>n.then(()=>new Promise(r=>{let t=document.createElement("script");t.src=e,t.onload=r,document.body.appendChild(t)})),Promise.resolve())}var o=class extends EventTarget{constructor(e){super();this.url=e;this.m=e=>{e.source===this.w&&(this.dispatchEvent(new MessageEvent("message",{data:e.data})),this.onmessage&&this.onmessage(e))};this.e=(e,r,t,i,m)=>{if(r===`${this.url}`){let a=new ErrorEvent("error",{message:e,filename:r,lineno:t,colno:i,error:m});this.dispatchEvent(a),this.onerror&&this.onerror(a)}};let r=document.createElement("iframe");r.hidden=!0,document.body.appendChild(this.iframe=r),this.w.document.open(),this.w.document.write(`<html><body><script>postMessage=${c};importScripts=${d};addEventListener("error",({error})=>{parent.dispatchEvent(new ErrorEvent("error",{filename:"${e}",error}))})<\/script><script src=${e}?${+Date.now()}><\/script></body></html>`),this.w.document.close(),onmessage=this.m,onerror=this.e,this.r=new Promise((t,i)=>{this.w.onload=t,this.w.onerror=i})}terminate(){this.iframe.remove(),onmessage=onerror=null}postMessage(e){this.r.catch().then(()=>{this.w.dispatchEvent(new MessageEvent("message",structuredClone({data:e})))})}get w(){return this.iframe.contentWindow}};window.IFrameWorker=o;location.protocol==="file:"&&(window.Worker=o);})();
+</script>
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/kortty.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#snippet-manager" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="korTTY Guide" class="md-header__button md-logo" aria-label="korTTY Guide" data-md-component="logo">
+      
+  <img src="../assets/images/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            korTTY Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Snippet manager
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      
+
+<div class="md-header__option">
+  <a class="md-header__button md-icon kt-lang-switch"
+     href="../../de/features/snippets.html"
+     title="Deutsch" hreflang="de">
+    <span class="kt-lang-code">DE</span>
+  </a>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="korTTY Guide" class="md-nav__button md-logo" aria-label="korTTY Guide" data-md-component="logo">
+      
+  <img src="../assets/images/favicon.png" alt="logo">
+
+    </a>
+    korTTY Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/installation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/building-packages.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building korTTY packages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/first-launch.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First launch — master password
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/main-window.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Main window overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/menu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Menu reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/keyboard-shortcuts.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keyboard shortcuts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/architecture.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/config-files.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/enterprise-policy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Policy configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../reference/settings/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Settings
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Settings
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/appearance.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Appearance, themes & font
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/colors.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/terminal.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/window.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Window
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/resources.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/logging.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/export.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Export
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/backup.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/updates.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Updates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/security.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/language.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Language
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/translation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Translation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/video.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/ai.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/ai-skills.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Skills
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/sftp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SFTP Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/editor.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_19" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../reference/settings/snippet-editor/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Snippet editor
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_6_19" id="__nav_3_6_19_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_19">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Snippet editor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/hardening-options.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardening options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/input-hardening.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input hardening
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/language-migration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Language unification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="connections.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="terminal.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminal sessions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tunnels.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSH Tunnels (Port Forwarding)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="jump-server.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jump Server (Bastion Host)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sftp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SFTP file manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="file-browser.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File browser
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Snippet manager
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="snippets.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Snippet manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opening-the-snippet-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opening the Snippet Manager
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-and-editing-snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating and editing snippets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating and editing snippets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editor-toolbar-and-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editor toolbar and features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#column-ruler-and-line-width-formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Column ruler and line-width formatting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editor-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editor profiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-assisted-editor-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI-assisted editor functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI-assisted editor functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-suggestions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI suggestions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text language
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-text-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Text menu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-additional-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional additional instructions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#last-ai-change-toggle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Last AI change toggle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-code-completions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Code completions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-code-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Code actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-profile-re-run-and-zoom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI profile, re-run and zoom
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-correction-and-translation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text correction and translation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical descriptions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternative-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternative solutions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mermaid-diagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mermaid diagrams
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram-appearance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram appearance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#placeholder-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Placeholder variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Placeholder variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#built-in-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Built-in variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sending-snippets-to-the-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sending snippets to the terminal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sending snippets to the terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#send-to-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Send to Terminal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-to-terminal-with-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Send to Terminal with Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Script arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminal-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Terminal display
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-and-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import and export
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Import and export">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-format-exports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data format exports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-focused-exports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Script-focused exports
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="jobscheduler.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JobScheduler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projects.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projects (workspaces)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="teamwork.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teamwork (shared connections)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ai-assistant.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI assistant
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="local-models.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Local models (llama.cpp and MLX)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rag.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RAG knowledge stores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ai-tools.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminal AI agent & tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ai-swarm.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Swarm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="security.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security — credentials, keys & encryption
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="backup.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backup & restore
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="recording.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminal recording
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="session-journal.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Session journal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ascii-art.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ASCII art
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="terminal-effect-plugins.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminal effect plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="i18n.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Languages & dynamic translation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/release-notes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/feedback.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feedback & support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/anonymous-data.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anonymous data for application optimization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opening-the-snippet-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opening the Snippet Manager
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-and-editing-snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating and editing snippets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating and editing snippets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editor-toolbar-and-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editor toolbar and features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#column-ruler-and-line-width-formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Column ruler and line-width formatting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editor-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editor profiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-assisted-editor-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI-assisted editor functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI-assisted editor functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-suggestions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI suggestions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text language
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-text-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Text menu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-additional-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional additional instructions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#last-ai-change-toggle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Last AI change toggle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-code-completions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Code completions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-code-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Code actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-profile-re-run-and-zoom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI profile, re-run and zoom
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-correction-and-translation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text correction and translation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-descriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical descriptions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternative-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternative solutions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mermaid-diagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mermaid diagrams
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram-appearance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram appearance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#placeholder-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Placeholder variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Placeholder variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#built-in-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Built-in variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sending-snippets-to-the-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sending snippets to the terminal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sending snippets to the terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#send-to-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Send to Terminal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-to-terminal-with-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Send to Terminal with Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Script arguments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminal-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Terminal display
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-and-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import and export
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Import and export">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-format-exports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data format exports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-focused-exports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Script-focused exports
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="snippet-manager">Snippet manager<a class="headerlink" href="#snippet-manager" title="Permanent link">&para;</a></h1>
+<p>The Snippet Manager lets you store, organize, and quickly insert reusable code snippets, scripts, and configuration templates. Manage snippets across multiple languages with syntax highlighting, advanced search, AI-assisted editing, placeholder variables, and flexible export options.</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The Snippet Manager includes the following features:</p>
+<ul>
+<li><strong>System (OS) column</strong> — A sortable operating-system column for each snippet (Any, Linux, macOS, Windows). Auto-set when a snippet is created via <em>Generate Workflow Script</em>.</li>
+<li><strong>Sortable columns</strong> — All columns (Name, Language, Category, System, Tags) are sortable.</li>
+<li><strong>Script-Header category</strong> — A fixed, non-deletable category containing reusable header templates for workflow-script generation.</li>
+</ul>
+<h2 id="opening-the-snippet-manager">Opening the Snippet Manager<a class="headerlink" href="#opening-the-snippet-manager" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Menu:</strong> Tools → Snippet Manager</li>
+<li><strong>Shortcut:</strong> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-s">S</kbd></span> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-s">S</kbd></span> on macOS)</li>
+</ul>
+<h2 id="creating-and-editing-snippets">Creating and editing snippets<a class="headerlink" href="#creating-and-editing-snippets" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Click <strong>Add</strong> (or <strong>Edit</strong> to modify an existing snippet).</li>
+<li>Fill in the fields:</li>
+<li><strong>Name</strong> — A descriptive name.</li>
+<li><strong>Code language</strong> — Select the programming language (Bash, Python, Java, JavaScript, TypeScript, SQL, XML, JSON, YAML, and more). Enables syntax highlighting. The add (<strong>+</strong>) button next to the list adds a language that is not offered yet: type its name once and it is stored and offered in every future snippet editor. A self-added language is used for the AI prompts and the file extension; syntax highlighting falls back to plain text unless korTTY happens to ship a grammar for it.</li>
+<li><strong>Text language</strong> — What language AI-written code should use for comments and for messages shown to users, logged, or printed as help. The default, <strong>Automatic — keep the script's language</strong>, leaves the snippet's own prose alone: korTTY writes new text in the language the script already uses and translates nothing. Picking a language instead is a deliberate instruction to convert the snippet's existing text into it. It is independent of the korTTY interface language. Tick <strong>Remember as default</strong> to keep the choice for future snippets; otherwise it applies to this editor only.</li>
+<li><strong>Category</strong> — Select an existing category or type a new one. The fixed non-deletable <em>Script-Header</em> category contains reusable header templates for generated workflow scripts.</li>
+<li><strong>System</strong> — Optionally select a target operating system (Any, Linux, macOS, Windows). Auto-set when created via <em>Generate Workflow Script</em> based on the agent's probed OS; you can manually override it for any snippet.</li>
+<li><strong>Tags</strong> — Comma-separated keywords for searching (e.g., <code>docker, deploy, backup</code>).</li>
+<li><strong>Description</strong> — Optional free-text description of the snippet.</li>
+<li><strong>Content</strong> — The snippet code. The editor provides live syntax highlighting based on the selected language.</li>
+<li>Click <strong>OK</strong>. If the snippet content changed, KorTTY saves the edited snippet while closing the dialog. When editing an existing entry, <strong>Save as new snippet</strong> stores the current content as a new snippet with a new ID and leaves the original unchanged.</li>
+</ol>
+<h3 id="editor-toolbar-and-features">Editor toolbar and features<a class="headerlink" href="#editor-toolbar-and-features" title="Permanent link">&para;</a></h3>
+<p>The snippet editor toolbar provides:</p>
+<ul>
+<li><strong>Format Code</strong> — Format the content using local formatters or AI-assisted formatting.</li>
+<li><strong>Check Syntax</strong> — Validate the syntax (local or AI-assisted).</li>
+<li><strong>AI Text</strong> — Correct spelling, translate, or generate technical descriptions.</li>
+<li><strong>AI Code</strong> — Complete code, run a full code analysis, improve a selection (readability, robustness, performance, comments, or a custom instruction), migrate the snippet into a single language, check security, or generate diagrams.</li>
+<li><strong>One-liner</strong> — Export as a terminal one-liner.</li>
+<li><strong>Editor zoom</strong> — Adjust text size with <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-plus">+</kbd></span> and <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-minus">-</kbd></span>.</li>
+<li><strong>Editor profiles</strong> — Switch between built-in IntelliJ-inspired profiles and custom color schemes.</li>
+<li><strong>Background brightness</strong> — Adjust editor background.</li>
+<li><strong>Word Wrap</strong> — Toggle line wrapping.</li>
+<li><strong>Line numbers</strong> — Toggle line-number display.</li>
+</ul>
+<p>When the editor opens from the SFTP Manager for a local or remote file, the same toolbar remains available and the dialog uses file-mode save buttons.</p>
+<h3 id="column-ruler-and-line-width-formatting">Column ruler and line-width formatting<a class="headerlink" href="#column-ruler-and-line-width-formatting" title="Permanent link">&para;</a></h3>
+<p>Above the content field, the column ruler keeps the current caret column fixed at the left as <code>Column N</code> and shows a live marker at the matching editor position. Moving the mouse over the live marker shows <code>Position N</code>. Click the ruler to set a maximum line-length marker (columns 20–240). Right-click that marker to format the content to the selected width or remove the marker.</p>
+<p>Line-width formatting works locally only for formatters that support configurable width:</p>
+<ul>
+<li>Prettier-backed web formats (JavaScript, TypeScript, HTML, CSS)</li>
+<li>Python (Black)</li>
+<li>Perl (Perl::Tidy)</li>
+</ul>
+<p>For languages without local line-width support, KorTTY asks whether to use AI-assisted formatting. Both local and AI-assisted formatting show a before/after preview before applying changes.</p>
+<h3 id="format-code">Format Code<a class="headerlink" href="#format-code" title="Permanent link">&para;</a></h3>
+<p><strong>Format Code</strong> uses KorTTY's shared local formatter service:</p>
+<ul>
+<li><strong>Built-in formatters:</strong> JSON, XML, YAML/YML, TOML, INI/properties, Groovy</li>
+<li><strong>Bundled formatters:</strong> Java (google-java-format), Bash/shell (shfmt), Web/JS/TS/HTML/CSS (Prettier), SQL (sql-formatter), Perl (Perl::Tidy)</li>
+<li><strong>Fallback:</strong> Optional PATH fallbacks for developer setups when a bundled formatter is missing</li>
+</ul>
+<p>Prettier runs as its offline Standalone browser build with only the Babel, Estree, TypeScript, HTML and PostCSS plugins; SQL uses the bundled sql-formatter browser build. Both are initialized lazily in an isolated JavaFX WebView and need no installed or packaged Node.js runtime. Requests are serialized and retain the same 15-second timeout, provider display and configurable Prettier line width as the process backend; a failed or timed-out engine is discarded before the next request.</p>
+<p>If local formatting is unavailable and the configured AI profile provides snippet AI capability, KorTTY asks whether to use AI assistance. AI formatting is applied only after the before/after preview is accepted.</p>
+<h3 id="editor-profiles">Editor profiles<a class="headerlink" href="#editor-profiles" title="Permanent link">&para;</a></h3>
+<p>Switch between:</p>
+<ul>
+<li><strong>Current custom colors</strong> — User-defined palette</li>
+<li><strong>10 built-in IntelliJ-inspired profiles</strong> — Predefined color schemes</li>
+<li><strong>User-created profiles</strong> — Custom profiles you create</li>
+</ul>
+<p>Profiles store foreground/background colors, syntax colors, cursor color, and cursor style.</p>
+<p><img alt="Snippet editor workflow" src="../assets/diagrams/snippet-editor-workflow.svg" /></p>
+<h2 id="ai-assisted-editor-functions">AI-assisted editor functions<a class="headerlink" href="#ai-assisted-editor-functions" title="Permanent link">&para;</a></h2>
+<p>If AI is configured, the snippet editor offers additional actions:</p>
+<h3 id="ai-suggestions">AI suggestions<a class="headerlink" href="#ai-suggestions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>AI suggestion</strong> — Generates a file name, description, <strong>Code language</strong> and <strong>Text language</strong> from the current code content. A detected code language that is not in the list yet is added to it, so the detection is never silently dropped.</li>
+<li><strong>Correct spelling</strong> — On the description field; sends only description text to the AI.</li>
+</ul>
+<h3 id="text-language">Text language<a class="headerlink" href="#text-language" title="Permanent link">&para;</a></h3>
+<p>When AI is configured, <strong>Text language</strong> — directly below <strong>Code language</strong> in the editor form — chooses what language AI-written code uses for its comments and messages, and which language spelling correction works in.</p>
+<p>Its default is <strong>Automatic — keep the script's language</strong>. korTTY works out which language the snippet's comments and messages are already written in and requires the AI to keep it: existing text is left as it is, and anything new is written to match. A script commented in English stays English even when you run korTTY in German. Identifiers, file paths, commands, options, configuration keys and other code tokens are never touched in either mode.</p>
+<p>Selecting a language instead is an explicit instruction to <strong>convert</strong> the snippet's prose into it — the previous behaviour, now opt-in rather than automatic. A selection-based action applies the contract to its returned selection, a full replacement to the complete script.</p>
+<p>When korTTY cannot tell which language a script uses — there is too little text to judge, or the comments mix languages — it asks before changing anything, rather than guessing. Tick <strong>Remember for this snippet</strong> in that dialog and the question is not asked again for that snippet. Dismissing the dialog cancels the action and leaves the code untouched.</p>
+<p>All of this is independent of both the korTTY interface language and the <strong>Code language</strong> selector, which continues to define the programming language and syntax highlighting. Analysis reports, improvement descriptions and analysis-diagram labels always follow the korTTY interface language.</p>
+<p>The list offers korTTY's own interface languages plus any <a href="../reference/settings/translation.html">AI-generated language</a> you have added. <strong>AI suggestion</strong> can also fill it for you: it reads the snippet's comments and its printed output (<code>echo</code>, <code>print</code>, <code>printf</code>, <code>Write-Host</code> and similar) and preselects the language it finds — including a language korTTY has no interface translation for, which is then added to the list. A script without any human-readable text leaves the current choice untouched.</p>
+<p>Leave <strong>Remember as default</strong> unticked for a temporary choice that applies only to the current editor window. Tick it to save the selected language as the default for newly opened snippet editors; this updates the existing <strong>Default language for AI text in code</strong> setting under <em>Settings → AI</em>. Other editor windows that are already open keep their own selection.</p>
+<p>Spelling correction uses the selected language for grammar and spelling rules without translating the text. <strong>Translate selection…</strong> keeps its separate target-language dialog and initially selects the current text language. Local formatters and syntax checks are unaffected.</p>
+<h3 id="ai-text-menu">AI Text menu<a class="headerlink" href="#ai-text-menu" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Correct spelling in selection</strong> — Fix typos in selected text.</li>
+<li><strong>Translate selection…</strong> — Translate selected text to another language.</li>
+<li><strong>Technical description</strong> — Generate documentation for selected code or the whole snippet.</li>
+</ul>
+<h3 id="optional-additional-instructions">Optional additional instructions<a class="headerlink" href="#optional-additional-instructions" title="Permanent link">&para;</a></h3>
+<p>If enabled in <em>Settings → AI</em>, the editor shows a shared instructions field sent with spelling correction, translation, and technical description requests.</p>
+<h3 id="last-ai-change-toggle">Last AI change toggle<a class="headerlink" href="#last-ai-change-toggle" title="Permanent link">&para;</a></h3>
+<p>The ↺ button switches between the original code and the last AI-generated editor change.</p>
+<h3 id="ai-code-completions">AI Code completions<a class="headerlink" href="#ai-code-completions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>AI Complete</strong> — Requests code completion at the current cursor position and shows it as a non-editing ghost suggestion. Click to insert.</li>
+<li><strong>Auto AI Complete</strong> — Requests completions automatically after you pause at a cursor position. Off by default; only active for the current editor session.</li>
+</ul>
+<p>When <strong>Full code analysis</strong> starts, KorTTY discards any completion still waiting for the pause timer and closes a visible ghost suggestion so the two AI actions cannot overlap.</p>
+<h3 id="ai-code-actions">AI Code actions<a class="headerlink" href="#ai-code-actions" title="Permanent link">&para;</a></h3>
+<p>The <strong>AI Code</strong> menu groups the actions that read or rewrite the code itself:</p>
+<ul>
+<li><strong>AI Complete</strong> / <strong>Auto AI Complete</strong> — Code completion at the cursor (see <a href="#ai-code-completions">AI Code completions</a> above).</li>
+<li><strong>Full code analysis</strong> — Opens a rich analysis window: a plain-language summary of what the script does, its external dependencies, categorized improvement suggestions you can tick and apply, and an auto-generated flow diagram. See <a href="#full-code-analysis">Full code analysis</a> below.</li>
+<li><strong>Improve readability / robustness / performance</strong> — Rewrites the <strong>selected</strong> code region toward one goal without unrelated changes. Before <em>Improve robustness</em> starts, it displays two optional panels for additional rules: <a href="../reference/hardening-options.html">Hardening options</a>, <a href="../reference/input-hardening.html">Input hardening</a>. If at least one rule is active, KorTTY rewrites the complete snippet so it can apply global prologue or epilogue changes.</li>
+<li><strong>Optimize code comments</strong> — Comments the <strong>selected</strong> code region: the AI inserts explanations of what the code does and why directly above or beside the lines they belong to, using the language's own comment syntax, and replaces outdated or misleading comments. Executable code stays untouched. The comments are written in the editor's <strong>Text language</strong>. Available from the <strong>AI Code</strong> menu and from the editor's right-click menu on a selection.</li>
+<li><strong>Custom improvement…</strong> — Rewrites the selected code region following a free-text instruction you type. It displays the same two optional rule panels: <a href="../reference/hardening-options.html">Hardening options</a>, <a href="../reference/input-hardening.html">Input hardening</a>. As with <em>Improve robustness</em>, KorTTY rewrites the complete snippet when any hardening rule is active.</li>
+<li><strong>Migrate into one language…</strong> — Rewrites a mixed-language snippet so that all of it is written in one target language. KorTTY detects the mix locally and only offers what actually applies; an orchestration format (Azure DevOps pipeline, GitHub Actions, Jenkinsfile, Ansible, …) embeds shell by design and is therefore never migrated as a whole — only its script steps can be unified, and a platform conversion is offered but never preselected. See <a href="../reference/language-migration.html">Language unification</a>.</li>
+<li><strong>Security Check</strong> — Generates a security report. Select findings to fix; KorTTY applies them with a before/after preview that highlights what changed and why. See <a href="#security-check">Security Check</a> below.</li>
+<li><strong>Diagram</strong> — Opens the snippet's saved diagrams, or generates the first logical-structure flowchart when none exists yet. A snippet can store several diagrams across five families — logical structure, sequence, state, class, and ER. See <a href="#mermaid-diagrams">Mermaid diagrams</a> below.</li>
+</ul>
+<p>The editor context menu also offers <strong>AI Assistant…</strong>, which opens an instruction dialog for the current cursor position: KorTTY sends the full snippet, cursor offset, line, column, and your instruction to the configured AI profile and shows the result as a before/after preview.</p>
+<p>The context menu additionally has a <strong>Generate diagram</strong> submenu listing the five diagram families. With a code selection its label switches to <strong>Generate diagram from selection</strong> and the chosen family diagrams only the selected lines — the selection is snapped to whole lines and the resulting diagram remembers its line range. Without a selection the whole snippet is diagrammed. Every generated diagram is added to the snippet's saved diagrams; see <a href="#mermaid-diagrams">Mermaid diagrams</a>.</p>
+<p>Readability, performance, comment optimization, and a custom improvement rewrite only the selected region when both hardening panels have no selected rules, so <strong>select a code region first</strong>. <em>Improve robustness</em> and <em>Custom improvement</em> instead rewrite the complete snippet whenever a classic hardening option or supported Input hardening guard is active, because those rules may need the prologue and epilogue. Every result is shown as a before/after preview (the <em>Review AI change</em> window) before anything is applied; an incomplete full-script response with an omission marker is refused.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Snippet AI actions send the current snippet content, selection or cursor metadata, and prompt instructions to the configured default AI profile (or, for Security Check, the dedicated security-check profile). Eligible actions can additionally send enabled, configurable AI Skills; the source-only diagram request sends no configurable library skill and instead always carries korTTY's compact built-in action skill for the chosen diagram family. Snippet AI actions do not enable internet tools, even when the selected profile has internet access. Auto-completion can send the snippet repeatedly while active, so disable it for sensitive snippets unless you trust the configured endpoint.</p>
+</div>
+<h4 id="full-code-analysis">Full code analysis<a class="headerlink" href="#full-code-analysis" title="Permanent link">&para;</a></h4>
+<p><img alt="Full code analysis" src="../assets/screenshots/tools/full-code-analysis.png" /></p>
+<p><strong>Full code analysis</strong> opens a dedicated window that examines the whole snippet at once and offers concrete improvements you can apply. The window is <strong>non-modal</strong> — you can keep editing the snippet while it stays open — and its title bar shows the script's file name so you can tell several analyses apart. The snippet editor's own title bar likewise shows the name of the file you are editing. When you apply a selection, this analysis window becomes the anchor of a three-part working surface: the narrow AI-processing window docks to one side of it and the review preview to the other, and all three stay open until you close the analysis window.</p>
+<p>The report and the flow diagram are generated by <strong>two separate AI requests</strong>: the analysis request returns the summary, dependencies and improvements, and as soon as the window opens the diagram pane starts its own dedicated diagram request — the same focused request <strong>Regenerate</strong> uses — while a spinner is shown. Each request carries one line-numbered copy of the script; neither repeats a second raw-script copy in the same prompt. Over OpenAI-compatible HTTP, korTTY constrains the initial analysis report to a strict summary/dependencies/improvements JSON schema. It retries once without that schema only when the endpoint explicitly rejects structured output; malformed model output is not retried. The diagram request is deliberately compact and source-grounded: it uses the fixed Mermaid schema, the script and label language, and an immutable built-in Mermaid action skill, but it does not add configurable library skills or knowledge-store excerpts. That required skill maps runtime control flow rather than declaration order, groups repeated same-purpose work, retains real decisions, error paths and loop exits, and requires every node to lie on a connected path from start to stop with an exact source range. If the <code>none</code> <strong>Reasoning</strong> value is available and the active profile has a fixed model selection, korTTY automatically sets that value for this request only; otherwise it keeps the profile's configured value, and the stored profile is never changed. An Auto profile is not overridden from previously discovered capabilities because its loaded model can change; an explicitly configured <code>none</code> value still applies. OpenAI-compatible HTTP, LM Studio native, and embedded llama.cpp/MLX transports cap the diagram response at 32,768 output tokens; Anthropic retains its separate provider cap. That cap covers the whole completion, so it deliberately leaves room for a thinking model's hidden reasoning: the diagram JSON itself is far smaller, but a model that reasons can otherwise spend the entire budget before emitting a single character. For embedded llama.cpp/MLX, korTTY does not repeat a response that is empty or contains only the model's reasoning. The automatic diagram request can be turned off with the <strong>Generate automatically</strong> checkbox in the diagram pane's header. Details are under <strong>Right — flow diagram</strong> below. Keeping the diagram out of the analysis request produces markedly more faithful flowcharts, especially with local models, and the report is readable while the diagram is still loading. Clicking <strong>Re-run</strong> repeats the analysis with the selected profile and configurable AI Skills and starts the separate dedicated diagram request with the same mandatory Mermaid skill. Starting another generation or closing the diagram view cancels its superseded client request. Before accepting a fresh AI result, korTTY rejects disconnected nodes, backward terminal paths, incomplete decision branches, more than 12 action/decision nodes, and missing or invalid source mappings; the general renderer stays backward-compatible with safe diagrams saved by older korTTY versions. If the provider reports that the diagram response was cut off at its cap, the request fails or no safe, usable Mermaid source is returned, korTTY keeps the analysis and shows its deterministic local fallback diagram without silently sending another request; the fallback also recognizes indented conditional blocks in common scripting languages.</p>
+<p>The summary, dependencies, improvement descriptions and diagram labels use the current korTTY interface language. The separate <strong>Text language</strong> becomes relevant only after you click <strong>Apply selected</strong>, because that action returns a full replacement: by default the rewritten script keeps the language its comments and messages are already written in, and only a language explicitly chosen there converts them. The analysis window carries its own <strong>Text language</strong> selector, pre-set from the editor's choice, so the decision sits where you tick the improvements. <strong>Apply selected</strong> and the equivalent security-fix apply action automatically request <code>none</code> Reasoning only when that value is available and the profile has a fixed model selection; an Auto profile keeps its configured or provider-default behavior unless <code>none</code> was explicitly configured. The saved profile remains unchanged. This prevents a reasoning model from consuming the bounded replacement budget before it emits the machine-parsed script. If a provider nevertheless reaches the output limit with no visible answer, korTTY records the usage, reports the localized output-limit failure and leaves the editor unchanged instead of misreporting an ordinary empty response or retrying the request.</p>
+<p>A toolbar runs along the top of the window, the report and flow diagram fill the two panes below it, and a script-header selector plus a collapsible hardening panel sit in the footer. The window is freely resizable, and korTTY remembers its position and size across sessions — including when <strong>Re-run</strong> replaces the window with a fresh analysis. During <strong>Apply selected</strong>, the AI-processing window and the review preview dock to opposite edges of it, match its height, and follow it when you move or resize it. If there is no room beside the analysis window where it currently sits, korTTY slides it far enough to open both sides up, and narrows it only when the three genuinely do not fit side by side on that screen; the original width comes back when the docked windows go. Each docked window stays freely resizable and korTTY remembers the width you give it for the next run. Drag a docked window away and it detaches, keeping the position you gave it; <strong>Arrange windows</strong> in the processing window lays all three out across the screen again.</p>
+<p><strong>Toolbar:</strong></p>
+<ul>
+<li><strong>Select all improvements</strong> — The first control at the far left ticks or unticks all Security, Optimization and Design improvements at once. Extra spacing clearly separates this bulk action from the following <strong>Profile:</strong> indicator. This control never changes any dependency selection.</li>
+<li><strong>Profile in use</strong> — The name of the AI profile the analysis ran with is shown beside this checkbox (for the default profile its <em>actual</em> name is shown, e.g. <em>Profile: LM Studio</em> — not just "Default profile"), so you can always tell which model produced the report.</li>
+<li><strong>AI skills</strong> — When <a href="../reference/settings/ai-skills.html">AI Skills</a> are configured, a row shows which skills were included and lets you change them; see <strong>AI skills for this analysis</strong> below.</li>
+<li><strong>Re-run</strong> — A transient AI-profile picker plus a <strong>Re-run</strong> button repeat the analysis with the chosen profile <em>and</em> your current AI-skill selection. The picker resets to the default when the window is reopened.</li>
+<li><strong>A− / A+</strong> — Adjust the reading font size (remembered across sessions).</li>
+<li><strong>Copy</strong> — Copy the summary, improvements and dependencies to the clipboard as plain text.</li>
+<li><strong>Export</strong> — Save the whole report (including the diagram) as a file; see <strong>Export the report</strong> below.</li>
+</ul>
+<p><strong>Left — analysis and improvements:</strong></p>
+<ul>
+<li><strong>Summary</strong> — A short, plain-language description of what the script does. It is a description, not a pickable item, so it is shown as a plain block without a selection accent.</li>
+<li><strong>Improvements</strong> — Suggestions grouped into <strong>Security</strong>, <strong>Optimization</strong> and <strong>Design</strong> sections. Each section title carries a colour-coded icon and a count — a padlock for <strong>Security</strong>, a gauge for <strong>Optimization</strong>, stacked layers for <strong>Design</strong>, and a module hexagon for <strong>Dependencies</strong> — and each suggestion has a severity badge, an explanation, and a concrete recommendation. Tick the ones you want; use <strong>Select all improvements</strong> to toggle every improvement at once. Empty sections are hidden.</li>
+<li><strong>Dependencies</strong> — External programs, scripts or services the snippet relies on, each with its <em>Purpose</em> and a <em>Reduce/replace</em> suggestion. Tick each dependency independently to have its suggestion applied too; <strong>Select all improvements</strong> leaves these checkboxes unchanged.</li>
+</ul>
+<p><strong>Right — flow diagram:</strong></p>
+<ul>
+<li>An <strong>auto-generated Mermaid flowchart</strong> from a dedicated diagram-only request renders while a spinner is shown, then fills the pane. It carries the full diagram toolbar: zoom <strong>−</strong> / <strong>Fit</strong> / <strong>+</strong>, <strong>Save SVG</strong> / <strong>Save PNG</strong>, <strong>Copy image</strong> / <strong>Copy Mermaid</strong>, a <strong>Dark mode</strong> control and a <strong>Background</strong> colour picker (both remembered), and <strong>Regenerate</strong>. <strong>Regenerate</strong> deliberately sends one new dedicated source-only diagram request using the analysis window's active profile; configurable AI Skills and knowledge-store excerpts remain reserved for the analysis request, while the required built-in Mermaid action skill is always included. See <a href="#diagram-appearance">Diagram appearance</a> below.</li>
+<li><strong>Hover code references</strong> — Moving the mouse over a diagram node shows the matching lines from the snippet, so you can trace each step back to the code — the same behaviour as the standalone <a href="#mermaid-diagrams">Diagram</a> window.</li>
+<li><strong>Generate automatically</strong> — A checkbox in the pane's header controls whether the diagram request starts on its own when the window opens. Untick it to skip the automatic AI request entirely — the pane then shows a hint instead, and <strong>Regenerate</strong> remains the manual way to request the diagram. Ticking the box while the window is open fetches the diagram immediately. The choice is remembered across sessions (default: on) and does not affect the standalone <a href="#mermaid-diagrams">Diagram</a> window, which renders saved diagrams without an AI request.</li>
+</ul>
+<p><strong>AI skills for this analysis:</strong></p>
+<p>When <a href="../reference/settings/ai-skills.html">AI Skills</a> are configured, a row at the top of the window shows exactly <strong>which skills were included</strong> in the analysis, as chips, with an <strong>(auto-selected)</strong> or <strong>(manual)</strong> badge:</p>
+<ul>
+<li><strong>Auto-selected</strong> — korTTY pre-selects the skills relevant to the snippet by matching each skill's tags, name and description against the snippet's language and content, and includes at most the two highest-scoring ordinary matches in the analysis. Explicitly pinned or connection-assigned skills remain outside that automatic limit. This is why the badge reads <em>(auto-selected)</em> on the first run.</li>
+<li><strong>Manual selection</strong> — Click <strong>Select…</strong> to open a <strong>searchable picker</strong>: type in the search field to filter your saved skills by name, description or tags, then tick or untick the skills you want. As soon as you change the set, the badge switches to <em>(manual)</em> and korTTY keeps your choice instead of auto-selecting.</li>
+</ul>
+<p>Changing the skills does <strong>not</strong> re-analyse immediately — the new set is applied to the report request on the next <strong>Re-run</strong>. That explicit snippet selection, together with any skills assigned to the active connection, is used as an allowlist: korTTY does not run global relevance detection again or append other skills. Skills you include here are sent to the analysis regardless of each skill's configured <em>target</em>; the separate diagram request intentionally omits those configurable skills and always uses its own immutable Mermaid action skill instead. The row appears only when at least one configurable AI Skill is enabled.</p>
+<p><strong>Hardening options:</strong></p>
+<p>At the bottom, a collapsible <strong>Hardening options</strong> panel lets you attach production-quality techniques (strict mode, error traps, meaningful exit codes, logging, idempotency, <code>--dry-run</code>, <code>--help</code>, and more) to the fixes that get applied. The panel title includes the number of currently ticked options — for example <em>Hardening options (11)</em> — and korTTY remembers whether you left the panel open or closed and restores that state the next time the window opens. See <a href="../reference/hardening-options.html">Hardening options</a> for what each option means and how it is applied.</p>
+<p><strong>Input hardening:</strong></p>
+<p>Below it, a second collapsible <strong>Input hardening</strong> panel asks the AI to build an input-validation guard block into the script when the fixes are applied: parameter allowlists and length limits, file format checks, a maximum input-file size controlled by an adjustable <code>MAX_FILE_SIZE</code> variable, security warnings in the script's own log, and a <code>FORCE=1</code> / <code>--force</code> override. The size check uses metadata before file content is read, and <code>0</code> means unlimited. It is strictly opt-in — the master check box starts unticked — and its title counts only the sub-options that are effectively active. The panel is disabled for YAML/YML/Ansible snippets because a script-level guard does not apply to these declarative formats. See <a href="../reference/input-hardening.html">Input hardening</a> for the full guard contract.</p>
+<p><strong>Script header:</strong></p>
+<p>A <strong>Script header</strong> selector lets you prepend one of your saved <em>Script-Header</em> snippets (from the fixed <a href="#creating-and-editing-snippets">Script-Header category</a>) to the code when you apply the analysis. Pick a header — or leave it on <em>No header</em> (the default) — and its content, with variables substituted, is inserted at the top of the snippet, after an existing shebang / lead line, as part of the same change.</p>
+<p><strong>Apply selected:</strong></p>
+<p>When you click <strong>Apply selected</strong> in the report, korTTY keeps the analysis window open and processes the ticked improvements, dependency suggestions and hardening options as an atomic sequence. A separate narrow <strong>AI processing</strong> window appears docked beside it. Two independent progress bars at the top track <strong>Improvements</strong> and <strong>Code hardening</strong>, followed by elapsed wall-clock time and cumulative token usage reported by the provider; when a provider supplies no usage data, the value is explicitly shown as <em>not reported</em> rather than estimated. The checklist lists improvements first, then classic and Input-hardening requirements. Each analyzed improvement or dependency row places the report's matching colour-coded category icon directly after its ID. Descriptions in this compact checklist are limited to three lines with an ellipsis. The complete descriptions remain visible in the analysis report beside it. The checklist no longer repeats category or severity text on the right; severity remains available in the analysis report, while hardening requirements need no redundant category label because they are already grouped under <strong>Code hardening</strong>. Pending entries use a neutral marker, all entries in the active provider batch are highlighted as running, a repair attempt is marked separately, each completed entry receives a green checkmark on its right, and the failed entry is marked if the sequence stops. If every entry completed and only the final verification rejected the combined result, the header names that instead of pointing at a marked entry. When the run ends — completed, failed or cancelled — the processing window does not close itself. It adds a <strong>run summary</strong>: the final duration, the token usage split into prompt, completion and total, the AI profile the run used, how many work items completed, and the number of repair attempts if there were any. <strong>Copy summary</strong> puts the same figures on the clipboard, and <strong>Show preview again</strong> reopens the review window if you closed it before deciding. Closing the analysis window cancels its running apply task and closes the docked windows with it; after a failure the report stays open so you can inspect the stopped step and retry the selection.</p>
+<p>korTTY batches selected analysis items and dependencies into apply stages of up to three items each, then handles classic hardening and Input hardening separately in batches of at most three mandatory requirements. Every stage receives the complete result of the previous stage and must preserve its existing behaviour. Intermediate scripts are never inserted into the editor. If a stage's response stream is dropped mid-answer by the connection, korTTY retries that stage once automatically — distinct from the fragment-repair attempt below — before giving up. If a stage still fails, is cut off or returns an incomplete replacement — or you stop the run with the editor's cancel button — before the first stage has completed, korTTY discards the sequence and leaves the editor unchanged. After at least one completed stage, the same aborts open an <strong>Apply interrupted</strong> prompt instead: <strong>Continue remaining stages</strong> resumes the run at the aborted stage and repeats it while keeping the completed stages' work — a fresh processing window opens with those stages already checked off, and the final cumulative verification still covers the whole selection; <strong>Preview partial result</strong> opens the completed stages' combined rewrite in the usual review preview, titled <em>Apply improvements — review partial changes</em> — each completed stage's requirements were already verified when that stage finished, and only the final cumulative re-check is skipped, because requirements of stages that never ran are missing by definition, while the degenerate-replacement guard still applies before the preview opens; <strong>Discard</strong> (also the prompt's Esc/close action) throws everything away as before. If a resumed run aborts again, the prompt reappears with the newer state. When every stage completed and only the final cumulative verification failed, the prompt omits the resume choice, since re-running zero remaining stages would fail identically. Closing the analysis window or the snippet editor mid-run remains a deliberate discard and never shows the prompt. A fully completed sequence opens the single <em>Apply improvements — review changes</em> window with the final cumulatively verified script, docked opposite the processing window; the analysis window, the completed checklist and the run summary all stay open after the preview is dismissed, so what the run did and cost can still be read. Closing the analysis window is what clears the group.</p>
+<p>This uses more model calls and can consume more total input tokens than one oversized request, but each individual task is substantially smaller for local models. Every selected classic and input-hardening rule keeps one stable, separately numbered mandatory identifier across the stages. Each stage confirms its completed identifiers in one compact list instead of repeating a full change explanation for every rule. The final validation checks the cumulative identifier set, while explicit flags and guard literals such as <code>--dry-run</code>, <code>--yes</code>, <code>--help</code>, <code>--verbose</code>, <code>MAX_FILE_SIZE</code>, <code>FORCE</code>, <code>--force</code>, and <code>SECURITY:</code> must still occur in the final code when their rules are active. Because every stage rewrites the whole script, each one is additionally checked against the literals of the rules earlier stages already delivered: a stage that removes earlier hardening work while implementing its own is rejected on the spot and gets its one repair attempt, which names exactly what to restore. That keeps such a regression from surfacing only in the final validation, where the remaining stages could no longer be resumed. Every stage returns the complete script as a JSON array with one source line per entry, avoiding one large escape-sensitive JSON string. Over OpenAI-compatible HTTP, a strict response schema also requires a conservative minimum number of returned source lines. korTTY repeats a stage without that schema only when the endpoint explicitly rejects the structured-output capability. If structured output is unavailable and a local model emits source escapes such as <code>\s</code> without valid JSON escaping, the compatibility parser preserves those code characters and still verifies the mandatory checklist. Every stage requires one complete rewritten script, including every code section that needs no intentional change copied from its input. Every stage carries the same <strong>Text language</strong> contract: by default the script's own prose language, which the stage must preserve rather than translate, or a language you chose explicitly, into which it must convert the text. OpenAI-compatible HTTP, LM Studio native, and embedded llama.cpp/MLX transports choose a per-stage completion safety ceiling from 32,768 to 65,536 tokens based on the current source size. Anthropic retains its separate provider cap. This ceiling prevents unbounded output, but it is not a capacity guarantee for arbitrarily large scripts: a very large full-script replacement can be refused when the provider reports truncation. Any response that introduces an omission marker such as <code>rest unchanged</code>, collapses a substantial script into a short fragment, or otherwise fails to contain the complete replacement is rejected before the next stage or preview. A short non-truncated fragment receives exactly one repair attempt for the same stage, and the progress window identifies that retry. If the repair answer is also bad, korTTY aborts the sequence. The code in the editor remains unchanged throughout. A valid final result shows the original and rewritten script side by side, with changed lines highlighted and per-change reasons, exactly like the Security-Check review below. The editor remains unchanged until you confirm <strong>Apply change</strong> in this preview. Any chosen <strong>Script header</strong> is prepended to the result before it is shown. A header on its own — with no improvements, dependencies or hardening ticked — is inserted directly, without an AI round-trip, and still shown as a before/after preview first.</p>
+<p>At most one repair attempt is also allowed when a complete response fails to confirm every mandatory identifier and required literal. korTTY uses that complete returned script as the repair input, names the identifiers that still need verification or implementation, and asks the model to preserve every other change. If the repair answer fails again, the localized status names the still-missing identifiers and the editor remains unchanged.</p>
+<p><strong>Export the report:</strong></p>
+<p>The <strong>Export</strong> button saves the full report — summary, categorized improvements, dependencies and the flow diagram — as a self-contained file in an attractive, print-friendly design. The export header records the script name, the AI profile used, the date, and the AI skills that were included:</p>
+<ul>
+<li><strong>PDF</strong> — A paginated document with the diagram embedded as an image.</li>
+<li><strong>HTML</strong> — A single self-contained web page (the diagram is embedded inline) that opens in any browser.</li>
+<li><strong>Markdown</strong> — A <code>.md</code> file, with the diagram saved next to it as a PNG.</li>
+</ul>
+<h4 id="security-check">Security Check<a class="headerlink" href="#security-check" title="Permanent link">&para;</a></h4>
+<p>The <strong>Security Check</strong> report window lists each finding with a colour-coded severity badge (findings are sorted most-severe first). From this window you can:</p>
+<ul>
+<li>Adjust the reading font size with <strong>A−</strong> / <strong>A+</strong> (remembered across sessions).</li>
+<li>Copy all findings to the clipboard.</li>
+<li><strong>Select all</strong> findings at once, then apply the selected fixes.</li>
+<li>Choose a dedicated <strong>Security profile</strong> — the AI profile used for security checks. The choice is remembered permanently and is also available in <strong>Configuration → Global Settings → AI</strong>; leave it on <em>Use default profile</em> to reuse the default. Changing it takes effect immediately.</li>
+<li><strong>Re-run check</strong> to repeat the review with the newly selected profile.</li>
+</ul>
+<p>When you apply fixes, the <strong>Review security fixes</strong> window shows the original and corrected code side by side. Changed lines are highlighted automatically and carry a marker in the margin. Hover anywhere in a changed block to see which finding(s) it addresses — for example <code>S1</code>, or <code>S1 + S2</code> when one block covers two findings — together with the reason for the change. Hover matching tolerates re-indented or case-shifted lines, and a reason whose anchor line cannot be found at all is attached to the remaining changed blocks in order, so explanations no longer go missing from the diff. The same explanations are also listed as cards below the diff: each card carries the finding's badge and colour-coded category icon (the same icons as the analysis sections) plus the line range it affects on the corrected side (for example <em>Lines 23–40</em>), so the reasoning stays visible even when a marker cannot be placed. A <strong>Highlight</strong> picker below the diff narrows the review to a single finding: pick <code>SEC-1</code>, a hardening requirement, or any other listed id and only that finding's places keep their marker and get a coloured line background, while every other changed block is muted to a neutral tint. The window scrolls to the first place and the explanation cards below shrink to that finding. The <strong>◀</strong> / <strong>▶</strong> buttons beside the picker walk the list one finding at a time — from <em>All changes</em> they enter it at either end, and the ends wrap into each other — so a report can be worked through without opening the dropdown for every step. <em>All changes</em> restores the full colouring. The picker appears once at least two findings carry a reason. Muted blocks stay visible and keep their change markers — this window is the approval step before the editor is touched, so a real change is never made invisible. The summary at the top of the window scrolls inside its own pane and sits above a draggable divider: a staged apply's summary runs to one paragraph per stage, and the divider decides how much of the window it may use. The window remembers the size and position you gave it, and the divider once you move it yourself — until then it keeps following the summary's own height, so a one-line summary never claims the room a multi-paragraph one needs. When it opens docked beside a <strong>Full code analysis</strong> run it remembers only its width, because the dock decides the rest. This review window does not block the rest of korTTY: your terminal sessions stay usable while you read the diff, and so does the processing window beside it. Because the snippet can therefore be edited while the review is open, korTTY checks before applying that the editor still holds the text the result was produced from — if it changed, nothing is applied and you are told to run the analysis again rather than have a stale full replacement overwrite what you typed. The preview font size can be zoomed and is remembered across sessions. The same review window (and its explanation cards) is used when applying <strong>Full code analysis</strong> improvements.</p>
+<h3 id="ai-profile-re-run-and-zoom">AI profile, re-run and zoom<a class="headerlink" href="#ai-profile-re-run-and-zoom" title="Permanent link">&para;</a></h3>
+<p>The AI-code report windows (Full code analysis, Security Check, the technical-description and alternative-solution dialogs, and the change-review diff) share a small toolbar:</p>
+<ul>
+<li><strong>AI profile</strong> — Pick a different AI profile for the <strong>next</strong> run of that window. The choice is transient: it resets to the default profile when the window is reopened. (Security Check keeps its own permanently remembered <em>Security profile</em> instead.)</li>
+<li><strong>Re-run</strong> — Repeat the request with the currently selected profile.</li>
+<li><strong>A− / A+</strong> — Adjust the reading or preview font size; the chosen size is remembered across sessions, separately per window type.</li>
+<li><strong>Copy</strong> — Copy the report or content to the clipboard.</li>
+</ul>
+<h3 id="ai-skills">AI skills<a class="headerlink" href="#ai-skills" title="Permanent link">&para;</a></h3>
+<p>When <a href="../reference/settings/ai-skills.html">AI Skills</a> are configured, the snippet editor shows an <strong>AI skills</strong> picker. Skills relevant to the snippet's language are pre-selected automatically, and any skill you tick here is applied to skill-relevant AI-code actions such as completion, analysis, improvement and security checks regardless of the skill's configured target. The fixed-contract <strong>Diagram</strong> action intentionally omits those configurable library skills to keep the source-grounded request small and predictable; korTTY always supplies its separate compact action skill for the requested diagram family, which is internal and therefore does not appear in the picker or count toward the 39 configurable built-in AI Skills. The picker appears only when at least one configurable AI Skill is enabled.</p>
+<p>The <strong>Full code analysis</strong> window surfaces this same selection as a row of chips — labelled <em>(auto-selected)</em> or <em>(manual)</em> — and lets you refine it just for that analysis through a searchable picker. Changes made there apply after you next click <strong>Re-run</strong>. See <a href="#full-code-analysis">Full code analysis</a>.</p>
+<h3 id="text-correction-and-translation">Text correction and translation<a class="headerlink" href="#text-correction-and-translation" title="Permanent link">&para;</a></h3>
+<p>For selection-based text correction and translation, KorTTY only rewrites editable comment text, string literals, and user-facing text segments. A selection may begin or end inside such a segment: KorTTY uses the surrounding snippet to recognize the selected words and replaces only the overlapping text. It does not rewrite logical code structure.</p>
+<h3 id="technical-descriptions">Technical descriptions<a class="headerlink" href="#technical-descriptions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>If text is selected, the AI describes only that region.</li>
+<li>If nothing is selected, the AI describes the whole snippet.</li>
+</ul>
+<p>The description dialog lets you:</p>
+<ul>
+<li>Copy the generated description</li>
+<li>Format it with the comment syntax of the current snippet language</li>
+<li>Insert it into the snippet above the selected code or at the top</li>
+</ul>
+<h3 id="alternative-solutions">Alternative solutions<a class="headerlink" href="#alternative-solutions" title="Permanent link">&para;</a></h3>
+<p>Right-click a selected code region and choose <strong>Alternative solution</strong> to:</p>
+<ul>
+<li>Request multiple alternative implementations (up to the configured limit)</li>
+<li>Add a 3-line field for additional instructions</li>
+<li>Reload and regenerate new alternatives</li>
+<li>Zoom an individual preview to the full dialog area</li>
+<li>Apply exactly the originally selected code when ready</li>
+</ul>
+<h3 id="mermaid-diagrams">Mermaid diagrams<a class="headerlink" href="#mermaid-diagrams" title="Permanent link">&para;</a></h3>
+<p>Mermaid diagrams are stored with the snippet, and a snippet can keep several of them side by side. If the snippet content changes after diagram generation, KorTTY marks a diagram as possibly outdated and offers regeneration.</p>
+<ul>
+<li><strong>Diagram families:</strong> Five families can be generated, each restricted to a compact, safe dialect: <strong>Logical structure</strong> (<code>flowchart TD</code> — the control-flow view and the default), <strong>Sequence diagram</strong> (<code>sequenceDiagram</code> — who talks to whom at runtime: the script, remote hosts, external commands, APIs), <strong>State diagram</strong> (<code>stateDiagram-v2</code> — observable states and transitions such as connection lifecycles and retry logic), <strong>Class diagram</strong> (<code>classDiagram</code> — types, members and relations declared in the code), and <strong>ER diagram</strong> (<code>erDiagram</code> — data entities and relations the code implies, such as SQL tables).</li>
+<li><strong>Saved diagrams dialog:</strong> The list on the left shows every stored diagram with its family, title and — for a selection-scoped diagram — its line range. <strong>New diagram</strong> is a menu offering the five families, <strong>Regenerate</strong> re-runs the selected diagram with its original family and scope, and <strong>Delete</strong> removes the selected diagram after a confirmation. Diagrams are persisted when the snippet is saved.</li>
+<li><strong>Diagrams from a selection:</strong> The editor context menu's <strong>Generate diagram from selection</strong> entries diagram only the selected lines. The selection is snapped to whole lines, the AI sees just that region, and the stored diagram remembers the line range: its code references point at the absolute snippet lines, and <strong>Regenerate</strong> re-reads the same lines from the current content.</li>
+<li><strong>Generation:</strong> Logical-structure diagrams use stable node IDs with the semantic classes <code>setup</code>, <code>work</code>, <code>success</code>, and <code>failure</code>, complete decisions with localized <strong>yes</strong>/<strong>no</strong> edge labels, and a mandatory source mapping from every node to exact snippet lines. The other families keep source references optional: entries that name a declared participant, state, class, or entity are stored, incomplete mappings are simply dropped. Every family's AI request carries its own small internal action skill with family-specific quality rules — grouped runtime behavior for flowcharts and sequence diagrams, observable states instead of statements, only declared types and members, no invented schemas. Hover code references and click-to-code navigation are a logical-structure feature.</li>
+<li><strong>Rendering:</strong> Local only — the SHA-256-pinned Mermaid 11.17.0 browser bundle is included with KorTTY and runs in an isolated, lazily created JavaFX WebView. No rendering server, Graphviz installation, Java subprocess, or first-use download is required.</li>
+<li><strong>Dialog features:</strong> Sanitized SVG display with JavaScript disabled, scaling without distortion, zoom/fit, SVG/PNG export, image and Mermaid-source clipboard copy, hover code references, and the shared <a href="#diagram-appearance">Diagram appearance</a> controls.</li>
+<li><strong>Safety and recovery:</strong> KorTTY rejects frontmatter, directives, links, callbacks, external images/icons, oversized sources and overly complex graphs before any rendering, and validates every generated diagram against its family's restricted grammar with per-family compactness caps (for example at most 12 flowchart action/decision nodes, 12 sequence participants, 12 states, 12 classes, or 12 entities). A rejected whole-snippet logical-structure result falls back to the deterministic local flowchart without another AI request; selection-scoped and non-flowchart generations report the failure instead, and nothing broken is ever saved. A response that was cut off at the output-token cap is reported as such rather than as an ordinary failure, because the usual cause is a thinking model spending the whole budget on reasoning — a smaller selection or a model that reasons less then helps. Safe restricted diagrams saved by older korTTY versions remain renderable even when they predate these stricter generation-quality rules. Requests are serialized with a 30-second timeout; cancellation or timeout discards the renderer, and the hidden WebView is released after idle time.</li>
+<li><strong>Upgrade cleanup:</strong> Saved legacy diagram entries are discarded without removing their owning snippets or chats. KorTTY also removes its retired diagram-renderer download cache and abandoned temporary render directories without following symbolic links.</li>
+</ul>
+<h3 id="diagram-appearance">Diagram appearance<a class="headerlink" href="#diagram-appearance" title="Permanent link">&para;</a></h3>
+<p>Both diagram windows — the standalone <strong>Diagram</strong> dialog and the <strong>Full code analysis</strong> flow diagram — share two appearance controls, and each remembers its setting across sessions:</p>
+<ul>
+<li>
+<p><strong>Dark mode</strong> — A <strong>Dark mode</strong> button with three choices:</p>
+<ul>
+<li><strong>Auto</strong> — follows the operating system's light/dark appearance. When you switch the OS to dark mode the diagram follows on the next render (and when the window regains focus).</li>
+<li><strong>Light</strong> — always light.</li>
+<li><strong>Dark</strong> — always dark.</li>
+</ul>
+<p>A manual choice is permanent until you change it. Dark mode recolours the <strong>whole</strong> diagram — a dark canvas, darkened node cards with light text, and light connectors and labels — not just the page margin.
+- <strong>Background</strong> — A colour picker for the page/canvas colour in light mode. It applies to the diagram itself and to any exported SVG/PNG. The picker is disabled while dark mode is active, because dark mode drives the appearance.</p>
+</li>
+</ul>
+<h2 id="placeholder-variables">Placeholder variables<a class="headerlink" href="#placeholder-variables" title="Permanent link">&para;</a></h2>
+<p>Snippets can contain placeholder variables that are replaced when you insert the snippet.</p>
+<h3 id="built-in-variables">Built-in variables<a class="headerlink" href="#built-in-variables" title="Permanent link">&para;</a></h3>
+<p>These variables are automatically replaced:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Replacement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>${date}</code></td>
+<td>Current date in <code>YYYY-MM-DD</code> format</td>
+</tr>
+<tr>
+<td><code>${time}</code></td>
+<td>Current time in <code>HH:MM:SS</code> format</td>
+</tr>
+<tr>
+<td><code>${datetime}</code></td>
+<td>Current date and time in <code>YYYY-MM-DD HH:MM:SS</code> format</td>
+</tr>
+<tr>
+<td><code>${hostname}</code></td>
+<td>Local machine hostname</td>
+</tr>
+<tr>
+<td><code>${username}</code></td>
+<td>Current system username</td>
+</tr>
+<tr>
+<td><code>${clipboard}</code></td>
+<td>Current clipboard content</td>
+</tr>
+<tr>
+<td><code>${cursor}</code></td>
+<td>Cursor position (removed from text; position returned)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="custom-variables">Custom variables<a class="headerlink" href="#custom-variables" title="Permanent link">&para;</a></h3>
+<p>Any <code>${variableName}</code> not in the built-in list is treated as a custom variable. When you insert the snippet:</p>
+<ul>
+<li>KorTTY checks the Variable Manager for stored values</li>
+<li>Variables without stored values prompt for input</li>
+</ul>
+<h2 id="sending-snippets-to-the-terminal">Sending snippets to the terminal<a class="headerlink" href="#sending-snippets-to-the-terminal" title="Permanent link">&para;</a></h2>
+<p>The Snippet Manager can send a selected snippet directly to the active terminal.</p>
+<h3 id="send-to-terminal">Send to Terminal<a class="headerlink" href="#send-to-terminal" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Keeps existing behavior</li>
+<li>Supported script languages are embedded as a terminal one-liner where possible</li>
+<li>Other snippets use the existing fallback path</li>
+</ul>
+<h3 id="send-to-terminal-with-parameters">Send to Terminal with Parameters<a class="headerlink" href="#send-to-terminal-with-parameters" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Opens a dialog for missing <code>${...}</code> placeholder variables and script arguments</li>
+<li>Script arguments are entered one per line; empty lines are ignored</li>
+<li>If you confirm without script arguments, the result is the same as <strong>Send to Terminal</strong>, but missing placeholder variables can still be filled in</li>
+</ul>
+<h3 id="script-arguments">Script arguments<a class="headerlink" href="#script-arguments" title="Permanent link">&para;</a></h3>
+<p>Supported for Bash/shell, Python, Perl, and Ruby snippets:</p>
+<ul>
+<li>Arguments are passed individually and shell-quoted</li>
+<li>Not appended as raw shell text</li>
+<li>If arguments are entered for unsupported languages, KorTTY shows an information message and sends nothing</li>
+</ul>
+<h3 id="terminal-display">Terminal display<a class="headerlink" href="#terminal-display" title="Permanent link">&para;</a></h3>
+<p>For embedded/base64 one-liners, the terminal shows the <code>KorTTY snippet: ...</code> label instead of echoing the full generated command.</p>
+<h2 id="import-and-export">Import and export<a class="headerlink" href="#import-and-export" title="Permanent link">&para;</a></h2>
+<p>Snippets can be imported and exported in multiple formats.</p>
+<h3 id="data-format-exports">Data format exports<a class="headerlink" href="#data-format-exports" title="Permanent link">&para;</a></h3>
+<p>Use <strong>Export</strong> to save selected snippets, or all snippets when nothing is selected. Use <strong>Import</strong> to merge snippets from a file.</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Extension</th>
+<th>Use case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JSON</td>
+<td><code>.json</code></td>
+<td>Data interchange, programmatic access</td>
+</tr>
+<tr>
+<td>XML</td>
+<td><code>.xml</code></td>
+<td>Structured data, tool integration</td>
+</tr>
+<tr>
+<td>YAML</td>
+<td><code>.yaml</code></td>
+<td>Human-readable, configuration-friendly</td>
+</tr>
+</tbody>
+</table>
+<h3 id="script-focused-exports">Script-focused exports<a class="headerlink" href="#script-focused-exports" title="Permanent link">&para;</a></h3>
+<p>For script-specific exports, choose:</p>
+<h4 id="plain-text-script-files">Plain text script files<a class="headerlink" href="#plain-text-script-files" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Opens a target-folder chooser</li>
+<li>Writes one file per snippet</li>
+<li>Filename comes from the snippet's <strong>Name</strong> column, including extension</li>
+<li>Unsafe path characters are sanitized</li>
+<li>Duplicate names receive a suffix such as <code>script (2).sh</code></li>
+</ul>
+<h4 id="zip-script-archive">ZIP script archive<a class="headerlink" href="#zip-script-archive" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Writes one ZIP containing one script file per snippet</li>
+<li>Keep the extension from the <strong>Name</strong> column or force one extension for all files</li>
+<li>Supported forced extensions: <code>.sh</code>, <code>.py</code>, <code>.pl</code>, <code>.rb</code>, <code>.ps1</code>, <code>.sql</code>, <code>.txt</code>, or custom</li>
+</ul>
+<h4 id="zip-encryption-options">ZIP encryption options<a class="headerlink" href="#zip-encryption-options" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Unencrypted</strong> — Standard ZIP archive</li>
+<li><strong>AES password-protected</strong> — Password-encrypted with AES-256</li>
+<li><strong>GPG-encrypted</strong> — Creates a <code>.zip.gpg</code> file; requires local <code>gpg</code> command and a usable public key</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Select two snippets, export them as plain text and confirm the created files use the names from the <strong>Name</strong> column. Then export the same selection as a ZIP with a forced <code>.txt</code> extension and verify all ZIP entries use <code>.txt</code>. For password export, confirm the ZIP requires the password before extraction. For GPG export, decrypt the <code>.zip.gpg</code> with your local GPG setup and inspect the ZIP entries.</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      
+
+
+<div class="md-copyright">
+  <div class="md-copyright__highlight">MIT-licensed · Developed by Daniel Mengel</div>
+  <div class="md-copyright__highlight">
+    korTTY <strong>v2.15.0</strong>
+  </div>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/chardonnay/korTTY" target="_blank" rel="noopener" title="korTTY on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../assets/javascripts/kt-zoom.js"></script>
+      
+    
+  </body>
+</html>

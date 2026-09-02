@@ -1,0 +1,3516 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete reference for korTTY — every feature, setting and tool of the cross-platform JavaFX SSH client, explained in detail.">
+      
+      
+        <meta name="author" content="korTTY">
+      
+      
+        <link rel="canonical" href="https://chardonnay.github.io/korTTY/guide/de/features/security.html">
+      
+      
+        <link rel="prev" href="ai-swarm.html">
+      
+      
+        <link rel="next" href="backup.html">
+      
+      
+        
+          <link rel="alternate" href="../en" hreflang="en">
+        
+          <link rel="alternate" href="../de" hreflang="de">
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Sicherheit – Anmeldeinformationen, Schlüssel und Verschlüsselung - korTTY Anleitung</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+        <script>/* iframe-worker shim (vendored, offline) */
+"use strict";(()=>{function c(s,n){parent.postMessage(s,n||"*")}function d(...s){return s.reduce((n,e)=>n.then(()=>new Promise(r=>{let t=document.createElement("script");t.src=e,t.onload=r,document.body.appendChild(t)})),Promise.resolve())}var o=class extends EventTarget{constructor(e){super();this.url=e;this.m=e=>{e.source===this.w&&(this.dispatchEvent(new MessageEvent("message",{data:e.data})),this.onmessage&&this.onmessage(e))};this.e=(e,r,t,i,m)=>{if(r===`${this.url}`){let a=new ErrorEvent("error",{message:e,filename:r,lineno:t,colno:i,error:m});this.dispatchEvent(a),this.onerror&&this.onerror(a)}};let r=document.createElement("iframe");r.hidden=!0,document.body.appendChild(this.iframe=r),this.w.document.open(),this.w.document.write(`<html><body><script>postMessage=${c};importScripts=${d};addEventListener("error",({error})=>{parent.dispatchEvent(new ErrorEvent("error",{filename:"${e}",error}))})<\/script><script src=${e}?${+Date.now()}><\/script></body></html>`),this.w.document.close(),onmessage=this.m,onerror=this.e,this.r=new Promise((t,i)=>{this.w.onload=t,this.w.onerror=i})}terminate(){this.iframe.remove(),onmessage=onerror=null}postMessage(e){this.r.catch().then(()=>{this.w.dispatchEvent(new MessageEvent("message",structuredClone({data:e})))})}get w(){return this.iframe.contentWindow}};window.IFrameWorker=o;location.protocol==="file:"&&(window.Worker=o);})();
+</script>
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/kortty.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sicherheit-anmeldeinformationen-schlussel-und-verschlusselung" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../index.html" title="korTTY Anleitung" class="md-header__button md-logo" aria-label="korTTY Anleitung" data-md-component="logo">
+      
+  <img src="../assets/images/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            korTTY Anleitung
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sicherheit – Anmeldeinformationen, Schlüssel und Verschlüsselung
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      
+
+<div class="md-header__option">
+  <a class="md-header__button md-icon kt-lang-switch"
+     href="../../en/features/security.html"
+     title="English" hreflang="en">
+    <span class="kt-lang-code">EN</span>
+  </a>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Teilen" aria-label="Teilen" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="korTTY Anleitung" class="md-nav__button md-logo" aria-label="korTTY Anleitung" data-md-component="logo">
+      
+  <img src="../assets/images/favicon.png" alt="logo">
+
+    </a>
+    korTTY Anleitung
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Startseite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Erste Schritte
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Erste Schritte
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/installation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/building-packages.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KorTTY-Pakete erstellen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/first-launch.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Erster Start – Master-Passwort
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/main-window.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Main window overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referenz
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Referenz
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/menu.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Menüreferenz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/keyboard-shortcuts.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tastaturkürzel
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/architecture.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architektur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/config-files.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Konfigurationsdateien
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/enterprise-policy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Richtlinienkonfiguration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../reference/settings/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Einstellungen
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Einstellungen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/appearance.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aussehen, Themen und Schriftart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/colors.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Farben
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/terminal.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/window.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fenster
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/resources.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ressourcen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/logging.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protokollierung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/export.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Export
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/backup.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sicherung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/updates.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aktualisierungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/security.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sicherheit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/language.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprache
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/translation.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersetzung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/video.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/ai.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/ai-skills.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KI-Fähigkeiten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/sftp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SFTP-Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/settings/editor.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_19" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../reference/settings/snippet-editor/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Snippet-Editor
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_6_19" id="__nav_3_6_19_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_19">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Snippet-Editor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/hardening-options.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Härtungsoptionen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/input-hardening.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eingabe-Härtung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/language-migration.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprachvereinigung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Funktionen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Funktionen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="connections.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verbindungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="terminal.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminalsitzungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tunnels.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSH-Tunnel (Portweiterleitung)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="jump-server.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jump-Server (Bastion Host)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sftp.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SFTP-Dateimanager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="file-browser.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dateibrowser
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="snippets.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Snippet-Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="jobscheduler.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JobScheduler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projects.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projekte (Arbeitsbereiche)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="teamwork.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teamarbeit (gemeinsame Verbindungen)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ai-assistant.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KI-Assistent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="local-models.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lokale Modelle (llama.cpp und MLX)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="rag.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RAG-Wissensspeicher
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ai-tools.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminal-KI-Agent und -Tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ai-swarm.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KI-Schwarm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sicherheit – Anmeldeinformationen, Schlüssel und Verschlüsselung
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="security.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sicherheit – Anmeldeinformationen, Schlüssel und Verschlüsselung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#master-passwort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Master-Passwort
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Master-Passwort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-rest-verschlusselung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        At-Rest-Verschlüsselung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verschlusselungsmodell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verschlüsselungsmodell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anmeldeinformationsverwaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anmeldeinformationsverwaltung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anmeldeinformationsverwaltung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offnen-des-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Öffnen des Managers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anmeldeinformationen-hinzufugen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anmeldeinformationen hinzufügen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anmeldeinformationen-in-verbindungen-verwenden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anmeldeinformationen in Verbindungen verwenden
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigenschaften" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eigenschaften
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-schlusselverwaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSH Schlüsselverwaltung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH Schlüsselverwaltung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offnen-des-managers_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Öffnen des Managers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schlussel-hinzufugen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schlüssel hinzufügen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hauptmerkmale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hauptmerkmale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verwenden-von-schlusseln-in-verbindungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verwenden von Schlüsseln in Verbindungen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interaktive-ssh-hostschlussel-vertrauensstellung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interaktive SSH-Hostschlüssel-Vertrauensstellung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interaktive SSH-Hostschlüssel-Vertrauensstellung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lockere-uberprufung-des-hostschlussels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lockere Überprüfung des Hostschlüssels
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gpg-schlusselverwaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPG Schlüsselverwaltung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GPG Schlüsselverwaltung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offnen-des-managers_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Öffnen des Managers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schlussel-hinzufugen_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schlüssel hinzufügen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bearbeiten-und-entfernen-von-schlusseln" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bearbeiten und Entfernen von Schlüsseln
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verwenden-von-schlusseln-fur-die-sicherung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verwenden von Schlüsseln für die Sicherung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gespeicherte-sicherheitsdaten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gespeicherte Sicherheitsdaten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-fur-die-sicherheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices für die Sicherheit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices für die Sicherheit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#master-passwort_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Master-Passwort
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-schlussel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSH-Schlüssel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jobscheduler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JobScheduler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-verschlusselung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup-Verschlüsselung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI-Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sicherheitsubersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sicherheitsübersicht
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#andern-des-master-passworts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ändern des Master-Passworts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#konfigurationsdateien-referenz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konfigurationsdateien-Referenz
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="backup.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sichern und wiederherstellen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="recording.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminalaufzeichnung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="session-journal.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sitzungsjournal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ascii-art.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ASCII-Art
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="terminal-effect-plugins.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminaleffekt-Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="i18n.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprachen und dynamische Übersetzung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Über korTTY
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Über korTTY
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/release-notes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versionshinweise
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/feedback.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Feedback und Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/anonymous-data.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anonyme Daten zur Applikationsoptimierung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#master-passwort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Master-Passwort
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Master-Passwort">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-rest-verschlusselung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        At-Rest-Verschlüsselung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verschlusselungsmodell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verschlüsselungsmodell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anmeldeinformationsverwaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anmeldeinformationsverwaltung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anmeldeinformationsverwaltung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offnen-des-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Öffnen des Managers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anmeldeinformationen-hinzufugen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anmeldeinformationen hinzufügen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anmeldeinformationen-in-verbindungen-verwenden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anmeldeinformationen in Verbindungen verwenden
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigenschaften" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eigenschaften
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-schlusselverwaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSH Schlüsselverwaltung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH Schlüsselverwaltung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offnen-des-managers_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Öffnen des Managers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schlussel-hinzufugen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schlüssel hinzufügen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hauptmerkmale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hauptmerkmale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verwenden-von-schlusseln-in-verbindungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verwenden von Schlüsseln in Verbindungen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interaktive-ssh-hostschlussel-vertrauensstellung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interaktive SSH-Hostschlüssel-Vertrauensstellung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interaktive SSH-Hostschlüssel-Vertrauensstellung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lockere-uberprufung-des-hostschlussels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lockere Überprüfung des Hostschlüssels
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gpg-schlusselverwaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPG Schlüsselverwaltung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GPG Schlüsselverwaltung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offnen-des-managers_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Öffnen des Managers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schlussel-hinzufugen_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schlüssel hinzufügen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bearbeiten-und-entfernen-von-schlusseln" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bearbeiten und Entfernen von Schlüsseln
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verwenden-von-schlusseln-fur-die-sicherung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verwenden von Schlüsseln für die Sicherung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gespeicherte-sicherheitsdaten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gespeicherte Sicherheitsdaten
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-fur-die-sicherheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices für die Sicherheit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices für die Sicherheit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#master-passwort_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Master-Passwort
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-schlussel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSH-Schlüssel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jobscheduler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JobScheduler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-verschlusselung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup-Verschlüsselung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI-Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sicherheitsubersicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sicherheitsübersicht
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#andern-des-master-passworts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ändern des Master-Passworts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#konfigurationsdateien-referenz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konfigurationsdateien-Referenz
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="sicherheit-anmeldeinformationen-schlussel-und-verschlusselung">Sicherheit: Anmeldeinformationen, Schlüssel und Verschlüsselung<a class="headerlink" href="#sicherheit-anmeldeinformationen-schlussel-und-verschlusselung" title="Permanent link">&para;</a></h1>
+<p>KorTTY schützt Ihre sensiblen Daten mit branchenüblicher Verschlüsselung und zentraler Schlüsselverwaltung. Alle Verbindungskennwörter, SSH-Schlüsselpassphrasen und die Speicherung von Anmeldeinformationen verwenden die AES-256-GCM-Verschlüsselung, die von einem Hauptkennwort abgeleitet wird, das beim ersten Start erstellt wird.</p>
+<p><img alt="Persistence &amp; encryption" src="../assets/diagrams/persistence-encryption-flow.svg" /></p>
+<h2 id="master-passwort">Master-Passwort<a class="headerlink" href="#master-passwort" title="Permanent link">&para;</a></h2>
+<p>Beim ersten Start werden Sie aufgefordert, ein Master-Passwort (mindestens 6 Zeichen) zu erstellen, das alle gespeicherten Geheimnisse verschlüsselt.</p>
+<h3 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Geben Sie ein Passwort ein (der Feldrand wird grün, wenn die Länge ausreichend ist, rot, wenn die Länge zu kurz ist).
+Der Stärkeindikator 2. A zeigt die Passwortqualität an; Bei schwachen oder gebräuchlichen Passwörtern wird eine Warnung angezeigt, die Sie bei Bedarf jedoch bestätigen können.</li>
+<li>Bestätigen Sie das Passwort.</li>
+<li>Klicken Sie auf <strong>Setup</strong>.</li>
+</ol>
+<h3 id="at-rest-verschlusselung">At-Rest-Verschlüsselung<a class="headerlink" href="#at-rest-verschlusselung" title="Permanent link">&para;</a></h3>
+<p>Das Master-Passwort selbst wird mit PBKDF2 gehasht (310.000 Iterationen) und niemals im Klartext gespeichert. Das Salz und der Hash werden in <code>~/.kortty/master.key</code> gespeichert.</p>
+<p>Bei nachfolgenden Starts werden Sie von KorTTY aufgefordert, das Master-Passwort einzugeben, um verschlüsselte Daten zu entsperren. Wenn Sie <strong>Master-Passwort beim Start anfordern</strong> in <strong>Einstellungen &gt; Sicherheit</strong> deaktivieren, wird diese Eingabeaufforderung ausgeblendet, aber auf gespeicherte Passwörter kann erst dann zugegriffen werden, wenn Sie das Master-Passwort manuell eingeben.</p>
+<div class="admonition danger">
+<p class="admonition-title">Optionale automatische Anmeldung schwächt den Schutz im Ruhezustand</p>
+<p>Die zweite Sicherheitsoption, <strong>Master-Passwort-Eingabeaufforderung beim Start deaktivieren (automatische Anmeldung)</strong>, entfernt die Eingabeaufforderung ebenfalls, hält den Tresor jedoch vollständig nutzbar: korTTY schreibt Ihr Master-Passwort in <code>~/.kortty/master.autounlock</code> – <strong>Nur verschleiert, nicht verschlüsselt</strong>, mit Dateiberechtigungen nur für den Besitzer – und wird bei jedem Start automatisch entsperrt. Der Verschleierungsschlüssel ist in die Anwendung eingebettet, sodass Dateiberechtigungen die einzige wirkliche Grenze darstellen. jeder, der lesen kann <code>~/.kortty</code> oder ein Backup kann alle gespeicherten Geheimnisse entschlüsseln. Bei einem brandneuen Profil führt die Option ein Standard-Master-Passwort ohne Dialog aus. korTTY fragt vor der Aktivierung nach einer Bestätigung, es ist für Wegwerf-/Testumgebungen gedacht und a <a href="../reference/enterprise-policy.html">Richtlinienkonfiguration</a> das ein Master-Passwort erfordert, deaktiviert es. Einzelheiten: <a href="../reference/settings/security.html">Sicherheitseinstellungen</a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Wenn Sie das Master-Passwort verlieren, können verschlüsselte Daten nicht wiederhergestellt werden. Löschen Sie <code>master.key</code> und <code>credentials.xml</code>, starten Sie neu, legen Sie ein neues Master-Passwort fest und geben Sie Ihre Passwörter erneut ein.</p>
+</div>
+<h2 id="verschlusselungsmodell">Verschlüsselungsmodell<a class="headerlink" href="#verschlusselungsmodell" title="Permanent link">&para;</a></h2>
+<p>Alle vertraulichen Daten im Ruhezustand werden mit <strong>AES-256-GCM</strong> verschlüsselt:</p>
+<ul>
+<li><strong>Algorithmus</strong>: AES-256-GCM (Galois/Counter-Modus)</li>
+<li><strong>Schlüsselableitung</strong>: PBKDF2WithHmacSHA256 mit 310.000 Iterationen</li>
+<li><strong>IV Länge</strong>: 12 Bytes (zufällig pro Verschlüsselung)</li>
+<li><strong>Authentifizierungs-Tag</strong>: 128 Bit (integrierte Integritätsüberprüfung)</li>
+<li><strong>Salt-Länge</strong>: 32 Bytes (zufällig pro Master-Passwort-Einrichtung)</li>
+</ul>
+<p>Jeder verschlüsselte Wert kombiniert einen zufälligen IV mit dem Chiffretext, der zur Speicherung als Base64 codiert wird.</p>
+<h2 id="anmeldeinformationsverwaltung">Anmeldeinformationsverwaltung<a class="headerlink" href="#anmeldeinformationsverwaltung" title="Permanent link">&para;</a></h2>
+<p>Speichern Sie zentralisierte Benutzernamen-/Passwort-Anmeldeinformationen, die über mehrere Verbindungen hinweg wiederverwendet werden können.</p>
+<h3 id="offnen-des-managers">Öffnen des Managers<a class="headerlink" href="#offnen-des-managers" title="Permanent link">&para;</a></h3>
+<p><strong>Menü:</strong> Verwaltung &gt; Anmeldeinformationen verwalten</p>
+<h3 id="anmeldeinformationen-hinzufugen">Anmeldeinformationen hinzufügen<a class="headerlink" href="#anmeldeinformationen-hinzufugen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Klicken Sie auf <strong>Hinzufügen</strong>.</li>
+<li>Ausfüllen:</li>
+<li><strong>Name</strong> – Beschreibender Bezeichner</li>
+<li><strong>Benutzername</strong> – Login-Benutzername</li>
+<li><strong>Passwort</strong> – Mit AES-256-GCM verschlüsselt gespeichert</li>
+<li><strong>Umgebung</strong> – Produktion, Entwicklung, Test oder Staging</li>
+<li><strong>Servermuster</strong> (optional) – Glob-Muster (z. B. <code>*.example.com</code>, <code>10.0.0.*</code>) für den automatischen Abgleich von Anmeldeinformationen mit Verbindungen</li>
+<li><strong>Beschreibung</strong> (optional) – Freitextnotizen</li>
+<li>Klicken Sie auf <strong>OK</strong>.</li>
+</ol>
+<h3 id="anmeldeinformationen-in-verbindungen-verwenden">Anmeldeinformationen in Verbindungen verwenden<a class="headerlink" href="#anmeldeinformationen-in-verbindungen-verwenden" title="Permanent link">&para;</a></h3>
+<p>Beim Erstellen oder Bearbeiten einer Verbindung:</p>
+<ol>
+<li>Gehen Sie zur Registerkarte <strong>Verbindung</strong>.</li>
+<li>Wählen Sie im Dropdown-Menü <strong>Anmeldeinformationen</strong> eine gespeicherte Anmeldeinformation aus.</li>
+<li>Benutzername und Passwort werden automatisch ausgefüllt.</li>
+</ol>
+<p>Das folgende Diagramm zeigt, wie Anmeldeinformationen und SSH-Schlüssel vom verschlüsselten Speicher zu aktiven Verbindungen fließen:</p>
+<p><img alt="Credential &amp; encryption flow" src="../assets/diagrams/credential-flow.svg" /></p>
+<h3 id="eigenschaften">Eigenschaften<a class="headerlink" href="#eigenschaften" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Umgebungsspezifisch</strong> – Anmeldeinformationen nach Bereitstellungsumgebung organisieren</li>
+<li><strong>Server Pattern Matching</strong> – Anmeldeinformationen automatisch passenden Servern zuweisen</li>
+<li><strong>Verschlüsselter Speicher</strong> – Passwörter werden mit AES-256-GCM verschlüsselt</li>
+<li><strong>Automatische Nutzung</strong> – Wählen Sie Anmeldeinformationen direkt in den Verbindungseinstellungen aus</li>
+</ul>
+<h2 id="ssh-schlusselverwaltung">SSH Schlüsselverwaltung<a class="headerlink" href="#ssh-schlusselverwaltung" title="Permanent link">&para;</a></h2>
+<p>Zentralisierte Verwaltung privater SSH-Schlüssel mit verschlüsselten Passphrasen.</p>
+<h3 id="offnen-des-managers_1">Öffnen des Managers<a class="headerlink" href="#offnen-des-managers_1" title="Permanent link">&para;</a></h3>
+<p><strong>Menü:</strong> Verwaltung &gt; SSH-Schlüssel verwalten</p>
+<h3 id="schlussel-hinzufugen">Schlüssel hinzufügen<a class="headerlink" href="#schlussel-hinzufugen" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Klicken Sie auf <strong>Hinzufügen</strong>.</li>
+<li>Wählen Sie den Pfad zu Ihrer privaten SSH-Schlüsseldatei.</li>
+<li>(Optional) Geben Sie die Passphrase ein – sie wird verschlüsselt und gespeichert.</li>
+<li>Klicken Sie auf <strong>OK</strong>.</li>
+</ol>
+<h3 id="hauptmerkmale">Hauptmerkmale<a class="headerlink" href="#hauptmerkmale" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Zentralisierte Verwaltung</strong> – Verwalten Sie alle SSH-Schlüssel an einem Ort</li>
+<li><strong>Verschlüsselte Passphrasen</strong> – Schlüsselpassphrasen werden mit AES-256-GCM verschlüsselt gespeichert</li>
+<li><strong>Schlüsselkopie</strong> – Verwenden Sie <strong>In Benutzerverzeichnis kopieren</strong>, um Schlüssel nach <code>~/.kortty/ssh-keys/</code> zu kopieren; Kopierte Schlüssel werden in verschlüsselte Backups einbezogen und nur mit Eigentümerberechtigungen wiederhergestellt</li>
+<li><strong>Platzhaltersuche</strong> – Schnelle Suche nach Schlüsseln mithilfe von <code>*</code>-Mustern</li>
+<li><strong>Automatische Nutzung</strong> – Wählen Sie Schlüssel direkt in den Verbindungseinstellungen aus</li>
+</ul>
+<h3 id="verwenden-von-schlusseln-in-verbindungen">Verwenden von Schlüsseln in Verbindungen<a class="headerlink" href="#verwenden-von-schlusseln-in-verbindungen" title="Permanent link">&para;</a></h3>
+<p>Beim Erstellen oder Bearbeiten einer Verbindung:</p>
+<ol>
+<li>Gehen Sie zur Registerkarte <strong>Verbindung</strong>.</li>
+<li>Wählen Sie <strong>Privater Schlüssel</strong> als Authentifizierungsmethode.</li>
+<li>Wählen Sie den gewünschten Schlüssel aus der Dropdown-Liste <strong>SSH-Schlüssel</strong> aus.</li>
+<li>Der Schlüsselpfad und die Passphrase werden automatisch ausgefüllt.</li>
+</ol>
+<h2 id="interaktive-ssh-hostschlussel-vertrauensstellung">Interaktive SSH-Hostschlüssel-Vertrauensstellung<a class="headerlink" href="#interaktive-ssh-hostschlussel-vertrauensstellung" title="Permanent link">&para;</a></h2>
+<p>Terminal- und SFTP-Verbindungen, einschließlich des von Mosh verwendeten SSH-Bootstraps, nutzen einen TOFU-Verifizierer (Trust-on-First-Use), der durch normalisierten Hostnamen und Port verschlüsselt ist. Bei der ersten Verwendung zeigt korTTY den Serverschlüsselalgorithmus und den OpenSSH SHA-256-Fingerabdruck an; Überprüfen Sie vor der Annahme, dass es außerhalb des Bandes liegt. Die Bestätigung lautet standardmäßig <strong>Nein</strong>. Ein zuvor vertrauenswürdiger passender Schlüssel wird stillschweigend akzeptiert, während ein geänderter Schlüssel mit den erwarteten und angebotenen Fingerabdrücken fest blockiert wird und nie automatisch erneut versucht wird.</p>
+<p>Interaktive Pins werden atomar in <code>~/.kortty/ssh-host-keys.properties</code> geschrieben; Eine Companion-Sperre koordiniert gleichzeitige korTTY-Prozesse. Dieser Speicher unterscheidet sich von den verbindungs-ID-basierten Hostschlüssel-Pins des JobScheduler in <code>job-scheduler.xml</code>, die die unbeaufsichtigte SSH-, SFTP- und Rsync-Ausführung schützen.</p>
+<h3 id="lockere-uberprufung-des-hostschlussels">Lockere Überprüfung des Hostschlüssels<a class="headerlink" href="#lockere-uberprufung-des-hostschlussels" title="Permanent link">&para;</a></h3>
+<p>Für Labor- oder Wegwerf-Hosts können Sie die Eingabeaufforderung bei der ersten Verwendung deaktivieren und korTTY veranlassen, einen unbekannten Schlüssel stillschweigend zu akzeptieren. Hierbei handelt es sich um eine <strong>Akzeptieren-Neu</strong>-Lockerung, nicht um blindes Vertrauen: Ein Schlüssel, der sich von dem unterscheidet, der bereits für diesen Host festgelegt wurde, ist immer noch hart blockiert, sodass ein Man-in-the-Middle auf einem Host, mit dem Sie sich zuvor verbunden haben, immer noch abgefangen wird. Es ist standardmäßig deaktiviert und kann in der Reihenfolge der Priorität auf drei Bereiche eingestellt werden:</p>
+<ol>
+<li><strong>Pro Verbindung</strong> – das Steuerelement <em>Hostschlüsselüberprüfung</em> im Verbindungseditor des Verbindungsmanagers und in der Schnellverbindung mit drei Zuständen: <strong>Standard verwenden</strong> (übernehmen), <strong>Überprüfen</strong> (strikt erzwingen, auch wenn die Gruppen- oder globale Einstellung dies gelockert hat) und <strong>Nicht überprüfen</strong>.</li>
+<li><strong>Pro Gruppe</strong> – Klicken Sie im Verbindungsmanager mit der rechten Maustaste auf eine Gruppe und aktivieren Sie <strong>Hostschlüsselüberprüfung deaktivieren</strong>; Es gilt für jede Verbindung in der Gruppe, die erbt.</li>
+<li><strong>Global</strong> – <strong>Einstellungen → Terminal → Hostschlüsselüberprüfung für alle Verbindungen deaktivieren</strong>, der Basisstandard für jede Verbindung, die auf beiden oben genannten Ebenen erbt.</li>
+</ol>
+<p>Der eigene Hostschlüssel eines Jump-Servers wird durch keines davon gelockert – die Bastion wird immer streng überprüft.</p>
+<h2 id="gpg-schlusselverwaltung">GPG Schlüsselverwaltung<a class="headerlink" href="#gpg-schlusselverwaltung" title="Permanent link">&para;</a></h2>
+<p>Verwalten Sie GPG-Schlüssel für die Backup-Verschlüsselung und die Verbindungs-/Snippet-Exportverschlüsselung.</p>
+<h3 id="offnen-des-managers_2">Öffnen des Managers<a class="headerlink" href="#offnen-des-managers_2" title="Permanent link">&para;</a></h3>
+<p><strong>Menü:</strong> Verwaltung &gt; GPG-Schlüssel verwalten</p>
+<h3 id="schlussel-hinzufugen_1">Schlüssel hinzufügen<a class="headerlink" href="#schlussel-hinzufugen_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Manuelle Eingabe</strong> – Klicken Sie auf <strong>Hinzufügen</strong>, um die Schlüssel-ID und die E-Mail-Adresse manuell einzugeben.</li>
+<li><strong>Systemimport</strong> – Klicken Sie auf <strong>Aus GPG importieren</strong>, um Schlüssel aus dem GPG-Schlüsselbund Ihres Systems zu importieren.</li>
+</ul>
+<h3 id="bearbeiten-und-entfernen-von-schlusseln">Bearbeiten und Entfernen von Schlüsseln<a class="headerlink" href="#bearbeiten-und-entfernen-von-schlusseln" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Wählen Sie einen Schlüssel aus der Liste aus.</li>
+<li>Klicken Sie auf <strong>Bearbeiten</strong>, um Details zu ändern, oder auf <strong>Löschen</strong>, um sie zu entfernen.</li>
+</ol>
+<h3 id="verwenden-von-schlusseln-fur-die-sicherung">Verwenden von Schlüsseln für die Sicherung<a class="headerlink" href="#verwenden-von-schlusseln-fur-die-sicherung" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Öffnen Sie <strong>Einstellungen &gt; Backup</strong>.</li>
+<li>Wählen Sie <strong>GPG-Verschlüsselung</strong> als Verschlüsselungstyp aus.</li>
+<li>Wählen Sie den GPG-Schlüssel aus, der für die Verschlüsselung verwendet werden soll.</li>
+</ol>
+<p>GPG-verschlüsselte Backups und Exporte werden als <code>.gpg</code>-Dateien gespeichert und erfordern den <code>gpg</code>-Befehl Ihres Systems und einen verwendbaren öffentlichen Schlüssel zur Entschlüsselung.</p>
+<h2 id="gespeicherte-sicherheitsdaten">Gespeicherte Sicherheitsdaten<a class="headerlink" href="#gespeicherte-sicherheitsdaten" title="Permanent link">&para;</a></h2>
+<p>Die folgenden sensiblen und sicherheitsrelevanten Daten werden in <code>~/.kortty/</code> gespeichert; Geheime Werte werden verschlüsselt, während öffentliches Verifizierungsmaterial nicht verschlüsselt ist:</p>
+<table>
+<thead>
+<tr>
+<th>Datei</th>
+<th>Inhalt</th>
+<th>Verschlüsselung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>credentials.xml</code></td>
+<td>Gespeicherte Benutzername/Passwort-Anmeldeinformationen</td>
+<td>AES-256-GCM</td>
+</tr>
+<tr>
+<td><code>ssh-keys.xml</code></td>
+<td>SSH-Schlüsselpfade und verschlüsselte Passphrasen</td>
+<td>AES-256-GCM</td>
+</tr>
+<tr>
+<td><code>connections.xml</code></td>
+<td>Verbindungskennwörter (inline) und Schlüsselpassphrasen (wenn keine SSH-Schlüsselverwaltung verwendet wird)</td>
+<td>AES-256-GCM</td>
+</tr>
+<tr>
+<td><code>ssh-host-keys.properties</code></td>
+<td>Vertrauenswürdige öffentliche Hostschlüssel für interaktive Terminal-, SFTP- und Mosh-Bootstrap-Verbindungen</td>
+<td>Öffentliche Verifizierungsdaten; nicht verschlüsselt</td>
+</tr>
+<tr>
+<td><code>job-scheduler.xml</code></td>
+<td>Scheduler-Sudo-Passwörter und Archiv-Passwörter; Journaleinträge schwärzen von KorTTY verwaltete Geheimnisse</td>
+<td>AES-256-GCM</td>
+</tr>
+<tr>
+<td><code>master.key</code></td>
+<td>Master-Passwort-Hash (PBKDF2, 310.000 Iterationen) und Salt</td>
+<td>PBKDF2-Hash nur</td>
+</tr>
+<tr>
+<td><code>master.autounlock</code></td>
+<td>Gespeichertes Master-Passwort für die optionale automatische Anmeldung</td>
+<td>Nur verschleiert – nicht verschlüsselt; Nur-Eigentümer-Dateiberechtigungen</td>
+</tr>
+<tr>
+<td><code>global-settings.xml</code></td>
+<td>AI-Profil-API-Schlüssel, Übersetzungs-API-Schlüssel, optionales Hugging Face-Token</td>
+<td>AES-256-GCM</td>
+</tr>
+</tbody>
+</table>
+<h2 id="best-practices-fur-die-sicherheit">Best Practices für die Sicherheit<a class="headerlink" href="#best-practices-fur-die-sicherheit" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Ausgewählter Terminaltext, der an KI-Dienste gesendet wird, kann vertrauliche Informationen wie Anmeldeinformationen, Hostnamen, Dateipfade, Stack-Traces oder Betriebsdetails enthalten. Bevorzugen Sie für vertrauliche Daten ein integriertes lokales GGUF-Modell oder stellen Sie sicher, dass Sie dem Remote-Endpunkt vertrauen, bevor Sie etwas senden.</p>
+</div>
+<h3 id="master-passwort_1">Master-Passwort<a class="headerlink" href="#master-passwort_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Verwenden Sie ein sicheres, eindeutiges Master-Passwort (mindestens 12 Zeichen, eine Mischung aus Groß-/Kleinbuchstaben, Zahlen und Symbolen).</li>
+<li>Geben Sie niemals Ihr Master-Passwort weiter.</li>
+<li>Speichern Sie es sicher (Passwort-Manager empfohlen).</li>
+</ul>
+<h3 id="ssh-schlussel">SSH-Schlüssel<a class="headerlink" href="#ssh-schlussel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Schützen Sie private Schlüsseldateien mit einer Passphrase.</li>
+<li>Schlüssel nach <code>~/.kortty/ssh-keys/</code> kopieren, um sie in verschlüsselte Backups aufzunehmen; Schlüssel, die an ihren ursprünglichen Speicherorten verbleiben, werden nur referenziert und müssen separat migriert werden.</li>
+<li>Schlüsseldateiberechtigungen einschränken (z. B. <code>chmod 600</code>).</li>
+<li>Überprüfen Sie den Fingerabdruck eines Hostschlüssels bei der ersten Verwendung über einen vertrauenswürdigen Kanal, bevor Sie ihn akzeptieren. Behandeln Sie eine Warnung bezüglich eines geänderten Schlüssels als einen möglichen Serverneuaufbau, einen DNS-Fehler oder einen Man-in-the-Middle-Angriff und untersuchen Sie ihn, anstatt die Verbindung wiederholt wiederherzustellen.</li>
+</ul>
+<h3 id="jobscheduler">JobScheduler<a class="headerlink" href="#jobscheduler" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Host-Schlüssel-Pinning</strong>: Host-Schlüssel werden standardmäßig für unbeaufsichtigte SSH-/SFTP-/Rsync-Jobs gepinnt, um Man-in-the-Middle-Angriffe zu verhindern. Diese Verbindungs-ID-Pins sind absichtlich von den normalisierten Endpunkt-Pins getrennt, die von interaktiven Terminal-/SFTP-Sitzungen verwendet werden.</li>
+<li><strong>Sudo-Passwörter</strong>: Scheduler-Sudo-Passwörter werden verschlüsselt und in <code>~/.kortty/job-scheduler.xml</code> gespeichert.</li>
+<li><strong>Journal-Schwärzung</strong>: Job-Journaleinträge schwärzen von KorTTY verwaltete Geheimnisse vor der Persistenz (der geschwärzte Modus ist die Standardeinstellung; der vollständige Modus speichert nicht geschwärzte Ausgaben).</li>
+</ul>
+<h3 id="backup-verschlusselung">Backup-Verschlüsselung<a class="headerlink" href="#backup-verschlusselung" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Verschlüsseln Sie Backups immer entweder mit passwortgeschützter ZIP- oder GPG-Verschlüsselung.</li>
+<li>Speichern Sie Sicherungsdateien an einem sicheren Ort.</li>
+<li>Testen Sie die Wiederherstellungsverfahren regelmäßig, um sicherzustellen, dass Backups verwendbar sind.</li>
+</ul>
+<h3 id="ai-integration">AI-Integration<a class="headerlink" href="#ai-integration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>API-Schlüssel für KI-Endpunkte werden mit Ihrem Master-Passwort verschlüsselt.</li>
+<li>Das optionale Hugging Face-Token ist mit dem Master-Passwort verschlüsselt und wird nur für genehmigte Modellsuch-/Downloadanfragen an den vertrauenswürdigen Hugging Face-Host verwendet.</li>
+<li>Jeder integrierte <code>llama-server</code> bindet nur an <code>127.0.0.1</code> an einem zufälligen Port und erfordert einen generierten lokalen API-Schlüssel. Der Offline-Modus ist obligatorisch; Web-UI-, Agent-, UI-MCP-Proxy-, Slot-Endpunkt- und geerbte Serveroptionsüberschreibungen sind deaktiviert.</li>
+<li>GGUF-Downloads erfordern eine unveränderliche Repository-Revision und genaue SHA-256-Metadaten. Laufzeitindizes erfordern eine Ed25519-Signatur, und jede Laufzeit-ZIP-Datei wird vor der sicheren Extraktion anhand ihrer signierten Größe und SHA-256 überprüft. Offizielle Anwendungs-Builds betten nur das Vertrauensstammverzeichnis des öffentlichen Laufzeitkanals ein; Ein fehlender oder ungültiger Schlüssel schlägt fehl, bevor eine Aktualisierungsanforderung erfolgt, während der signierende private Schlüssel im vom Menschen gesendeten Promotion-Workflow isoliert bleibt.</li>
+<li>Signierte Laufzeitabhebungen sind dauerhaft und werden nicht geschlossen. Ein verifizierter Index fügt zurückgezogene Laufzeit- und Installations-IDs zu <code>llm/runtime/revoked-v1</code> hinzu, markiert jedes installierte Paket, löscht einen passenden aktiven Zeiger, stoppt seine Sidecars, entfernt es aus dem fehlerfreien Rollback-Verlauf und stellt betroffene Modellbindungen unter Quarantäne. Sowohl das Installationsprogramm als auch der Prozessstarter lehnen diese Pakete ab, auch nach einem unterbrochenen Update. Überprüfungen, bei denen nur eine Benachrichtigung erfolgt, erzwingen eine Auszahlung, ohne dass der angebotene Ersatz stillschweigend installiert wird. <strong>Off</strong> stellt keine Indexanfrage und erfährt daher bis zu einer expliziten oder aktivierten Prüfung keine neue Entnahme.</li>
+<li>Eine neu aktivierte Laufzeit wird nicht in den fehlerfreien Verlauf hochgestuft, nur weil die begrenzte <code>--version</code>-Prüfung bestanden wurde. Es bleibt ausstehend, bis der erste echte GGUF-gestützte authentifizierte API-Start erfolgreich ist; Wenn dieser Start fehlschlägt, wird der Kandidat entfernt und das neueste fehlerfreie, nicht widerrufene Paket wiederhergestellt bzw. erneut gebunden, sofern eines vorhanden ist.</li>
+<li>-Modellempfehlungen und die automatische Erkennung von Eingabeaufforderungsfamilien können aus einem separaten Ed25519-signierten HTTPS-Katalog aktualisiert werden. Der letzte gültige Cache wird vor der Verwendung erneut überprüft, und eine monotone Sequenz lehnt signierte ältere Wiederholungen oder Versionskollisionen mit gleicher Sequenz vor einem atomaren Hochwasser-Update ab. Ohne den unabhängigen öffentlichen Katalogschlüssel vertraut korTTY weder Netzwerk- noch Cache-Daten und greift auf den integrierten Bootstrap zurück. Das Signieren von Produktionskatalogen und Laufzeiten ist auf die durch Prüfer geschützten GitHub-Umgebungen im Hauptzweig beschränkt. Anwendungsbuilds erhalten nur die öffentlichen Vertrauenswurzeln.
+Die Profilkonfiguration - AI wird lokal gespeichert; Nur Ihre überprüfte Terminalauswahl oder Eingabeaufforderung wird an den ausgewählten Dienst gesendet. Die eingebettete Inferenz bleibt auf diesem Computer.</li>
+<li>Wissensspeicher-Scanning folgt einer festen Text-Zulassungsliste, validiert Inhalte, lehnt symbolische Links ab und zeigt eine Vorschau an. Nur begrenzte abgerufene Auszüge, nicht der gesamte Wissensspeicher, werden in die Modellaufforderung eingegeben. Diese Auszüge bleiben für integrierte/Loopback-Profile lokal, verlassen jedoch den Computer, wenn ein explizit zugewiesenes Cloud-Profil die Anfrage verarbeitet. Wissensspeicherrollen und persistente Profilzuweisungen sind die Offenlegungsberechtigung des Benutzers.</li>
+<li>Remote-Qdrant-Wissensspeicher erfordern HTTPS; Einfaches HTTP wird nur für Loopback akzeptiert und der optionale API-Schlüssel bleibt durch den Tresor geschützt.</li>
+<li>Der Internetzugriff ist für AI-Profile standardmäßig deaktiviert. nur bei Bedarf aktivieren.</li>
+<li>Snippet-KI-Aktionen nutzen niemals den Internetzugang, selbst wenn dieser im Profil aktiviert ist.</li>
+<li>Die feste Snippet-/Workflow-<strong>Diagramm</strong>-Anfrage erhält nie Auszüge aus dem Wissensspeicher, selbst wenn an das Profil Speicher angehängt sind – die Diagramm-Eingabeaufforderung wird ausschließlich aus der Quelle erstellt.</li>
+</ul>
+<h2 id="sicherheitsubersicht">Sicherheitsübersicht<a class="headerlink" href="#sicherheitsubersicht" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Funktion</th>
+<th>Implementierung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Master-Passwort-Hashing</td>
+<td>PBKDF2 mit 310.000 Iterationen</td>
+</tr>
+<tr>
+<td>Anmeldeinformationsverschlüsselung</td>
+<td>AES-256-GCM</td>
+</tr>
+<tr>
+<td>SSH-Schlüsselpassphrasen</td>
+<td>Verschlüsselt mit AES-256-GCM und Master-Passwort</td>
+</tr>
+<tr>
+<td>Interaktive SSH/SFTP/Mosh-Hostschlüssel</td>
+<td>Gemeinsam genutzter normalisierter Host:Port-TOFU, Bestätigung des Fingerabdrucks bei der ersten Verwendung (optional entspannt, um „Neu“ zu akzeptieren), stille exakte Übereinstimmung, harte Blockierung bei Änderung</td>
+</tr>
+<tr>
+<td>AI-API-Schlüssel</td>
+<td>Verschlüsselt mit AES-256-GCM und Master-Passwort</td>
+</tr>
+<tr>
+<td>Eingebetteter llama.cpp</td>
+<td>Nur-Loopback-Zufallsport, generierter API-Schlüssel, Offline-/gehärtete Server-Flags, Anforderungsleasing</td>
+</tr>
+<tr>
+<td>GGUF/Laufzeit-Lieferkette</td>
+<td>Unveränderliche Revisionen, SHA-256-Verifizierung, signierter Laufzeitindex, dauerhafte Sperrquarantäne, Rollback nach fehlgeschlagener Integritätsprüfung oder erstem echten API-Start</td>
+</tr>
+<tr>
+<td>Modell-/Prompt-Katalog</td>
+<td>Unabhängiger Ed25519 Trust Root, striktes Schema, monotone Anti-Replay-Sequenz, erneut verifizierter Atomcache, geschützte menschliche Förderung, Bootstrap-Fallback</td>
+</tr>
+<tr>
+<td>RAG-Quellenaufnahme</td>
+<td>Zentrale Zulassungsliste, UTF-8/PDF-Inhaltsprüfungen, kein Symlink-Traversal, überprüfte Vorschau</td>
+</tr>
+<tr>
+<td>RAG-Eingabeaufforderungskontext</td>
+<td>Feste Abrufgrenzen, stabile Quellmarkierungen, explizit nicht vertrauenswürdiger Wrapper, explizite profilbasierte lokale/Cloud-Offenlegung</td>
+</tr>
+<tr>
+<td>Optionale automatische Anmeldung</td>
+<td>Master-Passwort verschleiert gespeichert in <code>master.autounlock</code> mit Nur-Eigentümer-Berechtigungen; Standardmäßig deaktiviert, Bestätigung erforderlich, blockiert durch eine Richtlinie, die ein Master-Passwort erfordert</td>
+</tr>
+<tr>
+<td>Backup-Verschlüsselung</td>
+<td>AES-256 passwortgeschützt ZIP- oder GPG-verschlüsselt (ältere ZIP-verschlüsselte Backups bleiben importierbar)</td>
+</tr>
+<tr>
+<td>JobScheduler-Geheimnisse</td>
+<td>Sudo- und Archivkennwörter verschlüsselt; Journal-Schwärzung standardmäßig aktiviert</td>
+</tr>
+<tr>
+<td>JobScheduler-Hostschlüssel</td>
+<td>Hostschlüssel-Pinning standardmäßig für unbeaufsichtigte SSH-/SFTP-/Rsync-Jobs erforderlich</td>
+</tr>
+<tr>
+<td>Anmeldeinformationen</td>
+<td>Niemals im Klartext gespeichert</td>
+</tr>
+</tbody>
+</table>
+<h2 id="andern-des-master-passworts">Ändern des Master-Passworts<a class="headerlink" href="#andern-des-master-passworts" title="Permanent link">&para;</a></h2>
+<p>So ändern Sie Ihr Master-Passwort (wodurch alle gespeicherten Geheimnisse mit einer neuen Ableitung neu verschlüsselt werden):</p>
+<ol>
+<li>Öffnen Sie <strong>Einstellungen &gt; Sicherheit</strong>.</li>
+<li>Klicken Sie auf <strong>Master-Passwort ändern</strong>.</li>
+<li>Geben Sie Ihr aktuelles (altes) Master-Passwort ein.</li>
+<li>Geben Sie das neue Master-Passwort zweimal ein.</li>
+<li>Jedes Master-Passwort-geschützte Geheimnis wird automatisch mit dem neuen Schlüssel neu verschlüsselt: Verbindungs- und Jump-Server-Passwörter, SSH-Schlüssel-Passphrasen, gespeicherte Anmeldeinformationen, AI-Profil-API-Schlüssel und die globalen AI-/Übersetzungs-/Hugging-Face-Schlüssel, RAG-Wissensspeicher-Geheimnisse und JobScheduler-Sudo-/Archive-Passwörter. Die Änderung erfolgt stufenweise – das neue Passwort wird erst übernommen, wenn alle Filialen migriert wurden, sodass bei einem Fehler auf halbem Weg das alte Passwort in Kraft bleibt. Einzelne Geheimnisse, die nicht migriert werden können, bleiben unberührt, werden in der Ergebnisnachricht gezählt und im Protokoll vermerkt; Geben Sie diese manuell erneut ein.</li>
+</ol>
+<h2 id="konfigurationsdateien-referenz">Konfigurationsdateien-Referenz<a class="headerlink" href="#konfigurationsdateien-referenz" title="Permanent link">&para;</a></h2>
+<p>Alle KorTTY-Daten werden unter <code>~/.kortty/</code> gespeichert. Wichtige sicherheitsrelevante Dateien:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>~/.kortty/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── master.key               # Master password hash and salt (PBKDF2)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── master.autounlock        # Optional auto-login password (obfuscated, owner-only permissions)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── credentials.xml           # Encrypted credentials (AES-256-GCM)
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├── ssh-keys.xml             # SSH key paths and encrypted passphrases
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├── gpg-keys.xml             # GPG keys for backup/export encryption
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>├── connections.xml          # Connection passwords and key passphrases
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>├── ssh-host-keys.properties # Interactive Terminal/SFTP/Mosh host-key pins
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>├── global-settings.xml      # AI API keys and other encrypted settings
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>├── llm/models.xml           # Model paths and typed launch settings (no model contents)
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>├── llm/runtime/             # Regenerable native packages; excluded from backup
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>├── llm/catalog/             # Regenerable signed-catalog cache; excluded from backup
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>├── llm/run/                 # Temporary per-process API keys/logs; excluded from backup
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>├── rag/stores.json          # Knowledge-store/source configuration
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>├── rag/stores/              # Regenerable HNSW snapshots; excluded from backup
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>├── job-scheduler.xml        # JobScheduler sudo/archive passwords (encrypted)
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>├── kortty.log               # Application log
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>└── history/                 # Compressed terminal session history
+</span></code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      
+
+
+<div class="md-copyright">
+  <div class="md-copyright__highlight">MIT-lizenziert · Entwickelt von Daniel Mengel</div>
+  <div class="md-copyright__highlight">
+    korTTY <strong>v2.15.0</strong>
+  </div>
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/chardonnay/korTTY" target="_blank" rel="noopener" title="korTTY on GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.tracking", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../assets/javascripts/kt-zoom.js"></script>
+      
+    
+  </body>
+</html>

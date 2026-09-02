@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Snippet editor and Mermaid diagram workflow</title>
+  <desc id="desc">Flow from the Monaco snippet editor through a full-analysis request plus a separate dedicated diagram request (or the local Mermaid fallback), the secure centralized renderer, the shared viewer and exports, and snippet persistence; applying selected analysis results keeps the report open beside a docked progress checklist, uses one atomic stage per analysis item plus bounded hardening batches, permits one targeted repair attempt for an incomplete stage, and opens one final preview only after every stage passes validation.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#67e8f9"/>
+    </marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#e6f3ff;font-size:16px}
+      .bg{fill:#07111d}
+      .grid{stroke:#14243a;stroke-width:1}
+      .panel{fill:#0d1a2b;stroke:#263f5c;stroke-width:2;rx:18}
+      .header{fill:#14243a;rx:18}
+      .box{fill:#13243a;stroke:#38bdf8;stroke-width:2;rx:10}
+      .editor{stroke:#60a5fa}
+      .ai{stroke:#a78bfa}
+      .render{stroke:#34d399}
+      .secure{stroke:#f59e0b}
+      .state{stroke:#fb7185}
+      .title{font-size:30px;font-weight:700;fill:#f8fafc}
+      .subtitle{font-size:14px;fill:#b9c8da}
+      .panelTitle{font-size:18px;font-weight:700;fill:#7dd3fc}
+      .label{font-size:15px;font-weight:700;fill:#f8fafc}
+      .detail{font-size:12px;fill:#b9c8da}
+      .note{font-size:13px;fill:#93a8bd}
+      .line{stroke:#67e8f9;stroke-width:2.2;fill:none;marker-end:url(#arrow)}
+      .dash{stroke:#64748b;stroke-width:1.8;stroke-dasharray:7 6;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1280" height="720"/>
+  <path class="grid" d="M 0 120 H 1280 M 0 240 H 1280 M 0 360 H 1280 M 0 480 H 1280 M 0 600 H 1280 M 160 0 V 720 M 320 0 V 720 M 480 0 V 720 M 640 0 V 720 M 800 0 V 720 M 960 0 V 720 M 1120 0 V 720" opacity="0.25"/>
+
+  <text class="title" x="42" y="52">Snippet Editor + Mermaid Workflow</text>
+  <text class="subtitle" x="42" y="80">The full-analysis request returns the report; a separate diagram-only request supplies the Mermaid source for the secure shared renderer.</text>
+
+  <rect class="panel" x="35" y="125" width="270" height="380"/>
+  <rect class="header" x="35" y="125" width="270" height="50"/>
+  <text class="panelTitle" x="62" y="157">1. Editor surface</text>
+  <rect class="box editor" x="65" y="198" width="210" height="54"/>
+  <text class="label" x="104" y="222">Monaco code area</text>
+  <text class="detail" x="96" y="241">snippet or SFTP file mode</text>
+  <rect class="box editor" x="65" y="274" width="210" height="54"/>
+  <text class="label" x="103" y="298">Local editor tools</text>
+  <text class="detail" x="90" y="317">format, syntax, ruler, profiles</text>
+  <rect class="box ai" x="65" y="350" width="210" height="54"/>
+  <text class="label" x="108" y="371">AI text + code</text>
+  <text class="detail" x="89" y="389">selected natural language</text>
+  <text class="detail" x="91" y="402">temporary or remembered</text>
+  <rect class="box state" x="65" y="426" width="210" height="54"/>
+  <text class="label" x="106" y="450">Snippet lifecycle</text>
+  <text class="detail" x="88" y="469">save, reopen, stale detection</text>
+
+  <rect class="panel" x="350" y="125" width="270" height="380"/>
+  <rect class="header" x="350" y="125" width="270" height="50"/>
+  <text class="panelTitle" x="377" y="157">2. Two AI requests</text>
+  <rect class="box ai" x="380" y="198" width="210" height="70"/>
+  <text class="label" x="424" y="222">Analysis request</text>
+  <text class="detail" x="401" y="242">summary + deps + improvements</text>
+  <text class="detail" x="422" y="258">report data only</text>
+  <rect class="box ai" x="380" y="291" width="210" height="70"/>
+  <text class="label" x="426" y="315">Diagram request</text>
+  <text class="detail" x="402" y="335">dedicated, same as Regenerate</text>
+  <text class="detail" x="399" y="351">flowchart TD + code references</text>
+  <rect class="box secure" x="380" y="384" width="210" height="70"/>
+  <text class="label" x="412" y="408">Local fallback</text>
+  <text class="detail" x="406" y="428">same dialect without AI</text>
+  <text class="detail" x="397" y="444">used when Mermaid is unusable</text>
+
+  <rect class="panel" x="665" y="125" width="270" height="380"/>
+  <rect class="header" x="665" y="125" width="270" height="50"/>
+  <text class="panelTitle" x="692" y="157">3. Central renderer</text>
+  <rect class="box secure" x="695" y="198" width="210" height="70"/>
+  <text class="label" x="725" y="222">Safety preflight</text>
+  <text class="detail" x="713" y="242">source, edge and URL limits</text>
+  <text class="detail" x="723" y="258">strict Mermaid security</text>
+  <rect class="box render" x="695" y="291" width="210" height="70"/>
+  <text class="label" x="718" y="315">MermaidRenderService</text>
+  <text class="detail" x="716" y="335">serialized lazy WebView</text>
+  <text class="detail" x="707" y="351">parse + render + node bounds</text>
+  <rect class="box render" x="695" y="384" width="210" height="70"/>
+  <text class="label" x="732" y="408">Safe output</text>
+  <text class="detail" x="718" y="428">sanitized SVG + Canvas PNG</text>
+  <text class="detail" x="711" y="444">theme and background included</text>
+
+  <rect class="panel" x="980" y="125" width="265" height="380"/>
+  <rect class="header" x="980" y="125" width="265" height="50"/>
+  <text class="panelTitle" x="1007" y="157">4. View + export</text>
+  <rect class="box render" x="1008" y="198" width="209" height="70"/>
+  <text class="label" x="1041" y="222">Shared viewer</text>
+  <text class="detail" x="1027" y="242">standalone + full analysis</text>
+  <text class="detail" x="1037" y="258">JavaScript disabled</text>
+  <rect class="box editor" x="1008" y="291" width="209" height="70"/>
+  <text class="label" x="1045" y="315">Interaction</text>
+  <text class="detail" x="1033" y="335">zoom, fit, dark, background</text>
+  <text class="detail" x="1029" y="351">node hover → source lines</text>
+  <rect class="box state" x="1008" y="384" width="209" height="70"/>
+  <text class="label" x="1053" y="408">Exports</text>
+  <text class="detail" x="1024" y="428">SVG, PNG, clipboard image</text>
+  <text class="detail" x="1026" y="444">PDF, HTML and Markdown</text>
+
+  <path class="line" d="M 305 377 H 350"/>
+  <path class="line" d="M 620 326 H 665"/>
+  <path class="line" d="M 935 326 H 980"/>
+
+  <rect class="panel" x="135" y="555" width="1010" height="105"/>
+  <rect class="box state" x="175" y="580" width="285" height="54"/>
+  <text class="label" x="214" y="604">snippets.xml persistence</text>
+  <text class="detail" x="204" y="623">mermaidSource + instructions + hash</text>
+  <rect class="box secure" x="500" y="580" width="285" height="54"/>
+  <text class="label" x="542" y="604">Upgrade compatibility</text>
+  <text class="detail" x="519" y="623">discard legacy diagram only; keep snippet</text>
+  <rect class="box render" x="825" y="580" width="285" height="54"/>
+  <text class="label" x="872" y="604">Renderer lifecycle</text>
+  <text class="detail" x="849" y="623">cancel/timeout resets; idle releases WebView</text>
+  <path class="dash" d="M 1113 505 V 555"/>
+  <path class="dash" d="M 170 505 V 540 H 318 V 580"/>
+
+  <text class="note" x="42" y="694">Reports use UI language; returned code uses text language. Apply keeps a docked checklist with time/tokens/checkmarks, then opens one final preview.</text>
+</svg>
