@@ -1,0 +1,1563 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+
+<head>
+        <title>Richtlinienkonfiguration - korTTY Anleitung</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link rel="canonical" href="https://chardonnay.github.io/korTTY/guide/de/reference/enterprise-policy.html">
+        <meta name="author" content="korTTY">
+        <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+        <link href="../assets/stylesheets/kortty.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
+
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+            <img class="logo" src="../assets/images/favicon.png" height="150px">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">korTTY Anleitung</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../index.html"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Startseite
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#erste-schritte-collapse" aria-expanded="false">
+                    Erste Schritte
+                </a>
+                <div class="collapse" id="erste-schritte-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/installation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Installation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/building-packages.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KorTTY-Pakete erstellen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/first-launch.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Erster Start – Master-Passwort
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/main-window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Main window overview
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover"
+                    data-bs-toggle="collapse" data-bs-target="#referenz-collapse" aria-expanded="true">
+                    Referenz
+                </a>
+                <div class="collapse show" id="referenz-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="menu.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Menüreferenz
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="keyboard-shortcuts.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tastaturkürzel
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="architecture.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architektur
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="config-files.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Konfigurationsdateien
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="enterprise-policy.html"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Richtlinienkonfiguration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="control-api.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Steuerungs-API
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="cli.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Steuerungs-CLI
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#einstellungen-collapse" aria-expanded="false">
+            Einstellungen
+        </a>
+
+        <div class="collapse" id="einstellungen-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Einstellungsreferenz
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/appearance.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Aussehen, Themen und Schriftart
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/colors.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Farben
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Fenster
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/resources.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Ressourcen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/logging.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Protokollierung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/export.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Export
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/updates.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Aktualisierungen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherheit
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/language.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprache
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/translation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Übersetzung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/video.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Video
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/ai.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/ai-skills.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Fähigkeiten
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP-Manager
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/editor.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#snippet-editor-collapse" aria-expanded="false">
+            Snippet-Editor
+        </a>
+
+        <div class="collapse" id="snippet-editor-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/snippet-editor/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet-Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="hardening-options.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Härtungsoptionen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="input-hardening.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Eingabe-Härtung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="language-migration.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprachvereinigung
+        </a>
+    </li>
+            </ul>
+        </div>
+    </li>
+            </ul>
+        </div>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#funktionen-collapse" aria-expanded="false">
+                    Funktionen
+                </a>
+                <div class="collapse" id="funktionen-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/connections.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verbindungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminalsitzungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/tunnels.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SSH-Tunnel (Portweiterleitung)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/jump-server.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Jump-Server (Bastion Host)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP-Dateimanager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/file-browser.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Dateibrowser
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/snippets.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet-Manager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/jobscheduler.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            JobScheduler
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/projects.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Projekte (Arbeitsbereiche)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/teamwork.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Teamarbeit (gemeinsame Verbindungen)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/ai-assistant.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Assistent
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/local-models.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lokale Modelle (llama.cpp und MLX)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/rag.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            RAG-Wissensspeicher
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/ai-tools.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal-KI-Agent und -Tools
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/ai-swarm.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Schwarm
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherheit – Anmeldeinformationen, Schlüssel und Verschlüsselung
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sichern und wiederherstellen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/recording.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminalaufzeichnung
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/session-journal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sitzungsjournal
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/ascii-art.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            ASCII-Art
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/terminal-effect-plugins.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminaleffekt-Plugins
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/coding-agents.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Coding-Agents
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/i18n.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprachen und dynamische Übersetzung
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#über-kortty-collapse" aria-expanded="false">
+                    Über korTTY
+                </a>
+                <div class="collapse" id="über-kortty-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/release-notes.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Versionshinweise
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/feedback.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Feedback und Support
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/anonymous-data.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Anonyme Daten zur Applikationsoptimierung
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="config-files.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="control-api.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item">
+
+
+
+
+
+<div role="search" class="search-box kt-search">
+	<form id="rtd-search-form" class="wy-form kt-search-form" action="../search.html" method="get">
+		<input type="text" name="q" id="mkdocs-search-query"
+		class="kt-search-input drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Anleitung durchsuchen"
+		autocomplete="off" title="Type search term here" /><button type="button" class="kt-search-clear" hidden
+		        aria-label="Suche zurücksetzen" title="Suche zurücksetzen">&times;</button>
+	</form>
+	<div id="mkdocs-search-results" class="kt-search-suggest"
+	     data-no-results-text="Keine Treffer"
+	     data-preparing-text="Suche wird vorbereitet …"
+	     data-more-text="{n} weitere Treffer anzeigen"></div>
+	<script>
+	  (function () {
+	    var box = document.currentScript.parentNode;
+	    var panel = box.querySelector('.kt-search-suggest');
+	    var input = box.querySelector('#mkdocs-search-query');
+	    var clear = box.querySelector('.kt-search-clear');
+
+	    // Emptying the panel is what hides it (CSS :empty), so closing is just that.
+	    function close () { while (panel.firstChild) { panel.removeChild(panel.firstChild); } }
+	    // The button is only useful once there is something to clear.
+	    function sync () { clear.hidden = !input.value; }
+
+	    input.addEventListener('input', sync);
+	    clear.addEventListener('click', function () {
+	      input.value = '';
+	      sync();
+	      // search/main.js renders on keyup, which a programmatic clear never fires, so
+	      // the panel has to be emptied here or the old hits would outlive the query.
+	      close();
+	      input.focus();
+	    });
+
+	    document.addEventListener('click', function (e) { if (!box.contains(e.target)) { close(); } });
+
+	    // Escape has to be handled on keyUP, and on the document rather than the input.
+	    // search/main.js binds doSearch to the field's keyup, so anything that closed the
+	    // panel on keydown was undone microseconds later by that re-render — which is why
+	    // Escape appeared to do nothing at all. Listening on the document means this runs
+	    // after the field's own handler has already re-rendered, so closing sticks.
+	    // What the panel looked like BEFORE that re-render is the interesting state, so it
+	    // is captured on keydown: the usual two steps, Escape dismisses the suggestions,
+	    // Escape again empties the box.
+	    var panelWasOpen = false;
+	    document.addEventListener('keydown', function (e) {
+	      if (e.key === 'Escape') {
+	        panelWasOpen = !!panel.firstChild;
+	      }
+	    });
+	    document.addEventListener('keyup', function (e) {
+	      if (e.key !== 'Escape') {
+	        return;
+	      }
+	      // Only clear the field while it has focus — Escape elsewhere on the page is not ours.
+	      if (!panelWasOpen && document.activeElement === input && input.value) {
+	        input.value = '';
+	        sync();
+	      }
+	      close();
+	    });
+
+	    sync();  // a ?q= deep link arrives with the field already filled
+	  })();
+	</script>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+<div class="kt-lang-bar">
+  <a class="kt-lang-switch" href="../../en/reference/enterprise-policy.html"
+     title="English" hreflang="en">EN</a>
+</div>
+
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="richtlinienkonfiguration">Richtlinienkonfiguration<a class="headerlink" href="#richtlinienkonfiguration" title="Permanent link">&para;</a></h1>
+<p>In verwalteten Umgebungen kann ein Administrator korTTY über eine einzige TOML-Datei, <code>kortty-policy.toml</code>, die im Installationsverzeichnis abgelegt wird, einschränken oder vorkonfigurieren. Benutzer können es nicht ändern oder umgehen: Die Datei wird nur aus dem vom Administrator beschreibbaren Installationsordner gelesen, gesperrte Einstellungen werden ausgegraut mit dem Hinweis „Von Ihrer Organisation verwaltet“ angezeigt und die manuelle Bearbeitung von <code>global-settings.xml</code> wird beim nächsten Laden rückgängig gemacht. In diesem Kapitel wird erläutert, wo sich die Datei befindet, wie Regeln auf Benutzer, Gruppen und Server abzielen und alle verfügbaren Parameter anhand von Beispielen dokumentiert werden.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ohne <code>kortty-policy.toml</code> ändert sich nichts – korTTY verhält sich genauso wie zuvor. Bei der ausgelieferten Vorlage <code>policy/kortty-policy.toml.example</code> handelt es sich um eine vollständig kommentierte Vorlage, bei der alles deaktiviert ist.</p>
+</div>
+<h2 id="dateispeicherort-und-sicherheitsmodell">Dateispeicherort und Sicherheitsmodell<a class="headerlink" href="#dateispeicherort-und-sicherheitsmodell" title="Permanent link">&para;</a></h2>
+<p>korTTY lädt die Richtlinie ausschließlich aus dem Ordner <code>policy/</code> seines Installationsverzeichnisses – dem Ordner, der auch die Anwendungs-JAR-Datei enthält – und niemals aus <code>~/.kortty/</code> oder einem anderen vom Benutzer beschreibbaren Speicherort. Eine kopierfertige Vorlage wird als <code>policy/kortty-policy.toml.example</code> geliefert; Kopieren Sie es nach <code>kortty-policy.toml</code> im selben Ordner und starten Sie korTTY neu (es gibt kein Hot-Reload).</p>
+<table>
+<thead>
+<tr>
+<th>Plattform</th>
+<th>Speicherort der Richtliniendatei</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>macOS</td>
+<td><code>/Applications/KorTTY.app/Contents/app/policy/kortty-policy.toml</code></td>
+</tr>
+<tr>
+<td>Windows</td>
+<td><code>C:\Program Files\KorTTY\app\policy\kortty-policy.toml</code></td>
+</tr>
+<tr>
+<td>Linux (deb/rpm)</td>
+<td><code>/opt/kortty/lib/app/policy/kortty-policy.toml</code></td>
+</tr>
+</tbody>
+</table>
+<p>Das Durchsetzungsmodell basiert auf den Dateiberechtigungen des Betriebssystems: Das Installationsverzeichnis darf nur von Administratoren beschreibbar sein, was für die oben genannten Speicherorte die Standardeinstellung ist. korTTY protokolliert zusätzlich eine Warnung, wenn die aktive Richtliniendatei vom aktuellen Benutzer beschreibbar ist. Während der Entwicklung (niemals in einer Paketinstallation) kann eine Richtlinie mit <code>-Dkortty.policy.file=/path/to/policy.toml</code> getestet werden.</p>
+<p>Wenn die Datei existiert, aber nicht geparst werden kann oder einen ungültigen Wert enthält, startet korTTY mit einer ausfallsicheren Sperre: Alle durch Richtlinien steuerbaren Funktionen werden verweigert, keine Serververbindung ist erlaubt und ein Startdialog benennt die Datei und die genaue Fehlerposition. Ein Tippfehler kann daher niemals stillschweigend die Durchsetzung verhindern. Eine ungültige Regel lehnt die gesamte Datei ab; Unbekannte Schlüssel erzeugen nur Protokollwarnungen, daher sperrt eine für ein neueres korTTY geschriebene Richtlinie Benutzer einer älteren Version nicht aus.</p>
+<h2 id="benutzer-gruppen-und-regelprioritat">Benutzer, Gruppen und Regelpriorität<a class="headerlink" href="#benutzer-gruppen-und-regelprioritat" title="Permanent link">&para;</a></h2>
+<p>Regeln zielen auf den aktuellen Anmeldenamen des Betriebssystems ab (entspricht Kleinbuchstaben). Die Gruppenmitgliedschaft stammt aus zwei Quellen gleichzeitig: Gruppen, die in der Tabelle <code>[groups]</code> der Richtlinie definiert sind, und den Gruppenmitgliedschaften des Benutzers auf Betriebssystemebene. Auf in die Domäne eingebundenen Windows-Computern umfassen die Betriebssystemgruppen Active Directory-Gruppen, sodass Regeln direkt auf AD-Gruppen abzielen können – sowohl vollständig qualifiziert (<code>ACME\Operations</code>) als auch als bloßer Name (<code>operations</code>) – ohne dass eine Verzeichnisserverkonfiguration erforderlich ist.</p>
+<p>Jeder <code>[[rule]]</code>-Block benennt optional <code>users</code> und/oder <code>groups</code>; Eine Regel, die keine Benennung vornimmt, gilt für jeden Benutzer. Pro Einstellung gewinnt die spezifischste Stufe, die sie festlegt: <strong>Benutzer schlägt Gruppe schlägt alle</strong>. Das ist das bekannte Gruppenrichtlinienmuster: Sperren Sie alles in einer Grundregel für alle und lockern Sie dann die individuellen Einstellungen für eine vertrauenswürdige Gruppe. Wenn mehrere Regeln derselben Ebene denselben Schlüssel festlegen, gilt der restriktivste Wert (<code>deny</code> über <code>read-only</code> über <code>confirm</code> über <code>allow</code>); Gemäß den Serverregeln muss eine Verbindung alle geltenden Einschränkungen der Gewinnerstufe erfüllen. Die Reihenfolge der Regeln in der Datei hat keine Bedeutung.</p>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">[meta]</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">schema-version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">organization</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ACME Corp"</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">[groups]</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">devs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"alice"</span><span class="p">,</span><span class="w"> </span><span class="s2">"bob"</span><span class="p">]</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">[[rule]]</span><span class="w">                              </span><span class="c1"># applies to ALL users</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"company-baseline"</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="k">[rule.features]</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="n">ai-agent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"deny"</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="k">[[rule]]</span><span class="w">                              </span><span class="c1"># group tier: relaxes the baseline for ops</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ops-exception"</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">groups</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"ops"</span><span class="p">,</span><span class="w"> </span><span class="s2">"ACME</span><span class="se">\\</span><span class="s2">Operations"</span><span class="p">]</span><span class="w">  </span><span class="c1"># policy group OR OS/AD group</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="k">[rule.features]</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="n">ai-agent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"allow"</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="n">ai-agent-execution</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"confirm"</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="k">[[rule]]</span><span class="w">                              </span><span class="c1"># user tier: beats eve's group</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"eve"</span><span class="p">]</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="k">[rule.features]</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="n">ai-agent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"deny"</span>
+</span></code></pre></div>
+<h2 id="server-zugriffskontrolle">Server-Zugriffskontrolle<a class="headerlink" href="#server-zugriffskontrolle" title="Permanent link">&para;</a></h2>
+<p>Die <code>[rule.servers]</code>-Tabelle schränkt ein, zu welchen Servern ein Benutzer eine Verbindung herstellen darf – als Zulassungsliste (<code>mode = "allow"</code>: nur aufgelistete Server sind erreichbar) oder als Sperrliste (<code>mode = "deny"</code>: aufgelistete Server sind blockiert). Die Einschränkung wird zentral für jeden Verbindungspfad durchgesetzt: gespeicherte Verbindungen, QuickConnect, Sitzungswiederherstellung, SFTP, von Teamwork freigegebene Verbindungen, KI-Schwarmziele und geplante Jobs, einschließlich des Jump-Hosts einer Verbindung. Blockierte Verbindungen bleiben im Verbindungsmanager sichtbar, werden jedoch mit einer Sperrmarkierung ausgegraut und bei jedem Verbindungsversuch wird eine eindeutige Richtlinienmeldung angezeigt.</p>
+<p>Muster stimmen genau mit der Hostzeichenfolge überein, wie sie in der Verbindung konfiguriert ist – korTTY löst DNS nie für Richtlinienprüfungen auf, daher sind Hostnamen und IP-Adressen separate Namespaces: Wenn ein Server in beide Richtungen erreichbar ist, listen Sie beide auf.</p>
+<table>
+<thead>
+<tr>
+<th>Musterform</th>
+<th>Beispiel</th>
+<th>Entspricht</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Genauer Hostname</td>
+<td><code>db01.acme.com</code></td>
+<td>dieser Host, ohne Berücksichtigung der Groß-/Kleinschreibung, jeder Port</td>
+</tr>
+<tr>
+<td>Hostname-Glob</td>
+<td><code>*.prod.acme.com</code>, <code>web-??.acme.com</code></td>
+<td><code>*</code> = beliebige Zeichen, <code>?</code> = ein Zeichen</td>
+</tr>
+<tr>
+<td>Host mit Port</td>
+<td><code>vault.acme.com:22</code></td>
+<td>nur Verbindungen zu diesem Port</td>
+</tr>
+<tr>
+<td>Einzelne IP-Adresse</td>
+<td><code>192.168.10.42</code>, <code>2001:db8::1</code></td>
+<td>, die Adresse (IPv4 oder IPv6)</td>
+</tr>
+<tr>
+<td>IP mit Port</td>
+<td><code>192.168.10.42:22</code>, <code>[2001:db8::1]:22</code></td>
+<td>IPv6-Ports erfordern die Halterungsform</td>
+</tr>
+<tr>
+<td>CIDR-Netzwerk</td>
+<td><code>10.99.0.0/16</code>, <code>2001:db8::/32</code></td>
+<td>jede Adresse im Netzwerk</td>
+</tr>
+<tr>
+<td>IP-Bereich</td>
+<td><code>10.20.0.100-10.20.0.199</code></td>
+<td>inklusive Von–Bis-Bereich</td>
+</tr>
+</tbody>
+</table>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">[[rule]]</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="k">[rule.servers]</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="n">mode</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s2">"deny"</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="n">hosts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"*.prod.acme.com"</span><span class="p">,</span><span class="w"> </span><span class="s2">"vault.acme.com:22"</span><span class="p">,</span><span class="w"> </span><span class="s2">"192.168.10.42"</span><span class="p">,</span><span class="w"> </span><span class="s2">"10.99.0.0/16"</span><span class="p">,</span><span class="w"> </span><span class="s2">"10.20.0.100-10.20.0.199"</span><span class="p">]</span>
+</span></code></pre></div>
+<h2 id="parameterreferenz">Parameterreferenz<a class="headerlink" href="#parameterreferenz" title="Permanent link">&para;</a></h2>
+<h3 id="meta"><code>[meta]</code><a class="headerlink" href="#meta" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Schlüssel</th>
+<th>Typ</th>
+<th>Werte</th>
+<th>Erforderlich</th>
+<th>Wirkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>schema-version</code></td>
+<td>ganze Zahl</td>
+<td><code>1</code></td>
+<td>Ja</td>
+<td>Abgelehnt (Sperrung), wenn dieser korTTY die Version nicht versteht</td>
+</tr>
+<tr>
+<td><code>organization</code></td>
+<td>Zeichenfolge</td>
+<td>Freitext</td>
+<td>Nein</td>
+<td>Wird in jedem Hinweis und Dialog „Von Ihrer Organisation verwaltet“ angezeigt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="groups"><code>[groups]</code><a class="headerlink" href="#groups" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Schlüssel</th>
+<th>Typ</th>
+<th>Wirkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;group-name&gt;</code></td>
+<td>Array von Benutzernamen</td>
+<td>Definiert eine Richtliniengruppe; Regeln, die auf den Namen verweisen, zielen auf seine Mitglieder ab. OS/AD-Gruppen passen automatisch zusammen und benötigen hier keinen Eintrag</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rule-bereich"><code>[[rule]]</code> Bereich<a class="headerlink" href="#rule-bereich" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Schlüssel</th>
+<th>Typ</th>
+<th>Wirkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>Zeichenfolge</td>
+<td>Optionale Bezeichnung, die in Protokollnachrichten verwendet wird</td>
+</tr>
+<tr>
+<td><code>users</code></td>
+<td>Array von Benutzernamen</td>
+<td>Zielt auf die aufgelisteten Betriebssystem-Anmeldenamen (Benutzerebene)</td>
+</tr>
+<tr>
+<td><code>groups</code></td>
+<td>Array von Gruppennamen</td>
+<td>Zielt auf Mitglieder von Richtliniengruppen und/oder OS/AD-Gruppen (Gruppenebene) ab; Eine Regel mit weder <code>users</code> noch <code>groups</code> gilt für alle</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ruleservers"><code>[rule.servers]</code><a class="headerlink" href="#ruleservers" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Schlüssel</th>
+<th>Typ</th>
+<th>Werte</th>
+<th>Wirkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mode</code></td>
+<td>Zeichenfolge</td>
+<td><code>allow</code>, <code>deny</code></td>
+<td>Semantik der Zulassungs- oder Ablehnungsliste für <code>hosts</code></td>
+</tr>
+<tr>
+<td><code>hosts</code></td>
+<td>Array von Mustern</td>
+<td>siehe Tabelle oben</td>
+<td>Nicht leere Liste von Servermustern</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rulefeatures"><code>[rule.features]</code><a class="headerlink" href="#rulefeatures" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Schlüssel</th>
+<th>Typ</th>
+<th>Werte</th>
+<th>Beschränkt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ai</code></td>
+<td>Zeichenfolge</td>
+<td><code>allow</code>, <code>deny</code></td>
+<td>Hauptschalter: <code>deny</code> deaktiviert alle AI-Funktionen auf einmal.</td>
+</tr>
+<tr>
+<td><code>ai-agent</code></td>
+<td>Zeichenfolge</td>
+<td><code>allow</code>, <code>deny</code></td>
+<td>AI Agent (Menü, Terminal-Kontextmenü, Tastaturkürzel, Headless-Job-Ausführungen)</td>
+</tr>
+<tr>
+<td><code>ai-chat</code></td>
+<td>Zeichenfolge</td>
+<td><code>allow</code>, <code>deny</code></td>
+<td>KI-Chat, gespeicherte Chats und die Terminalauswahl-KI-Aktionen</td>
+</tr>
+<tr>
+<td><code>ai-swarm</code></td>
+<td>Zeichenfolge</td>
+<td><code>allow</code>, <code>deny</code></td>
+<td>KI-Schwarm, einschließlich geplanter Schwarmjobs</td>
+</tr>
+<tr>
+<td><code>ai-planning</code></td>
+<td>Zeichenfolge</td>
+<td><code>allow</code>, <code>deny</code></td>
+<td>AI-Planung</td>
+</tr>
+<tr>
+<td><code>teamwork</code></td>
+<td>Zeichenfolge</td>
+<td><code>allow</code>, <code>deny</code></td>
+<td>Synchronisierung freigegebener Teamwork-Verbindungen (Dienst ist nicht gestartet, Menü gesperrt)</td>
+</tr>
+<tr>
+<td><code>plugins</code></td>
+<td>Zeichenfolge</td>
+<td><code>allow</code>, <code>deny</code></td>
+<td>Laden des Plugins und Plugins-Menü (z. B. Terminaleffekte)</td>
+</tr>
+<tr>
+<td><code>session-journal</code></td>
+<td>Zeichenfolge</td>
+<td><code>allow</code>, <code>deny</code></td>
+<td>The <a href="../features/session-journal.html">session journal</a>: Erfassung, Journalleiste, Manager, Viewer und Exporte. Nicht angekettet <code>ai</code> – Auch wenn die KI verweigert wird, zeichnet das Journal immer noch Rohaktivitäten auf</td>
+</tr>
+<tr>
+<td><code>control-api</code></td>
+<td>Zeichenfolge</td>
+<td><code>allow</code>, <code>deny</code></td>
+<td>Die <a href="control-api.html">Steuerungs-API</a> und ihr Client <code>kortty-cli</code>: <code>deny</code> beendet den Listener, sperrt das Kontrollkästchen in den Einstellungen und erzwingt die Einstellung aus. Nicht an <code>ai</code> gekoppelt – die API ist lokale Automatisierung, keine KI-Funktion</td>
+</tr>
+<tr>
+<td><code>ai-agent-execution</code></td>
+<td>Zeichenfolge</td>
+<td><code>allow</code>, <code>confirm</code>, <code>read-only</code></td>
+<td><code>confirm</code> erzwingt die interaktive Genehmigung jedes mutierenden Befehlssatzes und deaktiviert die Option zur automatischen Genehmigung; <code>read-only</code> lässt den Agenten planen und chatten, aber niemals Befehle ausführen</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Eine genannte Funktion wird übernommen, egal wie entschieden</p>
+<p>Eine Richtliniendatei, die einen Schlüssel erwähnt, sperrt das zugehörige Bedienelement – und zwar in der Stellung, die die Richtlinie gewählt hat. <code>control-api = "allow"</code> sperrt das Kontrollkästchen also <strong>eingeschaltet</strong>; Benutzer können die API dann nicht mehr selbst abschalten. Lassen Sie den Schlüssel ganz weg, um die Wahl beim Benutzer zu belassen, und schreiben Sie <code>deny</code>, um sie zu entziehen.</p>
+</div>
+<h3 id="rulesecurity"><code>[rule.security]</code><a class="headerlink" href="#rulesecurity" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Schlüssel</th>
+<th>Typ</th>
+<th>Werte</th>
+<th>Wirkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>require-master-password</code></td>
+<td>boolean</td>
+<td><code>true</code></td>
+<td>Erzwingt das Master-Passwort-Gate beim Start; Die Einstellung ist gesperrt</td>
+</tr>
+<tr>
+<td><code>enforce-host-key-check</code></td>
+<td>boolean</td>
+<td><code>true</code></td>
+<td>Die Überprüfung des SSH-Hostschlüssels kann nirgendwo deaktiviert werden – global, pro Gruppe oder pro Verbindung</td>
+</tr>
+<tr>
+<td><code>allow-telemetry</code></td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>Verbietet anonyme Nutzungsstatistiken</td>
+</tr>
+<tr>
+<td><code>allow-terminal-recording</code></td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>Verbietet die Aufzeichnung von Terminalsitzungen, einschließlich der Umschaltung auf Sitzungsebene</td>
+</tr>
+<tr>
+<td><code>clipboard-mode</code></td>
+<td>Zeichenfolge</td>
+<td><code>system</code>, <code>internal</code></td>
+<td><code>internal</code> beschränkt korTTY auf seine eigene Zwischenablage im Speicher – siehe unten</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ruleteamwork-rulesnippets-ruleai-profiles"><code>[rule.teamwork]</code>, <code>[rule.snippets]</code>, <code>[rule.ai-profiles]</code><a class="headerlink" href="#ruleteamwork-rulesnippets-ruleai-profiles" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Schlüssel</th>
+<th>Typ</th>
+<th>Werte</th>
+<th>Wirkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>allow-custom-sources</code></td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>Benutzer können keine Teamwork-Quellen hinzufügen; Es verbleiben nur die Einträge <code>[[teamwork-source]]</code> und</td>
+</tr>
+<tr>
+<td><code>allow-custom-script-headers</code></td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>Benutzer können keine Skript-Header erstellen; Es verbleiben nur die Einträge <code>[[script-header]]</code> und</td>
+</tr>
+<tr>
+<td><code>allow-create</code></td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>Benutzer können keine AI-Profile erstellen (Schaltflächen und Assistent sind gesperrt)</td>
+</tr>
+<tr>
+<td><code>allow-edit</code></td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>Benutzer können ihre vorhandenen AI-Profile auch nicht bearbeiten</td>
+</tr>
+<tr>
+<td><code>allow-internet</code></td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>Verbietet jeden KI-Internetzugriffsmodus – siehe unten</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title"><code>allow-internet = false</code> unterbindet den KI-Internetzugriff auf drei Ebenen</p>
+<p>Im Dropdown-Menü <a href="settings/ai.html#internetzugriffsmodi">internet access</a> eines AI-Profils wird ein ausgewählt
+Backend für Websuche oder MCP-Browsing. Das Verbot wird an drei Stellen durchgesetzt, weil eine
+einzelne eine Lücke ließe:</p>
+<ol>
+<li><strong>Gespeicherte Einstellungen</strong> – der Modus jedes Profils wird auf <em>Deaktiviert</em> zurückgesetzt, wenn die Einstellungen geändert werden
+   <em>Deaktiviert</em> zurückgesetzt. So überlebt weder ein Wert aus der Zeit vor der Richtlinie noch
+   eine Handänderung an <code>global-settings.xml</code>.</li>
+<li><strong>Die Schnittstelle</strong> – das Dropdown-Menü ist mit dem Hinweis „Von Ihrer Organisation verwaltet“ gesperrt
+   sowohl den KI-Manager als auch <strong>Einstellungen → AI</strong>.</li>
+<li><strong>Jede AI-Anfrage</strong> – korTTY weigert sich, einen Dienst für ein Profil zu erstellen, dessen Modus aktiviert ist,
+   und schließt damit das Zeitfenster zwischen zwei Klemmungen. Die Anfrage scheitert mit einer
+   Richtlinienmeldung, statt still ohne das angeforderte Web-Werkzeug zu antworten.</li>
+</ol>
+<p>Dies betrifft ausschließlich die Such-Backends. Ein <em>Cloud</em>-KI-Profil wird dadurch nicht daran
+eigener Anbieter – verweigern Sie dazu die <code>ai</code>-Funktion oder stellen Sie an dieser Stelle <code>[[ai-profile]]</code>-Einträge bereit
+stellen <code>[[ai-profile]]</code>-Einträge bereit, die auf einen internen Endpunkt zeigen.</p>
+</div>
+<h3 id="ruleai-runtime"><code>[rule.ai-runtime]</code><a class="headerlink" href="#ruleai-runtime" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Schlüssel</th>
+<th>Typ</th>
+<th>Werte</th>
+<th>Wirkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>allow-runtime-downloads</code></td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>Keine llama.cpp/MLX-Laufzeit-Downloads oder Update-Prüfungen</td>
+</tr>
+<tr>
+<td><code>allow-model-downloads</code></td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>Der Browser und die Downloads des Hugging Face-Modells sind deaktiviert</td>
+</tr>
+<tr>
+<td><code>allow-user-models</code></td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>Nur vom Administrator bereitgestellte <code>[[ai-runtime.model]]</code>-Einträge können von eingebetteten AI-Profilen geladen werden</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ruleupdates"><code>[rule.updates]</code><a class="headerlink" href="#ruleupdates" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Schlüssel</th>
+<th>Typ</th>
+<th>Werte</th>
+<th>Wirkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enabled</code></td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>Deaktiviert die automatische Update-Prüfung und die manuelle Prüfung im Info-Dialog</td>
+</tr>
+<tr>
+<td><code>feed-url</code></td>
+<td>Zeichenfolge</td>
+<td>http(s)-URL</td>
+<td>Aktualisierungsprüfungen fragen diesen Endpunkt anstelle von GitHub ab; Es muss dieselbe JSON-Form zurückgeben wie die GitHub <code>releases/latest</code>-API (<code>tag_name</code>, <code>assets[]</code> mit <code>name</code> und <code>browser_download_url</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ruleterminal"><code>[rule.terminal]</code><a class="headerlink" href="#ruleterminal" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Schlüssel</th>
+<th>Typ</th>
+<th>Werte</th>
+<th>Wirkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>load-into-snippet-editor</code></td>
+<td>Zeichenfolge</td>
+<td><code>allow</code>, <code>read-only</code>, <code>deny</code></td>
+<td><code>read-only</code> Lädt weiterhin entfernte Dateien in den Snippet-Editor, verbietet jedoch das Zurückschreiben in das Zielsystem; <code>deny</code> entfernt die Funktion vollständig</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rulelogging"><code>[rule.logging]</code><a class="headerlink" href="#rulelogging" title="Permanent link">&para;</a></h3>
+<p>korTTY rotiert sein Protokoll täglich (<code>kortty.YYYY-MM-DD.log</code>); Diese Tabelle steuert, wohin die Dateien gehen, wie lange sie leben, wie sie formatiert sind und wie die Rotation begrenzt wird. Verzeichnis und Aufbewahrung werden in die entsprechenden (dann gesperrten) Benutzereinstellungen gezwungen; Format, Komprimierung und die Rotationsbeschränkungen haben keine Benutzereinstellung und wirken direkt. Die Konfiguration wird vor der allerersten Protokollzeile eines Starts angewendet, sodass auch die Startprotokollierung dem Schema des Administrators folgt.</p>
+<table>
+<thead>
+<tr>
+<th>Schlüssel</th>
+<th>Typ</th>
+<th>Werte</th>
+<th>Wirkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>directory</code></td>
+<td>Zeichenfolge</td>
+<td>absoluter oder <code>~/</code>-relativer Pfad</td>
+<td>Protokollverzeichnis (Standard <code>~/.kortty/logs</code>); Die Einstellung ist gesperrt</td>
+</tr>
+<tr>
+<td><code>retention-days</code></td>
+<td>Ganzzahl</td>
+<td><code>0</code> = für immer behalten</td>
+<td>Rotierte Protokolle, die älter als N Tage sind, werden gelöscht; Die Einstellung ist gesperrt</td>
+</tr>
+<tr>
+<td><code>compress</code></td>
+<td>boolean</td>
+<td>Standard <code>true</code></td>
+<td>Gzip rotierte Protokolle nach einem Tag</td>
+</tr>
+<tr>
+<td><code>format</code></td>
+<td>Zeichenfolge</td>
+<td><code>text</code>, <code>json</code></td>
+<td><code>json</code> schreibt ein strukturiertes JSON-Objekt pro Ereignis (Logback-JSON-Encoder – praktisch für SIEM/zentrale Protokollerfassung)</td>
+</tr>
+<tr>
+<td><code>rotation-max-files</code></td>
+<td>Ganzzahl</td>
+<td><code>0</code> = unbegrenzt</td>
+<td>Behalten Sie höchstens N rotierte tägliche Dateien bei</td>
+</tr>
+<tr>
+<td><code>rotation-total-size-mb</code></td>
+<td>Ganzzahl</td>
+<td><code>0</code> = nicht begrenzt</td>
+<td>Begrenzen Sie die Gesamtgröße aller gedrehten Dateien (älteste zuerst gelöscht)</td>
+</tr>
+</tbody>
+</table>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">[[rule]]</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="k">[rule.logging]</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="n">directory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"/var/log/kortty"</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="n">retention-days</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="n">compress</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="n">format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"json"</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="n">rotation-max-files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">14</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="n">rotation-total-size-mb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">512</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Wenn mehrere gleichstufige Regeln die Protokollierung konfigurieren, wird jeder Schlüssel separat aufgelöst: kürzere Aufbewahrung und engere Obergrenzen gewinnen, Komprimierung gewinnt, <code>json</code> gewinnt gegenüber <code>text</code>. In der Praxis fassen Sie die Protokollierungskonfiguration in einer einzigen Regel für alle Benutzer zusammen. Das ausgewählte Verzeichnis muss für den Benutzer, der korTTY ausführt, beschreibbar sein.</p>
+</div>
+<h3 id="rulesession-journal"><code>[rule.session-journal]</code><a class="headerlink" href="#rulesession-journal" title="Permanent link">&para;</a></h3>
+<p>Mandate für das <a href="../features/session-journal.html">Sitzungsjournal</a>. Erzwungene Werte sperren die entsprechenden Steuerelemente in den Journaloptionen, im Einstellungsdialog und im Verbindungseditor mit dem Hinweis „Von Ihrer Organisation verwaltet“.</p>
+<table>
+<thead>
+<tr>
+<th>Schlüssel</th>
+<th>Typ</th>
+<th>Werte</th>
+<th>Wirkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enforced</code></td>
+<td>Boolescher Wert</td>
+<td><code>true</code></td>
+<td>Für <strong>jede</strong> Verbindung wird ein Journal geschrieben, unabhängig von der verbindungsspezifischen Einstellung; Benutzer können es nicht stoppen und der Aktivierungsschalter ist gesperrt</td>
+</tr>
+<tr>
+<td><code>log-format</code></td>
+<td>Zeichenfolge</td>
+<td><code>json</code> (Standard), <code>xml</code>, <code>yaml</code></td>
+<td>Erzwingt das Capture-Log-Format für neue Journale</td>
+</tr>
+<tr>
+<td><code>ai-max-lines</code></td>
+<td>Ganzzahl</td>
+<td><code>0</code> = Kontextfüllung</td>
+<td>Erzwingt das KI-Auswertungsfenster (max. Terminalzeilen pro Zusammenfassung)</td>
+</tr>
+<tr>
+<td><code>storage-path</code></td>
+<td>Zeichenfolge</td>
+<td>absoluter Pfad</td>
+<td>Erzwingt das Journalspeicherverzeichnis; Die Einstellung ist gesperrt</td>
+</tr>
+<tr>
+<td><code>allow-rename</code></td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>Journale können im Manager nicht umbenannt werden</td>
+</tr>
+<tr>
+<td><code>allow-delete</code></td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>Journale können im Manager nicht gelöscht werden</td>
+</tr>
+<tr>
+<td><code>name-template</code></td>
+<td>Zeichenfolge</td>
+<td>Vorlage</td>
+<td>Ursprünglicher Journaltitel mit den Platzhaltern <code>{connection}</code>, <code>{host}</code>, <code>{user}</code>, <code>{date}</code> und <code>{time}</code></td>
+</tr>
+<tr>
+<td><code>ai-title</code></td>
+<td>Boolescher Wert</td>
+<td><code>true</code></td>
+<td>Der abschließende KI-Titel wird unabhängig von der Benutzereinstellung generiert</td>
+</tr>
+<tr>
+<td><code>ai-screenshot-analysis</code></td>
+<td>boolean</td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>true</code> erzwingt die KI-Screenshot-Analyse, <code>false</code> verbietet sie – einschließlich der manuellen Ausführung pro Screenshot; Die Journaloption ist in beide Richtungen gesperrt</td>
+</tr>
+<tr>
+<td><code>ai-ask</code></td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>Verbietet On-Demand-KI für Journalinhalte: Das Frage-und-Antwort-Panel des Viewers und die tagebuchübergreifende KI-Suche des Managers werden ausgeblendet. KI-Zusammenfassungen sind nicht betroffen</td>
+</tr>
+<tr>
+<td><code>max-log-parts</code></td>
+<td>Ganzzahl</td>
+<td>≥ 1</td>
+<td>Begrenzt die Anzahl der rotierten Capture-Logteile pro Journal; Der wirksame Grenzwert ist das Minimum dieser Obergrenze und der Einstellung pro Verbindung, und der Spinner des Verbindungseditors ist darauf begrenzt</td>
+</tr>
+</tbody>
+</table>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">[[rule]]</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="k">[rule.features]</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="n">session-journal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"allow"</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="k">[rule.session-journal]</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="n">enforced</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="n">log-format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"json"</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="n">storage-path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"/srv/audit/kortty-journals"</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="n">allow-delete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="n">name-template</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"{connection} {date} {time} ({user})"</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>enforced</code>-Mandate erfassen, nicht AI: Wenn AI verweigert oder nicht verfügbar ist, zeichnet das erzwungene Journal Rohaktivitätseinträge auf. Wenn mehrere gleichstufige Regeln das Journal konfigurieren, werden <code>enforced</code> und <code>ai-title</code> zu „true“ aufgelöst, wenn eine Regel sie festlegt, <code>allow-rename</code>/<code>allow-delete</code> zu „false“, wenn eine Regel sie verbietet, <code>ai-screenshot-analysis</code> und <code>ai-ask</code> zu „off“, wenn eine Regel sie ausschaltet, die Zeilenobergrenze wird auf den engeren Wert aufgelöst (<code>0</code> gilt als unbegrenzt) und <code>max-log-parts</code> wird auf die niedrigere Obergrenze aufgelöst.</p>
+</div>
+<h3 id="rulesession-journalreplace"><code>[[rule.session-journal.replace]]</code><a class="headerlink" href="#rulesession-journalreplace" title="Permanent link">&para;</a></h3>
+<p>Automatisches Suchen und Ersetzen in jedem Journal – die Möglichkeit, eine ganze Kategorie von Geheimnissen aus dem Transkript herauszuhalten, anstatt sich darauf zu verlassen, dass der Benutzer es bemerkt. Jeder Eintrag stellt eine Regel dar, und eine Regel kann einen regulären Ausdruck verwenden.</p>
+<table>
+<thead>
+<tr>
+<th>Schlüssel</th>
+<th>Typ</th>
+<th>Standard</th>
+<th>Wirkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pattern</code></td>
+<td>Zeichenfolge</td>
+<td><em>erforderlich</em></td>
+<td>Der zu suchende Text. Wenn <code>regex</code> aktiviert ist, handelt es sich um einen regulären Ausdruck</td>
+</tr>
+<tr>
+<td><code>replacement</code></td>
+<td>Zeichenfolge</td>
+<td><code>***</code></td>
+<td>Der Text, der jede Übereinstimmung ersetzt. In einer Regex-Regel <code>$1</code> fügt eine erfasste Gruppe ein</td>
+</tr>
+<tr>
+<td><code>regex</code></td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>Behandelt <code>pattern</code> als regulären Ausdruck</td>
+</tr>
+<tr>
+<td><code>ignore-case</code></td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>Entspricht jeder Groß-/Kleinschreibung</td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>Zeichenfolge</td>
+<td>–</td>
+<td>Beschreibung für den Administrator; korTTY zählt nur die Regeln in seinem UI-Hinweis</td>
+</tr>
+</tbody>
+</table>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">[[rule]]</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="k">[rule.session-journal]</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="n">enforced</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="k">[[rule.session-journal.replace]]</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"AKIA[0-9A-Z]{16}"</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="n">replacement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"***AWS-ACCESS-KEY***"</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="n">regex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"AWS access keys"</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="k">[[rule.session-journal.replace]]</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"(?i)bearer</span><span class="se">\\</span><span class="s2">s+[A-Za-z0-9._-]{20,}"</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="n">replacement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Bearer ***"</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="n">regex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Bearer tokens"</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="k">[[rule.session-journal.replace]]</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"vpn.internal.acme.corp"</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="n">replacement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&lt;internal-host&gt;"</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">    </span><span class="n">ignore-case</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span></code></pre></div>
+<p>Die Regeln werden <strong>im Erfassungsthread ausgeführt, bevor eine Zeile geschrieben wird</strong>, sodass ein übereinstimmender Text überhaupt nicht in die Protokolldatei gelangt, und sie werden auch auf KI-Zusammenfassungen und Benutzernotizen angewendet. Im Gegensatz zu den anderen Schlüsseln werden Ersetzungsregeln <strong>über alle übereinstimmenden Regeln und alle Ebenen hinweg zusammengeführt</strong> und nicht, dass die höchste Ebene gewinnt: Mehr Schwärzung ist das restriktivere Ergebnis, sodass eine benutzer- oder gruppenspezifische Regel nur Muster hinzufügen und niemals die organisationsweiten ausschalten kann. Doppelte Einträge werden ausgeblendet.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Ein <code>pattern</code>, der kein gültiger regulärer Ausdruck ist, ist ein <strong>Richtlinienfehler</strong> und keine Warnung – die Datei wird abgelehnt. Eine Regel, die stillschweigend nichts übereinstimmt, ist schlimmer als eine Regel, die der Administrator korrigieren muss, weil die Schwärzung scheinbar vorhanden ist.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Es fallen nur Journale an, die während der Geltungsdauer der Regelung verfasst wurden; bestehende Journale werden nicht rückwirkend umgeschrieben. Benutzer können diese mit der Such- und Ersetzungsfunktion des Viewers bereinigen.</p>
+</div>
+<h3 id="von-admin-bereitgestellte-objekte">Von Admin bereitgestellte Objekte<a class="headerlink" href="#von-admin-bereitgestellte-objekte" title="Permanent link">&para;</a></h3>
+<p>Diese Tabellen der obersten Ebene definieren Objekte, die für jeden Benutzer schreibgeschützt und mit der Kennzeichnung „Von Ihrer Organisation bereitgestellt“ gekennzeichnet sind. Sie werden bei jedem Start aus der Richtlinie neu erstellt und nie in die Konfigurationsdateien des Benutzers geschrieben. Wenn Sie sie aus der Richtlinie entfernen, werden sie auch aus korTTY entfernt.</p>
+<table>
+<thead>
+<tr>
+<th>Tabelle</th>
+<th>Schlüssel</th>
+<th>Notizen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[[script-header]]</code></td>
+<td><code>name</code>, <code>content</code></td>
+<td>Unveränderlicher Skript-Header in der Script-Header-Kategorie des Snippet-Systems</td>
+</tr>
+<tr>
+<td><code>[[ai-profile]]</code></td>
+<td><code>id</code>, <code>name</code>, <code>provider</code>, <code>endpoint</code>, <code>model</code>, <code>api-key-encrypted</code></td>
+<td><code>id</code> muss mit <code>policy-</code> beginnen; <code>provider</code> ist einer von <code>anthropic</code>, <code>openai-compatible</code>, <code>lm-studio</code>, <code>embedded-llama</code>, <code>embedded-mlx</code> (eingebettete Anbieter lesen <code>model</code> als lokale Modell-ID)</td>
+</tr>
+<tr>
+<td><code>[[ai-runtime.model]]</code></td>
+<td><code>name</code>, <code>runtime</code>, <code>source</code></td>
+<td><code>runtime</code> Ist <code>llama</code> oder <code>mlx</code>; <code>source</code> ist ein absoluter lokaler/UNC-Pfad oder für GGUF-Modelle eine http(s)-URL, die korTTY einmal beim Start herunterlädt</td>
+</tr>
+<tr>
+<td><code>[[teamwork-source]]</code></td>
+<td><code>name</code>, <code>type</code>, <code>url</code></td>
+<td><code>type</code> Ist <code>git</code> oder <code>shared-file</code>; als schreibgeschützte Teamwork-Quelle eingefügt</td>
+</tr>
+</tbody>
+</table>
+<h2 id="interner-zwischenablagemodus">Interner Zwischenablagemodus<a class="headerlink" href="#interner-zwischenablagemodus" title="Permanent link">&para;</a></h2>
+<p>Mit <code>clipboard-mode = "internal"</code> trennt sich korTTY vollständig von der Zwischenablage des Betriebssystems und verwendet stattdessen seine eigene Zwischenablage im Arbeitsspeicher: In einer anderen Anwendung kopierter Text kann nirgendwo in korTTY eingefügt werden, und in korTTY kopierter Text gelangt nie in die Zwischenablage des Betriebssystems – während das Kopieren, Ausschneiden und Einfügen <em>innerhalb</em> von korTTY weiterhin überall funktioniert, da Terminals, SFTP-Ansichten, der Snippet-Editor und alle Dialoge denselben internen Puffer verwenden. Da es sich hierbei um reine Anwendungslogik handelt und keine Betriebssystem-Zwischenablage-Isolations-API beteiligt ist, verhält es sich unter macOS, Windows und Linux identisch, einschließlich der X11-Primärauswahl (Einfügen mit mittlerem Klick): Das Einfügen von Inhalten mit mittlerem Klick aus anderen Anwendungen ist blockiert, das Einfügen mit mittlerem Klick von korTTY-internen Kopien funktioniert weiterhin.</p>
+<p>Der Modus umfasst das Terminal (Verknüpfungen, Kontextmenü, Mittelklick), den Code-Editor, alle Kopierschaltflächen, die Snippet-Variable <code>${clipboard}</code> und die Verknüpfungen zum Kopieren/Ausschneiden/Einfügen einfacher Eingabefelder. Das Kopieren von Bildern (KI-generierte Bilder, Diagrammexporte) ist im internen Modus nicht verfügbar, da ein Bild nur über die Zwischenablage des Betriebssystems geteilt werden kann.</p>
+<div class="admonition note">
+<p class="admonition-title">Scope</p>
+<p>Die interne Zwischenablage ist ein Richtlinientool gegen zufällige Datenübertragung über die Zwischenablage und kein fester Luftspalt: Ein Benutzer kann weiterhin Text auf dem Bildschirm lesen. Die Rechtsklick-<em>Einfüge</em>-Eingabe von Nur-Text-Feldern wird vom UI-Toolkit bereitgestellt und kann weiterhin auf die Zwischenablage des Betriebssystems zugreifen – die Tastenkombination und jedes von korTTY bereitgestellte Menü werden abgedeckt.</p>
+</div>
+<h2 id="verschlusselte-api-schlussel">Verschlüsselte API-Schlüssel<a class="headerlink" href="#verschlusselte-api-schlussel" title="Permanent link">&para;</a></h2>
+<p>Der API-Schlüssel eines AI-Profils erscheint niemals im Klartext in der Richtlinie. Der Administrator verschlüsselt es einmal von einem Terminal aus – der Befehl gibt einen <code>kortty-enc:v1:</code>-Wert für den <code>api-key-encrypted</code>-Schlüssel aus:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>korTTY<span class="w"> </span>--encrypt-policy-value
+</span></code></pre></div>
+<p>Benutzern wird im Profil nur „Von Ihrer Organisation bereitgestellter API-Schlüssel“ angezeigt. Der Schlüssel wird im Speicher entschlüsselt, sobald eine Anfrage gestellt wird.</p>
+<div class="admonition warning">
+<p class="admonition-title">Sicherheitsbereich</p>
+<p>The envelope uses AES-256-GCM with an application-wide key, so it protects against casual disclosure (shoulder surfing, config diffs, backups) and detects tampering — it is not hard secrecy, since anyone with the korTTY binary could recover the application key. The installation directory's OS permissions remain the actual security boundary; prefer per-user keys via the normal profile flow when that boundary is not enough.</p>
+</div>
+<h2 id="fehlerbehebung">Fehlerbehebung<a class="headerlink" href="#fehlerbehebung" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Ursache und Abhilfe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Startdialog „Organisationsrichtlinie konnte nicht geladen werden“</td>
+<td>Die Richtliniendatei weist einen Syntaxfehler oder einen ungültigen Wert auf; Der Dialog und das Protokoll benennen die genaue Position. korTTY bleibt ausfallsicher gesperrt, bis die Datei repariert ist</td>
+</tr>
+<tr>
+<td>Richtlinie scheint ignoriert zu werden</td>
+<td>Die Datei heißt nicht <code>kortty-policy.toml</code>, befindet sich nicht im <code>policy/</code>-Ordner der Installation oder korTTY wurde nicht neu gestartet. Die Startzeilen des Protokolls geben an, welche Richtliniendatei (falls vorhanden) geladen wurde</td>
+</tr>
+<tr>
+<td>Eine Regel gilt nicht für einen Benutzer</td>
+<td>Der Regelbereich besteht aus Betriebssystem-Anmeldenamen in Kleinbuchstaben. überprüfen <code>[groups]</code> Mitgliedschaft und denken Sie daran, dass eine spezifischere Stufe (Benutzer &gt; Gruppe &gt; Jeder) weniger spezifische Regeln außer Kraft setzt</td>
+</tr>
+<tr>
+<td>Warning "policy file is writable by the current user"</td>
+<td>The installation directory permissions are too open — the enforcement model relies on admin-only write access</td>
+</tr>
+<tr>
+<td>Das Admin-Modell wird nicht angezeigt</td>
+<td>Sehen Sie sich das Protokoll an: GGUF-URL-Downloads erfolgen beim Start im Hintergrund und für die Registrierung ist eine installierte llama.cpp-Laufzeit erforderlich. MLX-Quellen müssen lokale Safetensors-Verzeichnisse sein</td>
+</tr>
+</tbody>
+</table></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+<footer class="kt-footer">
+  <div class="kt-footer__line">MIT-lizenziert &middot; Entwickelt von Daniel Mengel</div>
+  <div class="kt-footer__line">korTTY <strong>v2.17.0</strong></div>
+</footer>
+
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../assets/javascripts/kt-zoom.js" defer></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1034 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+
+<head>
+        <title>JobScheduler - korTTY Anleitung</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link rel="canonical" href="https://chardonnay.github.io/korTTY/guide/de/features/jobscheduler.html">
+        <meta name="author" content="korTTY">
+        <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+        <link href="../assets/stylesheets/kortty.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
+
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+            <img class="logo" src="../assets/images/favicon.png" height="150px">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">korTTY Anleitung</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../index.html"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Startseite
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#erste-schritte-collapse" aria-expanded="false">
+                    Erste Schritte
+                </a>
+                <div class="collapse" id="erste-schritte-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/installation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Installation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/building-packages.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KorTTY-Pakete erstellen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/first-launch.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Erster Start – Master-Passwort
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/main-window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Main window overview
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#referenz-collapse" aria-expanded="false">
+                    Referenz
+                </a>
+                <div class="collapse" id="referenz-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/menu.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Menüreferenz
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/keyboard-shortcuts.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tastaturkürzel
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/architecture.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architektur
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/config-files.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Konfigurationsdateien
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/enterprise-policy.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Richtlinienkonfiguration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/control-api.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Steuerungs-API
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/cli.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Steuerungs-CLI
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#einstellungen-collapse" aria-expanded="false">
+            Einstellungen
+        </a>
+
+        <div class="collapse" id="einstellungen-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Einstellungsreferenz
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/appearance.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Aussehen, Themen und Schriftart
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/colors.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Farben
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Fenster
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/resources.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Ressourcen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/logging.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Protokollierung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/export.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Export
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/updates.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Aktualisierungen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherheit
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/language.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprache
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/translation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Übersetzung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/video.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Video
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/ai.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/ai-skills.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Fähigkeiten
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP-Manager
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/editor.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#snippet-editor-collapse" aria-expanded="false">
+            Snippet-Editor
+        </a>
+
+        <div class="collapse" id="snippet-editor-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/snippet-editor/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet-Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/hardening-options.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Härtungsoptionen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/input-hardening.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Eingabe-Härtung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/language-migration.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprachvereinigung
+        </a>
+    </li>
+            </ul>
+        </div>
+    </li>
+            </ul>
+        </div>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover"
+                    data-bs-toggle="collapse" data-bs-target="#funktionen-collapse" aria-expanded="true">
+                    Funktionen
+                </a>
+                <div class="collapse show" id="funktionen-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="connections.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verbindungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminalsitzungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="tunnels.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SSH-Tunnel (Portweiterleitung)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="jump-server.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Jump-Server (Bastion Host)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP-Dateimanager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="file-browser.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Dateibrowser
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="snippets.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet-Manager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="jobscheduler.html"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            JobScheduler
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="projects.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Projekte (Arbeitsbereiche)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="teamwork.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Teamarbeit (gemeinsame Verbindungen)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-assistant.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Assistent
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="local-models.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lokale Modelle (llama.cpp und MLX)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="rag.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            RAG-Wissensspeicher
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-tools.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal-KI-Agent und -Tools
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-swarm.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Schwarm
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherheit – Anmeldeinformationen, Schlüssel und Verschlüsselung
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sichern und wiederherstellen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="recording.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminalaufzeichnung
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="session-journal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sitzungsjournal
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ascii-art.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            ASCII-Art
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal-effect-plugins.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminaleffekt-Plugins
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="coding-agents.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Coding-Agents
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="i18n.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprachen und dynamische Übersetzung
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#über-kortty-collapse" aria-expanded="false">
+                    Über korTTY
+                </a>
+                <div class="collapse" id="über-kortty-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/release-notes.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Versionshinweise
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/feedback.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Feedback und Support
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/anonymous-data.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Anonyme Daten zur Applikationsoptimierung
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="snippets.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="projects.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item">
+
+
+
+
+
+<div role="search" class="search-box kt-search">
+	<form id="rtd-search-form" class="wy-form kt-search-form" action="../search.html" method="get">
+		<input type="text" name="q" id="mkdocs-search-query"
+		class="kt-search-input drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Anleitung durchsuchen"
+		autocomplete="off" title="Type search term here" /><button type="button" class="kt-search-clear" hidden
+		        aria-label="Suche zurücksetzen" title="Suche zurücksetzen">&times;</button>
+	</form>
+	<div id="mkdocs-search-results" class="kt-search-suggest"
+	     data-no-results-text="Keine Treffer"
+	     data-preparing-text="Suche wird vorbereitet …"
+	     data-more-text="{n} weitere Treffer anzeigen"></div>
+	<script>
+	  (function () {
+	    var box = document.currentScript.parentNode;
+	    var panel = box.querySelector('.kt-search-suggest');
+	    var input = box.querySelector('#mkdocs-search-query');
+	    var clear = box.querySelector('.kt-search-clear');
+
+	    // Emptying the panel is what hides it (CSS :empty), so closing is just that.
+	    function close () { while (panel.firstChild) { panel.removeChild(panel.firstChild); } }
+	    // The button is only useful once there is something to clear.
+	    function sync () { clear.hidden = !input.value; }
+
+	    input.addEventListener('input', sync);
+	    clear.addEventListener('click', function () {
+	      input.value = '';
+	      sync();
+	      // search/main.js renders on keyup, which a programmatic clear never fires, so
+	      // the panel has to be emptied here or the old hits would outlive the query.
+	      close();
+	      input.focus();
+	    });
+
+	    document.addEventListener('click', function (e) { if (!box.contains(e.target)) { close(); } });
+
+	    // Escape has to be handled on keyUP, and on the document rather than the input.
+	    // search/main.js binds doSearch to the field's keyup, so anything that closed the
+	    // panel on keydown was undone microseconds later by that re-render — which is why
+	    // Escape appeared to do nothing at all. Listening on the document means this runs
+	    // after the field's own handler has already re-rendered, so closing sticks.
+	    // What the panel looked like BEFORE that re-render is the interesting state, so it
+	    // is captured on keydown: the usual two steps, Escape dismisses the suggestions,
+	    // Escape again empties the box.
+	    var panelWasOpen = false;
+	    document.addEventListener('keydown', function (e) {
+	      if (e.key === 'Escape') {
+	        panelWasOpen = !!panel.firstChild;
+	      }
+	    });
+	    document.addEventListener('keyup', function (e) {
+	      if (e.key !== 'Escape') {
+	        return;
+	      }
+	      // Only clear the field while it has focus — Escape elsewhere on the page is not ours.
+	      if (!panelWasOpen && document.activeElement === input && input.value) {
+	        input.value = '';
+	        sync();
+	      }
+	      close();
+	    });
+
+	    sync();  // a ?q= deep link arrives with the field already filled
+	  })();
+	</script>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+<div class="kt-lang-bar">
+  <a class="kt-lang-switch" href="../../en/features/jobscheduler.html"
+     title="English" hreflang="en">EN</a>
+</div>
+
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="jobscheduler">JobScheduler<a class="headerlink" href="#jobscheduler" title="Permanent link">&para;</a></h1>
+<p>Der JobScheduler führt unbeaufsichtigte Hintergrundjobs aus, während KorTTY geöffnet ist. Es ist kein Betriebssystemdienst oder eine aktive SSH-Terminalregisterkarte erforderlich. Jobs werden automatisch nach einem konfigurierten Zeitplan mithilfe gespeicherter SSH-Verbindungen aus dem Verbindungsmanager ausgeführt.</p>
+<p>Unter macOS und Windows verhindert ein aktivierter Job mit einer zukünftigen Ausführung, dass der Computer in den Systemschlaf wechselt, während korTTY ausgeführt wird, wenn <strong>Konfiguration &gt; Systemschlaf verhindern</strong> aktiviert ist, sodass die geplante Zeit erreichbar bleibt. Der Scheduler verwendet einen einzigen Weckvorgang für den nächsten fälligen Lauf und verfügt über keinen Abfrage-Timer, wenn kein aktivierter zukünftiger Job vorhanden ist. Ohne Terminalverbindung, zukünftiger oder laufender Scheduler-Auftrag oder aktive AI-Anfrage bleibt der Systemschlaf auch dann verfügbar, wenn die Einstellung überprüft wird. Während ein Job ausgeführt wird, fügt macOS korTTY nicht in App Nap ein. Der Display-Ruhezustand ist nicht blockiert. Die Linux-Stromunterdrückung wird noch nicht unterstützt.</p>
+<p>Öffnen Sie es mit <strong>Tools &gt; JobScheduler...</strong>. Der Dialog merkt sich seine Fensterposition und -größe. Die deutsche Benutzeroberfläche übersetzt jetzt alle Beschriftungen, Aktionsnamen, Statuswerte, Validierungsmeldungen, Zielselektoren und unterstützenden Eingabeaufforderungen. Technische Protokoll- und Formatnamen wie SFTP, Rsync, ZIP, TAR, stdout und stderr bleiben unverändert.</p>
+<p><img alt="JobScheduler execution" src="../assets/diagrams/jobscheduler-execution.svg" /></p>
+<h2 id="ubersicht">Übersicht<a class="headerlink" href="#ubersicht" title="Permanent link">&para;</a></h2>
+<p>JobScheduler unterstützt sechs Arten von Aktionen:</p>
+<ul>
+<li><strong>COMMAND</strong> – Führen Sie einen nicht interaktiven Remote-Shell-Befehl aus</li>
+<li><strong>SNIPPET_SCRIPT</strong> – Führen Sie ein SnippetManager-Skript auf dem Ziel mit optionalen Parametern aus</li>
+<li><strong>AI_AGENT</strong> – Führen Sie einen Headless-KI-Agenten mit expliziter automatischer Genehmigung aus</li>
+<li><strong>AI_SWARM</strong> – Senden Sie eine KI-Agent-Aufgabe parallel an alle ausgewählten Ziele und speichern Sie die kombinierte Antwort als gespeicherten Schwarm-Chat</li>
+<li><strong>SFTP</strong> – Hochladen, Herunterladen, Synchronisieren, Löschen, Umbenennen, Verzeichnisse erstellen, Berechtigungen festlegen, Eigentümer ändern, Remote-Kopieren oder Archive erstellen</li>
+<li><strong>RSYNC_SYNC</strong> – Verzeichnisse über externes <code>rsync</code> über SSH synchronisieren</li>
+</ul>
+<h2 id="job-konfiguration">Job-Konfiguration<a class="headerlink" href="#job-konfiguration" title="Permanent link">&para;</a></h2>
+<p>Das JobScheduler-Dialogfeld verfügt über drei Registerkarten: <strong>Job</strong>, <strong>Aktion</strong> und <strong>Journal</strong>.</p>
+<h3 id="job-registerkarte-ziele-und-zeitplane">Job-Registerkarte: Ziele und Zeitpläne<a class="headerlink" href="#job-registerkarte-ziele-und-zeitplane" title="Permanent link">&para;</a></h3>
+<p>Verwenden Sie die Registerkarte <strong>Job</strong>, um zu definieren, wo und wann ein Job ausgeführt wird.</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Aktiviert</strong></td>
+<td>Aktiviert oder deaktiviert den Job.</td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td>Anzeigename, der in der Auftragsliste, im Journal und im Menüleistenstatus angezeigt wird.</td>
+</tr>
+<tr>
+<td><strong>Verbindung</strong></td>
+<td>Öffnet den Verbindungsmanager-Auswahldialog. Wählen Sie einzelne SSH-TCP-Server, ganze Gruppen oder beides aus. Mosh-Verbindungen werden nicht unterstützt.</td>
+</tr>
+<tr>
+<td><strong>Arbeitsverzeichnis</strong></td>
+<td>Optionales Remote-Verzeichnis. Verwenden Sie <strong>Durchsuchen...</strong>, um eine Verbindung zum Ziel herzustellen und ein Verzeichnis auszuwählen, wenn der Pfad nicht bekannt ist.</td>
+</tr>
+<tr>
+<td><strong>Journal</strong></td>
+<td><code>LIMITED_REDACTED</code> speichert begrenzte, geschwärzte Auszüge. <code>FULL</code> speichert die vollständige Ausgabe/Transkripte (von KorTTY verwaltete Geheimnisse werden weiterhin geschwärzt).</td>
+</tr>
+<tr>
+<td><strong>Aktiv von</strong> / <strong>Aktiv bis</strong></td>
+<td>Optionaler Datumsbereich für den Job. Außerhalb dieses Bereichs wird der Job nicht ausgeführt.</td>
+</tr>
+<tr>
+<td><strong>Fensteranfang</strong> / <strong>Fensterende</strong></td>
+<td>Zeitfenster für den Job (z. B. 09:00 bis 17:00 Uhr). Die Werte werden aus validierten Zeitlisten ausgewählt.</td>
+</tr>
+<tr>
+<td><strong>Intervallminuten</strong></td>
+<td>Optionales wiederholtes Intervall innerhalb des aktiven Fensters. Wenn festgelegt, wird der Job alle N Minuten zwischen Fensterstart und -ende ausgeführt.</td>
+</tr>
+<tr>
+<td><strong>Feste Zeiten</strong></td>
+<td>Optionale explizite Startzeiten (z. B. 09:30, 12:00, 15:30). Die Werte werden aus validierten Zeitlisten ausgewählt.</td>
+</tr>
+<tr>
+<td><strong>Wochentage</strong></td>
+<td>Optionaler Wochentagsfilter. Mit der „Alle“-Taste können Sie alle Wochentage auf einmal auswählen oder löschen.</td>
+</tr>
+</tbody>
+</table>
+<p>Zeitplanberechnungen verwenden die Zeitzone des lokalen Systems. Wenn keine feste Zeit und kein Intervall konfiguriert sind, ist der nächste Lauf der Fensterstart an einem erlaubten Datum.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Scheduler-Jobs unterstützen nur gespeicherte SSH-TCP-Verbindungen. Mosh-Ziele werden als nicht unterstützt blockiert und der Grund wird in das Journal geschrieben.</p>
+</div>
+<h3 id="host-schlussel-sudo-und-geheimnisse">Host-Schlüssel, Sudo und Geheimnisse<a class="headerlink" href="#host-schlussel-sudo-und-geheimnisse" title="Permanent link">&para;</a></h3>
+<p>Die Überprüfung des Hostschlüssels ist standardmäßig sicher. Wählen Sie vor der unbeaufsichtigten SSH/SFTP/Rsync-Ausführung das Ziel aus und klicken Sie auf <strong>Hostschlüssel bestätigen</strong>, damit KorTTY den angehefteten Fingerabdruck und das öffentliche OpenSSH-Schlüsselmaterial speichert.</p>
+<p>Das Kontrollkästchen <strong>Hostschlüsselüberprüfung für diesen Job deaktivieren</strong> deaktiviert die Hostschlüsselüberprüfung nur für den ausgewählten Job. Dies ist unsicher und sollte nur verwendet werden, wenn das Risiko bekannt ist.</p>
+<p>Sudo-Passwörter können für einen Server oder für eine Servergruppe gespeichert werden:</p>
+<ul>
+<li>Serverspezifische Sudo-Passwörter werden zuerst verwendet.</li>
+<li>Gruppen-Sudo-Passwörter werden als Fallback verwendet.</li>
+<li>Gespeicherte Sudo-Passwörter werden mit dem Master-Passwort verschlüsselt.</li>
+<li>Wenn das Hauptkennwort gesperrt ist und ein Job SSH-, Sudo-, API- oder Archivgeheimnisse benötigt, wird der Job blockiert und protokolliert.</li>
+</ul>
+<p>Bei Rsync-Jobs bedeutet <strong>Sudo verwenden</strong> passwortloses Remote-Sudo nur über <code>sudo -n rsync</code>. Gespeicherte Sudo-Passwörter werden von der aktuellen Rsync-Integration nicht verwendet.</p>
+<h3 id="aktionsregisterkarte-jobtypen-und-konfiguration">Aktionsregisterkarte: Jobtypen und Konfiguration<a class="headerlink" href="#aktionsregisterkarte-jobtypen-und-konfiguration" title="Permanent link">&para;</a></h3>
+<p>Verwenden Sie die Registerkarte <strong>Aktion</strong>, um auszuwählen, was der Job tun soll. Auf der Registerkarte werden nur die Felder angezeigt, die die ausgewählte Aktion verwenden kann. Nicht verwandte Felder werden daher ausgeblendet. Der Aktionsselektor umfasst:</p>
+<table>
+<thead>
+<tr>
+<th>Aktion</th>
+<th>Zweck</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>BEFEHL</strong></td>
+<td>Führen Sie einen nicht interaktiven Remote-Befehl aus.</td>
+</tr>
+<tr>
+<td><strong>SNIPPET_SCRIPT</strong></td>
+<td>Führen Sie ein SnippetManager-Skript auf dem ausgewählten Ziel aus. Das Feld <strong>Snippet-Suche</strong> filtert das Skript-Dropdown nach Snippet-Name, Kategorie, Sprache oder ID; <strong>Snippet-Parameter</strong> übergibt zusätzliche Argumente als einen argv-Wert pro Zeile.</td>
+</tr>
+<tr>
+<td><strong>AI_AGENT</strong></td>
+<td>Führen Sie den Headless-Scheduler-KI-Agenten aus. Die unbeaufsichtigte Befehlsausführung erfordert die <strong>automatische Genehmigung von KI-Befehlen</strong> während des Auftrags.</td>
+</tr>
+<tr>
+<td><strong>AI_SWARM</strong></td>
+<td>Führen Sie das aus <a href="ai-swarm.html">KI-Schwarm</a> kopflos auf jedes ausgewählte Ziel parallel und fassen die Antworten in einer Vergleichstabelle zusammen.</td>
+</tr>
+<tr>
+<td><strong>SFTP_UPLOAD</strong></td>
+<td>Laden Sie einen lokalen Pfad auf einen Remote-Pfad hoch.</td>
+</tr>
+<tr>
+<td><strong>SFTP_DOWNLOAD</strong></td>
+<td>Laden Sie einen Remote-Pfad auf einen lokalen Pfad herunter.</td>
+</tr>
+<tr>
+<td><strong>SFTP_SYNC</strong></td>
+<td>Lokale und Remote-Pfade in der ausgewählten Upload-/Download-Richtung synchronisieren.</td>
+</tr>
+<tr>
+<td><strong>SFTP_DELETE</strong></td>
+<td>Einen Remote-Pfad löschen.</td>
+</tr>
+<tr>
+<td><strong>SFTP_RENAME</strong></td>
+<td>Benennen Sie einen Remote-Pfad um.</td>
+</tr>
+<tr>
+<td><strong>SFTP_MKDIR</strong></td>
+<td>Erstellen Sie ein Remote-Verzeichnis.</td>
+</tr>
+<tr>
+<td><strong>SFTP_CHMOD</strong></td>
+<td>Berechtigungen ändern. Es werden numerische Modi wie <code>755</code> und symbolische Modi wie <code>u+rw,o-w</code> akzeptiert.</td>
+</tr>
+<tr>
+<td><strong>SFTP_CHOWN</strong></td>
+<td>Besitzer und/oder Gruppe ändern. Besitzer- und Gruppenschaltflächen können das Ziel abfragen und verfügbare Werte anzeigen.</td>
+</tr>
+<tr>
+<td><strong>SFTP_COPY_REMOTE</strong></td>
+<td>Kopieren Sie einen Remote-Pfad in einen anderen Remote-Pfad auf demselben Ziel.</td>
+</tr>
+<tr>
+<td><strong>SFTP_ARCHIVE</strong></td>
+<td>Erstellen Sie ein Remote-Archiv.</td>
+</tr>
+<tr>
+<td><strong>RSYNC_SYNC</strong></td>
+<td>Synchronisieren Sie ein oder mehrere Verzeichnisse über externes <code>rsync</code> über SSH.</td>
+</tr>
+</tbody>
+</table>
+<p>Pfadfelder bieten eine lokale Finder-/Explorer-Auswahl, wenn der Pfad lokal ist, und das Durchsuchen von Remote-Verzeichnissen, wenn der Pfad remote ist. Remote-Browsing erfordert eine ausgewählte Ziel- und Hostschlüsselüberprüfung, es sei denn, der Job deaktiviert die Hostschlüsselüberprüfung ausdrücklich.</p>
+<h4 id="snippet-skriptjobs">Snippet-Skriptjobs<a class="headerlink" href="#snippet-skriptjobs" title="Permanent link">&para;</a></h4>
+<p>Snippet-Skriptjobs verwenden den ausgewählten SnippetManager-Eintrag, ohne dass eine geöffnete Terminalregisterkarte erforderlich ist. KorTTY löst integrierte Snippet-Variablen und gespeicherte SnippetManager-Variablen vor der Ausführung auf. Fehlende Snippets, fehlende gespeicherte Variablenwerte und nicht unterstützte Snippet-Sprachen blockieren den Job und schreiben den Grund in das Journal. Zusätzliche Snippet-Parameter werden einzeln pro Zeile eingegeben, sodass Werte mit Leerzeichen als einzelne Skriptargumente übergeben werden.</p>
+<h4 id="ai-schwarmjobs">AI Schwarmjobs<a class="headerlink" href="#ai-schwarmjobs" title="Permanent link">&para;</a></h4>
+<p>AI Swarm-Jobs führen über Hintergrund-SSH-Sitzungen eine AI-Agent-Eingabeaufforderung auf <strong>allen ausgewählten Zielen parallel</strong> aus – es werden keine Terminal-Registerkarten geöffnet. Über die gemeinsamen Felder <strong>KI-Profil</strong>, <strong>KI-Eingabeaufforderung</strong> und <strong>Automatisch genehmigende KI-Befehle</strong> hinaus gelten zwei schwarmspezifische Felder:</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Schwarmparallelität</strong></td>
+<td>Wie viele Ziele gleichzeitig ausgeführt werden (1–16, Standard 4).</td>
+</tr>
+<tr>
+<td><strong>Schwarm schreibgeschützt</strong></td>
+<td>Beschränkt jeden Agenten auf nicht mutierende Befehle. Standardmäßig aktiviert.</td>
+</tr>
+</tbody>
+</table>
+<p>Die Ergebnisse werden zweimal gespeichert: Das <strong>Journal</strong> zeichnet das Laufergebnis auf, und die vollständige Konversation – einschließlich der kombinierten Vergleichstabelle pro Server – wird als <strong>Schwarm-Chat</strong> gespeichert, der über den Abschnitt <em>Schwarm-Chats</em> des KI-Managers erneut geöffnet werden kann.</p>
+<p>Der schnellste Weg, einen AI Swarm-Job zu erstellen, ist die Schaltfläche <strong>Planen…</strong> auf der Registerkarte <a href="ai-swarm.html#schwarmlaufe-planen-jobscheduler">AI Swarm</a>: Sie füllt einen neuen Job mit den aktuellen Zielen, der Eingabeaufforderung, dem AI-Profil und der schreibgeschützten Einstellung der Registerkarte vorab aus. Auf dieser Seite finden Sie empfohlene Schwarm-/Scheduler-Nutzungsszenarien.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Ein geplanter Schwarm, bei dem <strong>Schwarm schreibgeschützt</strong> deaktiviert und <strong>Automatisch genehmigende KI-Befehle</strong> aktiviert ist, verändert Systeme unbeaufsichtigt. Testen Sie die Eingabeaufforderung interaktiv auf der Registerkarte „AI Swarm“, bevor Sie einen solchen Job aktivieren.</p>
+</div>
+<h4 id="sftp-archivierungsjobs">SFTP-Archivierungsjobs<a class="headerlink" href="#sftp-archivierungsjobs" title="Permanent link">&para;</a></h4>
+<p>SFTP-Archivierungsjobs unterstützen ZIP, passwortgeschütztes ZIP, TAR und TAR.BZ2. Archivquellen und Ausschlussmuster akzeptieren einen Pfad oder ein Muster pro Zeile. Das Archiv kann optional nach der Erstellung heruntergeladen werden.</p>
+<p>Wenn <strong>Sudo-Staging für SFTP-Pfade verwenden</strong> aktiviert ist, stellt KorTTY Dateien an einem temporären Speicherort bereit und verwendet Sudo-unterstützte Remote-Befehle wie <code>mv</code>, <code>cp</code>, <code>tar</code>, <code>chmod</code> und <code>chown</code>, wenn erhöhte Rechte erforderlich sind. Bereinigungsfehler werden in das Journal geschrieben.</p>
+<h2 id="rsync-jobs">Rsync-Jobs<a class="headerlink" href="#rsync-jobs" title="Permanent link">&para;</a></h2>
+<p><code>RSYNC_SYNC</code> unterstützt den Upload und Download zwischen dem lokalen Dateisystem und gespeicherten SSH-TCP-Verbindungen.</p>
+<ul>
+<li><strong>Upload</strong>: Lokale Quellverzeichnisse werden unter dem Remote-Zielstamm synchronisiert.</li>
+<li><strong>Download</strong>: Remote-Quellverzeichnisse werden unter dem lokalen Zielstamm synchronisiert.</li>
+<li><strong>Mehrere Quellen</strong> werden unterstützt.</li>
+<li><strong>Fehlende Dateien löschen</strong> fügt <code>--delete</code> hinzu; es ist standardmäßig deaktiviert.</li>
+<li>Bei Downloads von mehreren Gruppenzielen schreibt KorTTY jedes Ziel in sein eigenes Unterverzeichnis unterhalb des lokalen Zielstammverzeichnisses, um ein Überschreiben von Dateien von einem anderen Server zu vermeiden.</li>
+</ul>
+<p>KorTTY erstellt die Rsync-Ausführung als <code>ProcessBuilder</code>-Argumentliste, anstatt den Befehl per Shell zu verketten. Der Befehl verwendet <code>-a --itemize-changes</code>; <code>--delete</code> wird nur hinzugefügt, wenn das Job-Kontrollkästchen aktiviert ist.</p>
+<h3 id="rsync-voraussetzungen">Rsync-Voraussetzungen<a class="headerlink" href="#rsync-voraussetzungen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>rsync</code> wird von <code>PATH</code> übernommen, es sei denn, unter <strong>Einstellungen &gt; SFTP &gt; JobScheduler Rsync</strong> ist ein expliziter Binärpfad konfiguriert.</li>
+<li><code>ssh</code> muss in <code>PATH</code> verfügbar sein.</li>
+<li>Das Fixieren des Hostschlüssels ist erforderlich, es sei denn, der Job deaktiviert die Hostschlüsselüberprüfung ausdrücklich.
+Die Authentifizierung mit - Passwörtern und Passphrasen mit privatem Schlüssel verwendet einen temporären <code>SSH_ASKPASS</code>-Helfer, der nur dem Besitzer vorbehalten ist. Secrets, Hilfspfade und temporäre Secret-Dateipfade werden vor dem Journaling geschwärzt.</li>
+</ul>
+<h2 id="journal-tab">Journal-Tab<a class="headerlink" href="#journal-tab" title="Permanent link">&para;</a></h2>
+<p>Auf der Registerkarte <strong>Journal</strong> werden Jobausführungen mit lokalen KorTTY-Zeitstempeln, Status, Jobnamen und Zusammenfassung aufgeführt. Die Spalten <strong>Gestartet</strong>, <strong>Status</strong>, <strong>Auftrag</strong> und <strong>Zusammenfassung</strong> sind sortierbar; In der Standardreihenfolge werden die neuesten gestarteten Einträge zuerst angezeigt.</p>
+<p>Die Suchzeile kann mit allen persistenten Journalfeldern oder nur mit ausgewählten Spalten wie Status, Job, Zusammenfassung, Stdout, Stdderr und Detail übereinstimmen. Geben Sie mehrere durch Leerzeichen getrennte Begriffe ein, wenn jeder Begriff irgendwo im ausgewählten Suchbereich vorkommen muss; Verwenden Sie <code>*</code> innerhalb eines Begriffs als Platzhalter, zum Beispiel <code>backup*fail</code>.</p>
+<p>Wenn Sie eine Zeile auswählen, werden stdout, stderr und Detailtext angezeigt. Verwenden Sie <strong>Ausgewählte löschen</strong>, um ausgewählte Journaleinträge zu entfernen. Standardmäßig löscht KorTTY automatisch Planer-Journaleinträge, die älter als 14 Tage sind; Legen Sie den Aufbewahrungswert auf <code>0</code> fest, um Einträge auf unbestimmte Zeit aufzubewahren.</p>
+<p>Der Protokoll-/Detailbereich unterhalb der Tabelle ist durch einen vertikalen Splitter getrennt. Ändern Sie die Größe, um der Ausgabe mehr oder weniger Höhe zu verleihen. KorTTY speichert diese Teilerposition in den globalen Einstellungen. Markieren Sie im Detailtextbereich den Text und klicken Sie mit der rechten Maustaste, um den ausgewählten Text in die Zwischenablage zu kopieren.</p>
+<p>Zu den Journalstatus gehören erfolgreiche, fehlgeschlagene, blockierte, abgebrochene und ausgeführte/Systemeinträge. Gründe wie gesperrtes Master-Passwort, fehlende Hostschlüssel-PIN, fehlender <code>rsync</code>/<code>ssh</code>, nicht unterstütztes Mosh-Ziel oder Shutdown-Drain werden als Journaldetails geschrieben.</p>
+<h2 id="menuleistenstatus-und-stornierung">Menüleistenstatus und Stornierung<a class="headerlink" href="#menuleistenstatus-und-stornierung" title="Permanent link">&para;</a></h2>
+<p>Wenn <strong>Jobstatus in Menüleiste anzeigen</strong> aktiviert ist, zeigt KorTTY den Scheduler-Status nach <strong>Hilfe</strong> nur an, wenn ein aktivierter Scheduler-Eintrag vorhanden ist oder ein Job gerade ausgeführt wird. Der Status zeigt den laufenden Auftrag, den Abbruchstatus oder den nächsten Auftrag mit einem Live-Countdown an.</p>
+<p>Klicken Sie auf das Statusmenü, um Folgendes anzuzeigen:</p>
+<ul>
+<li><strong>JobScheduler öffnen...</strong></li>
+<li>Jobs ausführen und Einträge abbrechen</li>
+<li>bis zu fünf nächste Aufträge in der Warteschlange mit Startzeit und Live-Countdown</li>
+</ul>
+<p>Klicken Sie mit der rechten Maustaste auf die Statusbezeichnung, um ein kompaktes Menü mit Abbruchaktionen für laufende Jobs und einer Verknüpfung zum Öffnen von JobScheduler anzuzeigen. Stornierungsanfragen werden protokolliert und die Ausführung von SSH/Rsync-Arbeiten wird nach Möglichkeit sauber unterbrochen.</p>
+<h2 id="kortty-wird-wahrend-der-ausfuhrung-von-jobs-beendet">KorTTY wird während der Ausführung von Jobs beendet<a class="headerlink" href="#kortty-wird-wahrend-der-ausfuhrung-von-jobs-beendet" title="Permanent link">&para;</a></h2>
+<p>Wenn KorTTY kurz vor dem Beenden steht, während JobScheduler-Jobs ausgeführt werden, wird eine Warnung mit den aktiven Jobnamen angezeigt. Wenn Sie <strong>Abbrechen</strong> wählen, läuft KorTTY weiter. Wenn Sie <strong>Warten und beenden</strong> auswählen, wird der Shutdown-Drain-Modus gestartet:</p>
+<ul>
+<li>neue geplante oder manuelle Jobstarts sind blockiert;</li>
+<li>Die Wartezeit beim Herunterfahren wird in das Journal geschrieben.</li>
+<li>KorTTY wartet darauf, dass laufende Jobs abgeschlossen oder abgebrochen werden;</li>
+<li>KorTTY wird automatisch beendet, nachdem der Entleerungsvorgang abgeschlossen ist.</li>
+</ul>
+<h2 id="sicherheit-und-geheimnisse">Sicherheit und Geheimnisse<a class="headerlink" href="#sicherheit-und-geheimnisse" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Host-Schlüssel sind standardmäßig fixiert, um Man-in-the-Middle-Angriffe auf die unbeaufsichtigte Ausführung zu verhindern.</li>
+<li>Sudo-Passwörter werden verschlüsselt mit dem Master-Passwort gespeichert.</li>
+<li>SSH-Schlüsselpassphrasen und Archivpasswörter werden verschlüsselt gespeichert.</li>
+<li>KorTTY geschwärzt verwaltete Geheimnisse (Passwörter, Passphrasen, Archivanmeldeinformationen) aus der Journalausgabe vor der Persistenz.</li>
+<li>Wenn das Hauptkennwort gesperrt ist, wenn ein Job SSH-, Sudo-, API- oder Archivgeheimnisse benötigt, wird der Job blockiert.</li>
+</ul>
+<h2 id="fehlerbehebung">Fehlerbehebung<a class="headerlink" href="#fehlerbehebung" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>JobScheduler-Job ist blockiert:</strong> Öffnen Sie <strong>Extras &gt; JobScheduler... &gt; Journal</strong> und überprüfen Sie den Detailtext des ausgewählten Eintrags. Häufige Ursachen sind:
+- Master-Passwort gesperrt
+- Fehlende Hostschlüssel-PIN
+- Nicht unterstütztes Mosh-Ziel
+- Fehlendes <code>rsync</code> oder <code>ssh</code> im PATH
+- Alte Hostschlüssel-PIN ohne OpenSSH-Public-Key-Material für Rsync</p>
+<p><strong>JobScheduler Rsync kann nicht gestartet werden:</strong> Überprüfen Sie die lokalen Werte <code>rsync --version</code> und <code>ssh -V</code> oder konfigurieren Sie den Rsync-Binärpfad unter <strong>Einstellungen &gt; SFTP &gt; JobScheduler Rsync</strong>.</p>
+<p><strong>JobScheduler-Remotebrowser kann nicht geöffnet werden:</strong> Wählen Sie genau ein Ziel aus und bestätigen Sie zuerst den Hostschlüssel, es sei denn, der Job deaktiviert die Hostschlüsselüberprüfung ausdrücklich.</p>
+</div>
+<hr /></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+<footer class="kt-footer">
+  <div class="kt-footer__line">MIT-lizenziert &middot; Entwickelt von Daniel Mengel</div>
+  <div class="kt-footer__line">korTTY <strong>v2.17.0</strong></div>
+</footer>
+
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../assets/javascripts/kt-zoom.js" defer></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>
