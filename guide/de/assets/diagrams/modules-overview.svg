@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">KorTTY module overview</title>
+  <desc id="desc">Runtime modules grouped into application core including AI and RAG, user interface and browser assets, terminal stack, SSH and security, and data and local tooling responsibilities.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#67e8f9"/>
+    </marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#e6f3ff;font-size:16px}
+      .bg{fill:#07111d}
+      .grid{stroke:#14243a;stroke-width:1}
+      .panel{fill:#0d1a2b;stroke:#263f5c;stroke-width:2;rx:18}
+      .header{fill:#14243a;rx:18}
+      .box{fill:#13243a;stroke:#64748b;stroke-width:2;rx:10}
+      .core{stroke:#38bdf8}
+      .ui{stroke:#60a5fa}
+      .terminal{stroke:#a78bfa}
+      .security{stroke:#f59e0b}
+      .data{stroke:#34d399}
+      .optional{stroke:#fb7185}
+      .title{font-size:30px;font-weight:700;fill:#f8fafc}
+      .subtitle{font-size:14px;fill:#b9c8da}
+      .panelTitle{font-size:18px;font-weight:700;fill:#7dd3fc}
+      .label{font-size:14px;font-weight:700;fill:#f8fafc}
+      .detail{font-size:12px;fill:#b9c8da}
+      .note{font-size:13px;fill:#93a8bd}
+      .line{stroke:#67e8f9;stroke-width:2.1;fill:none;marker-end:url(#arrow)}
+      .dash{stroke:#64748b;stroke-width:1.7;stroke-dasharray:7 6;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1280" height="720"/>
+  <path class="grid" d="M 0 120 H 1280 M 0 240 H 1280 M 0 360 H 1280 M 0 480 H 1280 M 0 600 H 1280 M 160 0 V 720 M 320 0 V 720 M 480 0 V 720 M 640 0 V 720 M 800 0 V 720 M 960 0 V 720 M 1120 0 V 720" opacity="0.25"/>
+
+  <text class="title" x="42" y="52">KorTTY Module Overview</text>
+  <text class="subtitle" x="42" y="80">Runtime responsibilities and principal libraries; Node.js is build-only and the optional llama-server is installed separately.</text>
+
+  <rect class="panel" x="390" y="105" width="500" height="125"/>
+  <rect class="header" x="390" y="105" width="500" height="45"/>
+  <text class="panelTitle" x="420" y="134">Application core</text>
+  <rect class="box core" x="425" y="168" width="195" height="42"/>
+  <text class="label" x="462" y="194">core + ai + rag</text>
+  <rect class="box core" x="660" y="168" width="195" height="42"/>
+  <text class="label" x="704" y="194">JobScheduler</text>
+
+  <rect class="panel" x="25" y="280" width="290" height="300"/>
+  <rect class="header" x="25" y="280" width="290" height="48"/>
+  <text class="panelTitle" x="52" y="310">UI + browser assets</text>
+  <rect class="box ui" x="55" y="350" width="230" height="52"/>
+  <text class="label" x="112" y="373">JavaFX 21</text>
+  <text class="detail" x="85" y="392">controls, graphics, WebView</text>
+  <rect class="box ui" x="55" y="420" width="230" height="52"/>
+  <text class="label" x="105" y="443">Monaco editor</text>
+  <text class="detail" x="85" y="462">shared editor/diff bundle</text>
+  <rect class="box ui" x="55" y="490" width="230" height="66"/>
+  <text class="label" x="89" y="513">Mermaid + MathJax</text>
+  <text class="detail" x="77" y="533">separate lazy pinned assets</text>
+  <text class="detail" x="75" y="549">sanitized SVG/PNG rendering</text>
+
+  <rect class="panel" x="338" y="280" width="290" height="300"/>
+  <rect class="header" x="338" y="280" width="290" height="48"/>
+  <text class="panelTitle" x="365" y="310">Terminal stack</text>
+  <rect class="box terminal" x="368" y="350" width="230" height="52"/>
+  <text class="label" x="430" y="373">SithTermFX</text>
+  <text class="detail" x="432" y="392">terminal UI core</text>
+  <rect class="box terminal" x="368" y="420" width="230" height="52"/>
+  <text class="label" x="437" y="443">Lanterna</text>
+  <text class="detail" x="420" y="462">terminal primitives</text>
+  <rect class="box terminal" x="368" y="490" width="230" height="66"/>
+  <text class="label" x="450" y="513">pty4j</text>
+  <text class="detail" x="410" y="533">target-native local PTY</text>
+  <text class="detail" x="401" y="549">Terminal Effect plugin SPI</text>
+
+  <rect class="panel" x="651" y="280" width="290" height="300"/>
+  <rect class="header" x="651" y="280" width="290" height="48"/>
+  <text class="panelTitle" x="678" y="310">SSH + security</text>
+  <rect class="box security" x="681" y="350" width="230" height="52"/>
+  <text class="label" x="739" y="373">Apache SSHD</text>
+  <text class="detail" x="733" y="392">SSH, common, SFTP</text>
+  <rect class="box security" x="681" y="420" width="230" height="52"/>
+  <text class="label" x="756" y="443">Crypto</text>
+  <text class="detail" x="716" y="462">Ed25519 + Bouncy Castle</text>
+  <rect class="box optional" x="681" y="490" width="230" height="66"/>
+  <text class="label" x="751" y="513">Optional I/O</text>
+  <text class="detail" x="704" y="533">llama-server, mosh4j, rsync</text>
+  <text class="detail" x="720" y="549">isolated optional runtimes</text>
+
+  <rect class="panel" x="964" y="280" width="290" height="300"/>
+  <rect class="header" x="964" y="280" width="290" height="48"/>
+  <text class="panelTitle" x="991" y="310">Data + local tools</text>
+  <rect class="box data" x="994" y="350" width="230" height="52"/>
+  <text class="label" x="1055" y="373">JAXB / Gson</text>
+  <text class="detail" x="1044" y="392">XML and JSON state</text>
+  <rect class="box data" x="994" y="420" width="230" height="52"/>
+  <text class="label" x="1047" y="443">Archive tools</text>
+  <text class="detail" x="1024" y="462">zip4j, Commons, xz</text>
+  <rect class="box data" x="994" y="490" width="230" height="66"/>
+  <text class="label" x="1035" y="513">Code formatters</text>
+  <text class="detail" x="1015" y="533">WebView Prettier + SQL</text>
+  <text class="detail" x="1016" y="549">JVM and native formatters</text>
+
+  <path class="line" d="M 505 210 C 420 245 280 280 170 350"/>
+  <path class="line" d="M 575 210 C 550 245 510 275 483 350"/>
+  <path class="line" d="M 730 210 C 750 245 780 275 796 350"/>
+  <path class="line" d="M 800 210 C 900 245 1010 280 1109 350"/>
+  <path class="dash" d="M 620 189 C 640 250 600 420 285 523"/>
+
+  <rect class="panel" x="120" y="625" width="1040" height="55"/>
+  <text class="note" x="150" y="650">Embedded AI adds authenticated llama.cpp leases; RAG adds allowlisted extraction, embeddings and local HNSW snapshots.</text>
+  <text class="note" x="150" y="670">Signed catalogs are verified independently; native model runtimes and GGUF weights remain separate installations.</text>
+</svg>

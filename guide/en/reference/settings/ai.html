@@ -1,0 +1,1330 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>AI - korTTY Guide</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link rel="canonical" href="https://chardonnay.github.io/korTTY/guide/en/reference/settings/ai.html">
+        <meta name="author" content="korTTY">
+        <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+        <link href="../../assets/stylesheets/kortty.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
+
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+            <img class="logo" src="../../assets/images/favicon.png" height="150px">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">korTTY Guide</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../../index.html"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false">
+                    Getting started
+                </a>
+                <div class="collapse" id="getting-started-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../getting-started/installation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Installation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../getting-started/building-packages.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Building korTTY packages
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../getting-started/first-launch.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            First launch — master password
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../getting-started/main-window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Main window overview
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="true">
+                    Reference
+                </a>
+                <div class="collapse show" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../menu.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Menu reference
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../keyboard-shortcuts.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Keyboard shortcuts
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../architecture.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../config-files.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Configuration files
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../enterprise-policy.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Policy configuration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../control-api.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Control API
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../cli.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Control CLI
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover"
+            data-bs-toggle="collapse" data-bs-target="#settings-collapse" aria-expanded="true">
+            Settings
+        </a>
+
+        <div class="collapse show" id="settings-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Settings reference
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="appearance.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Appearance, themes & font
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="colors.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Colors
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Window
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="resources.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Resources
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="logging.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Logging
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="export.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Export
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Backup
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="updates.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Updates
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Security
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="language.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Language
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="translation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Translation
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="video.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Video
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="ai.html"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            AI
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="ai-skills.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            AI Skills
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP Manager
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="editor.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#snippet-editor-collapse" aria-expanded="false">
+            Snippet editor
+        </a>
+
+        <div class="collapse" id="snippet-editor-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="snippet-editor/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../hardening-options.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Hardening options
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../input-hardening.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Input hardening
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../language-migration.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Language unification
+        </a>
+    </li>
+            </ul>
+        </div>
+    </li>
+            </ul>
+        </div>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#features-collapse" aria-expanded="false">
+                    Features
+                </a>
+                <div class="collapse" id="features-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/connections.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Connections
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal sessions
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/tunnels.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SSH Tunnels (Port Forwarding)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/jump-server.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Jump Server (Bastion Host)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP file manager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/file-browser.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            File browser
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/snippets.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet manager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/jobscheduler.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            JobScheduler
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/projects.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Projects (workspaces)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/teamwork.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Teamwork (shared connections)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/ai-assistant.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            AI assistant
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/local-models.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local models (llama.cpp and MLX)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/rag.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            RAG knowledge stores
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/ai-tools.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal AI agent & tools
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/ai-swarm.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            AI Swarm
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Security — credentials, keys & encryption
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Backup & restore
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/recording.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal recording
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/session-journal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Session journal
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/ascii-art.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            ASCII art
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/terminal-effect-plugins.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal effect plugins
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/coding-agents.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Coding agents
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/i18n.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Languages & dynamic translation
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#about-collapse" aria-expanded="false">
+                    About
+                </a>
+                <div class="collapse" id="about-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/release-notes.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Release notes
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/feedback.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Feedback & support
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/anonymous-data.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Anonymous data for application optimization
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="video.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="ai-skills.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item">
+
+
+
+
+
+<div role="search" class="search-box kt-search">
+	<form id="rtd-search-form" class="wy-form kt-search-form" action="../../search.html" method="get">
+		<input type="text" name="q" id="mkdocs-search-query"
+		class="kt-search-input drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search"
+		autocomplete="off" title="Type search term here" /><button type="button" class="kt-search-clear" hidden
+		        aria-label="Clear search" title="Clear search">&times;</button>
+	</form>
+	<div id="mkdocs-search-results" class="kt-search-suggest"
+	     data-no-results-text="No results found"
+	     data-preparing-text="Preparing search …"
+	     data-more-text="Show {n} more results"></div>
+	<script>
+	  (function () {
+	    var box = document.currentScript.parentNode;
+	    var panel = box.querySelector('.kt-search-suggest');
+	    var input = box.querySelector('#mkdocs-search-query');
+	    var clear = box.querySelector('.kt-search-clear');
+
+	    // Emptying the panel is what hides it (CSS :empty), so closing is just that.
+	    function close () { while (panel.firstChild) { panel.removeChild(panel.firstChild); } }
+	    // The button is only useful once there is something to clear.
+	    function sync () { clear.hidden = !input.value; }
+
+	    input.addEventListener('input', sync);
+	    clear.addEventListener('click', function () {
+	      input.value = '';
+	      sync();
+	      // search/main.js renders on keyup, which a programmatic clear never fires, so
+	      // the panel has to be emptied here or the old hits would outlive the query.
+	      close();
+	      input.focus();
+	    });
+
+	    document.addEventListener('click', function (e) { if (!box.contains(e.target)) { close(); } });
+
+	    // Escape has to be handled on keyUP, and on the document rather than the input.
+	    // search/main.js binds doSearch to the field's keyup, so anything that closed the
+	    // panel on keydown was undone microseconds later by that re-render — which is why
+	    // Escape appeared to do nothing at all. Listening on the document means this runs
+	    // after the field's own handler has already re-rendered, so closing sticks.
+	    // What the panel looked like BEFORE that re-render is the interesting state, so it
+	    // is captured on keydown: the usual two steps, Escape dismisses the suggestions,
+	    // Escape again empties the box.
+	    var panelWasOpen = false;
+	    document.addEventListener('keydown', function (e) {
+	      if (e.key === 'Escape') {
+	        panelWasOpen = !!panel.firstChild;
+	      }
+	    });
+	    document.addEventListener('keyup', function (e) {
+	      if (e.key !== 'Escape') {
+	        return;
+	      }
+	      // Only clear the field while it has focus — Escape elsewhere on the page is not ours.
+	      if (!panelWasOpen && document.activeElement === input && input.value) {
+	        input.value = '';
+	        sync();
+	      }
+	      close();
+	    });
+
+	    sync();  // a ?q= deep link arrives with the field already filled
+	  })();
+	</script>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+<div class="kt-lang-bar">
+  <a class="kt-lang-switch" href="../../../de/reference/settings/ai.html"
+     title="Deutsch" hreflang="de">DE</a>
+</div>
+
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="ai">AI<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h1>
+<p>Configure AI profiles and terminal AI Agent settings. This is the largest settings tab, encompassing AI features enablement, profiles (with model, API endpoint, connection mode, and reasoning levels), token quota management, snippet editor settings, and internet access configuration. Open via <strong>Configuration → Global Settings → AI</strong>; stored in <code>~/.kortty/global-settings.xml</code>.</p>
+<p><img alt="AI settings tab" src="../../assets/screenshots/settings/ai.png" /></p>
+<h2 id="core-settings">Core Settings<a class="headerlink" href="#core-settings" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Type</th>
+<th>Values</th>
+<th>Default</th>
+<th>Stored as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enable AI features</td>
+<td>toggle</td>
+<td>—</td>
+<td>On</td>
+<td><code>aiFeaturesEnabled</code></td>
+</tr>
+<tr>
+<td>Show confirmation dialog before sending AI requests</td>
+<td>toggle</td>
+<td>—</td>
+<td>On</td>
+<td><code>aiConfirmBeforeSend</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="terminal-ai-agent">Terminal AI Agent<a class="headerlink" href="#terminal-ai-agent" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Type</th>
+<th>Values</th>
+<th>Default</th>
+<th>Stored as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enable AI Agent execution</td>
+<td>toggle</td>
+<td>—</td>
+<td>On</td>
+<td><code>terminalAgentExecutionEnabled</code></td>
+</tr>
+<tr>
+<td>Ask before AI Agent changes the target system</td>
+<td>toggle</td>
+<td>—</td>
+<td>Off</td>
+<td><code>terminalAgentConfirmMutatingCommandSets</code></td>
+</tr>
+<tr>
+<td>Use OSC 133 prompt markers when the shell already provides them</td>
+<td>toggle</td>
+<td>—</td>
+<td>On</td>
+<td><code>defaultPromptHookEnabled</code></td>
+</tr>
+<tr>
+<td>Show agent debug messages</td>
+<td>toggle</td>
+<td>—</td>
+<td>Off</td>
+<td><code>terminalAgentShowDebugMessages</code></td>
+</tr>
+<tr>
+<td>Show agent runtime messages</td>
+<td>toggle</td>
+<td>—</td>
+<td>Off</td>
+<td><code>terminalAgentShowRuntimeMessages</code></td>
+</tr>
+<tr>
+<td>Show terminal agent setup dialog before each run</td>
+<td>toggle</td>
+<td>—</td>
+<td>On</td>
+<td><code>terminalAgentShowRunDialog</code></td>
+</tr>
+<tr>
+<td>Agent command name</td>
+<td>text</td>
+<td>—</td>
+<td>agent</td>
+<td><code>terminalAgentCommandName</code></td>
+</tr>
+<tr>
+<td>Match agent command name case-insensitively</td>
+<td>toggle</td>
+<td>—</td>
+<td>Off</td>
+<td><code>terminalAgentCommandNameCaseInsensitive</code></td>
+</tr>
+<tr>
+<td>AI agent task target</td>
+<td>dropdown</td>
+<td>Terminal window, New chat window</td>
+<td>Terminal window</td>
+<td><code>terminalAgentExecutionTarget</code></td>
+</tr>
+<tr>
+<td>Terminal agent input history size</td>
+<td>number</td>
+<td>5–100</td>
+<td>20</td>
+<td><code>terminalAgentInputHistorySize</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ai-profiles">AI Profiles<a class="headerlink" href="#ai-profiles" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Type</th>
+<th>Values</th>
+<th>Default</th>
+<th>Stored as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default profile</td>
+<td>dropdown</td>
+<td>(list of configured profiles)</td>
+<td>—</td>
+<td><code>defaultAiProfileId</code></td>
+</tr>
+<tr>
+<td>AI request timeout</td>
+<td>number</td>
+<td>0–1440 minutes</td>
+<td>0 (no timeout)</td>
+<td><code>aiRequestTimeoutMinutes</code></td>
+</tr>
+<tr>
+<td>Security-check profile</td>
+<td>dropdown</td>
+<td>(list of configured profiles; empty = use default profile)</td>
+<td>—</td>
+<td><code>securityCheckAiProfileId</code></td>
+</tr>
+</tbody>
+</table>
+<p>The security-check profile is a dedicated AI profile for snippet <strong>Security Check</strong> actions. Leave it empty (or use <strong>Clear</strong>) to reuse the default profile. It can also be set directly in the snippet Security Check window, and both places share the same remembered setting.</p>
+<p><strong>AI request timeout</strong> is the maximum runtime of a single AI request and applies to every profile. The default <code>0</code> means korTTY imposes no timeout at all: long-running tasks such as the snippet editor's <strong>Full code analysis</strong> run until the model answers. Set a positive number of minutes to cancel requests that exceed it. A profile can override the value — see <strong>Timeout for this profile</strong> below.</p>
+<h3 id="profile-settings-in-editor-grid">Profile Settings (in Editor Grid)<a class="headerlink" href="#profile-settings-in-editor-grid" title="Permanent link">&para;</a></h3>
+<p>The same fields are edited in <strong>AI &gt; AI Manager &gt; Profiles</strong>, where the whole form is visible at once:</p>
+<p><img alt="AI Manager profiles tab" src="../../assets/screenshots/ai/ai-profiles.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Type</th>
+<th>Values</th>
+<th>Default</th>
+<th>Stored as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Profile name</td>
+<td>text</td>
+<td>—</td>
+<td>AI Profile</td>
+<td>(profile <code>name</code> field)</td>
+</tr>
+<tr>
+<td>Connection</td>
+<td>dropdown</td>
+<td>HTTP API, Local CLI, Integrated llama.cpp, Integrated MLX (Apple Silicon; offered on Apple Silicon Macs only)</td>
+<td>HTTP API</td>
+<td>(profile <code>connectionMode</code> field)</td>
+</tr>
+<tr>
+<td>API URL</td>
+<td>text</td>
+<td>—</td>
+<td>—</td>
+<td>(profile <code>apiUrl</code> field)</td>
+</tr>
+<tr>
+<td>CLI provider</td>
+<td>dropdown</td>
+<td>(registered providers)</td>
+<td>—</td>
+<td>(profile <code>cliProviderId</code> field)</td>
+</tr>
+<tr>
+<td>CLI executable</td>
+<td>text</td>
+<td>—</td>
+<td>—</td>
+<td>(profile <code>cliExecutablePath</code> field)</td>
+</tr>
+<tr>
+<td>Model</td>
+<td>dropdown/text</td>
+<td>(editable; "Default", curated cloud-provider suggestions plus live-loaded models; "Auto" only for local LM Studio endpoints)</td>
+<td>—</td>
+<td>(profile <code>model</code> field)</td>
+</tr>
+<tr>
+<td>Local GGUF model</td>
+<td>dropdown</td>
+<td>Installed chat models; available when Connection is Integrated llama.cpp</td>
+<td>—</td>
+<td>(profile <code>embeddedModelId</code> field)</td>
+</tr>
+<tr>
+<td>Local MLX model</td>
+<td>dropdown</td>
+<td>Installed MLX models; available when Connection is Integrated MLX (Apple Silicon)</td>
+<td>—</td>
+<td>(profile <code>embeddedModelId</code> field)</td>
+</tr>
+<tr>
+<td>Custom model</td>
+<td>text</td>
+<td>—</td>
+<td>—</td>
+<td>(profile <code>cliCustomModel</code> field)</td>
+</tr>
+<tr>
+<td>Prompt optimization</td>
+<td>dropdown</td>
+<td>Auto (model detection), Generic, Llama, Qwen, Mistral, Gemma, DeepSeek, Phi, GPT-OSS</td>
+<td>Auto</td>
+<td>(profile <code>promptPreset</code> field)</td>
+</tr>
+<tr>
+<td>Reasoning</td>
+<td>dropdown</td>
+<td>Disabled, None, Minimal, Low, Medium, High, Extra high</td>
+<td>Disabled</td>
+<td>(profile <code>reasoningEffort</code> field)</td>
+</tr>
+<tr>
+<td>Image input (vision)</td>
+<td>dropdown</td>
+<td>Auto (detect), Enabled, Disabled</td>
+<td>Auto (detect)</td>
+<td>(profile <code>visionSupport</code> field)</td>
+</tr>
+<tr>
+<td>Internet access</td>
+<td>dropdown</td>
+<td>Disabled, KorTTY Tavily Tool, LM Studio Tavily MCP, Bright Data Web MCP, Brave Search MCP, SearXNG MCP, LM Studio Toolpack</td>
+<td>Disabled</td>
+<td>(profile <code>internetAccessMode</code> field)</td>
+</tr>
+<tr>
+<td>API Key (optional)</td>
+<td>text</td>
+<td>(password field)</td>
+<td>—</td>
+<td>(profile <code>encryptedApiKey</code> field)</td>
+</tr>
+<tr>
+<td>Max characters</td>
+<td>number</td>
+<td>1–50,000,000</td>
+<td>100,000</td>
+<td>(profile <code>maxSelectionChars</code> field)</td>
+</tr>
+<tr>
+<td>Timeout for this profile</td>
+<td>check box + number</td>
+<td>Own timeout off = follow the global timeout; on: 0–1440 minutes (0 = never time out)</td>
+<td>Off</td>
+<td>(profile <code>requestTimeoutMinutes</code> field)</td>
+</tr>
+<tr>
+<td>Tokenizer</td>
+<td>dropdown</td>
+<td>Estimate, OpenAI cl100k_base, OpenAI o200k_base, OpenAI p50k_base, OpenAI r50k_base</td>
+<td>Estimate</td>
+<td>(profile <code>tokenizerType</code> field)</td>
+</tr>
+<tr>
+<td>Max tokens</td>
+<td>number + unit</td>
+<td>(amount: 0–1,000,000; unit: Thousands or Millions)</td>
+<td>0 (unlimited)</td>
+<td>(profile <code>tokenLimitAmount</code>, <code>tokenLimitUnit</code> fields)</td>
+</tr>
+<tr>
+<td>Warning thresholds</td>
+<td>number pair</td>
+<td>Yellow %: 0–100, Red %: 0–100</td>
+<td>75%, 90%</td>
+<td>(profile <code>tokenWarningYellowPercent</code>, <code>tokenWarningRedPercent</code> fields)</td>
+</tr>
+<tr>
+<td>Reset</td>
+<td>number + anchor date</td>
+<td>Period: 1–3650 days; Anchor date</td>
+<td>30 days</td>
+<td>(profile <code>tokenResetPeriodDays</code>, <code>tokenResetAnchorDate</code> fields)</td>
+</tr>
+<tr>
+<td>Test AI Connection</td>
+<td>button</td>
+<td>—</td>
+<td>—</td>
+<td>(action only)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="snippet-editor">Snippet Editor<a class="headerlink" href="#snippet-editor" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Type</th>
+<th>Values</th>
+<th>Default</th>
+<th>Stored as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default language for AI text in code</td>
+<td>dropdown</td>
+<td>(available language options)</td>
+<td>—</td>
+<td><code>aiCodeTextDefaultLanguage</code></td>
+</tr>
+<tr>
+<td>Show optional additional instructions for AI actions in the snippet editor</td>
+<td>toggle</td>
+<td>—</td>
+<td>Off</td>
+<td><code>aiSnippetEditorAdditionalInstructionsEnabled</code></td>
+</tr>
+<tr>
+<td>Maximum alternative solutions</td>
+<td>number</td>
+<td>1–10</td>
+<td>3</td>
+<td><code>aiSnippetAlternativeSolutionCount</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="internet-access-configuration">Internet Access Configuration<a class="headerlink" href="#internet-access-configuration" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Type</th>
+<th>Values</th>
+<th>Default</th>
+<th>Stored as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tavily API key</td>
+<td>text</td>
+<td>(password field)</td>
+<td>—</td>
+<td><code>encryptedAiTavilyApiKey</code></td>
+</tr>
+<tr>
+<td>Bright Data API token</td>
+<td>text</td>
+<td>(password field)</td>
+<td>—</td>
+<td><code>encryptedAiBrightDataApiToken</code></td>
+</tr>
+<tr>
+<td>Brave Search API key</td>
+<td>text</td>
+<td>(password field)</td>
+<td>—</td>
+<td><code>encryptedAiBraveSearchApiKey</code></td>
+</tr>
+<tr>
+<td>SearXNG URL</td>
+<td>text</td>
+<td>—</td>
+<td>—</td>
+<td><code>aiSearxngUrl</code></td>
+</tr>
+<tr>
+<td>Tavily MCP server label</td>
+<td>text</td>
+<td>—</td>
+<td>tavily</td>
+<td><code>aiTavilyMcpServerLabel</code></td>
+</tr>
+<tr>
+<td>Bright Data MCP server label</td>
+<td>text</td>
+<td>—</td>
+<td>bright-data</td>
+<td><code>aiBrightDataMcpServerLabel</code></td>
+</tr>
+<tr>
+<td>Brave Search MCP plugin ID</td>
+<td>text</td>
+<td>—</td>
+<td>—</td>
+<td><code>aiBraveSearchMcpPluginId</code></td>
+</tr>
+<tr>
+<td>SearXNG MCP plugin ID</td>
+<td>text</td>
+<td>—</td>
+<td>—</td>
+<td><code>aiSearxngMcpPluginId</code></td>
+</tr>
+<tr>
+<td>LM Studio Toolpack MCP plugin ID</td>
+<td>text</td>
+<td>—</td>
+<td>—</td>
+<td><code>aiLmStudioToolpackMcpPluginId</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<h3 id="ai-profiles_1">AI Profiles<a class="headerlink" href="#ai-profiles_1" title="Permanent link">&para;</a></h3>
+<p>KorTTY stores multiple named AI profiles, each with its own model, connection method, reasoning settings, prompt preset, and optional knowledge stores. Each profile tracks its own token usage separately. Profiles support three connection modes:</p>
+<ul>
+<li><strong>HTTP API</strong>: Direct connection to an OpenAI-compatible REST endpoint (specify API URL, model name, and optional API key).</li>
+<li><strong>Local CLI</strong>: Execute a local command-line AI client (configure CLI provider, custom executable, arguments template, and custom model name).</li>
+<li><strong>Integrated llama.cpp</strong>: Choose the installed chat GGUF in <strong>Local GGUF model</strong>. korTTY acquires a private loopback <code>llama-server</code> lease for it; the API URL and profile API key are managed by korTTY and are not editable.</li>
+</ul>
+<p>An explicitly chosen or security-check profile remains most specific. Otherwise terminal text actions use the configured Text profile, code actions use the Coding profile, and an unassigned role falls back to the <strong>Default profile</strong>. Configure those roles and the local runtime under <strong>AI &gt; AI Manager &gt; Local AI</strong>; see <a href="../../features/local-models.html">Local models with llama.cpp</a>.</p>
+<p>The AI Manager is modeless and can remain open while you use the main window. Invoking it again restores and focuses the same manager for that main window, and its open primary section remains visibly marked with a bold accent underline when you interact with controls inside that section.</p>
+<h3 id="local-ai-manager-settings">Local AI manager settings<a class="headerlink" href="#local-ai-manager-settings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Values</th>
+<th>Default</th>
+<th>Stored as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text and translation profile</td>
+<td>Configured AI profile, or use default</td>
+<td>Use default</td>
+<td><code>textAiProfileId</code></td>
+</tr>
+<tr>
+<td>Coding profile</td>
+<td>Configured AI profile, or use default</td>
+<td>Use default</td>
+<td><code>codingAiProfileId</code></td>
+</tr>
+<tr>
+<td>Session journal profile</td>
+<td>Configured AI profile, or use default</td>
+<td>Use default</td>
+<td><code>sessionJournalAiProfileId</code></td>
+</tr>
+<tr>
+<td>RAG embedding model ID</td>
+<td>Installed local embedding model</td>
+<td>—</td>
+<td><code>ragEmbeddingModelId</code></td>
+</tr>
+<tr>
+<td>llama.cpp runtime updates</td>
+<td>Off, Notify me, Install stable updates automatically</td>
+<td>Notify me</td>
+<td><code>llamaRuntimeUpdatePolicy</code></td>
+</tr>
+<tr>
+<td>Preferred runtime backend</td>
+<td>Auto/CPU/Metal on macOS; Auto/CPU/Vulkan on Windows/Linux</td>
+<td>Auto</td>
+<td><code>preferredLlamaRuntimeBackend</code></td>
+</tr>
+<tr>
+<td>Hugging Face token</td>
+<td>Optional encrypted token for gated/private repositories</td>
+<td>—</td>
+<td><code>encryptedHuggingFaceToken</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Automatic (keep active backend)</strong> retains the active runtime package backend for updates. With no installed package, Auto initially selects Metal on macOS and CPU elsewhere. Starting a model configured for another supported GPU backend offers to install the matching signed package.</p>
+<p>The <strong>Local Models &gt; Setup assistant</strong> exposes optional Text, Coding, and RAG-embedding slots. It verifies every selected fixed revision, quantization, license, and exact size before starting its asynchronous runtime/model installation, runs a real chat or embedding test for each installed GGUF, and saves the resulting role assignments only after all tests succeed. The Text and Coding slots may share one model. <strong>Configure</strong> refuses to replace a model's persisted runtime settings while that model is serving an active request.</p>
+<p>Knowledge stores assigned to the Text/Coding roles add only bounded, cited excerpts to matching normal terminal and snippet AI requests, never the complete knowledge store. A cloud Text/Coding profile receives those excerpts over its configured provider connection, so assigning the knowledge store to that role/profile is explicit permission for that disclosure. Agent, Planning, Swarm, and scheduled autonomous prompts remain a separate opt-in; see <a href="../../features/rag.html">RAG knowledge stores</a>.</p>
+<h3 id="prompt-optimization-presets">Prompt optimization presets<a class="headerlink" href="#prompt-optimization-presets" title="Permanent link">&para;</a></h3>
+<p><strong>Auto (model detection)</strong> resolves common Llama, Qwen, Mistral/Mixtral, Gemma, DeepSeek, Phi, and GPT-OSS names. A family preset adds concise compatibility guidance while leaving korTTY's strict JSON/code contracts authoritative; <strong>Generic</strong> adds no family-specific guidance. llama.cpp still applies the GGUF's native chat template.</p>
+<h3 id="reasoning-effort-levels">Reasoning Effort Levels<a class="headerlink" href="#reasoning-effort-levels" title="Permanent link">&para;</a></h3>
+<p>Reasoning effort configures how deeply the AI thinks before responding. Available levels depend on the model and endpoint:</p>
+<ul>
+<li><strong>Disabled</strong>: No reasoning parameter sent; model uses its default behavior.</li>
+<li><strong>None</strong>: Explicitly disable reasoning with the transport's supported off value.</li>
+<li><strong>Minimal</strong>: Light reasoning; fastest execution.</li>
+<li><strong>Low</strong>: Low effort reasoning; balance between speed and depth.</li>
+<li><strong>Medium</strong>: Medium effort; reasonable depth.</li>
+<li><strong>High</strong>: High effort; more thorough reasoning.</li>
+<li><strong>Extra high</strong>: Maximum reasoning effort; slowest but most comprehensive.</li>
+</ul>
+<p>Not all models support all levels. When LM Studio publishes <code>capabilities.reasoning.allowed_options</code> through its native model metadata, korTTY uses that exact list instead of treating a silently converted value as supported, and it reads that list <strong>automatically</strong>: picking another model or endpoint in the profile editor re-reads the metadata for the model you just chose, so the dropdown follows the profile without any further action. The list is only read from the endpoint's model metadata here — a single request that sends no prompt. Use the <strong>Refresh reasoning options</strong> button when you want to force a re-check, or for an endpoint that publishes no such metadata: that button also runs active connection probes.</p>
+<p>For a binary <code>off</code>/<code>on</code> model, an explicit <code>none</code> request switches this feature off, while omitting the reasoning parameter uses the model's published default; the unsupported Minimal, Low, Medium, High, and Extra high levels are not offered. A model whose LM Studio metadata publishes no reasoning capability at all — including a virtual model that overrides its reasoning metadata to false — offers only <strong>Disabled</strong>: LM Studio skips an unsupported request-time reasoning value with a log warning instead of rejecting the request, so an active probe would mistake every level for supported.</p>
+<p>A detected list belongs to the endpoint and model it was read for. Changing either discards it, and where korTTY cannot read the new combination's metadata — a CLI profile, a cloud endpoint — the profile falls back to the conservative defaults for its model name until you press <strong>Refresh reasoning options</strong>. A level that is no longer offered is dropped from the request with a log line naming the level actually used. Fields that a profile's own connection mode does not use, such as the CLI provider of an HTTP profile, never invalidate a detected list. Profiles using an integrated model keep their detected levels.</p>
+<p>For MiniMax endpoints (directly or through an aggregator whose model name contains <code>minimax</code>), both <strong>Disabled</strong> and an explicit <code>none</code> are sent as MiniMax's own <code>thinking: disabled</code> parameter, because those models ignore <code>reasoning_effort</code> and otherwise think by default — billing the hidden reasoning as completion tokens and, for MiniMax-M3, opening the reply with an inline <code>&lt;think&gt;</code> block. An explicit effort level is passed through unchanged.</p>
+<p>For the native Anthropic (Claude) endpoint, an enabled reasoning level requests <strong>extended thinking</strong> with a level-dependent thinking budget; models that do not support extended thinking are retried once without it. The model's reasoning is shown in the Terminal AI Agent's 💭 thinking rows.</p>
+<h3 id="image-input-vision">Image input (vision)<a class="headerlink" href="#image-input-vision" title="Permanent link">&para;</a></h3>
+<p><strong>Image input (vision)</strong> decides whether korTTY may attach images to a prompt for this profile — used by the <a href="../../features/session-journal.html#ai-screenshot-analysis">session journal's AI screenshot analysis</a>. <strong>Auto (detect)</strong> derives the capability from the endpoint: for a local LM Studio endpoint the model metadata is authoritative (a <code>vlm</code> model counts as image-capable; the answer is read together with the reasoning levels — by the automatic metadata read and by <strong>Refresh reasoning options</strong> — and cached with them), the native Anthropic endpoint always counts as image-capable, and other endpoints are recognized by well-known vision model names (GPT-4o/4.&#8533;, o3/o4, Gemini, Gemma 3, Qwen-VL, LLaVA, Pixtral and similar). <strong>Enabled</strong>/<strong>Disabled</strong> override the detection for models it misjudges. CLI and integrated (llama.cpp/MLX) profiles cannot send images. Local LM Studio vision models (<code>vlm</code>) also appear in the model dropdown.</p>
+<h3 id="token-quota-management">Token Quota Management<a class="headerlink" href="#token-quota-management" title="Permanent link">&para;</a></h3>
+<p>Each AI profile maintains a token usage quota with the following controls:</p>
+<ul>
+<li><strong>Tokenizer</strong>: Choose which tokenizer estimates token counts—useful when switching between OpenAI and other providers. Options are Estimate (generic), cl100k_base (GPT-3.5/4), o200k_base (o1/o1-mini), p50k_base (Codex), and r50k_base (GPT-2).</li>
+<li><strong>Max tokens limit</strong>: Set a spending cap (in thousands or millions of tokens, or unlimited). Token count resets on a rolling schedule.</li>
+<li><strong>Reset period</strong>: Number of days between resets (1–3650), with an optional anchor date for predictable reset timing.</li>
+<li><strong>Warning thresholds</strong>: Yellow warning triggers at a percentage of the limit; red warning at a higher percentage. Configure both as integers 0–100.</li>
+</ul>
+<p>Token usage is displayed as a colored bar and summary on the profile editor, and the profile list shows token status inline.</p>
+<h3 id="internet-access-modes">Internet Access Modes<a class="headerlink" href="#internet-access-modes" title="Permanent link">&para;</a></h3>
+<p>Per-profile internet access strategy for AI requests. Each mode requires different credentials and MCP configuration:</p>
+<ul>
+<li><strong>Disabled</strong> (default): No internet access.</li>
+<li><strong>KorTTY Tavily Tool</strong>: Built-in web search using Tavily API directly (requires Tavily API key).</li>
+<li><strong>LM Studio Tavily MCP</strong>: Web search via an LM Studio Tavily MCP instance (requires Tavily API key and MCP server label).</li>
+<li><strong>Bright Data Web MCP</strong>: Structured data extraction and browsing via Bright Data Web MCP (requires Bright Data API token and MCP server label).</li>
+<li><strong>Brave Search MCP</strong>: Search via Brave Search MCP (requires Brave Search API key and MCP plugin ID in <code>mcp/&lt;server_label&gt;</code> format).</li>
+<li><strong>SearXNG MCP</strong>: Search via a SearXNG MCP instance (requires SearXNG URL and MCP plugin ID in <code>mcp/&lt;server_label&gt;</code> format).</li>
+<li><strong>LM Studio Toolpack</strong>: Community LM Studio Toolpack web-search server (requires plugin ID in <code>mcp/&lt;server_label&gt;</code> format).</li>
+</ul>
+<p>Credentials are encrypted and stored securely. Use the <strong>Clear</strong> toggle adjacent to each secret field to erase stored values on the next save.</p>
+<div class="admonition warning">
+<p class="admonition-title">Embedded profiles support only the KorTTY Tavily Tool</p>
+<p>A profile whose connection mode is <strong>Integrated llama.cpp</strong> or <strong>Integrated MLX</strong> can use
+<strong>KorTTY Tavily Tool</strong> and nothing else. The five MCP modes route the request through LM Studio's
+native API, which an embedded model never goes through — selecting one on an embedded profile
+fails the request with an explicit message instead of silently answering without web access.
+Local CLI profiles have no internet modes at all; the dropdown is disabled for them.</p>
+<p>An organization can forbid web access entirely with the <code>allow-internet</code> policy key — see
+<a href="../enterprise-policy.html">Enterprise policy</a>.</p>
+</div></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+<footer class="kt-footer">
+  <div class="kt-footer__line">MIT-licensed &middot; Developed by Daniel Mengel</div>
+  <div class="kt-footer__line">korTTY <strong>v2.18.0</strong></div>
+</footer>
+
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../assets/javascripts/kt-zoom.js" defer></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

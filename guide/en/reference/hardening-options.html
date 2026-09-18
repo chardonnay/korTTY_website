@@ -1,0 +1,931 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Hardening options - korTTY Guide</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link rel="canonical" href="https://chardonnay.github.io/korTTY/guide/en/reference/hardening-options.html">
+        <meta name="author" content="korTTY">
+        <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+        <link href="../assets/stylesheets/kortty.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
+
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+            <img class="logo" src="../assets/images/favicon.png" height="150px">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">korTTY Guide</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../index.html"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false">
+                    Getting started
+                </a>
+                <div class="collapse" id="getting-started-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/installation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Installation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/building-packages.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Building korTTY packages
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/first-launch.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            First launch — master password
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/main-window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Main window overview
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="true">
+                    Reference
+                </a>
+                <div class="collapse show" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="menu.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Menu reference
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="keyboard-shortcuts.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Keyboard shortcuts
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="architecture.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="config-files.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Configuration files
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="enterprise-policy.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Policy configuration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="control-api.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Control API
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="cli.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Control CLI
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover"
+            data-bs-toggle="collapse" data-bs-target="#settings-collapse" aria-expanded="true">
+            Settings
+        </a>
+
+        <div class="collapse show" id="settings-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Settings reference
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/appearance.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Appearance, themes & font
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/colors.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Colors
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Window
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/resources.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Resources
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/logging.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Logging
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/export.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Export
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Backup
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/updates.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Updates
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Security
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/language.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Language
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/translation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Translation
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/video.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Video
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/ai.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            AI
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/ai-skills.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            AI Skills
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP Manager
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/editor.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover"
+            data-bs-toggle="collapse" data-bs-target="#snippet-editor-collapse" aria-expanded="true">
+            Snippet editor
+        </a>
+
+        <div class="collapse show" id="snippet-editor-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="settings/snippet-editor/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="hardening-options.html"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Hardening options
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="input-hardening.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Input hardening
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="language-migration.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Language unification
+        </a>
+    </li>
+            </ul>
+        </div>
+    </li>
+            </ul>
+        </div>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#features-collapse" aria-expanded="false">
+                    Features
+                </a>
+                <div class="collapse" id="features-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/connections.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Connections
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal sessions
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/tunnels.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SSH Tunnels (Port Forwarding)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/jump-server.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Jump Server (Bastion Host)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP file manager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/file-browser.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            File browser
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/snippets.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet manager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/jobscheduler.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            JobScheduler
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/projects.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Projects (workspaces)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/teamwork.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Teamwork (shared connections)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/ai-assistant.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            AI assistant
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/local-models.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local models (llama.cpp and MLX)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/rag.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            RAG knowledge stores
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/ai-tools.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal AI agent & tools
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/ai-swarm.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            AI Swarm
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Security — credentials, keys & encryption
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Backup & restore
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/recording.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal recording
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/session-journal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Session journal
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/ascii-art.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            ASCII art
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/terminal-effect-plugins.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal effect plugins
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/coding-agents.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Coding agents
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/i18n.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Languages & dynamic translation
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#about-collapse" aria-expanded="false">
+                    About
+                </a>
+                <div class="collapse" id="about-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/release-notes.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Release notes
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/feedback.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Feedback & support
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/anonymous-data.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Anonymous data for application optimization
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="settings/snippet-editor/index.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="input-hardening.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item">
+
+
+
+
+
+<div role="search" class="search-box kt-search">
+	<form id="rtd-search-form" class="wy-form kt-search-form" action="../search.html" method="get">
+		<input type="text" name="q" id="mkdocs-search-query"
+		class="kt-search-input drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search"
+		autocomplete="off" title="Type search term here" /><button type="button" class="kt-search-clear" hidden
+		        aria-label="Clear search" title="Clear search">&times;</button>
+	</form>
+	<div id="mkdocs-search-results" class="kt-search-suggest"
+	     data-no-results-text="No results found"
+	     data-preparing-text="Preparing search …"
+	     data-more-text="Show {n} more results"></div>
+	<script>
+	  (function () {
+	    var box = document.currentScript.parentNode;
+	    var panel = box.querySelector('.kt-search-suggest');
+	    var input = box.querySelector('#mkdocs-search-query');
+	    var clear = box.querySelector('.kt-search-clear');
+
+	    // Emptying the panel is what hides it (CSS :empty), so closing is just that.
+	    function close () { while (panel.firstChild) { panel.removeChild(panel.firstChild); } }
+	    // The button is only useful once there is something to clear.
+	    function sync () { clear.hidden = !input.value; }
+
+	    input.addEventListener('input', sync);
+	    clear.addEventListener('click', function () {
+	      input.value = '';
+	      sync();
+	      // search/main.js renders on keyup, which a programmatic clear never fires, so
+	      // the panel has to be emptied here or the old hits would outlive the query.
+	      close();
+	      input.focus();
+	    });
+
+	    document.addEventListener('click', function (e) { if (!box.contains(e.target)) { close(); } });
+
+	    // Escape has to be handled on keyUP, and on the document rather than the input.
+	    // search/main.js binds doSearch to the field's keyup, so anything that closed the
+	    // panel on keydown was undone microseconds later by that re-render — which is why
+	    // Escape appeared to do nothing at all. Listening on the document means this runs
+	    // after the field's own handler has already re-rendered, so closing sticks.
+	    // What the panel looked like BEFORE that re-render is the interesting state, so it
+	    // is captured on keydown: the usual two steps, Escape dismisses the suggestions,
+	    // Escape again empties the box.
+	    var panelWasOpen = false;
+	    document.addEventListener('keydown', function (e) {
+	      if (e.key === 'Escape') {
+	        panelWasOpen = !!panel.firstChild;
+	      }
+	    });
+	    document.addEventListener('keyup', function (e) {
+	      if (e.key !== 'Escape') {
+	        return;
+	      }
+	      // Only clear the field while it has focus — Escape elsewhere on the page is not ours.
+	      if (!panelWasOpen && document.activeElement === input && input.value) {
+	        input.value = '';
+	        sync();
+	      }
+	      close();
+	    });
+
+	    sync();  // a ?q= deep link arrives with the field already filled
+	  })();
+	</script>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+<div class="kt-lang-bar">
+  <a class="kt-lang-switch" href="../../de/reference/hardening-options.html"
+     title="Deutsch" hreflang="de">DE</a>
+</div>
+
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="hardening-options">Hardening options<a class="headerlink" href="#hardening-options" title="Permanent link">&para;</a></h1>
+<p><strong>Hardening options</strong> are a set of production-quality techniques you can ask the AI to bake into a script it generates or rewrites. Instead of writing the same instruction ("add error handling", "make it re-runnable", "give it a <code>--help</code>") by hand every time, you tick the techniques you want and KorTTY turns each one into a precise rule that is appended to the AI prompt. The result is a script that behaves like something a careful engineer would ship: it fails loudly instead of silently, cleans up after itself, logs what it does, and can be run again without surprises.</p>
+<p>The same eleven options are used everywhere KorTTY generates or improves a script, so they behave identically no matter where you start from.</p>
+<div class="admonition note">
+<p class="admonition-title">Not the same as Input hardening</p>
+<p>Hardening options shape <em>how the script is written</em> (structure, error handling, logging, CLI). The separate <a href="input-hardening.html">Input hardening</a> panel instead asks the AI to build a concrete <em>input-validation guard block</em> into the script that checks parameters and input files at run time. The two appear side by side and can be combined.</p>
+</div>
+<h2 id="where-they-appear">Where they appear<a class="headerlink" href="#where-they-appear" title="Permanent link">&para;</a></h2>
+<p>The <strong>Hardening options</strong> panel shows up in these places:</p>
+<table>
+<thead>
+<tr>
+<th>Where</th>
+<th>How it looks</th>
+<th>Applied when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Terminal → Generate Workflow Script</strong> (the <em>Workflow</em> button after an agent run)</td>
+<td>Collapsible <em>Hardening options</em> panel (collapsed by default)</td>
+<td>You click <em>Generate</em></td>
+</tr>
+<tr>
+<td><strong>AI Swarm → Generate multi-server workflow</strong></td>
+<td>No panel — the default all-on selection is applied automatically</td>
+<td>You generate the multi-server script</td>
+</tr>
+<tr>
+<td><strong>Snippet editor → AI Code → Improve robustness</strong></td>
+<td>Options panel with all boxes ticked</td>
+<td>You confirm the dialog; KorTTY rewrites the complete snippet when any hardening rule is active</td>
+</tr>
+<tr>
+<td><strong>Snippet editor → AI Code → Custom improvement…</strong></td>
+<td>Options panel plus a free-text instruction field</td>
+<td>You confirm the dialog; KorTTY rewrites the complete snippet when any hardening rule is active</td>
+</tr>
+<tr>
+<td><strong>Snippet editor → AI Code → Full code analysis</strong></td>
+<td>Collapsible <em>Hardening options</em> panel at the bottom of the window, with a live <strong>(N)</strong> count of ticked options in its title; korTTY remembers whether you left it open or closed</td>
+<td>You click <em>Apply selected</em></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Not shown for every action</p>
+<p><em>Improve readability</em> and <em>Improve performance</em> deliberately do <strong>not</strong> show hardening options — those actions are meant to stay close to the original code. Hardening options appear only where adding robustness is the point: <em>Improve robustness</em>, <em>Custom improvement</em>, <em>Full code analysis</em>, and the two workflow-script generators.</p>
+</div>
+<p>Every option is <strong>ticked by default</strong>. Untick the ones you do not want. An unticked option contributes nothing to the prompt.</p>
+<p>In <strong>Improve robustness</strong> and <strong>Custom improvement</strong>, active hardening rules are applied to the <strong>complete snippet</strong>, even if you marked only one region. This is required because options such as strict mode, a configuration block, <code>--help</code>, and a final summary must change the prologue or epilogue rather than only the selected lines. If you use <strong>Clear</strong> and leave Input hardening off, the ordinary improvement remains limited to the selected region. The complete-snippet result is still shown in the before/after review and is rejected if the AI abbreviates unchanged code with an omission marker.</p>
+<p>Below the options, three buttons help you manage the selection:</p>
+<ul>
+<li><strong>All</strong> — tick every option.</li>
+<li><strong>Clear</strong> — untick every option (generate/apply with no hardening rules).</li>
+<li><strong>Save</strong> — remember the current selection permanently. From then on, every hardening panel opens with your saved selection instead of the all-on default — so you can set your preferred hardening once and have it applied everywhere.</li>
+</ul>
+<h2 id="how-they-are-applied">How they are applied<a class="headerlink" href="#how-they-are-applied" title="Permanent link">&para;</a></h2>
+<p>Each ticked option becomes one authoritative hardening rule that KorTTY appends to the request sent to the AI (under <em>Apply these hardening techniques:</em> in the snippet editor, or <em>ADDITIONAL REQUIREMENTS:</em> in the workflow generator). In the Full code analysis apply flow, every selected rule is additionally assigned its own mandatory identifier: the AI returns the identifiers it completed in one compact list, and korTTY rejects the whole response if any identifier is missing. Explicit CLI and guard literals such as <code>--dry-run</code>, <code>--yes</code>, <code>--help</code>, and <code>--verbose</code> must also be present when the corresponding options are selected. Workflow generation also adds the corresponding target-language idioms — for example the Bash spelling of strict mode — only while that option is selected. Unticking an option removes both its rule and its option-specific language idioms; <strong>Clear</strong> therefore sends no hardening behaviour, apart from neutral requirements needed to produce valid code in the chosen language.</p>
+<p>The wording of each rule <strong>adapts to the target language</strong>:</p>
+<ul>
+<li><strong>Imperative scripts</strong> — Bash, Python, Perl, Ruby, PowerShell, Windows-CMD and AppleScript get the imperative phrasing (flags, traps, exit codes, …).</li>
+<li><strong>Declarative artefacts</strong> — Ansible playbooks, and snippets whose language is <code>YAML</code>/<code>YML</code> or contains <code>ansible</code>, get Ansible-idiomatic phrasing instead (<code>block</code>/<code>rescue</code>/<code>always</code>, <code>assert</code>, <code>vars:</code>, check mode, …).</li>
+</ul>
+<p>So the <em>idea</em> of each option is the same everywhere, but a Bash script gets a <code>set -euo pipefail</code> style rule while an Ansible playbook gets an <code>assert</code> / <code>failed_when</code> style rule for the very same tick-box.</p>
+<h2 id="the-two-groups">The two groups<a class="headerlink" href="#the-two-groups" title="Permanent link">&para;</a></h2>
+<p>The eleven options fall into two groups by their effect on the script:</p>
+<ul>
+<li><strong>Behaviour-preserving hardening</strong> (the first seven) only add documentation, logging, structure, and safety nets. They make the script sturdier and easier to read <strong>without changing what it actually does</strong>. These are safe to leave on for almost any script.</li>
+<li><strong>Behavioural / interactive changes</strong> (the last four) can change control flow or add a command-line interface — precondition gates, re-run detection, a dry-run mode, argument parsing. Leave them off if you want the rewrite to stay as close as possible to the original behaviour.</li>
+</ul>
+<h2 id="option-reference">Option reference<a class="headerlink" href="#option-reference" title="Permanent link">&para;</a></h2>
+<p>Each option below lists what it is for and the exact rule KorTTY sends to the AI — for imperative scripts and for Ansible playbooks.</p>
+<h3 id="behaviour-preserving-hardening">Behaviour-preserving hardening<a class="headerlink" href="#behaviour-preserving-hardening" title="Permanent link">&para;</a></h3>
+<h4 id="strict-mode-abort-on-error">Strict mode (abort on error)<a class="headerlink" href="#strict-mode-abort-on-error" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>What it is for</strong> — Stop the script the moment something goes wrong instead of blindly continuing on a half-failed state.</li>
+<li><strong>Imperative scripts</strong> — Enable the language's strict / abort-on-error mode (for example <code>set -euo pipefail</code> in Bash, <code>Set-StrictMode -Version Latest</code> with <code>$ErrorActionPreference = 'Stop'</code> in PowerShell, <code>use strict; use warnings;</code> in Perl).</li>
+<li><strong>Ansible playbooks</strong> — Validate prerequisites with <code>assert</code>/<code>failed_when</code> so bad state fails the play immediately.</li>
+</ul>
+<h4 id="error-trap-cleanup">Error trap &amp; cleanup<a class="headerlink" href="#error-trap-cleanup" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>What it is for</strong> — Guarantee that a failure is reported clearly and that any temporary state (temp files, mounts, locks) is cleaned up even when the script aborts.</li>
+<li><strong>Imperative scripts</strong> — Add an error trap / <code>finally</code> / <code>ensure</code> block that reports failures and cleans up temporary state.</li>
+<li><strong>Ansible playbooks</strong> — Use <code>block</code>/<code>rescue</code>/<code>always</code> so failures are caught and cleanup always runs.</li>
+</ul>
+<h4 id="meaningful-exit-codes">Meaningful exit codes<a class="headerlink" href="#meaningful-exit-codes" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>What it is for</strong> — Let whoever calls the script (a scheduler, a CI job, another script) tell <em>why</em> it failed, not just <em>that</em> it failed.</li>
+<li><strong>Imperative scripts</strong> — Use distinct, documented non-zero exit codes for distinct failure classes.</li>
+<li><strong>Ansible playbooks</strong> — Make failing tasks stop the play with a clear message (<code>any_errors_fatal</code> where sensible).</li>
+</ul>
+<h4 id="logging-verbose">Logging (<code>--verbose</code>)<a class="headerlink" href="#logging-verbose" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>What it is for</strong> — Make the script's progress visible and debuggable without cluttering normal output.</li>
+<li><strong>Imperative scripts</strong> — Emit timestamped log messages to stderr and support a <code>--verbose</code>/<code>-v</code> flag.</li>
+<li><strong>Ansible playbooks</strong> — Use the <code>debug</code> module for progress output (visible with <code>-v</code>).</li>
+</ul>
+<h4 id="configuration-block-for-literals">Configuration block for literals<a class="headerlink" href="#configuration-block-for-literals" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>What it is for</strong> — Collect the values you are most likely to change (paths, hostnames, package names) in one obvious place instead of scattering them through the script.</li>
+<li><strong>Imperative scripts</strong> — Hoist all literals (paths, hosts, packages) into a clearly commented configuration block near the top.</li>
+<li><strong>Ansible playbooks</strong> — Hoist all literals into a <code>vars:</code> block at the top.</li>
+</ul>
+<h4 id="final-summary">Final summary<a class="headerlink" href="#final-summary" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>What it is for</strong> — End with a short report so the operator can see at a glance what happened.</li>
+<li><strong>Imperative scripts</strong> — Print a final summary of what was done (with success/failure counts).</li>
+<li><strong>Ansible playbooks</strong> — End with a <code>debug</code> summary of what changed.</li>
+</ul>
+<h4 id="style-guide-linter-clean">Style-guide / linter clean<a class="headerlink" href="#style-guide-linter-clean" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>What it is for</strong> — Produce code that passes the language's standard linter, so it reads consistently and avoids common footguns.</li>
+<li><strong>Imperative scripts</strong> — Follow the language style guide and keep it linter-clean (for example ShellCheck-clean for Bash).</li>
+<li><strong>Ansible playbooks</strong> — Follow <code>ansible-lint</code> conventions and use fully-qualified module names.</li>
+</ul>
+<h3 id="behavioural-interactive-changes">Behavioural / interactive changes<a class="headerlink" href="#behavioural-interactive-changes" title="Permanent link">&para;</a></h3>
+<h4 id="precondition-checks">Precondition checks<a class="headerlink" href="#precondition-checks" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>What it is for</strong> — Fail fast, before touching anything, if the environment isn't ready — a missing command, insufficient privileges, or no network.</li>
+<li><strong>Imperative scripts</strong> — Before doing work, verify required commands, privileges (root/sudo) and connectivity.</li>
+<li><strong>Ansible playbooks</strong> — Add <code>pre_tasks</code>/<code>assert</code> checks for required privileges, packages and connectivity before any change.</li>
+</ul>
+<h4 id="idempotency-skip-completed-steps">Idempotency (skip completed steps)<a class="headerlink" href="#idempotency-skip-completed-steps" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>What it is for</strong> — Make the script safe to run a second time: steps that are already done are detected and skipped instead of repeated or erroring out.</li>
+<li><strong>Imperative scripts</strong> — Detect already-completed steps and skip them so the script is safe to re-run.</li>
+<li><strong>Ansible playbooks</strong> — Ensure the playbook is fully idempotent (safe to re-run; rely on module idempotency and <code>creates</code>/<code>removes</code>).</li>
+</ul>
+<h4 id="safe-mode-dry-run-confirm">Safe mode (<code>--dry-run</code> + confirm)<a class="headerlink" href="#safe-mode-dry-run-confirm" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>What it is for</strong> — Let the operator preview what the script <em>would</em> do without making any changes, and ask for confirmation before anything destructive.</li>
+<li><strong>Imperative scripts</strong> — Support a <code>--dry-run</code> flag that prints intended actions without executing, and confirm before destructive operations (suppressible with <code>--yes</code>).</li>
+<li><strong>Ansible playbooks</strong> — Support check mode (<code>--check</code>) and guard destructive tasks so a dry run makes no changes.</li>
+</ul>
+<h4 id="-help-argument-parsing"><code>--help</code> &amp; argument parsing<a class="headerlink" href="#-help-argument-parsing" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>What it is for</strong> — Turn the script into a proper command-line tool with documented, overridable inputs instead of hard-coded values.</li>
+<li><strong>Imperative scripts</strong> — Provide a <code>--help</code>/usage message and parse command-line arguments for the configurable values.</li>
+<li><strong>Ansible playbooks</strong> — Document all variables and how to override them via <code>--extra-vars</code> at the top of the file.</li>
+</ul>
+<h2 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Start with the defaults (all on) for a throwaway or personal script — the behaviour-preserving group costs you nothing and the interactive group makes the script friendlier.</li>
+<li>For a rewrite where you want the smallest possible diff, untick the four behavioural options and keep only the behaviour-preserving group.</li>
+<li>The options are independent — you can tick any combination. KorTTY only sends rules for the boxes that are ticked.</li>
+</ul></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+<footer class="kt-footer">
+  <div class="kt-footer__line">MIT-licensed &middot; Developed by Daniel Mengel</div>
+  <div class="kt-footer__line">korTTY <strong>v2.18.0</strong></div>
+</footer>
+
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../assets/javascripts/kt-zoom.js" defer></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>

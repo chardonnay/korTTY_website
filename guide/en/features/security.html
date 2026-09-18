@@ -1,0 +1,1108 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Security — credentials, keys & encryption - korTTY Guide</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link rel="canonical" href="https://chardonnay.github.io/korTTY/guide/en/features/security.html">
+        <meta name="author" content="korTTY">
+        <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+        <link href="../assets/stylesheets/kortty.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
+
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+            <img class="logo" src="../assets/images/favicon.png" height="150px">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">korTTY Guide</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../index.html"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false">
+                    Getting started
+                </a>
+                <div class="collapse" id="getting-started-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/installation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Installation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/building-packages.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Building korTTY packages
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/first-launch.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            First launch — master password
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/main-window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Main window overview
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/menu.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Menu reference
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/keyboard-shortcuts.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Keyboard shortcuts
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/architecture.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/config-files.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Configuration files
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/enterprise-policy.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Policy configuration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/control-api.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Control API
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/cli.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Control CLI
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#settings-collapse" aria-expanded="false">
+            Settings
+        </a>
+
+        <div class="collapse" id="settings-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Settings reference
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/appearance.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Appearance, themes & font
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/colors.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Colors
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Window
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/resources.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Resources
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/logging.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Logging
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/export.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Export
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Backup
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/updates.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Updates
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Security
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/language.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Language
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/translation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Translation
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/video.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Video
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/ai.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            AI
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/ai-skills.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            AI Skills
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP Manager
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/editor.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#snippet-editor-collapse" aria-expanded="false">
+            Snippet editor
+        </a>
+
+        <div class="collapse" id="snippet-editor-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/snippet-editor/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/hardening-options.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Hardening options
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/input-hardening.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Input hardening
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/language-migration.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Language unification
+        </a>
+    </li>
+            </ul>
+        </div>
+    </li>
+            </ul>
+        </div>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover"
+                    data-bs-toggle="collapse" data-bs-target="#features-collapse" aria-expanded="true">
+                    Features
+                </a>
+                <div class="collapse show" id="features-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="connections.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Connections
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal sessions
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="tunnels.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SSH Tunnels (Port Forwarding)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="jump-server.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Jump Server (Bastion Host)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP file manager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="file-browser.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            File browser
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="snippets.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet manager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="jobscheduler.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            JobScheduler
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="projects.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Projects (workspaces)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="teamwork.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Teamwork (shared connections)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-assistant.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            AI assistant
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="local-models.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local models (llama.cpp and MLX)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="rag.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            RAG knowledge stores
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-tools.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal AI agent & tools
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-swarm.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            AI Swarm
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="security.html"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Security — credentials, keys & encryption
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Backup & restore
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="recording.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal recording
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="session-journal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Session journal
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ascii-art.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            ASCII art
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal-effect-plugins.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal effect plugins
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="coding-agents.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Coding agents
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="i18n.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Languages & dynamic translation
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#about-collapse" aria-expanded="false">
+                    About
+                </a>
+                <div class="collapse" id="about-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/release-notes.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Release notes
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/feedback.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Feedback & support
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/anonymous-data.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Anonymous data for application optimization
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="ai-swarm.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="backup.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item">
+
+
+
+
+
+<div role="search" class="search-box kt-search">
+	<form id="rtd-search-form" class="wy-form kt-search-form" action="../search.html" method="get">
+		<input type="text" name="q" id="mkdocs-search-query"
+		class="kt-search-input drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search"
+		autocomplete="off" title="Type search term here" /><button type="button" class="kt-search-clear" hidden
+		        aria-label="Clear search" title="Clear search">&times;</button>
+	</form>
+	<div id="mkdocs-search-results" class="kt-search-suggest"
+	     data-no-results-text="No results found"
+	     data-preparing-text="Preparing search …"
+	     data-more-text="Show {n} more results"></div>
+	<script>
+	  (function () {
+	    var box = document.currentScript.parentNode;
+	    var panel = box.querySelector('.kt-search-suggest');
+	    var input = box.querySelector('#mkdocs-search-query');
+	    var clear = box.querySelector('.kt-search-clear');
+
+	    // Emptying the panel is what hides it (CSS :empty), so closing is just that.
+	    function close () { while (panel.firstChild) { panel.removeChild(panel.firstChild); } }
+	    // The button is only useful once there is something to clear.
+	    function sync () { clear.hidden = !input.value; }
+
+	    input.addEventListener('input', sync);
+	    clear.addEventListener('click', function () {
+	      input.value = '';
+	      sync();
+	      // search/main.js renders on keyup, which a programmatic clear never fires, so
+	      // the panel has to be emptied here or the old hits would outlive the query.
+	      close();
+	      input.focus();
+	    });
+
+	    document.addEventListener('click', function (e) { if (!box.contains(e.target)) { close(); } });
+
+	    // Escape has to be handled on keyUP, and on the document rather than the input.
+	    // search/main.js binds doSearch to the field's keyup, so anything that closed the
+	    // panel on keydown was undone microseconds later by that re-render — which is why
+	    // Escape appeared to do nothing at all. Listening on the document means this runs
+	    // after the field's own handler has already re-rendered, so closing sticks.
+	    // What the panel looked like BEFORE that re-render is the interesting state, so it
+	    // is captured on keydown: the usual two steps, Escape dismisses the suggestions,
+	    // Escape again empties the box.
+	    var panelWasOpen = false;
+	    document.addEventListener('keydown', function (e) {
+	      if (e.key === 'Escape') {
+	        panelWasOpen = !!panel.firstChild;
+	      }
+	    });
+	    document.addEventListener('keyup', function (e) {
+	      if (e.key !== 'Escape') {
+	        return;
+	      }
+	      // Only clear the field while it has focus — Escape elsewhere on the page is not ours.
+	      if (!panelWasOpen && document.activeElement === input && input.value) {
+	        input.value = '';
+	        sync();
+	      }
+	      close();
+	    });
+
+	    sync();  // a ?q= deep link arrives with the field already filled
+	  })();
+	</script>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+<div class="kt-lang-bar">
+  <a class="kt-lang-switch" href="../../de/features/security.html"
+     title="Deutsch" hreflang="de">DE</a>
+</div>
+
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="security-credentials-keys-encryption">Security: credentials, keys &amp; encryption<a class="headerlink" href="#security-credentials-keys-encryption" title="Permanent link">&para;</a></h1>
+<p>KorTTY protects your sensitive data with industry-standard encryption and centralized key management. All connection passwords, SSH key passphrases, and credential storage use AES-256-GCM encryption derived from a master password that is created on first launch.</p>
+<p><img alt="Persistence &amp; encryption" src="../assets/diagrams/persistence-encryption-flow.svg" /></p>
+<h2 id="master-password">Master Password<a class="headerlink" href="#master-password" title="Permanent link">&para;</a></h2>
+<p>On first launch, you are prompted to create a master password (minimum 6 characters) that encrypts all stored secrets.</p>
+<h3 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Enter a password (the field border turns green when length is sufficient, red when too short).</li>
+<li>A strength indicator shows password quality; a warning appears for weak or common passwords, but you can confirm if needed.</li>
+<li>Confirm the password.</li>
+<li>Click <strong>Setup</strong>.</li>
+</ol>
+<h3 id="at-rest-encryption">At-Rest Encryption<a class="headerlink" href="#at-rest-encryption" title="Permanent link">&para;</a></h3>
+<p>The master password itself is hashed with PBKDF2 (310,000 iterations) and never stored in plain text. The salt and hash are stored in <code>~/.kortty/master.key</code>.</p>
+<p>On subsequent launches, KorTTY prompts you to enter the master password to unlock encrypted data. Turning off <strong>Require master password on startup</strong> in <strong>Settings &gt; Security</strong> hides this prompt, but stored passwords will not be accessible until you enter the master password manually.</p>
+<div class="admonition danger">
+<p class="admonition-title">Optional auto-login weakens at-rest protection</p>
+<p>The second Security option, <strong>Disable master password prompt on startup (auto-login)</strong>, also removes the prompt but keeps the vault fully usable: korTTY writes your master password to <code>~/.kortty/master.autounlock</code> — <strong>obfuscated only, not encrypted</strong>, with owner-only file permissions — and unlocks automatically on every start. The obfuscation key is embedded in the application, so file permissions are the only real boundary; anyone who can read <code>~/.kortty</code> or a backup can decrypt all saved secrets. On a brand-new profile the option bootstraps a default master password with no dialog at all. korTTY asks for confirmation before enabling it, it is meant for throwaway/test environments, and a <a href="../reference/enterprise-policy.html">policy configuration</a> that requires a master password disables it. Details: <a href="../reference/settings/security.html">Security settings</a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you lose the master password, encrypted data cannot be recovered. Delete <code>master.key</code> and <code>credentials.xml</code>, restart, set a new master password, and re-enter your passwords.</p>
+</div>
+<h2 id="encryption-model">Encryption Model<a class="headerlink" href="#encryption-model" title="Permanent link">&para;</a></h2>
+<p>All sensitive data at rest is encrypted using <strong>AES-256-GCM</strong>:</p>
+<ul>
+<li><strong>Algorithm</strong>: AES-256-GCM (Galois/Counter Mode)</li>
+<li><strong>Key Derivation</strong>: PBKDF2WithHmacSHA256 with 310,000 iterations</li>
+<li><strong>IV Length</strong>: 12 bytes (random per encryption)</li>
+<li><strong>Authentication Tag</strong>: 128 bits (built-in integrity verification)</li>
+<li><strong>Salt Length</strong>: 32 bytes (random per master password setup)</li>
+</ul>
+<p>Each encrypted value combines a random IV with the ciphertext, encoded as Base64 for storage.</p>
+<h2 id="credential-management">Credential Management<a class="headerlink" href="#credential-management" title="Permanent link">&para;</a></h2>
+<p>Store centralized username/password credentials that can be reused across multiple connections.</p>
+<h3 id="opening-the-manager">Opening the Manager<a class="headerlink" href="#opening-the-manager" title="Permanent link">&para;</a></h3>
+<p><strong>Menu:</strong> Management &gt; Manage Credentials</p>
+<h3 id="adding-credentials">Adding Credentials<a class="headerlink" href="#adding-credentials" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click <strong>Add</strong>.</li>
+<li>Fill in:</li>
+<li><strong>Name</strong> — Descriptive identifier</li>
+<li><strong>Username</strong> — Login username</li>
+<li><strong>Password</strong> — Stored encrypted with AES-256-GCM</li>
+<li><strong>Environment</strong> — Production, Development, Test, or Staging</li>
+<li><strong>Server Pattern</strong> (optional) — Glob pattern (e.g., <code>*.example.com</code>, <code>10.0.0.*</code>) for automatic credential matching to connections</li>
+<li><strong>Description</strong> (optional) — Free-text notes</li>
+<li>Click <strong>OK</strong>.</li>
+</ol>
+<h3 id="using-credentials-in-connections">Using Credentials in Connections<a class="headerlink" href="#using-credentials-in-connections" title="Permanent link">&para;</a></h3>
+<p>When creating or editing a connection:</p>
+<ol>
+<li>Go to the <strong>Connection</strong> tab.</li>
+<li>Select a stored credential from the <strong>Credentials</strong> dropdown.</li>
+<li>Username and password are filled in automatically.</li>
+</ol>
+<p>The following diagram shows how credentials and SSH keys flow from encrypted storage to active connections:</p>
+<p><img alt="Credential &amp; encryption flow" src="../assets/diagrams/credential-flow.svg" /></p>
+<h3 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Environment-specific</strong> — Organize credentials by deployment environment</li>
+<li><strong>Server Pattern Matching</strong> — Automatically assign credentials to matching servers</li>
+<li><strong>Encrypted Storage</strong> — Passwords are encrypted with AES-256-GCM</li>
+<li><strong>Automatic Usage</strong> — Select credentials directly in connection settings</li>
+</ul>
+<h2 id="ssh-key-management">SSH Key Management<a class="headerlink" href="#ssh-key-management" title="Permanent link">&para;</a></h2>
+<p>Centralized management of private SSH keys with encrypted passphrases.</p>
+<h3 id="opening-the-manager_1">Opening the Manager<a class="headerlink" href="#opening-the-manager_1" title="Permanent link">&para;</a></h3>
+<p><strong>Menu:</strong> Management &gt; Manage SSH Keys</p>
+<h3 id="adding-keys">Adding Keys<a class="headerlink" href="#adding-keys" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click <strong>Add</strong>.</li>
+<li>Select the path to your private SSH key file.</li>
+<li>(Optional) Enter the passphrase — it will be encrypted and stored.</li>
+<li>Click <strong>OK</strong>.</li>
+</ol>
+<h3 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Centralized Management</strong> — Manage all SSH keys in one place</li>
+<li><strong>Encrypted Passphrases</strong> — Key passphrases are stored encrypted with AES-256-GCM</li>
+<li><strong>Key Copying</strong> — Use <strong>Copy to User Directory</strong> to copy keys to <code>~/.kortty/ssh-keys/</code>; copied keys are included in encrypted backups and restored with owner-only permissions</li>
+<li><strong>Wildcard Search</strong> — Quick search for keys using <code>*</code> patterns</li>
+<li><strong>Automatic Usage</strong> — Select keys directly in connection settings</li>
+</ul>
+<h3 id="using-keys-in-connections">Using Keys in Connections<a class="headerlink" href="#using-keys-in-connections" title="Permanent link">&para;</a></h3>
+<p>When creating or editing a connection:</p>
+<ol>
+<li>Go to the <strong>Connection</strong> tab.</li>
+<li>Select <strong>Private Key</strong> as the authentication method.</li>
+<li>Select the desired key from the <strong>SSH Keys</strong> dropdown.</li>
+<li>The key path and passphrase are filled in automatically.</li>
+</ol>
+<h2 id="interactive-ssh-host-key-trust">Interactive SSH host-key trust<a class="headerlink" href="#interactive-ssh-host-key-trust" title="Permanent link">&para;</a></h2>
+<p>Terminal and SFTP connections, including the SSH bootstrap used by Mosh, share a trust-on-first-use (TOFU) verifier keyed by normalized host name and port. On first use, korTTY displays the server key algorithm and OpenSSH SHA-256 fingerprint; verify it out of band before accepting. The confirmation defaults to <strong>No</strong>. A previously trusted matching key is accepted silently, while a changed key is hard-blocked with the expected and offered fingerprints and is never retried automatically.</p>
+<p>Interactive pins are written atomically to <code>~/.kortty/ssh-host-keys.properties</code>; a companion lock coordinates simultaneous korTTY processes. This store is distinct from the JobScheduler's connection-ID-based host-key pins in <code>job-scheduler.xml</code>, which protect unattended SSH, SFTP, and Rsync execution.</p>
+<h3 id="relaxing-host-key-verification">Relaxing host-key verification<a class="headerlink" href="#relaxing-host-key-verification" title="Permanent link">&para;</a></h3>
+<p>For lab or throwaway hosts you can turn the first-use prompt off and have korTTY accept an unknown key silently. This is an <strong>accept-new</strong> relaxation, not blind trust: a key that differs from one already pinned for that host is still hard-blocked, so a man-in-the-middle on a host you have connected to before is still caught. It is off by default and can be set at three scopes, in precedence order:</p>
+<ol>
+<li><strong>Per connection</strong> — the <em>Host key verification</em> control in the Connection Manager's connection editor and in Quick Connect, with three states: <strong>Use default</strong> (inherit), <strong>Verify</strong> (force strict even if the group or global setting relaxed it), and <strong>Don't verify</strong>.</li>
+<li><strong>Per group</strong> — right-click a group in the Connection Manager and toggle <strong>Disable host key verification</strong>; it applies to every connection in the group that inherits.</li>
+<li><strong>Globally</strong> — <strong>Settings → Terminal → Disable host key verification for all connections</strong>, the base default for every connection that inherits at both levels above.</li>
+</ol>
+<p>A jump server's own host key is never relaxed by any of these — the bastion is always verified strictly.</p>
+<h2 id="gpg-key-management">GPG Key Management<a class="headerlink" href="#gpg-key-management" title="Permanent link">&para;</a></h2>
+<p>Manage GPG keys for backup encryption and connection/snippet export encryption.</p>
+<h3 id="opening-the-manager_2">Opening the Manager<a class="headerlink" href="#opening-the-manager_2" title="Permanent link">&para;</a></h3>
+<p><strong>Menu:</strong> Management &gt; Manage GPG Keys</p>
+<h3 id="adding-keys_1">Adding Keys<a class="headerlink" href="#adding-keys_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Manual Entry</strong> — Click <strong>Add</strong> to enter key ID and email manually.</li>
+<li><strong>System Import</strong> — Click <strong>Import from GPG</strong> to import keys from your system's GPG keyring.</li>
+</ul>
+<h3 id="editing-and-removing-keys">Editing and Removing Keys<a class="headerlink" href="#editing-and-removing-keys" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Select a key from the list.</li>
+<li>Click <strong>Edit</strong> to modify details, or <strong>Delete</strong> to remove.</li>
+</ol>
+<h3 id="using-keys-for-backup">Using Keys for Backup<a class="headerlink" href="#using-keys-for-backup" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Open <strong>Settings &gt; Backup</strong>.</li>
+<li>Select <strong>GPG Encryption</strong> as the encryption type.</li>
+<li>Choose the GPG key to use for encryption.</li>
+</ol>
+<p>GPG-encrypted backups and exports are stored as <code>.gpg</code> files and require your system's <code>gpg</code> command and a usable public key for decryption.</p>
+<h2 id="stored-security-data">Stored security data<a class="headerlink" href="#stored-security-data" title="Permanent link">&para;</a></h2>
+<p>The following sensitive and security-related data is stored in <code>~/.kortty/</code>; secret values are encrypted, while public verification material is not:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Contents</th>
+<th>Encryption</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>credentials.xml</code></td>
+<td>Stored username/password credentials</td>
+<td>AES-256-GCM</td>
+</tr>
+<tr>
+<td><code>ssh-keys.xml</code></td>
+<td>SSH key paths and encrypted passphrases</td>
+<td>AES-256-GCM</td>
+</tr>
+<tr>
+<td><code>connections.xml</code></td>
+<td>Connection passwords (inline) and key passphrases (if not using SSH key management)</td>
+<td>AES-256-GCM</td>
+</tr>
+<tr>
+<td><code>ssh-host-keys.properties</code></td>
+<td>Trusted public host keys for interactive Terminal, SFTP, and Mosh bootstrap connections</td>
+<td>Public verification data; not encrypted</td>
+</tr>
+<tr>
+<td><code>job-scheduler.xml</code></td>
+<td>Scheduler sudo passwords and archive passwords; journal entries redact KorTTY-managed secrets</td>
+<td>AES-256-GCM</td>
+</tr>
+<tr>
+<td><code>master.key</code></td>
+<td>Master password hash (PBKDF2, 310,000 iterations) and salt</td>
+<td>PBKDF2 hash only</td>
+</tr>
+<tr>
+<td><code>master.autounlock</code></td>
+<td>Remembered master password for the optional auto-login</td>
+<td>Obfuscated only — not encrypted; owner-only file permissions</td>
+</tr>
+<tr>
+<td><code>global-settings.xml</code></td>
+<td>AI profile API keys, translation API keys, optional Hugging Face token</td>
+<td>AES-256-GCM</td>
+</tr>
+</tbody>
+</table>
+<h2 id="security-best-practices">Security Best Practices<a class="headerlink" href="#security-best-practices" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Selected terminal text sent to AI services can contain sensitive information such as credentials, hostnames, file paths, stack traces, or operational details. For sensitive data, prefer an integrated local GGUF model, or verify that you trust the remote endpoint before sending anything.</p>
+</div>
+<h3 id="master-password_1">Master Password<a class="headerlink" href="#master-password_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use a strong, unique master password (at least 12 characters, mix of upper/lowercase, numbers, symbols).</li>
+<li>Never share your master password.</li>
+<li>Store it securely (password manager recommended).</li>
+</ul>
+<h3 id="ssh-keys">SSH Keys<a class="headerlink" href="#ssh-keys" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Keep private key files protected with a passphrase.</li>
+<li>Copy keys to <code>~/.kortty/ssh-keys/</code> for inclusion in encrypted backups; keys left in their original locations are only referenced and must be migrated separately.</li>
+<li>Limit key file permissions (e.g., <code>chmod 600</code>).</li>
+<li>Verify a first-use host-key fingerprint through a trusted channel before accepting it. Treat a changed-key warning as a possible server rebuild, DNS error, or man-in-the-middle attack and investigate instead of reconnecting repeatedly.</li>
+</ul>
+<h3 id="jobscheduler">JobScheduler<a class="headerlink" href="#jobscheduler" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Host-key Pinning</strong>: Host keys are pinned by default for unattended SSH/SFTP/Rsync jobs to prevent man-in-the-middle attacks. These connection-ID pins are intentionally separate from the normalized endpoint pins used by interactive Terminal/SFTP sessions.</li>
+<li><strong>Sudo Passwords</strong>: Scheduler sudo passwords are encrypted and stored in <code>~/.kortty/job-scheduler.xml</code>.</li>
+<li><strong>Journal Redaction</strong>: Job journal entries redact KorTTY-managed secrets before persistence (redacted mode is the default; full mode stores unredacted output).</li>
+</ul>
+<h3 id="backup-encryption">Backup Encryption<a class="headerlink" href="#backup-encryption" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Always encrypt backups using either password-protected ZIP or GPG encryption.</li>
+<li>Store backup files in a secure location.</li>
+<li>Test restore procedures periodically to ensure backups are usable.</li>
+</ul>
+<h3 id="ai-integration">AI Integration<a class="headerlink" href="#ai-integration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>API keys for AI endpoints are encrypted with your master password.</li>
+<li>The optional Hugging Face token is encrypted with the master password and is used only for approved model search/download requests to the trusted Hugging Face host.</li>
+<li>Each integrated <code>llama-server</code> binds only to <code>127.0.0.1</code> on a random port and requires a generated local API key. Offline mode is mandatory; web UI, agent, UI MCP proxy, slot endpoint, and inherited server-option overrides are disabled.</li>
+<li>GGUF downloads require an immutable repository revision and exact SHA-256 metadata. Runtime indexes require an Ed25519 signature, and every runtime ZIP is checked against its signed size and SHA-256 before safe extraction. Official application builds embed only the public runtime-channel trust root; a missing or invalid key fails closed before any update request, while the signing private key remains isolated in the human-dispatched promotion workflow.</li>
+<li>Signed runtime withdrawals are durable and fail closed. A verified index adds withdrawn runtime and installation IDs to <code>llm/runtime/revoked-v1</code>, marks each installed package, clears a matching active pointer, stops its sidecars, removes it from healthy rollback history, and quarantines affected model bindings. The installer and process launcher both reject those packages, including after an interrupted update. Notification-only checks enforce a withdrawal without silently installing the offered replacement; <strong>Off</strong> makes no index request and therefore learns no new withdrawal until an explicit or enabled check.</li>
+<li>A newly activated runtime is not promoted to healthy history merely because its bounded <code>--version</code> check passed. It remains pending until the first real GGUF-backed authenticated API start succeeds; that start failing removes the candidate and restores/rebinds the newest healthy non-revoked package when one exists.</li>
+<li>Model recommendations and automatic prompt-family detection can refresh from a separate Ed25519-signed HTTPS catalog. The last valid cache is re-verified before use, and a monotonic sequence rejects signed older replays or equal-sequence version collisions before an atomic high-water update. Without the independent catalog public key, korTTY trusts neither network nor cache data and falls back to the built-in bootstrap. Production catalog and runtime signing are restricted to their main-branch, reviewer-protected GitHub environments; application builds receive only the public trust roots.</li>
+<li>AI profile configuration is stored locally; only your reviewed terminal selection or prompt is sent to the chosen service. Embedded inference stays on this computer.</li>
+<li>Knowledge-store scanning follows a fixed text allowlist, validates content, refuses symbolic links, and presents a preview. Only bounded retrieved excerpts, not the complete knowledge store, enter the model prompt. Those excerpts stay local for integrated/loopback profiles but leave the computer when an explicitly assigned cloud profile handles the request; knowledge-store roles and persisted profile assignments are the user's disclosure authorization.</li>
+<li>Remote Qdrant knowledge stores require HTTPS; plain HTTP is accepted only for loopback, and the optional API key remains vault-protected.</li>
+<li>Internet access is disabled by default for AI profiles; enable only when needed.</li>
+<li>Snippet AI actions never use internet access, even if the profile has it enabled.</li>
+<li>The fixed snippet/workflow <strong>Diagram</strong> request never receives knowledge-store excerpts, even when the profile has stores attached — the diagram prompt is built from the source alone.</li>
+</ul>
+<h2 id="security-overview">Security Overview<a class="headerlink" href="#security-overview" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Master Password Hashing</td>
+<td>PBKDF2 with 310,000 iterations</td>
+</tr>
+<tr>
+<td>Credential Encryption</td>
+<td>AES-256-GCM</td>
+</tr>
+<tr>
+<td>SSH Key Passphrases</td>
+<td>Encrypted with AES-256-GCM and master password</td>
+</tr>
+<tr>
+<td>Interactive SSH/SFTP/Mosh host keys</td>
+<td>Shared normalized host:port TOFU, first-use fingerprint confirmation (optionally relaxed to accept-new), silent exact match, hard block on change</td>
+</tr>
+<tr>
+<td>AI API Keys</td>
+<td>Encrypted with AES-256-GCM and master password</td>
+</tr>
+<tr>
+<td>Embedded llama.cpp</td>
+<td>Loopback-only random port, generated API key, offline/hardened server flags, request leases</td>
+</tr>
+<tr>
+<td>GGUF/runtime supply chain</td>
+<td>Immutable revisions, SHA-256 verification, signed runtime index, durable revocation quarantine, rollback after failed health check or first real API start</td>
+</tr>
+<tr>
+<td>Model/prompt catalog</td>
+<td>Independent Ed25519 trust root, strict schema, monotonic anti-replay sequence, reverified atomic cache, protected human promotion, bootstrap fallback</td>
+</tr>
+<tr>
+<td>RAG source ingestion</td>
+<td>Central allowlist, UTF-8/PDF content checks, no symlink traversal, reviewed preview</td>
+</tr>
+<tr>
+<td>RAG prompt context</td>
+<td>Fixed retrieval limits, stable source markers, explicitly untrusted wrapper, explicit profile-based local/cloud disclosure</td>
+</tr>
+<tr>
+<td>Optional auto-login</td>
+<td>Master password stored obfuscated in <code>master.autounlock</code> with owner-only permissions; off by default, confirmation required, blocked by a policy that requires a master password</td>
+</tr>
+<tr>
+<td>Backup Encryption</td>
+<td>AES-256 password-protected ZIP or GPG-encrypted (legacy ZIP-encrypted backups remain importable)</td>
+</tr>
+<tr>
+<td>JobScheduler Secrets</td>
+<td>Sudo and archive passwords encrypted; journal redaction enabled by default</td>
+</tr>
+<tr>
+<td>JobScheduler Host Keys</td>
+<td>Host-key pinning required by default for unattended SSH/SFTP/Rsync jobs</td>
+</tr>
+<tr>
+<td>Credentials</td>
+<td>Never stored in plain text</td>
+</tr>
+</tbody>
+</table>
+<h2 id="changing-the-master-password">Changing the Master Password<a class="headerlink" href="#changing-the-master-password" title="Permanent link">&para;</a></h2>
+<p>To change your master password (which re-encrypts all stored secrets with a new derivation):</p>
+<ol>
+<li>Open <strong>Settings &gt; Security</strong>.</li>
+<li>Click <strong>Change Master Password</strong>.</li>
+<li>Enter your current (old) master password.</li>
+<li>Enter the new master password twice.</li>
+<li>Every master-password-protected secret is automatically re-encrypted with the new key: connection and jump-server passwords, SSH-key passphrases, stored credentials, AI-profile API keys and the global AI/translation/Hugging Face keys, RAG store secrets, and JobScheduler sudo/archive passwords. The change is staged — the new password only takes over once every store has migrated, so an error part-way through leaves the old password in effect. Individual secrets that cannot be migrated are left untouched, counted in the result message, and noted in the log; re-enter those manually.</li>
+</ol>
+<h2 id="configuration-files-reference">Configuration Files Reference<a class="headerlink" href="#configuration-files-reference" title="Permanent link">&para;</a></h2>
+<p>All KorTTY data is stored under <code>~/.kortty/</code>. Key security-related files:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>~/.kortty/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── master.key               # Master password hash and salt (PBKDF2)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── master.autounlock        # Optional auto-login password (obfuscated, owner-only permissions)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── credentials.xml           # Encrypted credentials (AES-256-GCM)
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├── ssh-keys.xml             # SSH key paths and encrypted passphrases
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├── gpg-keys.xml             # GPG keys for backup/export encryption
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>├── connections.xml          # Connection passwords and key passphrases
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>├── ssh-host-keys.properties # Interactive Terminal/SFTP/Mosh host-key pins
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>├── global-settings.xml      # AI API keys and other encrypted settings
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>├── llm/models.xml           # Model paths and typed launch settings (no model contents)
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>├── llm/runtime/             # Regenerable native packages; excluded from backup
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>├── llm/catalog/             # Regenerable signed-catalog cache; excluded from backup
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>├── llm/run/                 # Temporary per-process API keys/logs; excluded from backup
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>├── rag/stores.json          # Knowledge-store/source configuration
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>├── rag/stores/              # Regenerable HNSW snapshots; excluded from backup
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>├── job-scheduler.xml        # JobScheduler sudo/archive passwords (encrypted)
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>├── kortty.log               # Application log
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>└── history/                 # Compressed terminal session history
+</span></code></pre></div></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+<footer class="kt-footer">
+  <div class="kt-footer__line">MIT-licensed &middot; Developed by Daniel Mengel</div>
+  <div class="kt-footer__line">korTTY <strong>v2.18.0</strong></div>
+</footer>
+
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../assets/javascripts/kt-zoom.js" defer></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>

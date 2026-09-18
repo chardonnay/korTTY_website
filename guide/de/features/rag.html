@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+
+<head>
+        <title>RAG-Wissensspeicher - korTTY Anleitung</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link rel="canonical" href="https://chardonnay.github.io/korTTY/guide/de/features/rag.html">
+        <meta name="author" content="korTTY">
+        <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+        <link href="../assets/stylesheets/kortty.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
+
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+            <img class="logo" src="../assets/images/favicon.png" height="150px">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">korTTY Anleitung</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../index.html"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Startseite
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#erste-schritte-collapse" aria-expanded="false">
+                    Erste Schritte
+                </a>
+                <div class="collapse" id="erste-schritte-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/installation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Installation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/building-packages.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KorTTY-Pakete erstellen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/first-launch.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Erster Start – Master-Passwort
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/main-window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Main window overview
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#referenz-collapse" aria-expanded="false">
+                    Referenz
+                </a>
+                <div class="collapse" id="referenz-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/menu.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Menüreferenz
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/keyboard-shortcuts.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tastaturkürzel
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/architecture.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architektur
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/config-files.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Konfigurationsdateien
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/enterprise-policy.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Richtlinienkonfiguration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/control-api.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Steuerungs-API
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/cli.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Steuerungs-CLI
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#einstellungen-collapse" aria-expanded="false">
+            Einstellungen
+        </a>
+
+        <div class="collapse" id="einstellungen-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Einstellungsreferenz
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/appearance.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Aussehen, Themen und Schriftart
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/colors.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Farben
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Fenster
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/resources.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Ressourcen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/logging.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Protokollierung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/export.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Export
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/updates.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Aktualisierungen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherheit
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/language.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprache
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/translation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Übersetzung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/video.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Video
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/ai.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/ai-skills.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Fähigkeiten
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP-Manager
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/editor.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#snippet-editor-collapse" aria-expanded="false">
+            Snippet-Editor
+        </a>
+
+        <div class="collapse" id="snippet-editor-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/snippet-editor/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet-Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/hardening-options.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Härtungsoptionen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/input-hardening.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Eingabe-Härtung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/language-migration.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprachvereinigung
+        </a>
+    </li>
+            </ul>
+        </div>
+    </li>
+            </ul>
+        </div>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover"
+                    data-bs-toggle="collapse" data-bs-target="#funktionen-collapse" aria-expanded="true">
+                    Funktionen
+                </a>
+                <div class="collapse show" id="funktionen-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="connections.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verbindungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminalsitzungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="tunnels.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SSH-Tunnel (Portweiterleitung)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="jump-server.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Jump-Server (Bastion Host)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP-Dateimanager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="file-browser.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Dateibrowser
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="snippets.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet-Manager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="jobscheduler.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            JobScheduler
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="projects.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Projekte (Arbeitsbereiche)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="teamwork.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Teamarbeit (gemeinsame Verbindungen)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-assistant.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Assistent
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="local-models.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lokale Modelle (llama.cpp und MLX)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="rag.html"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            RAG-Wissensspeicher
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-tools.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal-KI-Agent und -Tools
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-swarm.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Schwarm
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherheit – Anmeldeinformationen, Schlüssel und Verschlüsselung
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sichern und wiederherstellen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="recording.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminalaufzeichnung
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="session-journal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sitzungsjournal
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ascii-art.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            ASCII-Art
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal-effect-plugins.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminaleffekt-Plugins
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="coding-agents.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Coding-Agents
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="i18n.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprachen und dynamische Übersetzung
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#über-kortty-collapse" aria-expanded="false">
+                    Über korTTY
+                </a>
+                <div class="collapse" id="über-kortty-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/release-notes.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Versionshinweise
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/feedback.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Feedback und Support
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/anonymous-data.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Anonyme Daten zur Applikationsoptimierung
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="local-models.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="ai-tools.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item">
+
+
+
+
+
+<div role="search" class="search-box kt-search">
+	<form id="rtd-search-form" class="wy-form kt-search-form" action="../search.html" method="get">
+		<input type="text" name="q" id="mkdocs-search-query"
+		class="kt-search-input drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Durchsuchen"
+		autocomplete="off" title="Type search term here" /><button type="button" class="kt-search-clear" hidden
+		        aria-label="Suche zurücksetzen" title="Suche zurücksetzen">&times;</button>
+	</form>
+	<div id="mkdocs-search-results" class="kt-search-suggest"
+	     data-no-results-text="Keine Treffer"
+	     data-preparing-text="Suche wird vorbereitet …"
+	     data-more-text="{n} weitere Treffer anzeigen"></div>
+	<script>
+	  (function () {
+	    var box = document.currentScript.parentNode;
+	    var panel = box.querySelector('.kt-search-suggest');
+	    var input = box.querySelector('#mkdocs-search-query');
+	    var clear = box.querySelector('.kt-search-clear');
+
+	    // Emptying the panel is what hides it (CSS :empty), so closing is just that.
+	    function close () { while (panel.firstChild) { panel.removeChild(panel.firstChild); } }
+	    // The button is only useful once there is something to clear.
+	    function sync () { clear.hidden = !input.value; }
+
+	    input.addEventListener('input', sync);
+	    clear.addEventListener('click', function () {
+	      input.value = '';
+	      sync();
+	      // search/main.js renders on keyup, which a programmatic clear never fires, so
+	      // the panel has to be emptied here or the old hits would outlive the query.
+	      close();
+	      input.focus();
+	    });
+
+	    document.addEventListener('click', function (e) { if (!box.contains(e.target)) { close(); } });
+
+	    // Escape has to be handled on keyUP, and on the document rather than the input.
+	    // search/main.js binds doSearch to the field's keyup, so anything that closed the
+	    // panel on keydown was undone microseconds later by that re-render — which is why
+	    // Escape appeared to do nothing at all. Listening on the document means this runs
+	    // after the field's own handler has already re-rendered, so closing sticks.
+	    // What the panel looked like BEFORE that re-render is the interesting state, so it
+	    // is captured on keydown: the usual two steps, Escape dismisses the suggestions,
+	    // Escape again empties the box.
+	    var panelWasOpen = false;
+	    document.addEventListener('keydown', function (e) {
+	      if (e.key === 'Escape') {
+	        panelWasOpen = !!panel.firstChild;
+	      }
+	    });
+	    document.addEventListener('keyup', function (e) {
+	      if (e.key !== 'Escape') {
+	        return;
+	      }
+	      // Only clear the field while it has focus — Escape elsewhere on the page is not ours.
+	      if (!panelWasOpen && document.activeElement === input && input.value) {
+	        input.value = '';
+	        sync();
+	      }
+	      close();
+	    });
+
+	    sync();  // a ?q= deep link arrives with the field already filled
+	  })();
+	</script>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+<div class="kt-lang-bar">
+  <a class="kt-lang-switch" href="../../en/features/rag.html"
+     title="English" hreflang="en">EN</a>
+</div>
+
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="rag-wissensspeicher">RAG Wissensspeicher<a class="headerlink" href="#rag-wissensspeicher" title="Permanent link">&para;</a></h1>
+<p>Ein <strong>Wissensspeicher</strong> ermöglicht es einem KI-Profil, mit relevanten Auszügen aus lokalen Dateien zu antworten, ohne die vollständige Quellsammlung an das Modell zu senden. Der Standardspeicher verwendet einen lokalen Kosinus-Ähnlichkeits-HNSW-Snapshot; Als optionaler zweiter Wissensspeicher-Typ steht ein bestehender Qdrant-Service zur Verfügung.</p>
+<p><img alt="Knowledge-store indexing and retrieval pipeline" src="../assets/diagrams/rag-knowledge-pipeline.svg" /></p>
+<h2 id="erstellen-sie-einen-lokalen-wissensspeicher">Erstellen Sie einen lokalen Wissensspeicher<a class="headerlink" href="#erstellen-sie-einen-lokalen-wissensspeicher" title="Permanent link">&para;</a></h2>
+<p>Öffnen Sie <strong>KI &gt; KI-Manager &gt; Wissensspeicher</strong> und wählen Sie <strong>Erstellen</strong>. Der Anfänger-Flow benötigt einen Namen, ein installiertes Einbettungsmodell, Rollenzuweisungen und mindestens eine überprüfte Quelle. Speichertyp, Vektordimensionen und optionale Qdrant-Verbindungsfelder bleiben unter <strong>Erweitert</strong> ausgeblendet; korTTY verwaltet die lokalen HNSW-Graphparameter intern, sodass bei normaler Verwendung keine Vektorindexoptimierung erforderlich ist.</p>
+<p><img alt="Wissensspeicher with a local HNSW demo store and one manual folder source" src="../assets/screenshots/ai/knowledge-stores.png" /></p>
+<p>Wenn kein Einbettungsmodell installiert ist, öffnet derselbe Ablauf den Einrichtungsassistenten <a href="local-models.html">local-model </a> mit vorab ausgewählter Einbettungsrolle. Installieren Sie das vorausgewählte Modell Qwen3-Embedding 0.6B <code>Q8_0</code> oder wählen Sie eine der Katalogalternativen aus, die der Assistent für den Speicher dieses Computers anbietet – Qwen3-Embedding 4B oder 8B <code>Q4_K_M</code> auf Computern mit mindestens 16 oder 24 GiB, das mehrsprachige BGE-M3 <code>Q8_0</code> oder das sehr kleine und schnelle Nomic Embed Text v1.5 <code>Q8_0</code> – Kehren Sie dann zu <strong>Erstellen</strong> zurück. Ein Index ist an genau dieses Einbettungsmodell und die Dimensionsanzahl gebunden. Um eines davon zu ändern, muss es neu erstellt werden.</p>
+<p>So fügen Sie Inhalte hinzu:</p>
+<ol>
+<li>Wählen Sie <strong>Dateien hinzufügen</strong> für eine oder mehrere einzelne Dateien oder <strong>Ordner hinzufügen</strong> für eine rekursive Verzeichnisquelle.</li>
+<li>Während korTTY die Auswahl auf einem Hintergrund-Worker scannt, bleibt die Registerkarte „Wissensspeicher“ reaktionsfähig und meldet <strong>Ausgewählte Dateien und Ordner werden überprüft…</strong>. Sie können diesen Scan abbrechen, bevor das Überprüfungsdialogfeld geöffnet wird.</li>
+<li>Überprüfen Sie die Vorschautabelle. In jeder Zeile werden Pfad, Format, Größe, Status und beim Überspringen eine Erklärung angezeigt. Die Zusammenfassung unterscheidet unveränderte Dateien von Dateien, die indiziert werden, und gruppiert erkannte Formate.</li>
+<li>Bestätigen Sie erst, nachdem die Vorschau mit dem übereinstimmt, was Sie indizieren wollten.</li>
+<li>Warten Sie, bis die Textextraktion, das Chunking, die Einbettungen und die Snapshot-Aktivierung abgeschlossen sind. Sie können den Vorgang vor der Aktivierung abbrechen, ohne den vorherigen Snapshot zu beschädigen.</li>
+</ol>
+<p><img alt="Real review preview with unchanged, changed, and skipped demo files" src="../assets/screenshots/ai/rag-preview.png" /></p>
+<p>Die Quelltabelle zeigt den Pfad, den Quelltyp, den Synchronisierungsmodus, den Status, die Anzahl der Dateien/Chunks, die Anzahl der Probleme und den letzten erfolgreichen Index. Diese Werte bleiben über Neustarts hinweg bestehen. Zu den verfügbaren Aktionen gehören <strong>Dateien hinzufügen</strong>, <strong>Ordner hinzufügen</strong>, <strong>Jetzt aktualisieren</strong>, <strong>Deaktivieren/Aktivieren</strong>, <strong>Entfernen</strong> und <strong>Suche testen</strong>.</p>
+<div class="admonition important">
+<p class="admonition-title">Ein Ordner wird immer zuerst überprüft</p>
+<p>Das Hinzufügen eines Verzeichnisses bedeutet niemals „jede Datei senden“. korTTY scannt, ohne symbolischen Links zu folgen, wendet die zentrale Format-Zulassungsliste und Ausschlüsse sicherer Verzeichnisse an, validiert den Dateiinhalt auf einem Hintergrund-Worker und präsentiert den akzeptierten und übersprungenen Satz, bevor die Indizierung beginnt. Die Quelle wird nicht gespeichert und die Indizierung beginnt erst, wenn Sie diese Vorschau bestätigen.</p>
+</div>
+<h2 id="unterstutzte-formate">Unterstützte Formate<a class="headerlink" href="#unterstutzte-formate" title="Permanent link">&para;</a></h2>
+<p>Beim Dateinamenabgleich wird die Groß-/Kleinschreibung nicht beachtet. Ein anerkanntes Suffix ist notwendig, aber nicht ausreichend: Nicht-PDF-Dateien müssen gültigen UTF-8-Text ohne binäre NUL-/Kontrollbytes enthalten, und PDFs müssen lesbar sein und extrahierbaren Text enthalten.</p>
+<table>
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>Unterstützte Dateien</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dokumente</td>
+<td><code>.txt</code>, <code>.md</code>, <code>.markdown</code>, <code>.adoc</code>, <code>.asciidoc</code>, <code>.rst</code>, textbasiert <code>.pdf</code></td>
+</tr>
+<tr>
+<td>Strukturierte Daten</td>
+<td><code>.json</code>, <code>.jsonl</code>, <code>.xml</code>, <code>.yaml</code>, <code>.yml</code>, <code>.toml</code>, <code>.ini</code>, <code>.cfg</code>, <code>.conf</code>, <code>.properties</code>, <code>.csv</code>, <code>.tsv</code></td>
+</tr>
+<tr>
+<td>Shell und Skripte</td>
+<td><code>.sh</code>, <code>.bash</code>, <code>.zsh</code>, <code>.fish</code>, <code>.bat</code>, <code>.cmd</code>, <code>.awk</code>, <code>.ps1</code>, <code>.psm1</code>, <code>.psd1</code>, <code>.py</code>, <code>.pyw</code>, <code>.pyi</code>, <code>.rb</code>, <code>.pl</code>, <code>.php</code>, <code>.lua</code></td>
+</tr>
+<tr>
+<td>JVM und .NET</td>
+<td><code>.java</code>, <code>.kt</code>, <code>.kts</code>, <code>.groovy</code>, <code>.gradle</code>, <code>.gvy</code>, <code>.gy</code>, <code>.gsh</code>, <code>.scala</code>, <code>.sc</code>, <code>.cs</code></td>
+</tr>
+<tr>
+<td>JavaScript und Web</td>
+<td><code>.js</code>, <code>.jsx</code>, <code>.mjs</code>, <code>.cjs</code>, <code>.ts</code>, <code>.tsx</code>, <code>.mts</code>, <code>.cts</code>, <code>.html</code>, <code>.htm</code>, <code>.css</code>, <code>.scss</code>, <code>.sass</code>, <code>.less</code>, <code>.vue</code>, <code>.svelte</code></td>
+</tr>
+<tr>
+<td>Systeme und Datencode</td>
+<td><code>.c</code>, <code>.h</code>, <code>.cc</code>, <code>.cpp</code>, <code>.cxx</code>, <code>.hpp</code>, <code>.hxx</code>, <code>.hh</code>, <code>.inl</code>, <code>.go</code>, <code>.rs</code>, <code>.swift</code>, <code>.sql</code></td>
+</tr>
+<tr>
+<td>Bekannte Dateien ohne Erweiterung</td>
+<td><code>README</code>, <code>LICENSE</code>, <code>Dockerfile</code>, <code>Makefile</code></td>
+</tr>
+</tbody>
+</table>
+<p>Folgendes wird in Version 1 nicht indiziert: Office-Dokumente, Bilder oder OCR, Archive, Datenbanken, Audio, Video und beliebige Binärformate. Passwortgeschützte PDFs und PDFs ohne extrahierbaren Text werden als übersprungen gemeldet.</p>
+<p>Das Standardlimit beträgt 50 MiB pro Datei. Eine Quelle kann es unter <strong>Erweitert</strong> von 1 MiB auf 1 GiB festlegen, aber benutzerdefinierte Include-Globs können die zentrale Zulassungsliste nur eingrenzen; Sie können ein nicht unterstütztes oder binäres Format nicht in eine akzeptierte Quelle umwandeln. Eine Vorschau ist außerdem auf 5.000 besuchte Dateien, 500 MiB akzeptierter Quelldaten und 100 MiB extrahierter Zeichen beschränkt.</p>
+<h2 id="sicheres-scannen-von-ordnern">Sicheres Scannen von Ordnern<a class="headerlink" href="#sicheres-scannen-von-ordnern" title="Permanent link">&para;</a></h2>
+<p>Ordnerquellen sind standardmäßig rekursiv. korTTY folgt keinen symbolischen Links und schließt versteckte Pfade sowie allgemeine Metadaten-, Abhängigkeits-, Build-, Cache- und IDE-Verzeichnisse aus:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>.git  .hg  .svn  .gradle  .idea  .vscode  .venv  venv
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>node_modules  vendor  build  target  dist  out  coverage  __pycache__
+</span></code></pre></div>
+<p>Optionale Einschluss-/Ausschluss-Globs und <code>.gitignore</code>-Behandlung sind unter <strong>Erweitert</strong> verfügbar. Einschlussregeln werden nach der Zulassungsliste für das feste Format ausgewertet. Eine einzelne Datei, die bereits von einer Ordnerquelle abgedeckt wird, wird kein zweites Mal hinzugefügt und identische oder überlappende Ordnerquellen werden mit dem Pfad der vorhandenen Quelle abgelehnt.</p>
+<h2 id="automatische-und-manuelle-synchronisierung">Automatische und manuelle Synchronisierung<a class="headerlink" href="#automatische-und-manuelle-synchronisierung" title="Permanent link">&para;</a></h2>
+<p>Jede Datei oder jeder Ordner verfügt über einen eigenen Synchronisierungsmodus:</p>
+<table>
+<thead>
+<tr>
+<th>Modus</th>
+<th>Verhalten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Automatisch</strong></td>
+<td>Standard. korTTY überwacht die Datei oder das Verzeichnis während der Ausführung, gruppiert Änderungsstöße für drei Sekunden und führt dann eine inkrementelle Synchronisierung durch. Beim Start der Anwendung gleicht es auch aktivierte automatische Quellen unabhängig von Anmeldeinformationen oder JobScheduler-Start ab und fängt Änderungen ab, die während des Schließens von korTTY vorgenommen wurden.</td>
+</tr>
+<tr>
+<td><strong>Manuell</strong></td>
+<td>Die Quelle ändert sich nur, wenn Sie <strong>Jetzt aktualisieren</strong> wählen.</td>
+</tr>
+</tbody>
+</table>
+<p>Die Überwachung des Dateisystems ist plattformabhängig. Wenn eine Quelle nicht zuverlässig beobachtet werden kann, bleibt sie nutzbar und manuell aktualisierbar; Verwenden Sie <strong>Jetzt aktualisieren</strong>, wenn der Manager eine eingeschränkte Überwachung meldet.</p>
+<p>Bei der Synchronisierung wird die gesamte akzeptierte Datei gehasht. <strong>Jetzt aktualisieren</strong> führt denselben abbrechbaren Hintergrundscan durch und zeigt dieselbe Überprüfungstabelle an, bevor mit der Arbeit begonnen wird. Ein zweiter Scan- oder Indexierungsvorgang wird abgelehnt, während einer bereits aktiv ist, wodurch überlappende Vorschau-/Indexierungsaufträge für den Bereich verhindert werden. Unveränderte Dateien behalten ihre vorhandenen Blöcke und Vektoren; Neue oder geänderte Dateien werden extrahiert, in Chunks aufgeteilt und erneut eingebettet. Gelöschte Dateien entfernen ihre Blöcke bei der nächsten Synchronisierung und eine Umbenennung wird als eine Löschung plus eine Hinzufügung verarbeitet.</p>
+<p><strong>Deaktivieren</strong> behält die Quellkonfiguration und die indizierten Blöcke bei, schließt sie jedoch vom Abruf aus. <strong>Entfernen</strong> fragt nach einer Bestätigung und löscht die Blöcke dieser Quelle. Durch das Entfernen einer Quelle werden niemals die Originaldateien gelöscht. Durch das Löschen eines gesamten lokalen Speichers wird auch sein bestätigtes Indexverzeichnis unter <code>~/.kortty/rag/stores/</code> entfernt, die konfigurierten Quelldokumente werden jedoch nie berührt. Durch das Löschen einer Qdrant-Speicherdefinition werden zunächst die Vektoren für die konfigurierten Quellen entfernt, der externe Qdrant-Dienst selbst wird jedoch nicht gelöscht.</p>
+<h2 id="indizierung-und-ausfallsicherheit">Indizierung und Ausfallsicherheit<a class="headerlink" href="#indizierung-und-ausfallsicherheit" title="Permanent link">&para;</a></h2>
+<p>Der Text ist in deterministische Blöcke von etwa 800 Token mit einer Überlappung von 120 Token unterteilt. PDF-Blöcke behalten ihre Seitenzahl für Zitate. Einbettungen werden vom ausgewählten authentifizierten lokalen llama.cpp-Modell in Stapeln von 32 angefordert.</p>
+<p>Für einen lokalen Speicher erstellt korTTY im Speicher ein deterministisches hierarchisches HNSW-Graph mit Kosinusähnlichkeit. Exponentiell verteilte obere Schichten ermöglichen eine gierige Einstiegsnavigation, während die Konstruktion und die begrenzte Suche die internen Standardeinstellungen <code>M</code>, <code>efConstruction</code> und <code>efSearch</code> verwenden. korTTY schreibt den Kandidaten in einen temporären <code>index.hnsw</code>-Snapshot, leert ihn und aktiviert ihn dann mit einer atomaren Umbenennung, sofern dies unterstützt wird. Bei Abbruch, Extraktionsfehlern, Einbettungsfehlern oder einem Stromausfall vor der Aktivierung bleibt der zuvor aktive Snapshot unberührt. Ein älterer Single-Layer-v1-Snapshot wird neu erstellt und beim ersten Öffnen atomar in das hierarchische v2-Format hochgestuft.</p>
+<p>Während der Indizierung meldet die Statuszeile den aktuellen Quellstatus, Dokumente, Chunks, Probleme und Prozentsätze. Die Vervollständigung fasst neu indizierte, unveränderte, entfernte und übersprungene Dokumente zusammen. Die Quelltabelle behält den Status, die Datei-/Chunk-/Problemanzahl und die Abschlusszeit bei, während die Quellkonfiguration die für den nächsten Vergleich verwendeten Inhalts-Hashes beibehält. Unveränderte Dokument-Hashes verwenden ihre Vektoren wieder, während geänderte, neue und gelöschte Dokumente den Ersatz-Snapshot aktualisieren.</p>
+<p>Ein konfigurierter Datei- oder Ordnerstamm, der tatsächlich gelöscht wurde, wird als inkrementelle Löschung behandelt: korTTY ersetzt diese Quelle atomar ohne Blöcke, meldet die Anzahl der entfernten Dokumente, behält leere Hashes/Zählungen bei und markiert die Quelle als <strong>FEHLEND</strong>, um zu verhindern, dass veraltete Auszüge weiterhin abrufbar bleiben. Andere schwerwiegende Scanfehler, wie z. B. eine Typinkongruenz, ein Berechtigungs-/Extraktionsfehler oder ein symbolischer Link-Root, melden <strong>FEHLER</strong> und behalten den vorherigen aktiven Snapshot bei, anstatt bekanntermaßen funktionierende Vektoren zu löschen. Lesbare Dateien können weiterhin indiziert werden, wenn nicht verwandte Einträge mit Warnungen übersprungen wurden.</p>
+<p>Der optionale Qdrant-Adapter erstellt oder validiert eine Cosinus-Sammlung, speichert dieselben Chunk-Metadaten und aktualisiert jeweils eine Quelle über die REST-API. Remote-Endpunkte müssen HTTPS verwenden; Einfaches HTTP wird nur für eine Loopback-Qdrant-Instanz akzeptiert. Der konfigurierte Endpunkt und der durch den Tresor geschützte API-Schlüssel gehören zu diesem Qdrant-Speicher. Für lokales HNSW ist kein Datenbankdienst erforderlich.</p>
+<h2 id="verwenden-sie-einen-wissensspeicher-mit-einem-ai-profil">Verwenden Sie einen Wissensspeicher mit einem AI-Profil<a class="headerlink" href="#verwenden-sie-einen-wissensspeicher-mit-einem-ai-profil" title="Permanent link">&para;</a></h2>
+<p>Wählen Sie beim Erstellen oder Konfigurieren eines Wissensspeichers <strong>Text</strong>, <strong>Coding</strong> oder beide Rollen aus. korTTY verknüpft den Wissensspeicher mit den Profilen, die diesen Rollen derzeit zugewiesen sind. Aktivieren Sie <strong>Autonome Workflows</strong> nur dann separat, wenn Hintergrundaufforderungen im Agentenstil aus diesem Wissensspeicher abgerufen werden können.</p>
+<div class="admonition warning">
+<p class="admonition-title">Cloud-Profile erhalten abgerufene Auszüge</p>
+<p>korTTY sendet niemals die vollständige Quellsammlung, das HNSW-Graph oder die Qdrant-Sammlung an ein Chat-Modell. Es werden nur die begrenzten Auszüge gesendet, die für die aktuelle Anfrage abgerufen wurden. Diese Auszüge verbleiben auf diesem Computer mit einem integrierten llama.cpp- oder nachweislich Loopback-HTTP-Profil, verlassen jedoch den Computer, wenn das ausgewählte Text-/Codierungsprofil einen Cloud-Endpunkt verwendet. Die Auswahl einer Wissensspeicherrolle zeichnet diesen Wissensspeicher in dem Profil auf, das der Rolle aktuell zugewiesen ist, und stellt daher eine ausdrückliche Berechtigung dar, passende Auszüge zu diesem Profil offenzulegen. Die Service Factory kann andere berechtigte Wissensspeicher mit Rollenzuweisung automatisch nur zu integrierten Profilen oder Loopback-Profilen hinzufügen; Cloud-, LAN-, Hostname-Lookalike- und CLI-Profile verwenden nur ihre persistenten expliziten Wissensspeicherzuweisungen.</p>
+</div>
+<p>Bei gewöhnlichen korTTY-KI-Aktionen verwendet der Abruf die Eingabeaufforderung des Benutzers oder den ausgewählten Terminal-/Snippet-Text, wenn keine separate Eingabeaufforderung vorhanden ist. Die Abfrage ist in das Modell des Wissensspeichers eingebettet, durchsucht nur aktivierte Quellen und wendet die folgenden festen Grenzen an:</p>
+<ul>
+<li>Höchstens sechs Auszüge insgesamt.</li>
+<li>Höchstens zwei Auszüge aus einer Quelle.</li>
+<li>Höchstens 4.000 Token und nie mehr als 25 % des Kontextfensters des Zielmodells.</li>
+</ul>
+<p>Das Ergebnis wird nach dem Aktionsvertrag und den KI-Fähigkeiten von korTTY und vor der Eingabeaufforderungsvoreinstellung für die Modellfamilie eingefügt. Es ist in <code>&lt;retrieved_context&gt;</code> verpackt und explizit als nicht vertrauenswürdige Daten und nicht als Anweisungen gekennzeichnet. Quellstandorte erhalten stabile Markierungen wie <code>[R1]</code>; Immer wenn eine Antwort auf einem Auszug basiert, muss das Modell genau diesen Marker zitieren. Text innerhalb einer Quelle kann keine Systemregeln außer Kraft setzen, keine Tools anfordern, keine Geheimnisse preisgeben oder den Wrapper für den abgerufenen Kontext schließen.</p>
+<p>Terminal-KI-Agent-, Planungs-, Swarm- und geplante Agent-Eingabeaufforderungen erhalten keinen RAG-Kontext, nur weil einem normalen Profil Wissensspeicher zugeordnet sind. Diese autonomen Abläufe erfordern ihr eigenes explizites RAG-Opt-in, sodass die Hintergrundautomatisierung ihren lokalen Datenumfang niemals stillschweigend erweitert. Die dedizierte Snippet-/Workflow-<strong>Diagramm</strong>-Anfrage ist eine zweite, immer aktive Ausnahme: Sie wird ausschließlich aus der Quelle erstellt und empfängt niemals Auszüge aus dem Wissensspeicher, sodass Diagramme „Nein“ anzeigen <code>[R1]</code>-artige Quellmarkierungen, auch wenn an das Profil Wissensspeicher angehängt sind. Eine visuelle Aufforderung – wie die <a href="session-journal.html#ki-screenshot-analyse">KI-Screenshot-Analyse des Sitzungsjournals</a> – ist eine dritte: Der Wissensspeicher enthält Text, und eine aus einer generischen Bildaufforderung erstellte Abfrage würde nur irrelevanten Kontext zu einer bereits großen Bildnutzlast hinzufügen, sodass der Abruf für diese Anforderungen unabhängig von den dem Profil zugewiesenen Speichern übersprungen wird.</p>
+<h2 id="testabruf">Testabruf<a class="headerlink" href="#testabruf" title="Permanent link">&para;</a></h2>
+<p>Wählen Sie einen Wissensspeicher aus und wählen Sie <strong>Suche testen</strong>. Geben Sie eine Frage oder einen Suchbegriff ein; Das Ergebnisdialogfeld zeigt den begrenzten abgerufenen Kontextblock mit geordneten <code>[R1]</code>-Quellmarkierungen, Quellpfaden und PDF-Seiten, sofern verfügbar. Bei einer Testsuche wird nur der Abruf ausgeführt und die Auszüge werden nicht an ein Chat-Modell gesendet. Dies macht sie nützlich, um Chunking und Quellabdeckung zu überprüfen, bevor der Wissensspeicher einer Rolle zugewiesen wird.</p>
+<p>Bei schwachen Ergebnissen:</p>
+<ul>
+<li>Bestätigen Sie, dass die erwartete Quelle aktiviert und erfolgreich synchronisiert ist.</li>
+<li>Verwenden Sie Begriffe, die in den Dokumenten vorkommen, und vergleichen Sie sie dann mit einer Frage in natürlicher Sprache.</li>
+<li>Überprüfen Sie den Scanbericht auf nicht unterstützte, binäre, nicht UTF-8-fähige, übergroße, geschützte oder reine Bilddateien.</li>
+<li>Neuaufbau nach Änderung des Einbettungsmodells oder der Abmessungen; Ein durch eine andere Einbettungskonfiguration erstellter Index wird abgelehnt.</li>
+</ul>
+<h2 id="dateien-und-sicherungsverhalten">Dateien und Sicherungsverhalten<a class="headerlink" href="#dateien-und-sicherungsverhalten" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Pfad</th>
+<th>Zweck</th>
+<th>In einem korTTY-Backup enthalten?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>~/.kortty/rag/stores.json</code></td>
+<td>Speicherdefinitionen, Einbettungskonfiguration, Rollen-/autonome Zuweisungen, Quellpfade/Filter/Synchronisierungsmodi, Dokument-Hashes, Status/Zähler und Zeitstempel für den letzten Erfolg</td>
+<td>Ja</td>
+</tr>
+<tr>
+<td>Speicherverzeichnis wie <code>~/.kortty/rag/stores/&lt;id&gt;/index.hnsw</code></td>
+<td>Regenerierbare Vektoren, Chunks und HNSW-Graph</td>
+<td>Nein</td>
+</tr>
+<tr>
+<td>Originalquelldateien und -ordner</td>
+<td>Wissensdokumente im Besitz des Benutzers</td>
+<td>Nein; Sichern Sie sie mit ihrem normalen Speicher-Workflow</td>
+</tr>
+</tbody>
+</table>
+<p>Stellen Sie nach der Wiederherstellung auf einem anderen Computer die ursprünglichen Quellpfade wieder her oder verbinden Sie sie erneut, installieren Sie das Einbettungsmodell neu und führen Sie <strong>Jetzt aktualisieren</strong> aus, um den lokalen Snapshot neu zu erstellen. Qdrant-Daten bleiben in der Verantwortung der Qdrant-Bereitstellung.</p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+<footer class="kt-footer">
+  <div class="kt-footer__line">MIT-lizenziert &middot; Entwickelt von Daniel Mengel</div>
+  <div class="kt-footer__line">korTTY <strong>v2.18.0</strong></div>
+</footer>
+
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../assets/javascripts/kt-zoom.js" defer></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>
