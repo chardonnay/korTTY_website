@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Teamwork sync</title>
+  <desc id="desc">Team maintainers change the shared connections file in a Git repository or on a shared path. On each check interval korTTY fetches it (git clone or fetch plus reset, or a file read), strips inline secrets, replaces its teamwork cache and lists the connections read-only on the Teamwork connections tab; connecting resolves authentication from local storage. korTTY never writes back to the source.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#67e8f9"/></marker><style>text{font-family:Arial,Helvetica,sans-serif;fill:#e6f3ff;font-size:16px}.bg{fill:#07111d}.box{fill:#13243a;stroke:#38bdf8;stroke-width:2;rx:12}.note{fill:none;stroke:#64748b;stroke-width:2;stroke-dasharray:7 7;rx:12}.title{font-size:28px;font-weight:700;fill:#f8fafc}.subtitle{font-size:14px;fill:#b9c8da}.small{font-size:13px;fill:#b9c8da}.line{stroke:#67e8f9;stroke-width:2.6;fill:none;marker-end:url(#arrow)}.secure{stroke:#f59e0b}.state{stroke:#34d399}.external{stroke:#fb7185}.service{stroke:#60a5fa}</style></defs>
+  <rect class="bg" width="1280" height="720"/>
+  <text class="title" x="40" y="54">Teamwork Sync Flow</text>
+  <text class="subtitle" x="40" y="82">One way: korTTY reads shared connections from a team source and never writes back to it.</text>
+
+  <rect class="box external" x="40" y="140" width="220" height="110"/>
+  <text x="62" y="176">Team maintainers</text>
+  <text class="small" x="62" y="200">edit the connections file,</text>
+  <text class="small" x="62" y="220">commit + push or save it</text>
+
+  <rect class="box service" x="350" y="140" width="250" height="110"/>
+  <text x="370" y="176">Teamwork source</text>
+  <text class="small" x="370" y="200">Git repo or shared file</text>
+  <text class="small" x="370" y="220">kortty-teamwork-connections.xml</text>
+
+  <rect class="box" x="690" y="140" width="250" height="110"/>
+  <text x="712" y="176">Sync service</text>
+  <text class="small" x="712" y="200">every check interval</text>
+  <text class="small" x="712" y="220">Git: clone, or fetch + reset</text>
+  <text class="small" x="712" y="240">file: read the XML</text>
+
+  <rect class="box secure" x="1030" y="140" width="210" height="110"/>
+  <text x="1052" y="176">Strip inline secrets</text>
+  <text class="small" x="1052" y="200">passwords, key paths</text>
+  <text class="small" x="1052" y="220">and passphrases removed</text>
+
+  <rect class="box note" x="350" y="276" width="250" height="62"/>
+  <text class="small" x="370" y="302">korTTY never pushes to the repo</text>
+  <text class="small" x="370" y="322">and never writes to the file</text>
+
+  <rect class="box state" x="1030" y="370" width="210" height="110"/>
+  <text x="1052" y="406">Teamwork cache</text>
+  <text class="small" x="1052" y="430">replaced on every</text>
+  <text class="small" x="1052" y="450">successful sync; kept</text>
+  <text class="small" x="1052" y="470">when a fetch fails</text>
+
+  <rect class="box state" x="690" y="370" width="250" height="110"/>
+  <text x="712" y="406">Teamwork connections</text>
+  <text class="small" x="712" y="430">Connection Manager tab</text>
+  <text class="small" x="712" y="450">read-only; delete only hides</text>
+  <text class="small" x="712" y="470">a connection on this computer</text>
+
+  <rect class="box secure" x="350" y="370" width="250" height="110"/>
+  <text x="370" y="406">Local authentication</text>
+  <text class="small" x="370" y="430">credentialId / sshKeyId, or the</text>
+  <text class="small" x="370" y="450">default credential, SSH key or</text>
+  <text class="small" x="370" y="470">temporary key set for all</text>
+
+  <rect class="box" x="40" y="370" width="220" height="110"/>
+  <text x="62" y="406">SSH session</text>
+  <text class="small" x="62" y="430">terminal tab</text>
+
+  <path class="line" d="M260 195 H350"/>
+  <text class="small" x="272" y="185">1. push</text>
+  <path class="line" d="M600 195 H690"/>
+  <text class="small" x="612" y="185">2. fetch</text>
+  <path class="line" d="M940 195 H1030"/>
+  <text class="small" x="952" y="185">3. import</text>
+  <path class="line" d="M1135 250 V370"/>
+  <text class="small" x="1145" y="316">4. cache</text>
+  <path class="line" d="M1030 425 H940"/>
+  <text class="small" x="952" y="415">5. list</text>
+  <path class="line" d="M690 425 H600"/>
+  <text class="small" x="607" y="415">6. connect</text>
+  <path class="line" d="M350 425 H260"/>
+  <text class="small" x="275" y="415">7. open</text>
+
+  <text class="small" x="40" y="560">Each sync replaces the cached copy of a source with the version just fetched; local changes are never merged into it.</text>
+  <text class="small" x="40" y="586">Local overrides cover only authentication: stored credentials, SSH keys, the temporary key and the default username.</text>
+</svg>

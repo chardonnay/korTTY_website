@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+
+<head>
+        <title>SSH-Tunnel (Portweiterleitung) - korTTY Anleitung</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link rel="canonical" href="https://chardonnay.github.io/korTTY/guide/de/features/tunnels.html">
+        <meta name="author" content="korTTY">
+        <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+        <link href="../assets/stylesheets/kortty.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
+
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+            <img class="logo" src="../assets/images/favicon.png" height="150px">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">korTTY Anleitung</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../index.html"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Startseite
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#erste-schritte-collapse" aria-expanded="false">
+                    Erste Schritte
+                </a>
+                <div class="collapse" id="erste-schritte-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/installation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Installation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/building-packages.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KorTTY-Pakete erstellen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/first-launch.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Erster Start – Master-Passwort
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/main-window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Übersicht des Hauptfensters
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#referenz-collapse" aria-expanded="false">
+                    Referenz
+                </a>
+                <div class="collapse" id="referenz-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/menu.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Menüreferenz
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/keyboard-shortcuts.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tastaturkürzel
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/architecture.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architektur
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/config-files.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Konfigurationsdateien
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/enterprise-policy.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Richtlinienkonfiguration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/control-api.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Steuerungs-API
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/cli.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Steuerungs-CLI
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#einstellungen-collapse" aria-expanded="false">
+            Einstellungen
+        </a>
+
+        <div class="collapse" id="einstellungen-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Einstellungsreferenz
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/appearance.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Aussehen, Themen und Schriftart
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/colors.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Farben
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Fenster
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/resources.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Ressourcen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/logging.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Protokollierung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/export.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Exportieren
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/updates.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Aktualisierungen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherheit
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/language.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprache
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/translation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Übersetzung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/video.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Video
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/ai.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/ai-skills.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Skills
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP-Manager
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/editor.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#snippet-editor-collapse" aria-expanded="false">
+            Snippet-Editor
+        </a>
+
+        <div class="collapse" id="snippet-editor-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/snippet-editor/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet-Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/hardening-options.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Härtungsoptionen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/input-hardening.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Eingabe-Härtung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/language-migration.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprachvereinigung
+        </a>
+    </li>
+            </ul>
+        </div>
+    </li>
+            </ul>
+        </div>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover"
+                    data-bs-toggle="collapse" data-bs-target="#funktionen-collapse" aria-expanded="true">
+                    Funktionen
+                </a>
+                <div class="collapse show" id="funktionen-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="connections.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verbindungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminalsitzungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="highlighting.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Hervorhebung von Schlüsselwörtern
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="tunnels.html"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SSH-Tunnel (Portweiterleitung)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="jump-server.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Jump-Server (Bastion Host)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP-Dateimanager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="file-browser.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Dateibrowser
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="snippets.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet-Manager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="jobscheduler.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            JobScheduler
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="projects.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Projekte (Arbeitsbereiche)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="teamwork.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Teamarbeit (gemeinsame Verbindungen)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-assistant.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Assistent
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="local-models.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lokale Modelle (llama.cpp und MLX)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="rag.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            RAG-Wissensspeicher
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-tools.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal-KI-Agent und -Tools
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-swarm.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Schwarm
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherheit – Anmeldeinformationen, Schlüssel und Verschlüsselung
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sichern und wiederherstellen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="recording.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminalaufzeichnung
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="session-journal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sitzungsjournal
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ascii-art.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            ASCII-Art
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal-effect-plugins.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminaleffekt-Plugins
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="coding-agents.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Coding-Agents
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="i18n.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprachen und dynamische Übersetzung
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#über-kortty-collapse" aria-expanded="false">
+                    Über korTTY
+                </a>
+                <div class="collapse" id="über-kortty-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/release-notes.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Versionshinweise
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/feedback.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Feedback und Support
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/anonymous-data.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Anonyme Daten zur Applikationsoptimierung
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="highlighting.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="jump-server.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item">
+
+
+
+
+
+<div role="search" class="search-box kt-search">
+	<form id="rtd-search-form" class="wy-form kt-search-form" action="../search.html" method="get">
+		<input type="text" name="q" id="mkdocs-search-query"
+		class="kt-search-input drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Durchsuchen"
+		autocomplete="off" title="Type search term here" /><button type="button" class="kt-search-clear" hidden
+		        aria-label="Suche zurücksetzen" title="Suche zurücksetzen">&times;</button>
+	</form>
+	<div id="mkdocs-search-results" class="kt-search-suggest"
+	     data-no-results-text="Keine Treffer"
+	     data-preparing-text="Suche wird vorbereitet …"
+	     data-more-text="{n} weitere Treffer anzeigen"></div>
+	<script>
+	  (function () {
+	    var box = document.currentScript.parentNode;
+	    var panel = box.querySelector('.kt-search-suggest');
+	    var input = box.querySelector('#mkdocs-search-query');
+	    var clear = box.querySelector('.kt-search-clear');
+
+	    // Emptying the panel is what hides it (CSS :empty), so closing is just that.
+	    function close () { while (panel.firstChild) { panel.removeChild(panel.firstChild); } }
+	    // The button is only useful once there is something to clear.
+	    function sync () { clear.hidden = !input.value; }
+
+	    input.addEventListener('input', sync);
+	    clear.addEventListener('click', function () {
+	      input.value = '';
+	      sync();
+	      // search/main.js renders on keyup, which a programmatic clear never fires, so
+	      // the panel has to be emptied here or the old hits would outlive the query.
+	      close();
+	      input.focus();
+	    });
+
+	    document.addEventListener('click', function (e) { if (!box.contains(e.target)) { close(); } });
+
+	    // Escape has to be handled on keyUP, and on the document rather than the input.
+	    // search/main.js binds doSearch to the field's keyup, so anything that closed the
+	    // panel on keydown was undone microseconds later by that re-render — which is why
+	    // Escape appeared to do nothing at all. Listening on the document means this runs
+	    // after the field's own handler has already re-rendered, so closing sticks.
+	    // What the panel looked like BEFORE that re-render is the interesting state, so it
+	    // is captured on keydown: the usual two steps, Escape dismisses the suggestions,
+	    // Escape again empties the box.
+	    var panelWasOpen = false;
+	    document.addEventListener('keydown', function (e) {
+	      if (e.key === 'Escape') {
+	        panelWasOpen = !!panel.firstChild;
+	      }
+	    });
+	    document.addEventListener('keyup', function (e) {
+	      if (e.key !== 'Escape') {
+	        return;
+	      }
+	      // Only clear the field while it has focus — Escape elsewhere on the page is not ours.
+	      if (!panelWasOpen && document.activeElement === input && input.value) {
+	        input.value = '';
+	        sync();
+	      }
+	      close();
+	    });
+
+	    sync();  // a ?q= deep link arrives with the field already filled
+	  })();
+	</script>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+<div class="kt-lang-bar">
+  <a class="kt-lang-switch" href="../../en/features/tunnels.html"
+     title="English" hreflang="en">EN</a>
+</div>
+
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="ssh-tunnel-portweiterleitung">SSH-Tunnel (Portweiterleitung)<a class="headerlink" href="#ssh-tunnel-portweiterleitung" title="Permanent link">&para;</a></h1>
+<p>SSH-Tunnels leiten den Datenverkehr sicher zwischen lokalen und entfernten Ports über eine verschlüsselte SSH-Verbindung weiter. korTTY unterstützt drei Tunnelarten: lokales Port-Forwarding, entferntes Port-Forwarding und dynamisches Port-Forwarding (SOCKS-Proxy). Sie funktionieren wie die Optionen <code>-L</code>, <code>-R</code> und <code>-D</code> von OpenSSH und laufen über die Login-Sitzung des Terminal-Tabs, sodass kein zweites Login erforderlich ist.</p>
+<h2 id="tunnel-konfigurieren">Tunnel konfigurieren<a class="headerlink" href="#tunnel-konfigurieren" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Öffnen Sie eine Verbindung zum Bearbeiten: <strong>Verbindungen &gt; Verbindungen verwalten</strong> → Verbindung auswählen → <strong>Bearbeiten</strong>.</li>
+<li>Navigieren Sie zur Registerkarte <strong>SSH-Tunnel</strong>.</li>
+<li>Klicken Sie auf <strong>Hinzufügen</strong>, wählen Sie den <strong>Typ</strong> und füllen Sie die Felder aus. Ein neuer Tunnel startet mit angekreuztem <strong>Tunnel aktivieren</strong>.</li>
+<li>Klicken Sie auf <strong>Speichern</strong> im Tunnel-Dialog, dann auf <strong>Speichern</strong> im Verbindungseditor. <strong>Abbrechen</strong> im Verbindungseditor verwirft jeden Tunnel, den Sie seit dem Öffnen hinzugefügt, bearbeitet oder entfernt haben.</li>
+</ol>
+<h3 id="tunnelkonfigurationsfelder">Tunnelkonfigurationsfelder<a class="headerlink" href="#tunnelkonfigurationsfelder" title="Permanent link">&para;</a></h3>
+<p>Der Tunnel-Dialog benennt seine Felder nach der Rolle, die sie für den gewählten Typ spielen, und listet immer zuerst die Adresse auf, die lauscht, gefolgt von der Adresse, zu der die Verbindungen weitergeleitet werden.</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th><strong>Lokal (-L)</strong></th>
+<th><strong>Remote (-R)</strong></th>
+<th><strong>Dynamischer SOCKS-Proxy (-D)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lauscht auf</td>
+<td><strong>Lokale Bind-Adresse</strong> und <strong>Lokaler Port</strong> auf Ihrem Computer</td>
+<td><strong>Remote-Bind-Adresse</strong> und <strong>Remote-Port</strong> auf dem SSH-Server</td>
+<td><strong>Lokale Bind-Adresse</strong> und <strong>Lokaler Port</strong> auf Ihrem Computer</td>
+</tr>
+<tr>
+<td>Weiterleitung zu</td>
+<td><strong>Remote-Host</strong> und <strong>Remote-Port</strong>, wie vom SSH-Server gesehen</td>
+<td><strong>Lokaler Host</strong> und <strong>Lokaler Port</strong>, wie von Ihrem Computer aus gesehen</td>
+<td>Unabhängig vom Ziel, das der SOCKS-Client anfordert</td>
+</tr>
+<tr>
+<td>Standard-Bind-Adresse</td>
+<td><code>localhost</code></td>
+<td><code>localhost</code></td>
+<td><code>localhost</code></td>
+</tr>
+<tr>
+<td><strong>Beschreibung</strong></td>
+<td>Optionaler Bezeichner</td>
+<td>Optionaler Bezeichner</td>
+<td>Optionaler Bezeichner</td>
+</tr>
+<tr>
+<td><strong>Tunnel aktivieren</strong></td>
+<td>Nur aktivierte Tunnel werden geöffnet</td>
+<td>Nur aktivierte Tunnel werden geöffnet</td>
+<td>Nur aktivierte Tunnel werden geöffnet</td>
+</tr>
+</tbody>
+</table>
+<p>Eine Bindungsadresse von <code>localhost</code> (oder ein leeres Feld) hält den Listener privat für den Computer, auf dem er läuft. Sobald Sie eine andere Adresse eingeben, z. B. <code>0.0.0.0</code> oder ein Netzwerkinterface, warnt das Dialogfeld, dass andere Computer den Tunnel erreichen können; bei einem Remote-Tunnel fügt die Warnung hinzu, dass der SSH-Server eine solche Adresse nur akzeptiert, wenn seine <code>GatewayPorts</code>-Einstellung dies zulässt.</p>
+<p>Mehrere Tunnel können pro Verbindung konfiguriert werden. Deaktivierte Tunnel bleiben in der Konfiguration, werden aber nicht geöffnet, wenn die Verbindung hergestellt wird.</p>
+<h3 id="die-tunnelliste">Die Tunnelliste<a class="headerlink" href="#die-tunnelliste" title="Permanent link">&para;</a></h3>
+<p>Der Tab <strong>SSH-Tunnel</strong> listet jeden Tunnel in der Reihenfolge, wie die <code>ssh</code>-Optionen gelesen werden, Listener zuerst: <code>✓ L localhost:8080 -&gt; db:5432</code>, <code>✓ R localhost:9090 -&gt; localhost:3000</code> oder <code>○ D localhost:1080 (SOCKS)</code>, gefolgt von seiner Beschreibung. <code>✓</code> markiert einen aktivierten Tunnel und <code>○</code> einen deaktivierten. Ein Tunnel, der von anderen Computern erreicht werden kann, ist in der Liste entsprechend gekennzeichnet, sodass ein vergessener <code>0.0.0.0</code> auffällt.</p>
+<p><strong>SSH-Tunnel aktivieren</strong> über der Liste schaltet alle Tunnel der Verbindung gleichzeitig ein oder aus. Es ist aktiviert, wenn alle Tunnel aktiv sind und zeigt einen Bindestrich an, wenn nur einige aktiv sind; ein Klick auf den Bindestrich aktiviert alle. Einen einzelnen Tunnel zu schalten erfolgt über <strong>Tunnel aktivieren</strong> in seinem eigenen Dialog.</p>
+<h2 id="tunneltypen">Tunneltypen<a class="headerlink" href="#tunneltypen" title="Permanent link">&para;</a></h2>
+<h3 id="lokale-portweiterleitung-l">Lokale Portweiterleitung (<code>-L</code>)<a class="headerlink" href="#lokale-portweiterleitung-l" title="Permanent link">&para;</a></h3>
+<p>Leiten Sie einen lokalen Port über den SSH-Tunnel an einen Remotedienst weiter.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Your machine:8080  --&gt;  SSH Server  --&gt;  database-server:5432
+</span></code></pre></div>
+<p><strong>Beispielanwendungsfall:</strong> Greifen Sie auf einen Remote-Datenbankserver zu, der von Ihrem Computer aus nicht direkt erreichbar ist.</p>
+<ul>
+<li><strong>Lokale Bind-Adresse:</strong> <code>localhost</code></li>
+<li><strong>Lokaler Port:</strong> <code>8080</code></li>
+<li><strong>Remote Host:</strong> <code>database-server</code> (oder IP)</li>
+<li><strong>Remote Port:</strong> <code>5432</code></li>
+</ul>
+<p>Sobald Sie verbunden sind, verbinden Sie sich mit der Remote-Datenbank über <code>localhost:8080</code> auf Ihrem Rechner.</p>
+<h3 id="remote-port-weiterleitung-r">Remote-Port-Weiterleitung (<code>-R</code>)<a class="headerlink" href="#remote-port-weiterleitung-r" title="Permanent link">&para;</a></h3>
+<p>Machen Sie einen lokalen Dienst auf dem SSH-Server zugänglich.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>SSH Server localhost:9090  --&gt;  Your machine:3000
+</span></code></pre></div>
+<p><strong>Beispielanwendung:</strong> Lassen Sie ein Programm auf dem SSH-Server einen Entwicklungsserver auf Ihrem Rechner erreichen.</p>
+<ul>
+<li><strong>Remote-Bind-Adresse:</strong> <code>localhost</code> (die Adresse, auf der der SSH-Server lauscht)</li>
+<li><strong>Remote Port:</strong> <code>9090</code> (der Port, auf dem der SSH-Server lauscht)</li>
+<li><strong>Lokaler Host:</strong> <code>localhost</code> (wo Ihr Computer jede Verbindung weiterleitet)</li>
+<li><strong>Lokaler Port:</strong> <code>3000</code> (Ihr lokaler Dienst)</li>
+</ul>
+<p>Nach dem Verbinden erreichen Programme auf dem SSH-Server Ihren Dienst unter <code>localhost:9090</code>. Wie OpenSSH fordert korTTY den Server auf, nur auf seiner Loopback-Adresse zu lauschen. Das Setzen von <strong>Remote-Bind-Adresse</strong> auf <code>0.0.0.0</code> fordert den Server auf, Verbindungen aus seinem Netzwerk ebenfalls zu akzeptieren; ein OpenSSH-Server tut dies nur, wenn seine <code>GatewayPorts</code>-Einstellung <code>clientspecified</code> ist, und korTTY kennzeichnet einen solchen Tunnel im Tunnel-Dialog, in der Tunnelliste und in der Statusleiste als von anderen Computern erreichbar. Ein Server mit <code>GatewayPorts yes</code> lauscht auf allen seinen Adressen für jeden Remote-Tunnel, egal welche Bind-Adresse Sie eingeben.</p>
+<h3 id="dynamische-portweiterleitung-d">Dynamische Portweiterleitung (<code>-D</code>)<a class="headerlink" href="#dynamische-portweiterleitung-d" title="Permanent link">&para;</a></h3>
+<p>Erstellen Sie einen SOCKS-Proxy für Netzwerkverkehr über den SSH-Tunnel.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Your machine:1080  --&gt;  SSH Server  --&gt;  (any destination)
+</span></code></pre></div>
+<p><strong>Beispielhafter Anwendungsfall:</strong> Verschlüsseln Sie den gesamten Datenverkehr von Ihrem Browser oder Ihrer Anwendung, indem Sie ihn durch den SSH-Tunnel leiten.</p>
+<ul>
+<li><strong>Lokale Bind-Adresse:</strong> <code>localhost</code></li>
+<li><strong>Lokaler Port:</strong> <code>1080</code> (oder jeder verfügbare Port)</li>
+</ul>
+<p>Konfigurieren Sie Ihren Browser oder Ihre Anwendung so, dass sie <code>localhost:1080</code> als SOCKS5-(oder SOCKS4)-Proxy verwendet. Hostnamen werden vom SSH-Server aufgelöst.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ein dynamischer Tunnel verwendet nur die lokale Bindadresse und den lokalen Port; die Remote-Felder sind für diesen Typ deaktiviert.</p>
+</div>
+<h2 id="wenn-tunnel-geoffnet-sind">Wenn Tunnel geöffnet sind<a class="headerlink" href="#wenn-tunnel-geoffnet-sind" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Einmal pro Terminal-Tab:</strong> die Tunnel öffnen sich unmittelbar nach dem Login in der ersten SSH-Sitzung des Tabs und bleiben offen, solange der Tab verbunden ist. Aufgeteilte Panes öffnen sie nicht erneut und stehen auch nicht im Konflikt mit ihnen.</li>
+<li><strong>Einmal gefragt:</strong> Beim ersten Öffnen der Tunnel einer Verbindung listet korTTY sie auf und fragt <strong>Tunnel öffnen</strong> oder <strong>Nicht jetzt</strong>. <strong>Nicht jetzt</strong> ist die Standardschaltfläche, sodass ein Tastendruck, den Sie noch in das Terminal eingeben, wenn die Frage erscheint, sie nicht öffnet. Die Antwort wird für diese Verbindung gespeichert; korTTY fragt erneut, wenn sich die Tunnel oder der Server ändern. <strong>Nicht jetzt</strong> gilt für den Tab, einschließlich seiner Neuverbindungen – öffnen Sie die Verbindung in einem neuen Tab, um erneut gefragt zu werden.</li>
+<li><strong>Neu verbinden:</strong> Eine manuelle oder automatische Neuverbindung schließt zunächst die Tunnel und öffnet sie anschließend in der neuen Sitzung.</li>
+<li><strong>Pane schließen:</strong> Schließen Sie den Pane, in dem die Tunnel laufen (oder geben dort <code>exit</code> ein), während ein mit <strong>Rechts teilen (gleicher Server)</strong> oder <strong>Unten teilen (gleicher Server)</strong> geöffneter Pane offen bleibt, werden die Tunnel in diesen Pane verschoben. Mit <strong>Rechts teilen (neue Verbindung)</strong> oder <strong>Unten teilen (neue Verbindung)</strong> geöffnete Pane übernehmen sie nie, selbst wenn sie sich mit demselben Server verbinden.</li>
+<li><strong>Tab schließen</strong> schließt seine Tunnel.</li>
+<li><strong>Zwei Tabs, eine Verbindung:</strong> Jeder Tab öffnet eigene Tunnel, sodass im zweiten Tab ein lokaler oder dynamischer Tunnel meldet, dass die Adresse bereits verwendet wird, und ein Remote-Tunnel meldet, dass der SSH-Server ihn abgelehnt hat. Der erste Tab bleibt funktionsfähig.</li>
+<li><strong>Nicht geöffnet</strong> von SFTP-Tabs, Mosh-Verbindungen (die Statusleiste sagt, dass Tunnel das SSH-Protokoll benötigen), oder für Aufteilungen zu einem anderen Server.</li>
+<li><strong>Serverseitig:</strong> Der SSH-Server muss Weiterleitung zulassen (<code>AllowTcpForwarding</code> in OpenSSH). Ein Remote-Tunnel, den der Server ablehnt (Weiterleitung deaktiviert oder sein Port bereits auf dem Server in Benutzung), wird in der Statusleiste angezeigt; die anderen Tunnel bleiben offen.</li>
+</ul>
+<h3 id="statusleiste">Statusleiste<a class="headerlink" href="#statusleiste" title="Permanent link">&para;</a></h3>
+<p>Während ein Tab Tunnel hat, zeigt die Statusleiste <code>Tunnel: 2/3 aktiv</code>, gefolgt vom ersten Tunnel, der fehlgeschlagen ist und warum (zum Beispiel <code>Address already in use</code>) sowie dem ersten Tunnel, den andere Computer erreichen können. Bewegen Sie die Maus über die Statusleiste, um jeden Tunnel mit seinem Zustand anzuzeigen.</p>
+<h3 id="geteilte-verbindungen-teamarbeit">Geteilte Verbindungen (Teamarbeit)<a class="headerlink" href="#geteilte-verbindungen-teamarbeit" title="Permanent link">&para;</a></h3>
+<p>Tunnel einer Verbindung, die von einer <a href="teamwork.html">Teamarbeit</a>-Quelle stammt, wurden von der Person geschrieben, die die gemeinsame Datei bearbeitet; daher beschränkt korTTY sie:</p>
+<ul>
+<li>Remote-Tunnel werden nie geöffnet, egal welche Adresse sie angeben: Loopback auf einem gemeinsamen SSH-Server ist von jedem Konto darauf erreichbar.</li>
+<li>Lokale und dynamische Tunnel können nur auf <code>localhost</code> hören.</li>
+<li>Der Rest erfordert noch Ihre einmalige Bestätigung, die darauf hinweist, dass die Tunnel aus der gemeinsamen Datei stammen.</li>
+</ul>
+<p>Um einen anderen Tunnel zu verwenden, erstellen Sie Ihre eigene Verbindung zum selben Server und fügen dort den Tunnel hinzu; gemeinsame Verbindungen können im Connection-Manager nicht dupliziert werden.</p>
+<h3 id="organisationsrichtlinie">Organisationsrichtlinie<a class="headerlink" href="#organisationsrichtlinie" title="Permanent link">&para;</a></h3>
+<p>Ein Administrator kann alle Tunnel mit <code>allow-port-forwarding = false</code> in der <a href="../reference/enterprise-policy.html">Unternehmensrichtlinie</a> verbieten. Die Statusleiste sagt dann, dass Tunnel von Ihrer Organisation deaktiviert sind.</p>
+<h2 id="tunnel-verwalten">Tunnel verwalten<a class="headerlink" href="#tunnel-verwalten" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Aktivieren/Deaktivieren:</strong> Schalten Sie <strong>Tunnel aktivieren</strong> an einem Tunnel oder <strong>SSH-Tunnel aktivieren</strong> für alle, um Tunnel zu aktivieren oder zu deaktivieren, ohne die Konfiguration zu entfernen.</li>
+<li><strong>Bearbeiten:</strong> Wählen Sie einen Tunnel aus und klicken Sie auf <strong>Bearbeiten</strong>, um dessen Einstellungen zu ändern.</li>
+<li><strong>Entfernen:</strong> wählen Sie einen Tunnel aus und klicken Sie auf <strong>Entfernen</strong>, um ihn von der Verbindung zu löschen.</li>
+<li><strong>Mehrere Tunnel:</strong> beliebig viele Tunnel können auf einer einzigen Verbindung konfiguriert und gleichzeitig geöffnet werden.</li>
+</ul>
+<p>Beim Speichern der Verbindung wird die Änderung sofort auf jeden offenen Tab dieser Verbindung angewendet: ausgeschaltete oder entfernte Tunnel werden geschlossen, und ein geänderter Satz von Tunneln ersetzt den laufenden in derselben Sitzung – nach der einmaligen Frage, sofern Sie genau diesen Satz nicht bereits zugelassen haben. Ein Tab, dessen Tunnel sich nicht geändert haben, hält sie offen, sodass die Bearbeitung nur einer Beschreibung oder einer anderen Einstellung der Verbindung sie nicht unterbricht. Ein Tab, der zu diesem Zeitpunkt getrennt ist oder sich noch anmeldet, öffnet die gespeicherten Tunnel, sobald er verbunden ist.</p>
+<h2 id="importierte-tunnel">Importierte Tunnel<a class="headerlink" href="#importierte-tunnel" title="Permanent link">&para;</a></h2>
+<p>Tunnel, die aus dem PuTTY Connection Manager importiert wurden, behalten ihren Typ, ihre Ports und den Zielhost bei. Das CSV-Format nennt keine Bind-Adresse, daher bindet korTTY jeden importierten Listener an <code>localhost</code>, was auch PuTTYs Standard für Remote-Tunnel ist. Remote-Tunnels, die frühere Versionen importierten, wurden mit der Remote-Bind-Adresse <code>0.0.0.0</code> gespeichert; die Tunnelliste, das Tunnel-Dialogfeld und die Statusleiste kennzeichnen sie als von anderen Computern erreichbar. Setzen Sie daher deren <strong>Remote-Bind-Adresse</strong> auf <code>localhost</code>, wenn der weitergeleitete Port privat für den Server bleiben soll.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Ports unter 1024 (wie 80 oder 443) erfordern erhöhte Privilegien: auf Ihrem Computer für lokale und dynamische Tunnel sowie ein Root-Login auf dem SSH-Server für entfernte Tunnel. Verwenden Sie Ports ab 1024, um Berechtigungsprobleme zu vermeiden.</p>
+</div></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+<footer class="kt-footer">
+  <div class="kt-footer__line">MIT-lizenziert &middot; Entwickelt von Daniel Mengel</div>
+  <div class="kt-footer__line">korTTY <strong>v2.18.0</strong></div>
+</footer>
+
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../assets/javascripts/kt-zoom.js" defer></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>

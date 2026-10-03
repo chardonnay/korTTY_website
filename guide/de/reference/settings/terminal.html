@@ -1,0 +1,1068 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+
+<head>
+        <title>Terminal - korTTY Anleitung</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link rel="canonical" href="https://chardonnay.github.io/korTTY/guide/de/reference/settings/terminal.html">
+        <meta name="author" content="korTTY">
+        <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+        <link href="../../assets/stylesheets/kortty.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.png">
+
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+            <img class="logo" src="../../assets/images/favicon.png" height="150px">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">korTTY Anleitung</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../../index.html"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Startseite
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#erste-schritte-collapse" aria-expanded="false">
+                    Erste Schritte
+                </a>
+                <div class="collapse" id="erste-schritte-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../getting-started/installation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Installation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../getting-started/building-packages.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KorTTY-Pakete erstellen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../getting-started/first-launch.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Erster Start – Master-Passwort
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../getting-started/main-window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Übersicht des Hauptfensters
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover"
+                    data-bs-toggle="collapse" data-bs-target="#referenz-collapse" aria-expanded="true">
+                    Referenz
+                </a>
+                <div class="collapse show" id="referenz-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../menu.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Menüreferenz
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../keyboard-shortcuts.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tastaturkürzel
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../architecture.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architektur
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../config-files.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Konfigurationsdateien
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../enterprise-policy.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Richtlinienkonfiguration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../control-api.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Steuerungs-API
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../cli.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Steuerungs-CLI
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover"
+            data-bs-toggle="collapse" data-bs-target="#einstellungen-collapse" aria-expanded="true">
+            Einstellungen
+        </a>
+
+        <div class="collapse show" id="einstellungen-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Einstellungsreferenz
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="appearance.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Aussehen, Themen und Schriftart
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="colors.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Farben
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="terminal.html"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Fenster
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="resources.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Ressourcen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="logging.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Protokollierung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="export.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Exportieren
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="updates.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Aktualisierungen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherheit
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="language.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprache
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="translation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Übersetzung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="video.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Video
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="ai.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="ai-skills.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Skills
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP-Manager
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="editor.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#snippet-editor-collapse" aria-expanded="false">
+            Snippet-Editor
+        </a>
+
+        <div class="collapse" id="snippet-editor-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="snippet-editor/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet-Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../hardening-options.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Härtungsoptionen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../input-hardening.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Eingabe-Härtung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../language-migration.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprachvereinigung
+        </a>
+    </li>
+            </ul>
+        </div>
+    </li>
+            </ul>
+        </div>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#funktionen-collapse" aria-expanded="false">
+                    Funktionen
+                </a>
+                <div class="collapse" id="funktionen-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/connections.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verbindungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminalsitzungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/highlighting.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Hervorhebung von Schlüsselwörtern
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/tunnels.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SSH-Tunnel (Portweiterleitung)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/jump-server.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Jump-Server (Bastion Host)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP-Dateimanager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/file-browser.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Dateibrowser
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/snippets.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet-Manager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/jobscheduler.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            JobScheduler
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/projects.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Projekte (Arbeitsbereiche)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/teamwork.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Teamarbeit (gemeinsame Verbindungen)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/ai-assistant.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Assistent
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/local-models.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lokale Modelle (llama.cpp und MLX)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/rag.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            RAG-Wissensspeicher
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/ai-tools.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal-KI-Agent und -Tools
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/ai-swarm.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Schwarm
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherheit – Anmeldeinformationen, Schlüssel und Verschlüsselung
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sichern und wiederherstellen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/recording.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminalaufzeichnung
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/session-journal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sitzungsjournal
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/ascii-art.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            ASCII-Art
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/terminal-effect-plugins.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminaleffekt-Plugins
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/coding-agents.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Coding-Agents
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/i18n.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprachen und dynamische Übersetzung
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#über-kortty-collapse" aria-expanded="false">
+                    Über korTTY
+                </a>
+                <div class="collapse" id="über-kortty-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/release-notes.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Versionshinweise
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/feedback.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Feedback und Support
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/anonymous-data.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Anonyme Daten zur Applikationsoptimierung
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="colors.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="window.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item">
+
+
+
+
+
+<div role="search" class="search-box kt-search">
+	<form id="rtd-search-form" class="wy-form kt-search-form" action="../../search.html" method="get">
+		<input type="text" name="q" id="mkdocs-search-query"
+		class="kt-search-input drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Durchsuchen"
+		autocomplete="off" title="Type search term here" /><button type="button" class="kt-search-clear" hidden
+		        aria-label="Suche zurücksetzen" title="Suche zurücksetzen">&times;</button>
+	</form>
+	<div id="mkdocs-search-results" class="kt-search-suggest"
+	     data-no-results-text="Keine Treffer"
+	     data-preparing-text="Suche wird vorbereitet …"
+	     data-more-text="{n} weitere Treffer anzeigen"></div>
+	<script>
+	  (function () {
+	    var box = document.currentScript.parentNode;
+	    var panel = box.querySelector('.kt-search-suggest');
+	    var input = box.querySelector('#mkdocs-search-query');
+	    var clear = box.querySelector('.kt-search-clear');
+
+	    // Emptying the panel is what hides it (CSS :empty), so closing is just that.
+	    function close () { while (panel.firstChild) { panel.removeChild(panel.firstChild); } }
+	    // The button is only useful once there is something to clear.
+	    function sync () { clear.hidden = !input.value; }
+
+	    input.addEventListener('input', sync);
+	    clear.addEventListener('click', function () {
+	      input.value = '';
+	      sync();
+	      // search/main.js renders on keyup, which a programmatic clear never fires, so
+	      // the panel has to be emptied here or the old hits would outlive the query.
+	      close();
+	      input.focus();
+	    });
+
+	    document.addEventListener('click', function (e) { if (!box.contains(e.target)) { close(); } });
+
+	    // Escape has to be handled on keyUP, and on the document rather than the input.
+	    // search/main.js binds doSearch to the field's keyup, so anything that closed the
+	    // panel on keydown was undone microseconds later by that re-render — which is why
+	    // Escape appeared to do nothing at all. Listening on the document means this runs
+	    // after the field's own handler has already re-rendered, so closing sticks.
+	    // What the panel looked like BEFORE that re-render is the interesting state, so it
+	    // is captured on keydown: the usual two steps, Escape dismisses the suggestions,
+	    // Escape again empties the box.
+	    var panelWasOpen = false;
+	    document.addEventListener('keydown', function (e) {
+	      if (e.key === 'Escape') {
+	        panelWasOpen = !!panel.firstChild;
+	      }
+	    });
+	    document.addEventListener('keyup', function (e) {
+	      if (e.key !== 'Escape') {
+	        return;
+	      }
+	      // Only clear the field while it has focus — Escape elsewhere on the page is not ours.
+	      if (!panelWasOpen && document.activeElement === input && input.value) {
+	        input.value = '';
+	        sync();
+	      }
+	      close();
+	    });
+
+	    sync();  // a ?q= deep link arrives with the field already filled
+	  })();
+	</script>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+<div class="kt-lang-bar">
+  <a class="kt-lang-switch" href="../../../en/reference/settings/terminal.html"
+     title="English" hreflang="en">EN</a>
+</div>
+
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="terminal">Terminal<a class="headerlink" href="#terminal" title="Permanent link">&para;</a></h1>
+<p>Konfigurieren Sie die Anzeige- und Verhaltenseinstellungen des Terminals, einschließlich Abmessungen, Scrollback, Zeichenkodierung, Hervorhebung von Schlüsselwörtern, Links, Einfügeschutz und SSH-Verbindungsverwaltung. Öffnen über <strong>Konfiguration → Globale Einstellungen → Terminal</strong>; in <code>~/.kortty/global-settings.xml</code> gespeichert.</p>
+<p><img alt="Terminal settings tab" src="../../assets/screenshots/settings/terminal.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Einstellung</th>
+<th>Typ</th>
+<th>Werte</th>
+<th>Standard</th>
+<th>Gespeichert als</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spalten:</td>
+<td>Nummer</td>
+<td>40–500</td>
+<td>80</td>
+<td><code>terminalColumns</code></td>
+</tr>
+<tr>
+<td>Zeilen:</td>
+<td>Nummer</td>
+<td>10–200</td>
+<td>24</td>
+<td><code>terminalRows</code></td>
+</tr>
+<tr>
+<td>Scrollback:</td>
+<td>Nummer</td>
+<td>100–100.000</td>
+<td>10.000</td>
+<td><code>scrollbackLines</code></td>
+</tr>
+<tr>
+<td>Kodierung:</td>
+<td>Dropdown</td>
+<td>UTF-8, ISO-8859-1, ISO-8859-15, Windows-1252</td>
+<td>UTF-8</td>
+<td><code>encoding</code></td>
+</tr>
+<tr>
+<td>Fett wie helle Farbe</td>
+<td>umschalten</td>
+<td>—</td>
+<td>Ein</td>
+<td><code>boldAsBright</code></td>
+</tr>
+<tr>
+<td>Bildlaufleiste im Terminal anzeigen</td>
+<td>umschalten</td>
+<td>–</td>
+<td>Ein</td>
+<td><code>showTerminalScrollbar</code></td>
+</tr>
+<tr>
+<td>Befehlszeitstempel anzeigen</td>
+<td>umschalten</td>
+<td>–</td>
+<td>Aus</td>
+<td><code>commandTimestampsEnabled</code></td>
+</tr>
+<tr>
+<td>Drag-and-Drop ins Terminal erlauben (Dateien werden per SFTP kopiert, Text wird eingefügt)</td>
+<td>umschalten</td>
+<td>–</td>
+<td>Ein</td>
+<td><code>terminalDragDropEnabled</code></td>
+</tr>
+<tr>
+<td>Auswahl automatisch in die Zwischenablage kopieren</td>
+<td>umschalten</td>
+<td>–</td>
+<td>Ein</td>
+<td><code>terminalCopyOnSelectEnabled</code></td>
+</tr>
+<tr>
+<td>Aktive Terminalfenster ohne Bestätigung schließen</td>
+<td>umschalten</td>
+<td>–</td>
+<td>Aus</td>
+<td><code>closeActiveTerminalWindowsWithoutConfirmation</code></td>
+</tr>
+<tr>
+<td>Schlüsselwörter in der Terminalausgabe hervorheben</td>
+<td>umschalten</td>
+<td>–</td>
+<td>Ein</td>
+<td><code>terminalHighlightingEnabled</code></td>
+</tr>
+<tr>
+<td>Auch in Vollbildprogrammen hervorheben (vim, less, htop)</td>
+<td>umschalten</td>
+<td>–</td>
+<td>Aus</td>
+<td><code>terminalHighlightAlternateScreen</code></td>
+</tr>
+<tr>
+<td>Standard-Regelsatz:</td>
+<td>Dropdown</td>
+<td>Keiner, Fehler und Warnungen, Netzwerkadressen, Netzwerkgeräte oder ein eigener Regelsatz</td>
+<td>Keiner</td>
+<td><code>defaultHighlightRuleSetId</code></td>
+</tr>
+<tr>
+<td>Regeln bearbeiten…</td>
+<td>Schaltfläche</td>
+<td>öffnet den Regelsatz-Editor</td>
+<td>–</td>
+<td><code>highlightRuleSets</code></td>
+</tr>
+<tr>
+<td>Web-Adressen, E-Mail-Adressen und Dateipfade im Terminaltext erkennen</td>
+<td>umschalten</td>
+<td>–</td>
+<td>Ein</td>
+<td><code>terminalLinkDetectionEnabled</code></td>
+</tr>
+<tr>
+<td>Bei mehrzeiligem Einfügen warnen:</td>
+<td>Dropdown</td>
+<td>Aus, Außer das Programm verwendet Bracketed Paste, Immer</td>
+<td>Außer das Programm verwendet Bracketed Paste</td>
+<td><code>pasteWarningMode</code></td>
+</tr>
+<tr>
+<td>Warnen, wenn eingefügter Text größer ist als:</td>
+<td>Nummer</td>
+<td>0–10.240 KiB (0 = aus)</td>
+<td>5</td>
+<td><code>pasteLargeWarningKiB</code></td>
+</tr>
+<tr>
+<td>Pause nach jeder eingefügten Zeile:</td>
+<td>Nummer</td>
+<td>0–1.000 ms (0 = aus)</td>
+<td>0</td>
+<td><code>pasteLineDelayMs</code></td>
+</tr>
+<tr>
+<td>SSH Keep-Alive aktivieren</td>
+<td>umschalten</td>
+<td>–</td>
+<td>Ein</td>
+<td><code>sshKeepAliveEnabled</code></td>
+</tr>
+<tr>
+<td>Intervall (Sekunden):</td>
+<td>Nummer</td>
+<td>5–600</td>
+<td>60</td>
+<td><code>sshKeepAliveInterval</code></td>
+</tr>
+<tr>
+<td>Verbindungswiederholungen aktivieren</td>
+<td>umschalten</td>
+<td>–</td>
+<td>Ein</td>
+<td><code>connectionRetriesEnabled</code></td>
+</tr>
+<tr>
+<td>Verlorene Verbindungen automatisch wiederherstellen</td>
+<td>umschalten</td>
+<td>–</td>
+<td>Ein</td>
+<td><code>autoReconnectEnabled</code></td>
+</tr>
+<tr>
+<td>Hostschlüsselüberprüfung für alle Verbindungen deaktivieren</td>
+<td>umschalten</td>
+<td>–</td>
+<td>Aus</td>
+<td><code>hostKeyCheckDisabledForAllConnections</code></td>
+</tr>
+<tr>
+<td>Coding-Agents (Claude Code, Codex, Gemini CLI) in lokalen Shell-Tabs erkennen</td>
+<td>umschalten</td>
+<td>–</td>
+<td>Ein</td>
+<td><code>codingAgentDetectionEnabled</code></td>
+</tr>
+<tr>
+<td>Desktop-Benachrichtigung, wenn ein Coding-Agent eine Entscheidung braucht oder fertig wird, während Sie seinen Bereich nicht ansehen</td>
+<td>umschalten</td>
+<td>–</td>
+<td>Ein</td>
+<td><code>codingAgentNotificationsEnabled</code></td>
+</tr>
+<tr>
+<td>Anzahl der auf eine Entscheidung wartenden Agents am App-Symbol anzeigen</td>
+<td>umschalten</td>
+<td>–</td>
+<td>Ein</td>
+<td><code>codingAgentAppBadgeEnabled</code></td>
+</tr>
+<tr>
+<td>Einem lokalen Programm erlauben, dieses korTTY zu lesen und zu steuern</td>
+<td>umschalten</td>
+<td>–</td>
+<td><strong>Aus</strong></td>
+<td><code>controlApiEnabled</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="hinweise">Hinweise<a class="headerlink" href="#hinweise" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Kodierung</p>
+<p>Die Zeichenkodierung, mit der korTTY die Ausgabe einer SSH-Sitzung dekodiert und das kodiert, was Sie eingeben oder einfügen. Sie gilt für jede SSH-Verbindung, die auf dem Tab <em>Verbindung</em> des Verbindungseditors keine eigene <strong>Zeichenkodierung</strong> auswählt (siehe <a href="../../features/connections.html#zeichenkodierung">Zeichenkodierung</a>). Lokale Shells verwenden UTF-8, sofern ihre Verbindung keine Kodierung festlegt, und Mosh nutzt stets UTF-8, weil mosh-server und mosh-client dies erfordern. Wählen Sie die Kodierung aus, die die Programme auf dem Server tatsächlich schreiben, in der Regel das, was <code>locale</code> dort meldet. Eine Änderung tritt beim nächsten Verbindungsaufbau oder bei einer erneuten Verbindung eines Tabs in Kraft; offene Tabs behalten ihre Kodierung. Zeichen, die die gewählte Kodierung nicht darstellen kann, werden als <code>?</code> übermittelt.</p>
+<p>Frühere Versionen ignorierten diese Einstellung, sodass ein damals gewählter Wert nicht automatisch angewendet wird: SSH-Sitzungen bleiben UTF-8, und ein Hinweis unter dem Dropdown sagt dies, bis Sie die Einstellungen nach dem Öffnen der Terminal-Seite speichern. Wählen Sie <strong>UTF-8</strong> vor dem Speichern, wenn Sie den alten Wert nicht übernehmen möchten.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Fett als helle Farbe anzeigen</p>
+<p>Diese Einstellung gilt derzeit nur für Terminalaufnahmen: mit <a href="video.html">Terminalfarben in Aufnahmen erfassen</a> aktiviert, wird fetter Text einer der 8 normalen ANSI-Farben in seiner hellen Variante gespeichert. Das Live-Terminal zeichnet fetten Text in jeder Hinsicht immer noch in seiner normalen Farbe aus.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Zurückscrollen</p>
+<p>Steuert, wie viele Ausgabezeilen jeder Terminalbereich in seinem Scrollback-Puffer behält. Der Wert wird beim Erstellen eines Terminals gelesen, daher gilt eine Änderung für neu geöffnete Registerkarten und geteilte Bereiche – bereits geöffnete Terminals behalten ihre aktuelle Puffergröße. Größere Werte verbrauchen mehr Speicher pro Bereich.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Markierung automatisch in Zwischenablage kopieren</p>
+<p>Wenn aktiviert, wird der von Ihnen im Terminal ausgewählte Text sofort in die Zwischenablage kopiert. Unter Linux wird er zudem zur X11-Hauptauswahl, sodass ein Mittelklick ihn in anderen Anwendungen wie xterm oder gedit einfügt. Mit dem internen Zwischenablage-Modus der Unternehmensrichtlinie <a href="../enterprise-policy.html#interner-zwischenablagemodus">interner Zwischenablage-Modus</a> bleibt die Auswahl innerhalb von korTTY auf jeder Plattform.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Hervorhebung von Schlüsselwörtern</p>
+<p><strong>Schlüsselwörter in der Terminalausgabe hervorheben</strong> ist der Hauptschalter der <a href="../../features/highlighting.html">Hervorhebung von Schlüsselwörtern</a>. Solange er ausgeschaltet ist, wird kein Bereich hervorgehoben, gleich was in einem Menü, mit <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-h">H</kbd></span> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-h">H</kbd></span> auf macOS), für eine Verbindung oder als Standard-Regelsatz gewählt wurde, und die Hervorhebungsmenüs sind ausgegraut. Er ist standardmäßig eingeschaltet, aber es wird nichts hervorgehoben, bis ein Regelsatz gewählt ist.</p>
+<p><strong>Standard-Regelsatz</strong> ist der Regelsatz, den jeder Terminalbereich zeigt, sofern weder seine Verbindung einen eigenen Regelsatz hat (siehe <a href="../../features/highlighting.html#regelsatz-pro-verbindung">Regelsatz pro Verbindung</a>) noch Sie für diesen Bereich einen anderen wählen. Standardmäßig ist er <strong>Keiner</strong>, sodass die Hervorhebung ausgeschaltet bleibt, bis Sie sie bewusst einschalten: hier, für eine Verbindung im Verbindungseditor, unter <em>Ansicht → Hervorhebung</em>, im Kontextmenü eines Bereichs oder mit dem Tastenkürzel. Ein an einer dieser Stellen für einen Bereich gewählter Regelsatz hat Vorrang vor dem Standard, bis der Bereich geschlossen wird, und wenn Sie dort <strong>Keine</strong> wählen, bleibt dieser Bereich ohne Hervorhebung, gleich welcher Standard gilt. Nennt der gespeicherte Standard einen Regelsatz, der nicht mehr existiert, zeigt das Dropdown ihn als fehlend an, und die Bereiche zeigen keine Hervorhebung.</p>
+<p><strong>Auch in Vollbildprogrammen hervorheben</strong> erweitert die Hervorhebung auf Programme, die den alternativen Bildschirm des Terminals verwenden, etwa <code>vim</code>, <code>less</code> und <code>htop</code>. Die Option ist standardmäßig ausgeschaltet, weil diese Programme ihren Bildschirm ständig neu zeichnen und eigene Farben mitbringen, sodass Hervorhebungen dort flackern und mit den Farben des Programms kollidieren können. Wenn Sie sie ausschalten, bleiben Hervorhebungen, die ein laufendes Programm bereits zeigt, bestehen, bis es sie neu zeichnet.</p>
+<p>Alle drei gelten für geöffnete Terminals, sobald Sie speichern.</p>
+<p><strong>Regeln bearbeiten…</strong> öffnet den <a href="../../features/highlighting.html#ihre-eigenen-regelsatze">Regelsatz-Editor</a>, in dem Sie eigene Regelsätze anlegen und die mitgelieferten ansehen. Die Schaltfläche bleibt verfügbar, solange der Hauptschalter ausgeschaltet ist, sodass Sie Regelsätze vorbereiten können, bevor Sie die Hervorhebung einschalten. Der Editor speichert seine Änderungen, sobald Sie ihn bestätigen, gleich ob Sie danach den Einstellungsdialog speichern, und anschließend listet das Dropdown <strong>Standard-Regelsatz</strong> Ihre Regelsätze in ihrem aktuellen Stand. Löschen Sie den Regelsatz, den das Dropdown zeigt, fällt es auf <strong>Keiner</strong> zurück.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Links</p>
+<p>Wenn <strong>Web-Adressen, E-Mail-Adressen und Dateipfade im Terminaltext erkennen</strong> eingeschaltet ist, öffnet <span class="keys"><kbd class="key-command">Cmd</kbd></span> + Klick (macOS) bzw. <span class="keys"><kbd class="key-control">Ctrl</kbd></span> + Klick (Windows, Linux) eine Webadresse, eine E-Mail-Adresse oder einen Dateipfad, die ein Programm als Klartext ausgegeben hat: eine Webadresse in Ihrem Standardbrowser, eine E-Mail-Adresse als neue Mail in Ihrem Mailprogramm und in SSH- und lokalen Shell-Tabs einen Dateipfad als Text im Snippet-Editor. Ein einfacher Klick wählt weiterhin nur Text aus. Eine Änderung gilt sofort für die offenen Terminals. Links, die ein Programm selbst mit OSC 8 auszeichnet, öffnen sich in jedem Fall mit demselben Klick. Siehe <a href="../../features/terminal.html#links-in-der-terminalausgabe">Links in der Terminalausgabe</a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Einfügeschutz</p>
+<p>Legt fest, welcher ins Terminal eingefügte Text nachfragt, bevor er den Bereich erreicht; der Dialog selbst ist unter <a href="../../features/terminal.html#einfugeschutz">Einfügeschutz</a> beschrieben. <strong>Bei mehrzeiligem Einfügen warnen</strong> legt fest, wann eingefügter Text mit Zeilenumbruch nachfragt: <strong>Außer das Programm verwendet Bracketed Paste</strong> (der Standard) fragt nur nach, wenn das Programm im Bereich jeden Zeilenumbruch als Enter empfangen würde, <strong>Immer</strong> fragt bei jedem eingefügten Text mit Zeilenumbruch nach, und <strong>Aus</strong> fragt nie nach. Solange die Einstellung nicht <strong>Aus</strong> ist, fragt auch eingefügter Text mit Steuerzeichen (etwa Escape oder Strg+C) oder mit unsichtbaren Zeichen, die die Schreibrichtung ändern, nach, ob mit Bracketed Paste oder ohne. <strong>Warnen, wenn eingefügter Text größer ist als</strong> fragt bei jedem eingefügten Text über dieser Größe in KiB nach, unabhängig von der Auswahl im Dropdown; 0 schaltet die Größenprüfung ab. Beide Einstellungen gelten ab dem nächsten Einfügen. Sie werden als <code>pasteWarningMode</code> (<code>off</code>, <code>unless-bracketed</code> oder <code>always</code>; ein unbekannter Wert gilt als <code>unless-bracketed</code>) und <code>pasteLargeWarningKiB</code> gespeichert.</p>
+<p><strong>Pause nach jeder eingefügten Zeile</strong> ist für Geräte wie Switches, Router und Konsolenserver gedacht, die zu schnell eintreffende Eingaben verlieren: Mehrzeiliger eingefügter Text wird Zeile für Zeile gesendet, mit so vielen Millisekunden Pause nach jeder Zeile. Währenddessen nimmt der Bereich keine Tastatureingaben an, und <span class="keys"><kbd class="key-escape">Esc</kbd></span> bricht das Einfügen ab (siehe <a href="../../features/terminal.html#einfugen-in-langsame-gerate">Einfügen in langsame Geräte</a>). 0 sendet jeden eingefügten Text auf einmal. Die Einstellung wird als <code>pasteLineDelayMs</code> gespeichert.</p>
+<p>Ob ein Programm Bracketed Paste verwendet, meldet der Server, und jede Ausgabe kann es einschalten, auch in einer Shell wie <code>sh</code>, die es nicht beherrscht. Eingefügte Zeilenumbrüche werden dann ohne Warnung ausgeführt; wählen Sie daher <strong>Immer</strong>, wenn Sie auf Produktionsservern arbeiten.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">SSH-Keep-Alive</p>
+<p>Wenn korTTY aktiviert ist, sendet es regelmäßig Keep-Alive-Pakete, um zu verhindern, dass SSH-Sitzungen während Leerlaufzeiten ablaufen. Die Intervalleinstellung steuert, wie oft (in Sekunden) diese Pakete gesendet werden. Der Spinnerbereich beträgt 5–600 Sekunden; Das Intervall ist deaktiviert, wenn SSH Keep-Alive ausgeschaltet ist.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Hostschlüsselüberprüfung für alle Verbindungen deaktivieren</p>
+<p>Dies ist die globale Einstellung mit der niedrigsten Priorität für den Host-Schlüssel: Sie entspannt die Prüfung und akzeptiert für jede Verbindung, die keine eigene oder die eigene Gruppeneinstellung überschreibt. Accept-new blockiert weiterhin geänderte Schlüssel bei einem Host, der bereits festgelegt wurde, und der Schlüssel eines Jump-Server ist stets streng überprüft — jedoch entfernt die Deaktivierung der ersten-Nutzung-Prüfung die Sicherheit vor einem Man-in-the-Middle bei der ersten Verbindung. Standardmäßig deaktiviert. Per-Verbindung- und per-Gruppen-Überwachungen werden im Connection-Manager konfiguriert; siehe <a href="../../features/security.html#lockere-uberprufung-des-hostschlussels">Sicherheit → Lockerung der Host-Schlüssel-Prüfung</a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Drag-and-Drop ins Terminal</p>
+<p>Wenn diese Option aktiviert ist, können Sie Dateien oder Ordner aus Ihrem Dateimanager (Finder unter macOS, Explorer unter Windows) direkt im Terminalfenster ablegen. Die Dateien werden über SFTP auf den Remote-SSH-Server kopiert.</p>
+<p>Text, der aus einem Browser, einem Editor oder einem anderen korTTY-Fenster auf einen Terminalbereich gezogen wird, wird in den Bereich unter dem Mauszeiger eingefügt und durchläuft wie jedes andere Einfügen den <a href="../../features/terminal.html#einfugeschutz">Einfügeschutz</a>; siehe <a href="../../features/terminal.html#text-ablegen">Text ablegen</a>. Ein Ziehvorgang, der Dateien und ihren Pfad als Text mitbringt, kopiert die Dateien. Mit dem <a href="../enterprise-policy.html#interner-zwischenablagemodus">internen Zwischenablagemodus</a> der Unternehmensrichtlinie wird Text, der aus einer anderen Anwendung gezogen wird, abgelehnt. Ist diese Einstellung aus, nimmt das Terminal weder Dateien noch Text an.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Befehlszeitstempel</p>
+<p>Wenn diese Option aktiviert ist, wird auf der linken Seite des Terminals eine Seitenleiste angezeigt, in der das Datum und die Uhrzeit der Eingabe jedes Befehls angezeigt werden. Dies ist nützlich für Audit-Trails und Sitzungsprotokollierung.</p>
+<p>Jede Markierung bleibt auf ihrer Befehlszeile, wenn der Scrollback voll ist und die ältesten Zeilen verworfen werden, und eine Markierung, deren Zeile den Scrollback verlassen hat, verschwindet ebenfalls. <strong>Puffer löschen</strong> im Rechtsklick-Menü des Terminals sowie ein <code>clear</code>, der den Scrollback ebenfalls leert, entfernt alle Markierungen; der nächste Befehl erhält eine neue. Das Öffnen und Beenden eines Vollbildprogramms wie <code>vim</code> oder <code>less</code> verschiebt die Markierungen nicht. Der Tag und Monat über jeder Markierung sowie das vollständige Datum im Hover-Popup folgen der korTTY UI-Sprache (zum Beispiel <code>02.10.</code> auf Deutsch, <code>10/02</code> auf Englisch), ebenso wie die verstrichene Zeit im Popup.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Verbindungswiederholungsversuche</p>
+<p>Wenn diese Option aktiviert ist, werden fehlgeschlagene SSH-Verbindungen automatisch wiederholt. Wenn Sie dies deaktivieren, werden automatische Wiederverbindungsversuche bei fehlgeschlagenen Verbindungen verhindert.</p>
+<p>Wiederholungen decken nur Fehler ab, die durch einen weiteren Versuch behoben werden könnten. Ein geänderter Host-Key, eine verweigerte Anmeldung, eine SSH-Schlüsseldatei, die fehlt oder nicht gelesen werden kann, ein Sprungserver, dessen gespeichertes Passwort nicht verwendet werden kann oder dessen Einrichtung unvollständig ist, eine Mosh-Verbindung, die mit einem Sprungserver konfiguriert ist, oder ein fehlender Mosh-Laufzeitumgebung werden sofort abgelehnt, unabhängig von dieser Einstellung.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Verlorene Verbindungen automatisch wiederherstellen</p>
+<p>Wenn aktiviert und eine <strong>bestehende</strong> SSH-Verbindung verloren geht (Netzwerkabbruch, Server ist weg), reconnectt der Tab automatisch mit zunehmenden Verzögerungen — 3, 5, 10, 20, 30, dann alle 60 Sekunden — und die rote Statusleiste zählt ab zur nächsten Versuch. Ein Doppelklick auf die Leiste führt zu einem sofortigen Wiederherstellen, und ein erfolgreicher Wiederherstellung oder das Schließen des Tabs beendet die automatischen Versuche. Fehlerhafte Anmeldungen und andere dauerhafte Fehlschläge (Authentifizierung, Host-Schlüssel, Konfiguration) werden nie automatisch erneut versucht, und eine Verbindung, die nie erfolgreich hergestellt wurde, wird ebenfalls nicht erneut versucht — das ist der Inhalt von <em>Verbindungswiederholungen aktivieren</em>. Siehe <a href="../../features/terminal.html#verbindungsverlust-und-automatische-wiederherstellung-der-verbindung">Terminal-Sitzungen → Verbindungsverlust</a>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Einem lokalen Programm erlauben, dieses korTTY zu lesen und zu steuern</p>
+<p>Das ist die Steuerungs-API und die einzige Einstellung dieses Reiters, die standardmäßig aus ist. Solange sie an ist, kann jedes Programm unter Ihrem Benutzerkonto auf diesem Rechner Ihre Fenster auflisten, jeden offenen Bereich lesen – lokale Shells wie SSH-Sitzungen – und darin tippen, einschließlich <span class="keys"><kbd class="key-enter">Enter</kbd></span>. Über das Netzwerk ist nichts erreichbar und kein anderer Benutzer des Rechners kann sich verbinden, aber weiter reicht die Grenze nicht: innerhalb Ihres eigenen Kontos ist es dieselbe Macht, als säße jemand an Ihrer Tastatur. Eine Statuszeile unter dem Kontrollkästchen meldet, was der Listener tatsächlich tut, denn Kontrollkästchen und Listener können berechtigt auseinanderliegen – die Unternehmensrichtlinie kann die Funktion verbieten, und ein Start kann scheitern, weil bereits ein anderes korTTY den Socket besitzt. Jede Aktion wird nur mit Byte-Anzahlen protokolliert, nie mit Terminaltext, und beim ersten Tippen eines Programms in einen Bereich erhalten Sie eine Desktop-Benachrichtigung. Siehe <a href="../control-api.html">Steuerungs-API</a> für das Sicherheitsmodell und <a href="../cli.html">Steuerungs-CLI</a> für den Client <code>kortty-cli</code>, der sie spricht.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Coding-Agents erkennen</p>
+<p>Wenn aktiviert, beobachtet korTTY jede lokale Shell-Abteilung auf laufende Claude Code, Codex oder Gemini CLI-Instanzen und überwacht, ob sie arbeitet, auf eine Frage blockiert ist, abgeschlossen oder inaktiv ist. Die Anzeige wird lokal analysiert und nichts verlässt den Computer; die Änderung wird sofort auf offene Tabs übertragen. Die beiden Schalter unten steuern die Desktop-Benachrichtigung für einen Agenten, der eine Entscheidung benötigt oder abgeschlossen wird, während Sie nicht auf dessen Abteilung sehen, sowie die Anzahl der wartenden Agenten auf der App-Icon (oder im Fenstertitel, wenn kein Icon-Abzeichen existiert); beide lesen den Einstellung live, sodass eine Änderung sofort wirkt. Siehe <a href="../../features/coding-agents.html#app-symbol-badge-und-benachrichtigungen">Coding-Agents</a>.</p>
+</div></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+<footer class="kt-footer">
+  <div class="kt-footer__line">MIT-lizenziert &middot; Entwickelt von Daniel Mengel</div>
+  <div class="kt-footer__line">korTTY <strong>v2.18.0</strong></div>
+</footer>
+
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../assets/javascripts/kt-zoom.js" defer></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1059 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+
+<head>
+        <title>SFTP-Dateimanager - korTTY Anleitung</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link rel="canonical" href="https://chardonnay.github.io/korTTY/guide/de/features/sftp.html">
+        <meta name="author" content="korTTY">
+        <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+        <link href="../assets/stylesheets/kortty.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
+
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+            <img class="logo" src="../assets/images/favicon.png" height="150px">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">korTTY Anleitung</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../index.html"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Startseite
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#erste-schritte-collapse" aria-expanded="false">
+                    Erste Schritte
+                </a>
+                <div class="collapse" id="erste-schritte-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/installation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Installation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/building-packages.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KorTTY-Pakete erstellen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/first-launch.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Erster Start – Master-Passwort
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/main-window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Übersicht des Hauptfensters
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#referenz-collapse" aria-expanded="false">
+                    Referenz
+                </a>
+                <div class="collapse" id="referenz-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/menu.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Menüreferenz
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/keyboard-shortcuts.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tastaturkürzel
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/architecture.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architektur
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/config-files.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Konfigurationsdateien
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/enterprise-policy.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Richtlinienkonfiguration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/control-api.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Steuerungs-API
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/cli.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Steuerungs-CLI
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#einstellungen-collapse" aria-expanded="false">
+            Einstellungen
+        </a>
+
+        <div class="collapse" id="einstellungen-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Einstellungsreferenz
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/appearance.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Aussehen, Themen und Schriftart
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/colors.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Farben
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Fenster
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/resources.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Ressourcen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/logging.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Protokollierung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/export.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Exportieren
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/updates.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Aktualisierungen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherheit
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/language.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprache
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/translation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Übersetzung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/video.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Video
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/ai.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/ai-skills.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Skills
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP-Manager
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/editor.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#snippet-editor-collapse" aria-expanded="false">
+            Snippet-Editor
+        </a>
+
+        <div class="collapse" id="snippet-editor-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/snippet-editor/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet-Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/hardening-options.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Härtungsoptionen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/input-hardening.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Eingabe-Härtung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/language-migration.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprachvereinigung
+        </a>
+    </li>
+            </ul>
+        </div>
+    </li>
+            </ul>
+        </div>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover"
+                    data-bs-toggle="collapse" data-bs-target="#funktionen-collapse" aria-expanded="true">
+                    Funktionen
+                </a>
+                <div class="collapse show" id="funktionen-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="connections.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verbindungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminalsitzungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="highlighting.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Hervorhebung von Schlüsselwörtern
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="tunnels.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SSH-Tunnel (Portweiterleitung)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="jump-server.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Jump-Server (Bastion Host)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="sftp.html"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP-Dateimanager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="file-browser.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Dateibrowser
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="snippets.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet-Manager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="jobscheduler.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            JobScheduler
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="projects.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Projekte (Arbeitsbereiche)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="teamwork.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Teamarbeit (gemeinsame Verbindungen)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-assistant.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Assistent
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="local-models.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lokale Modelle (llama.cpp und MLX)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="rag.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            RAG-Wissensspeicher
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-tools.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal-KI-Agent und -Tools
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-swarm.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Schwarm
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherheit – Anmeldeinformationen, Schlüssel und Verschlüsselung
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sichern und wiederherstellen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="recording.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminalaufzeichnung
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="session-journal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sitzungsjournal
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ascii-art.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            ASCII-Art
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal-effect-plugins.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminaleffekt-Plugins
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="coding-agents.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Coding-Agents
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="i18n.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprachen und dynamische Übersetzung
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#über-kortty-collapse" aria-expanded="false">
+                    Über korTTY
+                </a>
+                <div class="collapse" id="über-kortty-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/release-notes.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Versionshinweise
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/feedback.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Feedback und Support
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/anonymous-data.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Anonyme Daten zur Applikationsoptimierung
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="jump-server.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="file-browser.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item">
+
+
+
+
+
+<div role="search" class="search-box kt-search">
+	<form id="rtd-search-form" class="wy-form kt-search-form" action="../search.html" method="get">
+		<input type="text" name="q" id="mkdocs-search-query"
+		class="kt-search-input drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Durchsuchen"
+		autocomplete="off" title="Type search term here" /><button type="button" class="kt-search-clear" hidden
+		        aria-label="Suche zurücksetzen" title="Suche zurücksetzen">&times;</button>
+	</form>
+	<div id="mkdocs-search-results" class="kt-search-suggest"
+	     data-no-results-text="Keine Treffer"
+	     data-preparing-text="Suche wird vorbereitet …"
+	     data-more-text="{n} weitere Treffer anzeigen"></div>
+	<script>
+	  (function () {
+	    var box = document.currentScript.parentNode;
+	    var panel = box.querySelector('.kt-search-suggest');
+	    var input = box.querySelector('#mkdocs-search-query');
+	    var clear = box.querySelector('.kt-search-clear');
+
+	    // Emptying the panel is what hides it (CSS :empty), so closing is just that.
+	    function close () { while (panel.firstChild) { panel.removeChild(panel.firstChild); } }
+	    // The button is only useful once there is something to clear.
+	    function sync () { clear.hidden = !input.value; }
+
+	    input.addEventListener('input', sync);
+	    clear.addEventListener('click', function () {
+	      input.value = '';
+	      sync();
+	      // search/main.js renders on keyup, which a programmatic clear never fires, so
+	      // the panel has to be emptied here or the old hits would outlive the query.
+	      close();
+	      input.focus();
+	    });
+
+	    document.addEventListener('click', function (e) { if (!box.contains(e.target)) { close(); } });
+
+	    // Escape has to be handled on keyUP, and on the document rather than the input.
+	    // search/main.js binds doSearch to the field's keyup, so anything that closed the
+	    // panel on keydown was undone microseconds later by that re-render — which is why
+	    // Escape appeared to do nothing at all. Listening on the document means this runs
+	    // after the field's own handler has already re-rendered, so closing sticks.
+	    // What the panel looked like BEFORE that re-render is the interesting state, so it
+	    // is captured on keydown: the usual two steps, Escape dismisses the suggestions,
+	    // Escape again empties the box.
+	    var panelWasOpen = false;
+	    document.addEventListener('keydown', function (e) {
+	      if (e.key === 'Escape') {
+	        panelWasOpen = !!panel.firstChild;
+	      }
+	    });
+	    document.addEventListener('keyup', function (e) {
+	      if (e.key !== 'Escape') {
+	        return;
+	      }
+	      // Only clear the field while it has focus — Escape elsewhere on the page is not ours.
+	      if (!panelWasOpen && document.activeElement === input && input.value) {
+	        input.value = '';
+	        sync();
+	      }
+	      close();
+	    });
+
+	    sync();  // a ?q= deep link arrives with the field already filled
+	  })();
+	</script>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+<div class="kt-lang-bar">
+  <a class="kt-lang-switch" href="../../en/features/sftp.html"
+     title="English" hreflang="en">EN</a>
+</div>
+
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="manager-fur-sftp-dateien">Manager für SFTP-Dateien<a class="headerlink" href="#manager-fur-sftp-dateien" title="Permanent link">&para;</a></h1>
+<p>Der integrierte SFTP-Manager bietet einen grafischen Dateimanager zum Übertragen von Dateien zwischen Ihrem lokalen Computer und Remote-Servern über SFTP. Es verfügt über ein Dual-Panel-Layout, vollständige Unterstützung für Dateivorgänge und eine nahtlose Integration mit dem Snippet-Editor für die Fernbearbeitung von Dateien.</p>
+<h2 id="sftp-manager-offnen">SFTP-Manager öffnen<a class="headerlink" href="#sftp-manager-offnen" title="Permanent link">&para;</a></h2>
+<p>Sie können den SFTP-Manager auf zwei Arten öffnen:</p>
+<ul>
+<li><strong>Menü:</strong> <em>Verbindungen → SFTP-Client...</em> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-u">U</kbd></span>, unter macOS <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-u">U</kbd></span>). Mit einem verbundenen Terminal-Tab vor sich öffnet es für den Server dieses Tabs; andernfalls wählen Sie zuerst eine Verbindung.</li>
+<li><strong>Dashboard:</strong> Rechtsklick auf eine verbundene Sitzung &gt; <strong>SFTP-Client...</strong></li>
+</ul>
+<p>Wenn die Verbindung einen temporären SSH-Schlüssel verwendet, der abgelaufen ist, werden Sie aufgefordert, einen neuen Schlüssel einzugeben, bevor die Verbindung fortgesetzt werden kann.</p>
+<h2 id="schnittstelle">Schnittstelle<a class="headerlink" href="#schnittstelle" title="Permanent link">&para;</a></h2>
+<p>Der SFTP-Manager verwendet ein <strong>Zwei-Panel-Layout</strong> für eine einfache Dateiverwaltung nebeneinander:</p>
+<table>
+<thead>
+<tr>
+<th>Linker Bereich (lokale)</th>
+<th>Rechter Bereich (fern)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lokale Dateien durchstöbern</td>
+<td>Ferndateien durchstöbern</td>
+</tr>
+<tr>
+<td>Auf Remote-System hochladen</td>
+<td>Auf lokales System herunterladen</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sortierbare-spalten">Sortierbare Spalten<a class="headerlink" href="#sortierbare-spalten" title="Permanent link">&para;</a></h3>
+<p>Beide Paneele zeigen die gleichen Spalten an, von denen alle durch Klicken auf den Spaltenkopf sortierbar sind:</p>
+<table>
+<thead>
+<tr>
+<th>Spalte</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Name</strong></td>
+<td>Datei oder Verzeichnisaname</td>
+</tr>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Verzeichnis (📁) oder Datei (📄) Hinweis</td>
+</tr>
+<tr>
+<td><strong>Größe</strong></td>
+<td>Dateigröße im menschenlesbaren Format (Verzeichnisse zeigen —); die Sortierung verwendet die exakte Byteanzahl, mit Ordnern zuerst</td>
+</tr>
+<tr>
+<td><strong>Datum</strong></td>
+<td>Letzte Änderungsdatum und -zeit</td>
+</tr>
+<tr>
+<td><strong>Benutzer</strong></td>
+<td>Eigentümername (lokale Umgebung: aus der Dateisystem; remote: aus SFTP oder UID)</td>
+</tr>
+<tr>
+<td><strong>Gruppe</strong></td>
+<td>Gruppenname (lokal: vom Dateisystem; remote: von SFTP oder GID)</td>
+</tr>
+<tr>
+<td><strong>Berechtigungen</strong></td>
+<td>Berechtigungen im Unix-Stil (z. B. <code>rwxr-xr-x</code>)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="standardsortierreihenfolge">Standardsortierreihenfolge<a class="headerlink" href="#standardsortierreihenfolge" title="Permanent link">&para;</a></h2>
+<p>Standardmäßig werden Dateien in der folgenden Reihenfolge nach der Spalte <strong>Typ</strong> sortiert:</p>
+<ol>
+<li><strong>Übergeordnetes Verzeichnis</strong> (<code>..</code>) – immer oben</li>
+<li><strong>Verzeichnisse, die mit „.“</strong> beginnen (z. B. <code>.git</code>, <code>.config</code>) – alphabetisch</li>
+<li><strong>Andere Verzeichnisse</strong> – alphabetisch</li>
+<li><strong>Dateien, die mit „.“</strong> beginnen (z. B. <code>.bashrc</code>) – alphabetisch</li>
+<li><strong>Alle anderen Dateien</strong> – alphabetisch</li>
+</ol>
+<p>Klicken Sie auf eine beliebige Spaltenüberschrift, um nach dieser Spalte zu sortieren. Durch erneutes Klicken der Typ-Spalte wird zwischen aufsteigender und absteigender Reihenfolge umgeschaltet. Das übergeordnete Verzeichnis (<code>..</code>) bleibt immer oben, unabhängig von Spalte und Richtung der Sortierung.</p>
+<h2 id="durchsuchen-des-servers">Durchsuchen des Servers<a class="headerlink" href="#durchsuchen-des-servers" title="Permanent link">&para;</a></h2>
+<p>Remote-Ordner werden im Hintergrund gelesen, sodass das Fenster auch bei Ordnern mit Zehntausenden von Einträgen reaktionsfähig bleibt. Während ein Ordner geladen wird, überdeckt ein <strong>Wird geladen…</strong>-Indikator die Remote-Liste. Das Pfadfeld und die Liste wechseln erst in den neuen Ordner, wenn er gelesen wurde; falls das Lesen fehlschlägt (Ordner existiert nicht oder Sie haben keine Rechte), wird ein Fehler angezeigt und der Ordner, in dem Sie sich befanden, bleibt bestehen.</p>
+<p>Geben Sie einen Pfad in das Remote-<strong>Pfad</strong>-Feld ein und drücken <span class="keys"><kbd class="key-enter">Enter</kbd></span>, um dorthin zu gelangen. <code>~</code> und <code>~/…</code> stehen für Ihr Login-Verzeichnis auf dem Server, und ein Pfad ohne führendes <code>/</code> wird relativ zum angezeigten Ordner interpretiert; <code>..</code> und <code>.</code> werden aufgelöst, sodass <code>../logs</code> den Geschwisterordner <code>logs</code> öffnet.</p>
+<h2 id="verbindung-verloren">Verbindung verloren<a class="headerlink" href="#verbindung-verloren" title="Permanent link">&para;</a></h2>
+<p>Wenn der Server oder das Netzwerk die Sitzung beendet, zeigt die Statusleiste <strong>Getrennt von</strong> <em>host</em> mit einer Schaltfläche <strong>Neu verbinden</strong>, und die Remote-Aktionen sind deaktiviert. Wenn die Verbindung ohne Mitteilung des Servers abbricht, führt die erste Remote-Aktion, die Sie versuchen (Refresh, Upload, Download usw.), wieder denselben Zustand aus, anstatt nichts zu tun.</p>
+<p><strong>Neu verbinden</strong> öffnet eine neue Sitzung mit denselben Anmeldeinformationen und listet den Ordner auf, in dem Sie sich befanden. Der Hostschlüssel des Servers wird wie bei der ersten Verbindung geprüft: ein unveränderter Schlüssel verbindet ohne Aufforderung, ein geänderter Schlüssel bleibt blockiert.</p>
+<h2 id="wieder-offnen-mit-einem-projekt">Wieder öffnen mit einem Projekt<a class="headerlink" href="#wieder-offnen-mit-einem-projekt" title="Permanent link">&para;</a></h2>
+<p>SFTP-Manager-Tabs werden mit einem <a href="projects.html#sftp-manager-tabs">Projekt</a> gespeichert. Das Öffnen des Projekts mit <strong>Automatisches Wiederverbinden</strong> verbindet jeden Tab erneut mit den lokalen und entfernten Ordnern, in denen er sich zum Zeitpunkt des Speicherns befand. Ein Ordner, der nicht mehr existiert, öffnet stattdessen den Home-Ordner; auf der entfernten Seite sagt die Statusleiste dies an.</p>
+<h2 id="dateioperationen">Dateioperationen<a class="headerlink" href="#dateioperationen" title="Permanent link">&para;</a></h2>
+<p>Jedes Panel hat seine eigene Gruppe von Toolbar-Buttons unter den Listen (lokal links, remote rechts) und ein Rechtsklick-Kontextmenü:</p>
+<table>
+<thead>
+<tr>
+<th>Betrieb</th>
+<th>Wie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hochladen</strong></td>
+<td>Wählen Sie lokale Dateien oder Ordner aus und klicken Sie auf <strong>Hochladen</strong>, oder ziehen Sie sie in das Remote-Panel; siehe <a href="#ziehen-und-ablegen">Ziehen und Ablegen</a></td>
+</tr>
+<tr>
+<td><strong>Herunterladen</strong></td>
+<td>Wählen Sie Remote-Dateien oder Ordner aus und klicken Sie auf <strong>Herunterladen</strong>, oder ziehen Sie sie in das lokale Panel</td>
+</tr>
+<tr>
+<td><strong>Umbenennen</strong></td>
+<td>Wählen Sie einen Eintrag aus und drücken Sie <span class="keys"><kbd class="key-f2">F2</kbd></span>, oder wählen Sie <strong>Umbenennen</strong> im Kontextmenü. Ein vorhandener Eintrag mit dem neuen Namen wird niemals ersetzt; stattdessen erhalten Sie einen Fehler</td>
+</tr>
+<tr>
+<td><strong>Neuer Ordner</strong></td>
+<td>Klicken Sie auf die Ordner-Schaltfläche neben <strong>Aktualisieren</strong>, oder wählen Sie <strong>Neuer Ordner</strong> im Kontextmenü, in beiden Panels. Der Ordner wird im angezeigten Verzeichnis erstellt; ein bereits vorhandener Name ist ein Fehler</td>
+</tr>
+<tr>
+<td><strong>Löschen</strong></td>
+<td>Wählen Sie Einträge aus und klicken Sie auf <strong>Löschen</strong>, wählen Sie <strong>Löschen</strong> im Kontextmenü, oder drücken Sie <span class="keys"><kbd class="key-delete">Del</kbd></span> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-backspace">Backspace</kbd></span>, auf macOS <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-backspace">Backspace</kbd></span>). Sie bestätigen vor dem Löschen von etwas</td>
+</tr>
+<tr>
+<td><strong>Kopieren</strong></td>
+<td><strong>Kopieren nach…</strong> im Kontextmenü kopiert innerhalb derselben Seite: lokal in ein von Ihnen ausgewähltes Verzeichnis (im Hintergrund), remote in einen von Ihnen eingegebenen Pfad. Ein Remote-Verzeichnis, das an einer Stelle kopiert wird, an der bereits ein Verzeichnis mit diesem Namen existiert, wird in dieses zusammengeführt; das Kopieren eines Elements auf sich selbst oder in einen seiner eigenen Unterordner wird mit einem Fehler abgelehnt.</td>
+</tr>
+<tr>
+<td><strong>Im Snippet-Editor bearbeiten</strong></td>
+<td>Wählen Sie genau eine lokale oder Remote-Datei aus und verwenden Sie dann das Symbolleistenmenü <em>Bearbeiten</em> oder das Kontextmenü mit der rechten Maustaste</td>
+</tr>
+<tr>
+<td><strong>Archivieren</strong></td>
+<td><strong>Archivieren</strong> in der Remote-Werkzeugleiste, oder <strong>Archivieren...</strong> im jeweiligen Kontextmenü, packt die Auswahl als ZIP, TAR.BZ2 oder 7z, je nach verfügbaren Tools auf dieser Seite</td>
+</tr>
+<tr>
+<td><strong>Besitzer/Berechtigungen setzen</strong></td>
+<td>Wählen Sie Einträge aus, klicken dann auf <strong>Rechte</strong> oder wählen <strong>Besitzer/Berechtigungen setzen...</strong> im Kontextmenü. Separate Felder für Benutzer, Gruppe und oktale Berechtigungen (z.B., 755)</td>
+</tr>
+</tbody>
+</table>
+<p>Ein Name für <strong>Umbenennen</strong> oder <strong>Neuer Ordner</strong> muss ein einzelnes Element im angezeigten Ordner sein: er darf nicht leer, <code>.</code> oder <code>..</code> sein, und darf <code>/</code> oder <code>\</code> nicht enthalten. Das Dialogfeld bleibt mit einem Fehler offen, bis der Name nutzbar ist.</p>
+<h3 id="ziehen-und-ablegen">Ziehen und Ablegen<a class="headerlink" href="#ziehen-und-ablegen" title="Permanent link">&para;</a></h3>
+<p>Sie können Einträge zwischen den beiden Panels ziehen, von Ihrem Desktop in den SFTP-Manager und in kleinen Mengen vom Server auf Ihren Desktop. Während Sie ziehen, wird das Panel oder die Ordnerzeile, in die der Drop erfolgen würde, hervorgehoben; ein Drop auf eine Ordnerzeile legt die Einträge in diesen Ordner, ein Drop an einer anderen Stelle in den angezeigten Ordner.</p>
+<table>
+<thead>
+<tr>
+<th>Ziehen</th>
+<th>Ergebnis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lokale Zeilen auf das entfernte Panel</td>
+<td>Hochgeladen, wie bei <strong>Hochladen</strong>: eine Datei mit demselben Namen auf dem Server wird ersetzt, ein Ordner wird zusammengeführt</td>
+</tr>
+<tr>
+<td>Dateien aus Finder, Explorer oder der Dateibrowser-Seitenleiste auf das Remote-Panel</td>
+<td>hochgeladen – dieselbe Methode</td>
+</tr>
+<tr>
+<td>Remote-Zeilen auf das lokale Panel</td>
+<td>Im Hintergrund heruntergeladen, wie bei <strong>Herunterladen</strong>: Ordner eingeschlossen, und eine lokale Datei mit demselben Namen wird ersetzt</td>
+</tr>
+<tr>
+<td>Dateien aus Finder, Explorer oder der Dateibrowser-Seitenleiste auf das lokale Panel</td>
+<td>Kopiert im Hintergrund; ein bereits vorhandener Name bekommt eine Nummer, wie in <code>report (2).txt</code>, und eine Datei, die auf den Ordner fallen gelassen wird, bleibt unverändert</td>
+</tr>
+<tr>
+<td>Lokale Zeilen auf den Desktop oder ein anderes Programm</td>
+<td>Als die Dateien selbst angeboten</td>
+</tr>
+<tr>
+<td>Remote Zeilen auf den Desktop oder ein anderes Programm</td>
+<td>Nur für maximal 20 Dateien mit insgesamt höchstens 16 MB, keine Ordner</td>
+</tr>
+</tbody>
+</table>
+<p>Ein Drag in dasselbe Panel bewirkt nichts; nutzen Sie dort <strong>Kopieren nach...</strong> oder <strong>Umbenennen</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Ziehen vom Server zum Desktop</p>
+<p>Der Desktop kann nur Dateien übernehmen, die bereits existieren, wenn der Drag beginnt. KorTTY lädt daher die gezogenen Remote-Dateien zunächst in einen privaten temporären Ordner, was das Fenster bis zu 5 Sekunden blockieren kann. Ordner, mehr als 20 Dateien, mehr als 16 MB oder ein Download, der länger dauert, können nur innerhalb des Fensters fallen gelassen werden; die Statusleiste weist darauf hin, und Sie legen sie stattdessen auf das lokale Panel. Ein Link auf dem Server zählt als die Datei, auf die er zeigt, sodass ein Link zu einer großen Datei ebenfalls nicht dem Desktop angeboten wird. Die temporären Kopien werden gelöscht, wenn Sie den nächsten Drag starten oder den Tab schließen.</p>
+</div>
+<h3 id="tasten">Tasten<a class="headerlink" href="#tasten" title="Permanent link">&para;</a></h3>
+<p>Diese Tasten funktionieren in beiden Panels:</p>
+<table>
+<thead>
+<tr>
+<th>Taste</th>
+<th>Aktion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-f2">F2</kbd></span> (in der Liste)</td>
+<td>Den ausgewählten Eintrag umbenennen</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-delete">Del</kbd></span> oder <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-backspace">Backspace</kbd></span> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-backspace">Backspace</kbd></span> auf macOS, in der Liste)</td>
+<td>Löschen der Auswahl, nach Bestätigung</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-enter">Enter</kbd></span> (im <strong>Pfad</strong> Feld)</td>
+<td>Gehe zum eingegebenen Ordner</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dateien-und-ordner-hochladen">Dateien und Ordner hochladen<a class="headerlink" href="#dateien-und-ordner-hochladen" title="Permanent link">&para;</a></h3>
+<p><strong>Hochladen</strong> kopiert die ausgewählten lokalen Dateien und Ordner in den entfernten Ordner, der angezeigt wurde, als Sie <strong>Hochladen</strong> geklickt haben; das Durchsuchen anderer Orte während es läuft ändert das Ziel nicht. <strong>Hochladen</strong> bleibt deaktiviert, bis der erste entfernte Ordner aufgelistet wurde, weil der Server <code>~</code> selbst nicht erweitert.</p>
+<ul>
+<li><strong>Das erneute Hochladen eines Ordners führt zu einer Zusammenführung</strong> in den bestehenden entfernten Ordner: Dateien mit demselben Namen werden ersetzt, andere entfernte Dateien bleiben erhalten.</li>
+<li><strong>Dateien werden gestreamt</strong>, sodass ihre Größe nicht durch den Speicher begrenzt ist; Dateien größer als 2 GB werden wie jede andere hochgeladen.</li>
+<li>Wenn die Verbindung während eines Uploads oder Downloads abbricht, stoppt der Rest des Batches mit einem <strong>Getrennt</strong>-Status statt eines Fehlers pro Datei.</li>
+</ul>
+<h3 id="berechtigungen">Berechtigungen<a class="headerlink" href="#berechtigungen" title="Permanent link">&para;</a></h3>
+<p>Das Berechtigungsfeld von <strong>Besitzer/Berechtigungen setzen</strong> und des Remote-Archivdialogs akzeptiert genau drei Oktalziffern, wie <code>755</code> oder <code>644</code>; lassen Sie es leer (oder unverändert), um den aktuellen Modus beizubehalten. Alles andere lässt das Dialogfeld mit einem Fehler offen, sodass kein anderer Text jemals <code>chmod</code> erreicht.</p>
+<h3 id="bearbeiten-von-dateien-mit-dem-snippet-editor">Bearbeiten von Dateien mit dem Snippet-Editor<a class="headerlink" href="#bearbeiten-von-dateien-mit-dem-snippet-editor" title="Permanent link">&para;</a></h3>
+<p>Die Aktion <strong>Im Snippet-Editor bearbeiten</strong> ist nur für eine einzelne ausgewählte Datei aktiviert. Es ist deaktiviert für:</p>
+<ul>
+<li>Ordner</li>
+<li>Der Eintrag im übergeordneten Verzeichnis (<code>..</code>)</li>
+<li>Mehrfachauswahl</li>
+</ul>
+<p>Lokale Dateien werden direkt aus dem lokalen Dateisystem gelesen; Remote-Dateien werden über die aktive SFTP-Sitzung in den Editor heruntergeladen.</p>
+<p>Wenn die Datei im Snippet-Editor geöffnet wird, bleibt die vollständige Symbolleiste verfügbar, einschließlich:</p>
+<ul>
+<li>Formatierung und Syntaxprüfung</li>
+<li>Editor-Profile und Styling</li>
+<li>Zeilennummern und Zeilenumbruch</li>
+<li>Konfigurierte KI-Aktionen</li>
+</ul>
+<p>Die Dateimodus-Schaltflächen bieten folgende Speicheroptionen:</p>
+<ul>
+<li><strong>Datei überschreiben</strong> – schreibt den aktuellen Editorinhalt zurück in die ursprüngliche lokale oder Remote-Datei</li>
+<li><strong>Speichern unter...</strong> – schreibt eine neue lokale Datei über eine Dateiauswahl oder fordert für Remote-Dateien zur Eingabe eines neuen Dateinamens im selben Remote-Verzeichnis auf</li>
+<li><strong>Als Snippet speichern</strong> – speichert den aktuellen Inhalt als neues Snippet-Manager-Snippet, ohne die Quelldatei als gespeichert zu markieren</li>
+</ul>
+<p><img alt="SFTP dual-panel file manager" src="../assets/screenshots/sftp/sftp-manager.png" /></p>
+<h2 id="suche">Suche<a class="headerlink" href="#suche" title="Permanent link">&para;</a></h2>
+<p>Das Suchfeld über jeder Liste filtert den angezeigten Ordner während der Eingabe, ohne ihn zu verlassen; der übergeordnete Eintrag <code>..</code> bleibt sichtbar. korTTY bewertet die Platzhalter selbst, gleichartig für lokale und entfernte Namen. Ein Muster mit einem Platzhalter muss den gesamten Namen entsprechen, ohne Groß-/Kleinschreibung:</p>
+<table>
+<thead>
+<tr>
+<th>Platzhalter</th>
+<th>Trifft auf</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*</code></td>
+<td>Beliebig viele Zeichen</td>
+<td><code>*.log</code> findet alle Logdateien, <code>backup*</code> alle Namen beginnend mit "backup"</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>Genau ein Zeichen</td>
+<td><code>data?.csv</code> findet <code>data1.csv</code>, nicht <code>data10.csv</code></td>
+</tr>
+<tr>
+<td><code>[abc]</code>, <code>[a-z]</code></td>
+<td>Eines der aufgeführten Zeichen; <code>[!abc]</code> oder <code>[^abc]</code> eines, das nicht aufgeführt ist</td>
+<td><code>[ab]*</code> findet Namen beginnend mit a oder b</td>
+</tr>
+<tr>
+<td><code>{py,sh}</code></td>
+<td>Eine der Alternativen</td>
+<td><code>*.{py,sh}</code> findet Python- und Shell-Dateien</td>
+</tr>
+</tbody>
+</table>
+<p>Text ohne Platzhalter passt überall im Namen, Groß-/Kleinschreibung ignorierend: <code>rep</code> findet <code>Report.txt</code>. Ein Muster, das nicht gelesen werden kann, wie ein nicht geschlossenes <code>[</code>, wird als einfacher Text gesucht.</p>
+<hr /></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+<footer class="kt-footer">
+  <div class="kt-footer__line">MIT-lizenziert &middot; Entwickelt von Daniel Mengel</div>
+  <div class="kt-footer__line">korTTY <strong>v2.18.0</strong></div>
+</footer>
+
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../assets/javascripts/kt-zoom.js" defer></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>

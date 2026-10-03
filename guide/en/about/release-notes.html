@@ -1,0 +1,962 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Release notes - korTTY Guide</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link rel="canonical" href="https://chardonnay.github.io/korTTY/guide/en/about/release-notes.html">
+        <meta name="author" content="korTTY">
+        <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+        <link href="../assets/stylesheets/kortty.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
+
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+            <img class="logo" src="../assets/images/favicon.png" height="150px">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">korTTY Guide</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../index.html"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false">
+                    Getting started
+                </a>
+                <div class="collapse" id="getting-started-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/installation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Installation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/building-packages.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Building korTTY packages
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/first-launch.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            First launch — master password
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/main-window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Main window overview
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/menu.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Menu reference
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/keyboard-shortcuts.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Keyboard shortcuts
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/architecture.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/config-files.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Configuration files
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/enterprise-policy.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Policy configuration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/control-api.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Control API
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/cli.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Control CLI
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#settings-collapse" aria-expanded="false">
+            Settings
+        </a>
+
+        <div class="collapse" id="settings-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Settings reference
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/appearance.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Appearance, themes & font
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/colors.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Colors
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Window
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/resources.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Resources
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/logging.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Logging
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/export.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Export
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Backup
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/updates.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Updates
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Security
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/language.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Language
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/translation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Translation
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/video.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Video
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/ai.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            AI
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/ai-skills.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            AI Skills
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP Manager
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/editor.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#snippet-editor-collapse" aria-expanded="false">
+            Snippet editor
+        </a>
+
+        <div class="collapse" id="snippet-editor-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/snippet-editor/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/hardening-options.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Hardening options
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/input-hardening.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Input hardening
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/language-migration.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Language unification
+        </a>
+    </li>
+            </ul>
+        </div>
+    </li>
+            </ul>
+        </div>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#features-collapse" aria-expanded="false">
+                    Features
+                </a>
+                <div class="collapse" id="features-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/connections.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Connections
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal sessions
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/highlighting.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Keyword highlighting
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/tunnels.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SSH Tunnels (Port Forwarding)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/jump-server.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Jump Server (Bastion Host)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP file manager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/file-browser.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            File browser
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/snippets.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet manager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/jobscheduler.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            JobScheduler
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/projects.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Projects (workspaces)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/teamwork.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Teamwork (shared connections)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/ai-assistant.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            AI assistant
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/local-models.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local models (llama.cpp and MLX)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/rag.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            RAG knowledge stores
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/ai-tools.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal AI agent & tools
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/ai-swarm.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            AI Swarm
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Security — credentials, keys & encryption
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Backup & restore
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/recording.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal recording
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/session-journal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Session journal
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/ascii-art.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            ASCII art
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/terminal-effect-plugins.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal effect plugins
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/coding-agents.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Coding agents
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/i18n.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Languages & dynamic translation
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover"
+                    data-bs-toggle="collapse" data-bs-target="#about-collapse" aria-expanded="true">
+                    About
+                </a>
+                <div class="collapse show" id="about-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="release-notes.html"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Release notes
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="feedback.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Feedback & support
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="anonymous-data.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Anonymous data for application optimization
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../features/i18n.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="feedback.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item">
+
+
+
+
+
+<div role="search" class="search-box kt-search">
+	<form id="rtd-search-form" class="wy-form kt-search-form" action="../search.html" method="get">
+		<input type="text" name="q" id="mkdocs-search-query"
+		class="kt-search-input drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search"
+		autocomplete="off" title="Type search term here" /><button type="button" class="kt-search-clear" hidden
+		        aria-label="Clear search" title="Clear search">&times;</button>
+	</form>
+	<div id="mkdocs-search-results" class="kt-search-suggest"
+	     data-no-results-text="No results found"
+	     data-preparing-text="Preparing search …"
+	     data-more-text="Show {n} more results"></div>
+	<script>
+	  (function () {
+	    var box = document.currentScript.parentNode;
+	    var panel = box.querySelector('.kt-search-suggest');
+	    var input = box.querySelector('#mkdocs-search-query');
+	    var clear = box.querySelector('.kt-search-clear');
+
+	    // Emptying the panel is what hides it (CSS :empty), so closing is just that.
+	    function close () { while (panel.firstChild) { panel.removeChild(panel.firstChild); } }
+	    // The button is only useful once there is something to clear.
+	    function sync () { clear.hidden = !input.value; }
+
+	    input.addEventListener('input', sync);
+	    clear.addEventListener('click', function () {
+	      input.value = '';
+	      sync();
+	      // search/main.js renders on keyup, which a programmatic clear never fires, so
+	      // the panel has to be emptied here or the old hits would outlive the query.
+	      close();
+	      input.focus();
+	    });
+
+	    document.addEventListener('click', function (e) { if (!box.contains(e.target)) { close(); } });
+
+	    // Escape has to be handled on keyUP, and on the document rather than the input.
+	    // search/main.js binds doSearch to the field's keyup, so anything that closed the
+	    // panel on keydown was undone microseconds later by that re-render — which is why
+	    // Escape appeared to do nothing at all. Listening on the document means this runs
+	    // after the field's own handler has already re-rendered, so closing sticks.
+	    // What the panel looked like BEFORE that re-render is the interesting state, so it
+	    // is captured on keydown: the usual two steps, Escape dismisses the suggestions,
+	    // Escape again empties the box.
+	    var panelWasOpen = false;
+	    document.addEventListener('keydown', function (e) {
+	      if (e.key === 'Escape') {
+	        panelWasOpen = !!panel.firstChild;
+	      }
+	    });
+	    document.addEventListener('keyup', function (e) {
+	      if (e.key !== 'Escape') {
+	        return;
+	      }
+	      // Only clear the field while it has focus — Escape elsewhere on the page is not ours.
+	      if (!panelWasOpen && document.activeElement === input && input.value) {
+	        input.value = '';
+	        sync();
+	      }
+	      close();
+	    });
+
+	    sync();  // a ?q= deep link arrives with the field already filled
+	  })();
+	</script>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+<div class="kt-lang-bar">
+  <a class="kt-lang-switch" href="../../de/about/release-notes.html"
+     title="Deutsch" hreflang="de">DE</a>
+</div>
+
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="release-notes">Release notes<a class="headerlink" href="#release-notes" title="Permanent link">&para;</a></h1>
+<p>What changed in the current release. The version this guide was built for is shown in the footer.</p>
+<h2 id="v2180">v2.18.0<a class="headerlink" href="#v2180" title="Permanent link">&para;</a></h2>
+<h3 id="terminal">Terminal<a class="headerlink" href="#terminal" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Coding agents</strong> — korTTY recognises Claude Code, Codex and Gemini CLI in local shell tabs and classifies each pane as working, blocked on a question, done or idle, and now shows it everywhere: a glyph in the tab title, chips, accent bars, rollups and pane rows in the dashboard (which expands to a waiting agent and offers Send Enter / Esc / Interrupt in the context menu), a dockable <strong>Coding Agents</strong> panel (<em>View → Coding Agents</em>, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-g">G</kbd></span>) listing every agent of every window with one-click answers (y, n, Enter, Esc, ↑, ↓, Ctrl+C), Explain, Rename and a prompt box, a status-bar strip, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-n">N</kbd></span> to jump to the next waiting agent, a badge with the number of waiting agents on the app icon (Dock, Windows taskbar, KDE/Ubuntu launcher; window title elsewhere) and a desktop notification when an agent needs a decision or finishes while you are not looking at its pane. Detection reads the terminal screen locally and can be switched off in <em>Settings → Terminal → Coding agents</em>, where the badge and the notifications have their own toggles; the rules are JSON files you can override under <code>~/.kortty/coding-agents/</code>. See <a href="../features/coding-agents.html">Coding agents</a>.</li>
+<li><strong>Control API and <code>kortty-cli</code></strong> — korTTY can now open a local socket so a script or a coding agent on the same computer can list your windows, read any pane, type into it, wait for output, split a local shell, and drive a detected coding agent. It is <strong>off by default</strong> and is switched on under <em>Settings → Terminal → Control API</em>, where a status line reports what the listener is actually doing. Nothing is reachable over the network and no other user of the computer can connect: the endpoint lives in an owner-only <code>~/.kortty/control/</code> directory and needs a token that is regenerated on every start. Every action is logged with byte counts only, never terminal text, and the first time a program types into a pane you get one desktop notification, so a takeover is never silent. An administrator can deny the feature outright with the <code>control-api</code> policy key. The <code>kortty-cli</code> client ships beside the application in every native package and handles discovery, authentication and exit codes for you. See <a href="../reference/control-api.html">Control API</a> and <a href="../reference/cli.html">Control CLI</a>.</li>
+<li><strong>Prompts and Control API pastes can no longer end their bracketed paste early</strong> — a bracketed-paste end marker (<code>ESC[201~</code>, or its 8-bit form in a single-byte encoding) inside the text of a coding-agent prompt or a bracketed <code>pane.send_text</code> closed the paste korTTY had wrapped around it, so every following line reached the program as typed input and was submitted on its own. korTTY now removes the start and end markers from every prompt and from the text of a bracketed <code>pane.send_text</code>, including markers that only form once an inner one is removed and, in a Windows-1252 pane, the <code>›</code> that this encoding sends as the 8-bit introducer; an unbracketed <code>pane.send_text</code> or <code>pane.run</code> still keeps them. See <a href="../reference/control-api.html#typing-into-a-pane">Typing into a pane</a>.</li>
+<li><strong>Terminal pastes can no longer end their bracketed paste early</strong> — korTTY passed pasted text to the terminal unchanged, so a bracketed-paste end marker (<code>ESC[201~</code>) inside it closed the paste the terminal wrapped around it, and every following line reached the shell as typed input and ran on its own. Every terminal paste (the paste shortcut, <em>Edit → Paste</em>, <strong>Paste</strong> in the right-click menu and a middle-click) now goes through korTTY, which removes the start and end markers from the text, including their 8-bit form in a single-byte character encoding, before it wraps the paste itself. A pane also no longer keeps bracketed paste switched on after a reconnect or a terminal reset (<code>reset</code>), which wrapped pastes in markers that the next program might not understand. See <a href="../features/terminal.html#pasting-text">Pasting text</a>.</li>
+<li><strong>Paste protection</strong> — a terminal paste that could run commands or hide something now asks first. A paste with line breaks asks unless the program in the pane uses bracketed paste, a paste with control characters (such as Escape or Ctrl+C) or invisible direction-changing characters asks even then, and a paste larger than 5 KiB always asks. The dialog shows the pane, the number of lines, the size, the reasons and a preview in which hidden characters are visible; <strong>Cancel</strong> is the default button, so pressing <span class="keys"><kbd class="key-enter">Enter</kbd></span> by habit never pastes. Choose when it asks under <em>Settings → Terminal → Paste protection</em>: <strong>Always</strong> asks for every paste with a line break, <strong>Off</strong> only keeps the size check, and a size of 0 turns that off. See <a href="../features/terminal.html#paste-protection">Paste protection</a>.</li>
+<li><strong>Paste line by line into slow devices</strong> — switches, routers and console servers behind SSH can lose input that arrives too fast, so a pasted configuration arrived with characters or lines missing. <em>Settings → Terminal → Paste protection → Pause after each pasted line</em> (0 to 1,000 ms, off by default) now sends a paste with several lines one line at a time with that pause. The pane shows how far the paste is, takes no keys meanwhile so nothing you type lands between two lines, and <span class="keys"><kbd class="key-escape">Esc</kbd></span> stops the rest; broadcast mode leaves the pane out until it is done. See <a href="../features/terminal.html#pasting-into-slow-devices">Pasting into slow devices</a>.</li>
+<li><strong>Drop text onto a terminal</strong> — text dragged from a browser, an editor or another korTTY window and dropped onto a terminal was ignored; only files were taken, to be copied to the server. Dropped text is now pasted into the pane under the pointer, which becomes the focused pane, through paste protection like any other paste, and it is always copied, so the application you drag from keeps it. The setting is now called <em>Settings → Terminal → Allow drag and drop into the terminal</em> and covers files and text; with the enterprise policy's internal clipboard mode, text from other applications is refused. See <a href="../features/terminal.html#dropping-text">Dropping text</a>.</li>
+<li><strong>Command timestamps stay on their command lines</strong> — once the scrollback had reached its limit, the marks in the command timestamp sidebar drifted one row further from their command with every new line of output, and a new prompt on the bottom row got no mark of its own. Marks now move with their lines, disappear when their line leaves the scrollback, and are removed by <strong>Clear Buffer</strong>. The dates in the sidebar and its hover popup follow the UI language instead of a fixed German order, and <strong>Duplicate</strong> and <strong>No Group</strong> in the tab context menu are translated instead of always German. See <a href="../reference/settings/terminal.html#notes">Terminal settings</a>.</li>
+<li><strong>Anonymous usage statistics now cover coding agents and the Control API</strong> — if you allowed anonymous statistics, korTTY also reports which agent kinds are detected, how often agent notifications fire, which Control API methods are used and whether the coding-agent and Control API settings are on. Only kinds, states, method names and counts are sent — never terminal text, prompts or pane names. See <a href="anonymous-data.html">Anonymous data</a>.</li>
+<li><strong>Cmd/Ctrl+W and the Dashboard's Close ask before closing a busy terminal</strong> — the tab's close button asks before it closes a tab with split panes or a command that is still running, but <strong>Close Tab</strong> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-w">W</kbd></span> on macOS, <em>File → Close Tab</em>) and <strong>Close</strong> in the Dashboard closed such a tab straight away and ended the running command. All three now ask the same question; an idle terminal at its prompt still closes immediately, and a connection set to <em>Close tab without confirmation</em> never asks. A terminal closed with <strong>Close Tab</strong>, the Dashboard's <strong>Close</strong> or <strong>Close All Tabs</strong> is now also released like one closed with its close button, instead of staying in memory with its status-bar timer still running. See <a href="../features/terminal.html#working-with-tabs">Working with tabs</a>.</li>
+<li><strong>Tabs that close on their own are fully released</strong> — when a split pane was left as the last pane and its shell exited, or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-d">D</kbd></span> closed a local cmd or PowerShell tab, the tab closed without the cleanup its close button runs: korTTY still counted that pane as connected, so with <strong>Configuration &gt; Prevent System Sleep</strong> checked the computer was kept awake, and a shell closed with <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-d">D</kbd></span> kept running in the background. Such tabs now close exactly like a tab closed with its close button.</li>
+<li><strong>Navigation keys reach programs the way they expect them</strong> — korTTY used to send the arrow keys, Tab, Home/End, Page Up/Down, Insert/Delete and the F-keys as fixed sequences without their modifiers, so <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-left">Left</kbd></span> and <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span> arrived as plain Left and Tab and <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f1">F1</kbd></span> as F1. They are now encoded the xterm way and follow the program's cursor-key mode, so word movement (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-left">Left</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-right">Right</kbd></span>, <span class="keys"><kbd class="key-option">Option</kbd><span>+</span><kbd class="key-arrow-left">Left</kbd></span> / <span class="keys"><kbd class="key-option">Option</kbd><span>+</span><kbd class="key-arrow-right">Right</kbd></span> on macOS) and back-tab work in the shell, <code>mc</code> and <code>vim</code>. <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-page-up">Page Up</kbd></span> / <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-page-down">Page Down</kbd></span> now scroll korTTY's scrollback, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-tab">Tab</kbd></span> switches tabs while the terminal has the focus, editing the find bar's search text no longer types into the shell, and broadcast mode mirrors these keys to every pane, encoded for each. See <a href="../reference/keyboard-shortcuts.html#terminal">Keyboard shortcuts</a>.</li>
+<li><strong>Broadcast mode no longer freezes the window when one server stalls</strong> — the keys mirrored into the other panes were sent on the thread that draws the window, so a pane whose SSH connection had stopped responding froze korTTY on every keystroke. They are now sent in the background, still in the order you typed them for each pane, so only the stalled pane waits while the window and the other panes keep reacting. See <a href="../features/terminal.html#broadcast-mode">Broadcast mode</a>.</li>
+<li><strong>Ctrl+L and Ctrl+F reach the shell on Windows and Linux</strong> — the terminal's own Clear Buffer and Find took these keys, so <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-l">L</kbd></span> wiped the scrollback instead of redrawing the screen in bash, psql or a REPL, and <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-f">F</kbd></span> never moved the cursor forward or paged forward in <code>less</code>. Both keys now go to the shell; Clear Buffer and Find stay in the terminal's right-click menu and Find in <em>Edit → Find…</em>, while <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-k">K</kbd></span> and <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-f">F</kbd></span> on macOS are unchanged. On Linux a selection copied automatically also becomes the X11 primary selection, so a middle-click pastes it in other applications. See <a href="../reference/keyboard-shortcuts.html#terminal">Keyboard shortcuts</a>.</li>
+<li><strong>The ANSI colors and the selection color on the Colors tab now take effect</strong> — the 16 color pickers in <em>Settings → Colors</em> were never saved, and the terminal ignored the <strong>Selection</strong> color too. Both now apply to every open terminal as soon as you save, and terminal recordings use the same colors as the screen. Settings you never changed keep the built-in palette and inverse-video selection, so nothing looks different until you customize a color. <strong>Bold as bright color</strong> still affects recordings only. See <a href="../reference/settings/colors.html">Colors</a>.</li>
+<li><strong>Menu commands follow the pane you type in</strong> — in a split tab, <em>Edit → Copy</em>, <em>Edit → Paste</em>, <em>Edit → Find...</em>, the AI actions and a recording of the active split used the pane you had last clicked. When the keyboard focus reached another pane some other way, for example with a middle-click, or stayed in the original pane after a split that showed a connection dialog, they acted on a different pane than the one receiving your typing, and closing one pane moved them to the first pane even when you were typing in another. They now use the pane that has the keyboard focus. See <a href="../features/terminal.html#split-operations">Split operations</a>.</li>
+<li><strong>No pane close button on a tab with a single terminal</strong> — the × in a pane's top-right corner, meant for closing one pane of a split tab, also showed when the tab had only one pane, and clicking it there ended that terminal's session at once, without the question the tab's own close button asks before it closes a busy terminal. The × now shows only while the tab has more than one pane. See <a href="../features/terminal.html#split-operations">Split operations</a>.</li>
+<li><strong>Window shortcuts leave no character behind in the terminal</strong> — on Windows and Linux a key combination can still produce a typed character after korTTY has acted on it. For <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-l">L</kbd></span> (Show / Hide Menu Bar) and <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f">F</kbd></span> (Terminal-only Fullscreen) korTTY now discards that character, as it already did for the zoom keys, so it can neither reach the shell nor be mirrored to the other panes in broadcast mode. See <a href="../reference/keyboard-shortcuts.html#general">Keyboard shortcuts</a>.</li>
+<li><strong>Keyword highlighting in terminal output</strong> — korTTY can now color errors and warnings, IP and MAC addresses, and the interface names and link states of switches and routers as output arrives, with three built-in rule sets (<strong>Errors and warnings</strong>, <strong>Network addresses</strong>, <strong>Network devices</strong>). It is off until you switch it on: <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-h">H</kbd></span> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-h">H</kbd></span> on macOS) toggles it for the focused pane, and <em>View → Highlighting</em> or <strong>Highlighting</strong> in the terminal context menu picks the set. The choice applies to that pane for the running session; a new split inherits it. Highlighting only changes how text looks — copying, logs and the AI features see the original output — it skips full-screen programs such as <code>vim</code> and <code>less</code>, runs on a background thread so a fast <code>cat</code> keeps its speed, and gives each rule a time limit so a slow pattern cannot stall the terminal. See <a href="../features/highlighting.html">Keyword highlighting</a>.</li>
+<li><strong>A default highlighting rule set for every terminal</strong> — <em>Settings → Terminal → Keyword highlighting</em> can now pick a rule set that every pane shows without a choice of its own, so highlighting is on in every new and open terminal without pressing the shortcut in each one. A set chosen for a pane in a menu or with the shortcut, including <strong>None</strong>, still wins for that pane. The same section has a master switch that turns highlighting off everywhere and greys out the menus, and an option to highlight inside full-screen programs such as <code>vim</code>, <code>less</code> and <code>htop</code>, which stays off by default because they redraw constantly. The default rule set is <strong>None</strong>, so nothing changes until you choose one, and every change applies to open terminals as soon as you save. See <a href="../features/highlighting.html#default-rule-set-and-settings">Default rule set and settings</a>.</li>
+<li><strong>Your own highlighting rule sets</strong> — the new rule-set editor (<em>View → Highlighting → Manage Rule Sets…</em>, the <strong>Highlighting</strong> submenu of the terminal context menu, or <strong>Edit Rules…</strong> in <em>Settings → Terminal</em>) creates and changes rule sets of your own: words or regular expressions, whole word and ignore case, the matched text or the whole line, a theme or custom text and background color, and bold, italic or underline, in a priority order you set. The built-in sets stay read-only, and <strong>Duplicate</strong> turns one into an editable copy. A live preview shows a test text the way a terminal pane would, with the hits of each rule and a warning for a rule that is slow or runs out of its time limit, and <strong>OK</strong> stays disabled while a rule cannot work. Your sets appear in the highlighting menus and as the default rule set as soon as you confirm the editor. See <a href="../features/highlighting.html#your-own-rule-sets">Your own rule sets</a>.</li>
+<li><strong>A highlighting rule set per connection</strong> — the connection editor's <em>Terminal Settings</em> tab has a new <strong>Terminal behavior</strong> section where <strong>Keyword highlighting</strong> picks the rule set that connection's terminals show, for example <strong>Network devices</strong> for your switches: <strong>Use the default</strong> follows <em>Settings → Terminal</em>, <strong>None</strong> keeps the connection plain even when a default is set, or pick a built-in set or one of your own. A pane shows the set chosen for it in a menu or with the shortcut first, then its connection's set, then the default. Saving in the Connection Manager applies the change to open terminals in every window, a split to another server follows that server's connection, and the choice is stored in <code>connections.xml</code> and survives duplicating, exporting and importing; a set that does not exist on this computer, for example from a shared teamwork file, is skipped. See <a href="../features/highlighting.html#rule-set-per-connection">Rule set per connection</a>.</li>
+<li><strong>Rename terminal tabs</strong> — right-click a tab and choose <strong>Rename Tab…</strong>, or use <em>File → Rename Tab…</em>, to give a terminal tab a name of its own in place of the connection's name; the coding-agent glyph, the tab group and the <code>(DISCONNECT)</code> marker stay. An empty name shows the connection's name again. Projects save the name and restore it, and the Coding Agents panel and the Control API's <code>tab.list</code> show it. See <a href="../features/terminal.html#working-with-tabs">Working with tabs</a>.</li>
+<li><strong>Close other tabs or the tabs to the right</strong> — right-click a terminal tab and choose <strong>Close Other Tabs</strong> or <strong>Close Tabs to the Right</strong>, or use the <em>File</em> menu entries of the same name for the active tab. The tab you chose stays open and becomes the active tab. Rather than one question per tab you are asked at most once, and only when some of the closing terminals have split panes or a command that is still running; an editor with unsaved changes still asks on its own, and a Cancel keeps every tab open. See <a href="../features/terminal.html#working-with-tabs">Working with tabs</a>.</li>
+<li><strong>Jump to a tab with Cmd/Ctrl+1 to 9</strong> — <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-1">1</kbd></span> to <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-8">8</kbd></span> on macOS and <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-1">1</kbd></span> to <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-8">8</kbd></span> on Windows and Linux select the first to eighth tab of the window, and <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-9">9</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-9">9</kbd></span> the last one, with the top-row or the numpad digits and also while a terminal has the focus. No digit is left behind in the terminal or mirrored to the other panes in broadcast mode. On Windows and Linux only <span class="keys"><kbd class="key-control">Ctrl</kbd></span> with a digit jumps, so <span class="keys"><kbd class="key-alt-graph">AltGr</kbd></span> characters and <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-6">6</kbd></span> still reach the terminal, while <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-1">1</kbd></span> to <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-9">9</kbd></span> themselves no longer do (the terminal never sent them as keys of their own). See <a href="../reference/keyboard-shortcuts.html#general">Keyboard shortcuts</a>.</li>
+<li><strong>Reopen closed tabs</strong> — <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-option">Option</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-t">T</kbd></span> on macOS and <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-t">T</kbd></span> on Windows and Linux, <em>File → Reopen Closed Tab</em> or <strong>Reopen Closed Tab</strong> in a terminal tab's right-click menu bring back the terminal tab you closed last, with a new session to the same connection and with its tab group, its name and its terminal effect; its output and split panes are not restored. <em>File → Recently Closed</em> lists the last 25 closes of this session, newest first: a single tab, the tabs one <strong>Close Other Tabs</strong>, <strong>Close Tabs to the Right</strong> or <strong>Close All Tabs</strong> closed, which reopen together, or the tabs of a window you closed while korTTY kept running. Tabs whose session ended on their own and everything that closes when you quit are not listed, and the list ends with korTTY. A reopened tab signs in like <strong>Connect</strong> in the Connection Manager, with the saved connection as it is now and the server access policy checked first; the list never keeps a temporary SSH key, so a session that used one asks for a new key. The <em>Close all tabs?</em> question no longer says this cannot be undone. See <a href="../features/terminal.html#working-with-tabs">Working with tabs</a>.</li>
+<li><strong>Tab titles from the shell</strong> — a terminal tab now shows the title its shell or program sets with OSC 0 or OSC 2, such as <code>user@host: directory</code> from the default <code>bash</code> of Debian and Ubuntu, in place of the connection's name; a tab with split panes follows the pane that has the focus, and a name you gave the tab with <strong>Rename Tab</strong> still comes first. Pointing at such a tab shows the connection it belongs to. The server decides this title, so korTTY strips control and bidi characters from it, caps it at 80 characters and never lets it change the tab color or the frame; it is not saved in projects. To keep the connection's names, switch off <strong>Name terminal tabs after the title the shell sets</strong> in <em>Settings → Window</em>. See <a href="../features/terminal.html#title-from-the-shell">Title from the shell</a>.</li>
+<li><strong>Links in terminal output keep their colors</strong> — text inside a clickable OSC 8 link was drawn in the terminal's default text color whenever the mouse was not over it, and terminal recordings stored it without its colors and bold. Linked text now keeps the colors it was printed with and is underlined while the mouse is over it, and recordings also keep its bold and inverse video. See <a href="../features/terminal.html#links-in-terminal-output">Links in terminal output</a>.</li>
+<li><strong>Terminal links open only with Cmd/Ctrl+click</strong> — a plain click on a link that a program printed opened it at once, a double-click opened it twice, and a selection dragged across the screen opened the link it ended on, even while tmux or vim was using the mouse. Links now open only on a single <span class="keys"><kbd class="key-command">Cmd</kbd></span> + click (macOS) or <span class="keys"><kbd class="key-control">Ctrl</kbd></span> + click (Windows, Linux) that does not move the mouse; a plain click on a link does nothing, a double-click selects its word and a triple-click its line as on other text, and <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd></span> (AltGr on Windows) with a click never opens a link. See <a href="../features/terminal.html#links-in-terminal-output">Links in terminal output</a>.</li>
+<li><strong>Cmd/Ctrl+click opens web and e-mail addresses printed as plain text</strong> — only links that a program marked up with OSC 8 could be opened, so the addresses in log lines, compiler messages and <code>git</code> hints had to be copied into the browser by hand. A <span class="keys"><kbd class="key-command">Cmd</kbd></span> + click (macOS) or <span class="keys"><kbd class="key-control">Ctrl</kbd></span> + click (Windows, Linux) now also opens a web address printed as plain text in the browser and an e-mail address as a new mail, with the same allowlist as OSC 8 links and also when the address wraps over several rows; a plain click still selects text as before. korTTY looks for the address only when you click, so terminal output is not slowed down, and it never opens an address cut short. Detection is on by default and can be switched off under <em>Settings → Terminal → Links</em>. See <a href="../features/terminal.html#links-in-terminal-output">Links in terminal output</a>.</li>
+<li><strong>Terminal links show where they go before you open them</strong> — the text of a link that a program printed could hide its real target, and nothing showed that a web address in plain text could be opened at all. Resting the mouse on a link now shows the hand cursor, an underline and, after half a second, a tooltip with <strong>Cmd+click to open</strong> or <strong>Ctrl+click to open</strong> and the address the link really opens, with international host names in their <code>xn--</code> form and hidden control and bidi characters made visible. When the text of a link shows a web address on another host than the link opens, a Cmd/Ctrl+click asks first, with <strong>Cancel</strong> as the default answer. See <a href="../features/terminal.html#links-in-terminal-output">Links in terminal output</a>.</li>
+<li><strong>Open Link and Copy Link Address in the terminal's right-click menu</strong> — opening a terminal link needed <span class="keys"><kbd class="key-command">Cmd</kbd></span> or <span class="keys"><kbd class="key-control">Ctrl</kbd></span> held down, and copying the address behind an OSC 8 link was not possible at all, because only its text could be selected. Right-clicking a link now puts <strong>Open Link</strong> and <strong>Copy Link Address</strong> at the top of the context menu: <strong>Open Link</strong> opens it like a Cmd/Ctrl+click, the question for a link whose text shows another host included, and <strong>Copy Link Address</strong> copies the address the link really opens, or a plain-text address as printed. A link korTTY does not open gets neither entry. See <a href="../features/terminal.html#links-in-terminal-output">Links in terminal output</a>.</li>
+<li><strong>Quick select copies or opens what the terminal shows with a few keys</strong> — copying an address, a path, a commit hash or a process ID out of terminal output needed the mouse. <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-space">Space</kbd></span> (macOS) or <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-space">Space</kbd></span> (Windows, Linux), or <em>Edit → Quick Select</em>, now marks every web address, file path, e-mail address, UUID, IP address, git hash and number of four or more digits in the focused pane with a label of one or two letters, starting at the bottom row: typing a label copies its text, and <span class="keys"><kbd class="key-shift">Shift</kbd></span> with the label opens a web or e-mail address like a Cmd/Ctrl+click. Nothing typed while quick select runs reaches the program, in broadcast mode or through an input method neither, and copies respect the internal clipboard mode. See <a href="../features/terminal.html#quick-select">Quick select</a>.</li>
+<li><strong>File paths and <code>file:</code> links in terminal output open in the Snippet Editor</strong> — a path in a compiler message, a <code>grep -n</code> hit or a log line had to be copied and opened by hand, and the <code>file:</code> links that <code>ls --hyperlink</code>, <code>eza --hyperlink</code> or <code>rg</code> put on file names did nothing. In SSH and local-shell tabs a <span class="keys"><kbd class="key-command">Cmd</kbd></span> + click (macOS) or <span class="keys"><kbd class="key-control">Ctrl</kbd></span> + click (Windows, Linux) on such a path, <strong>Open File in Snippet Editor</strong> in the right-click menu, or <span class="keys"><kbd class="key-shift">Shift</kbd></span> with its quick-select label now opens the file as text in the Snippet Editor, read over SFTP or from disk: absolute paths, <code>~/...</code>, and relative paths against the shell's current directory, without the <code>:line:column</code> after them. It never starts a program, only regular UTF-8 text files of up to 10 MB open, on the server as on your disk, network paths such as <code>\\server\share</code> are never read, and a <code>file:</code> link opens read-only and only when it names the session's own host. Paths follow the <strong>Open in Snippet Editor</strong> policy and the setting under <em>Settings → Terminal → Links</em>. See <a href="../features/terminal.html#links-in-terminal-output">Links in terminal output</a>.</li>
+<li><strong>The menu bar of a closed macOS window acts in a window you can see</strong> — korTTY keeps running on macOS after you close its last window, and the menu bar at the top of the screen still belonged to that closed window. <em>File → New Tab</em>, <em>Connections → Manage Connections...</em>, <em>File → Open Project...</em> and the other entries acted in the closed, hidden window, so nothing visible happened. They now act in the korTTY window you used last, which comes to the front, or open a new window first when none is open. Closing tabs or the window and <em>Edit → Cut</em>, <em>Copy</em> and <em>Paste</em> do nothing from such a menu bar; <strong>New Window</strong> and <strong>Quit</strong> work as before. See <a href="../reference/menu.html#macos-dock-menu-bar">macOS Dock &amp; menu bar</a>.</li>
+</ul>
+<h3 id="connections-and-security">Connections and security<a class="headerlink" href="#connections-and-security" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Connection groups, duplicated tabs and reconnects follow the server access policy</strong> — <strong>Open Group</strong> in Quick Connect opened every connection of the group without checking your organization's server allow or deny list, and <strong>Duplicate</strong> on a tab did not check it either. Open Group now skips the connections whose server or jump server is blocked, names them in one policy message and opens the rest; Duplicate shows the policy message before it asks for a password. Because editing a saved connection also changes the tabs already opened from it, every connect and reconnect attempt of a tab now checks the policy too: if the server or jump server was edited to a blocked one, the terminal shows the policy message and korTTY stops retrying instead of reaching that server, and automatic reconnect stops as well. See <a href="../reference/enterprise-policy.html#server-access-control">Server access control</a>.</li>
+<li><strong>Review and replace a changed host key</strong> — when a server was rebuilt, the changed-key alert of a terminal tab or the SFTP manager now offers <strong>Review and Replace…</strong>: it shows the trusted and the new SHA-256 fingerprint side by side and replaces the key only after you tick that you verified the new fingerprint with the server administrator. <strong>Close</strong> and <strong>Cancel</strong> stay the default buttons, background connections never offer the replacement, and the <code>enforce-host-key-check</code> policy forbids it. The new <strong>Configuration → Security → Known Hosts…</strong> lists, searches and removes trusted keys. See <a href="../features/connections.html#ssh-host-key-verification">SSH host-key verification</a>.</li>
+<li><strong>Split panes follow the server access policy</strong> — <strong>Split Right (new connection)</strong> and <strong>Split Down (new connection)</strong> connected to the server you picked without checking your organization's server allow or deny list, so a split pane could reach a server or jump server that Quick Connect and saved connections refuse. A blocked server or jump server is now refused right after you pick it, with the same policy message as Quick Connect and before korTTY asks for a password or saves the connection. Same-server splits check the policy too, so a tab whose saved connection was edited to point at a blocked server or jump server cannot open a pane there. See <a href="../reference/enterprise-policy.html#server-access-control">Server access control</a>.</li>
+<li><strong>Open Group opens key-based connections and local shells</strong> — <strong>Open Group</strong> in Quick Connect silently left out every connection of the group that had no saved password, so connections that log in with an SSH key and local shells never opened. They now open as they do on their own, connections whose password comes from a saved credential open too, and the status bar counts the tabs that actually opened. A connection that logs in with a password and has none saved is still left out, but a message now names it, so you can open it on its own and enter the password.</li>
+<li><strong>Connect checks the server policy before it asks for anything, and Duplicate signs in like the Connection Manager</strong> — <strong>Connect</strong> in the Connection Manager asked for a password before it checked your organization's server allow or deny list, so you could type a password for a server korTTY then refused; the policy message now comes first. A password saved in the locked vault now offers <strong>Unlock Vault…</strong>, where Connect used to do nothing for a password saved with the connection and asked you to type one saved in a credential; if you do not unlock, korTTY asks for the password. The password dialog now belongs to the korTTY window and keeps <strong>OK</strong> greyed out until you type something. A tab's <strong>Duplicate</strong> now signs in the same way, so it reuses the tab's temporary SSH key while it is valid and asks for a new one once it has expired, where it used to ignore the key's expiry. See <a href="../features/connections.html#signing-in">Signing in</a>.</li>
+<li><strong>A tab color per connection</strong> — mark the tabs of a connection with a color, for example red for production servers: tick <strong>Mark this connection's tabs with a color</strong> in the new <strong>Terminal behavior</strong> section of the connection editor's <em>Terminal Settings</em> tab and pick a color. Every terminal tab of that connection then shows a colored dot in front of its title, and pointing at the tab names the connection and the color, which screen readers read as well. Saving in the Connection Manager updates the open tabs in every window; the yellow and dark red connection-status colors of a tab are unchanged. The color is stored in <code>connections.xml</code>, survives duplicating, exporting and importing, and can come with a shared teamwork connection. See <a href="../features/connections.html#tab-color">Tab color</a>.</li>
+<li><strong>A frame in the tab color around the terminal</strong> — the terminal of a connection with a tab color now also gets a 3-pixel frame of that color, around all of its split panes and status bars, so a production server stands out right where you type. Connections without a tab color are unchanged. If you prefer only the dot on the tab, switch off <strong>Frame the terminal in its connection's tab color</strong> in the new <strong>Tabs</strong> section of <em>Settings → Window</em>; the change reaches the open tabs of every window at once. The frame takes 3 pixels on each side, so switching it resizes the terminal. See <a href="../reference/settings/window.html#tabs">Window settings</a>.</li>
+<li><strong>Tab colors for credential environments</strong> — give a credential environment a tab color under <em>Configuration → Security → Credentials… → Environments...</em>: select the environment, tick <strong>Mark this environment's tabs with a color</strong> and pick a color. Every terminal tab that signed in with a stored credential of that environment then shows the color as a dot and a frame, unless its connection has a tab color of its own, and pointing at the tab names the color and the environment. No environment has a color until you pick one, because new credentials start out in Production. Color changes apply when you click <strong>OK</strong> and reach the open tabs of every window at once; they are saved in <code>environments.xml</code>. See <a href="../features/security.html#environments-and-tab-colors">Environments and tab colors</a>.</li>
+</ul>
+<h3 id="ssh-and-security">SSH and security<a class="headerlink" href="#ssh-and-security" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>SSH tunnels now really open</strong> — tunnels configured on a connection were saved, imported and shared, but never opened. korTTY now opens the enabled ones once per terminal tab after login, closes them before a reconnect and opens them again afterwards, moves them to another pane of the same server when you close the pane they run on, and shows <code>Tunnels: 2/3 active</code> with the first error in the tab's status bar (hover for every tunnel). Because tunnels that never did anything would otherwise start listening silently after the update, korTTY asks once per connection before it opens them, and again when the tunnels or the server change. A remote tunnel listens on the SSH server's loopback address unless you name another one, shared (Teamwork) connections never open remote tunnels and may only listen on <code>localhost</code>, and administrators can forbid tunnels with the new <code>allow-port-forwarding</code> policy key. Remote tunnels that earlier versions imported from PuTTY Connection Manager carry the bind address <code>0.0.0.0</code>; the confirmation, the tunnel list and the status bar mark them as reachable from other computers, so set their <strong>Remote bind address</strong> to <code>localhost</code> if the forwarded port should stay private to the server. See <a href="../features/tunnels.html">SSH Tunnels</a>.</li>
+<li><strong>The tunnel editor says what listens where, and Enable SSH tunnels works</strong> — the tunnel dialog now labels its fields after their role for each type (<strong>Local bind address</strong>, <strong>Remote bind address</strong>, <strong>Local host</strong> as a remote tunnel's target), lists the listener first and warns when other computers can reach it; the tunnel list shows remote tunnels listener first instead of reversed and no longer shows German text for SOCKS proxies. <strong>Enable SSH tunnels</strong>, which nothing ever read, now switches every tunnel of the connection on or off, and saving the connection applies tunnel changes to open tabs right away, so switching tunnels off closes them. <strong>Cancel</strong> now discards tunnels added, edited or removed in the connection editor, which were kept before. PuTTY Connection Manager imports bind remote tunnels to <code>localhost</code>. See <a href="../features/tunnels.html#the-tunnel-list">SSH Tunnels</a>.</li>
+<li><strong>The terminal encoding now takes effect</strong> — <em>Settings → Terminal → Encoding</em> was never read, so every SSH session was decoded as UTF-8 and servers that write ISO-8859-1, ISO-8859-15 or Windows-1252 showed broken umlauts. The setting now applies to SSH connections, and each connection can choose its own <strong>Character encoding</strong> on the <em>Connection</em> tab of the connection editor. Local shells stay UTF-8 unless their connection sets an encoding, and Mosh is always UTF-8. A value you picked in an earlier version, when it had no effect, is not applied on its own: SSH sessions stay UTF-8 until you save the settings after opening the Terminal page, where a note points this out. Text that the <a href="../reference/control-api.html#typing-into-a-pane">Control API</a> types into a pane follows the pane's encoding as well. See <a href="../features/connections.html#character-encoding">Character encoding</a>.</li>
+<li><strong>Temporary SSH keys are no longer left in the temp folder</strong> — every connect, split and SFTP session with a temporary SSH key wrote the private key to a file in the system temp folder that was never deleted, so the key stayed on disk long after it had expired, and the debug log recorded the beginning and end of the key text. Temporary keys are now read in memory only and never logged, and key files that earlier versions left behind are deleted at the next start when they belong to you. See <a href="../reference/settings/security.html">Security</a>.</li>
+<li><strong>Scheduled jobs keep temporary keys off the disk too</strong> — a JobScheduler job with a temporary SSH key now authenticates in memory like a terminal tab. Only an Rsync job still needs the key as a file for its external <code>ssh</code>; that file is created owner-only from the start and deleted when the job ends or its connection fails, instead of staying in the temp folder.</li>
+<li><strong>JMX monitoring shows the connections that are really open</strong> — the <code>de.kortty:type=SSHClient</code> MBean always reported 0 active connections and no names, because it read a session list that nothing ever filled. <code>ActiveConnectionCount</code>, <code>ActiveConnectionNames</code> and <code>ConnectionStatistics</code> now list every live SSH and Mosh terminal connection (each split pane counts, local shells do not), and <code>BufferedTextSize</code>, which was never measured, stays at 0 for existing JMX clients. See <a href="../reference/architecture.html#logging-and-diagnostics">Logging and diagnostics</a>.</li>
+</ul>
+<h3 id="local-ai">Local AI<a class="headerlink" href="#local-ai" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Go back to an older llama.cpp or MLX runtime</strong> — when a new runtime release causes problems, <strong>Other version…</strong> in the Runtimes table of <em>AI → AI Manager → Local Models</em> lists every version the signed stable channel still offers for this computer and installs the one you choose through the same verification as an update. A version other than the newest stays <strong>pinned</strong>, so update checks keep it until you pick the newest version again or choose <strong>Unpin</strong>; a pinned version the channel later withdraws is dropped automatically. See <a href="../features/local-models.html#runtimes">Runtimes</a>.</li>
+<li><strong>Both runtimes stay visible in the Runtimes table</strong> — the table had a fixed height that fit two rows only at the default font, so with a larger UI font scale or an AtlantaFX design only llama.cpp was visible and MLX needed scrolling. The table now sizes itself to its rows and follows font-scale and design changes while the AI Manager is open.</li>
+<li><strong>Being offline is no longer reported as a failed runtime update</strong> — the startup check for the llama.cpp and MLX runtimes ran into an error with a stack trace whenever the computer had no network yet. An unreachable channel now ends in an <strong>Offline</strong> status and a single log line, installed runtimes stay usable, and an installation you start yourself still says why it did not happen.</li>
+<li><strong>MLX runtime updates are published like llama.cpp ones</strong> — the MLX index is now read from the same immutable, versioned releases as the llama.cpp index instead of a release whose files were replaced on every update; builds fall back to the previous location until the first combined release exists.</li>
+</ul>
+<h3 id="ai-chat">AI chat<a class="headerlink" href="#ai-chat" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Attach the selected file to an AI request</strong> — when the text you right-click in the terminal is a single file name, <em>AI → Summarize / Solve Problem / Ask</em> and <em>Ask Agent…</em> offer to send that file's content along with the request, so the model can work with the file rather than only its name. The file is resolved against the pane's current directory (over SFTP in SSH tabs, from disk in local-shell tabs) and is attached only after korTTY has checked that it exists, is readable, is UTF-8 text and fits the profile's selection limit; a checkbox in the confirmation dialog lets you send the text alone. The attachment is shown above the chat, stays in context for follow-up prompts and is kept with a saved chat. A <strong>Flowchart</strong> button beside it renders a Mermaid flowchart of the attached script in the chat. See <a href="../features/ai-assistant.html#attaching-a-selected-file-to-the-chat">Attaching a selected file to the chat</a>.</li>
+<li><strong>Secrets in terminal selections are masked before they reach the AI</strong> — <em>Summarize</em>, <em>Solve Problem</em>, <em>Ask</em> and <em>Ask Agent…</em> used to send the selected text and an attached file exactly as they were, including a password or token that happened to be on screen. korTTY now replaces the connection's password, your organization's journal replacement rules and well-known formats (private-key blocks, AWS, GitHub, GitLab and Slack tokens, <code>sk-</code> API keys, bearer tokens, JWTs, passwords in URLs, <code>*_PASSWORD=</code> assignments) with <code>***</code>, and the preview or the status bar says how many it masked. Only integrated models are exempt; an endpoint on <code>localhost</code> is masked too unless you mark it as a <strong>Trusted local endpoint</strong> in the profile, because it may forward to a cloud API. Masking is pattern-based and cannot catch every secret. See <a href="../features/ai-assistant.html#masking-secrets-before-sending">Masking secrets before sending</a>.</li>
+<li><strong>Closing an AI chat or AI Swarm tab stops its work</strong> — only the tab's close button cancelled a running request or swarm. <strong>Close Tab</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-w">W</kbd></span>, <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-w">W</kbd></span> on macOS), <strong>Close All Tabs</strong>, opening a project and closing the window removed the tab but let a chat request run on to its answer and a swarm go on running its agents' commands on every server. Every way of closing the tab now cancels what it runs, as its <strong>Cancel</strong> or <strong>Stop</strong> button does. See <a href="../features/ai-assistant.html#ai-result-tab-features">AI result tab features</a> and <a href="../features/ai-swarm.html#run-control">Run control</a>.</li>
+</ul>
+<h3 id="ai-agent-and-profiles">AI agent and profiles<a class="headerlink" href="#ai-agent-and-profiles" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>The AI agent asks before it runs in a switched session</strong> — after <code>su</code>, <code>sudo -i</code> or a nested <code>ssh</code> in a terminal, the agent's commands would still run over the tab's original connection, as the user the tab was opened with, not as the user the prompt shows. AI Agent and AI Planning now warn first and name the <code>user@host</code> (or "on this computer" in a local-shell tab) the commands will really run as; <strong>Cancel</strong> is the default. The check also covers rerunning a command with the activity panel's reload button and the execution of an accepted plan. See <a href="../features/ai-assistant.html#safety-and-failure-handling">Safety and failure handling</a>.</li>
+<li><strong>No internet mode for native Anthropic profiles</strong> — korTTY sends no web tools to the native Anthropic Messages API, so a mode such as KorTTY Tavily Tool had no effect there. For such profiles the <strong>Internet access</strong> dropdown is now locked to <strong>Disabled</strong> with a hint explaining why. See <a href="../features/ai-assistant.html#ai-internet-access">AI internet access</a>.</li>
+</ul>
+<h3 id="ai-usage-and-costs">AI usage and costs<a class="headerlink" href="#ai-usage-and-costs" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>See what AI costs</strong> — an AI profile can now carry a price per one million input and output tokens (<em>AI → AI Manager → Profiles</em>, <strong>Price per 1M tokens</strong>). With a price, korTTY shows the money spent next to the quota bar ("≈ 3.42 € in this period"), on session journals and in the AI Swarm header; local models are marked as having no token costs. See <a href="../reference/settings/ai.html#token-quota-management">Token quota management</a>.</li>
+<li><strong>Session journals show their AI tokens</strong> — every AI call made for a journal (summaries, title, screenshot analysis, questions) is added to the journal: the journal page header shows the total and the journal manager has an <strong>AI tokens</strong> column with a breakdown in its tooltip. See <a href="../features/session-journal.html#ai-token-usage-and-cost">AI token usage and cost</a>.</li>
+<li><strong>All AI calls count towards the profile quota</strong> — session journal calls, every AI Swarm agent and the swarm's combined answer, and scheduled AI jobs were not added to the profile's token quota before; they now are, so the quota bar reflects what was really spent. The AI Swarm header also shows the total tokens of the whole run.</li>
+<li><strong>Scheduled AI agent jobs no longer hide a number in their output</strong> — the job's token count was treated like a secret, so every occurrence of that number in the job's output and journal was replaced by <code>***</code>. It is now booked against the profile quota instead.</li>
+</ul>
+<h3 id="jobscheduler">JobScheduler<a class="headerlink" href="#jobscheduler" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Session journal per run</strong> — a job can now record a full session journal for every run: one journal per target server with every command, its output, the job's summary and the outcome, which can be summarized by the AI, searched, exported and asked questions like an interactive journal. Per job you choose when the AI summarizes (every kept run, only failed runs, or never), whether successful runs are kept at all, when the journals are deleted automatically (after N days, on a date, or never), a maximum number of runs and disk space, whether a run identical to the previous one is discarded in favour of a reference, and which AI profile summarizes — a local profile keeps it free. Switching the journal or its AI summaries on first shows a warning with an estimate of the tokens and cost per run, day and month. The run history shows each run's journals with tokens and cost and opens them in the viewer; scheduled AI Swarm jobs record one journal per server as well. Administrators can forbid automation journals or cap their retention, disk space and number of runs. See <a href="../features/jobscheduler.html#session-journal-per-run">Session journal per run</a>.</li>
+<li><strong>Screenshots of jobs from an invisible virtual terminal</strong> — COMMAND and snippet jobs with a session journal can run in a pseudo terminal that korTTY renders without any window: screenshots at an interval, when the screen changes and at the end land in the run's journal, and a runtime limit stops monitors such as <code>top</code> with Ctrl+C. Progress bars and AI coding tools in non-interactive mode become visible without disturbing the terminals you are working in. See <a href="../features/jobscheduler.html#virtual-terminal-and-screenshots">Virtual terminal and screenshots</a>.</li>
+</ul>
+<h3 id="ai-swarm-and-journal-manager">AI Swarm and journal manager<a class="headerlink" href="#ai-swarm-and-journal-manager" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Session journal per swarm run</strong> — the <strong>Session journal</strong> checkbox in the AI Swarm toolbar records one journal per server for every run: the agent's commands and output, its answer and the combined report, with the same settings as a job (⚙) and the same cost warning. The dashboard reports what was kept and what the journal summaries cost, and <strong>Open</strong> shows the journals. See <a href="../features/ai-swarm.html#session-journal-per-run">Session journal per run</a>.</li>
+<li><strong>Journals grouped by job and swarm, with badges</strong> — the journal manager now groups automation journals by their job or swarm and by run, with the totals of each group, a filter for interactive, JobScheduler, AI Swarm, failed or pinned journals, and badges for the source, outcome, AI mode, identical runs, pin and the time left until automatic deletion. See <a href="../features/session-journal.html#managing-journals">Managing journals</a>.</li>
+<li><strong>Temporary SSH keys are no longer sent to the AI with a multi-server workflow</strong> — <strong>Generate multi-server workflow</strong> sent the complete private key of a temporary SSH key to the AI provider. The request now only states that the server uses a temporary key. The path of a key file is still sent, so the script can use it. See <a href="../features/ai-swarm.html#generate-multi-server-workflow">Generate multi-server workflow</a>.</li>
+<li><strong>The automatic marker rules read correctly in every language</strong> — in Italian, Spanish, Portuguese, French, Croatian and Dutch the hint below the rules said that the first <em>game</em> wins, and in five of these languages <strong>Apply now</strong> read as an invitation to apply for a job. Both now say what they do: the first rule that matches applies, and the button applies the rules. See <a href="../features/session-journal.html#automatic-markers">Automatic markers</a>.</li>
+</ul>
+<h3 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Links in terminal output can no longer start local programs</strong> — a program or server could print an OSC 8 link (the kind <code>ls --hyperlink</code> prints) with a <code>file:</code> target, and a single click opened that file with its associated application, which runs scripts and programs, on Windows even from a network share. korTTY now opens only <code>http</code>, <code>https</code>, <code>ftp</code>, <code>ftps</code> and <code>mailto</code> links, in your browser or mail program. <code>file:</code>, <code>news:</code> and every other link stays plain text, and so does a link with control characters, invisible bidi characters or more than 8 KB. A mail link may only fill in recipients, subject, body and in-reply-to, because some mail programs attach the local file an <code>attach</code> field names. See <a href="../features/terminal.html#links-in-terminal-output">Links in terminal output</a>.</li>
+<li><strong>Server output can no longer start an AI agent run</strong> — korTTY reacted to an escape sequence (<code>ESC ] 777 ; korTTY-agent</code>) anywhere in the output of an SSH session, such as a file shown with <code>cat</code>, a login banner or anything a compromised server sends. It opened the AI agent run dialog filled in with a prompt and inline options such as <code>root=true</code> chosen by the server, or started the run right away when the per-run setup dialog was turned off, and the same sequence moved the working directory korTTY tracks for the session. korTTY now ignores these sequences, so an agent command in the terminal starts a run only when you type or paste it. Prompt detection through OSC 133 markers and directory tracking through the shell's OSC 7 reports are unchanged. See <a href="../features/ai-assistant.html#terminal-agent-shortcut-commands">Terminal agent shortcut commands</a>.</li>
+<li><strong>Unlock the vault after startup</strong> — with <em>Require master password on startup</em> turned off, korTTY started with the vault locked and offered no way to enter the master password later. <em>Configuration → Security → Unlock Vault…</em> now opens the vault mid-session, and the "vault locked" messages for saving keys and passwords, AI Swarm, guide questions and workflow scripts have an <strong>Unlock Vault…</strong> button that continues the action once the vault is open. Temporary SSH keys that a locked start could not decrypt are restored on unlock instead of being lost on the next save. See <a href="../features/security.html#unlocking-the-vault-later">Unlocking the vault later</a>.</li>
+</ul>
+<h3 id="connections">Connections<a class="headerlink" href="#connections" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Password targets behind a password jump server now connect</strong> — the terminal handed the master password only to targets that log in with an SSH key, and the SFTP tab not even to a temporary key, so a password or keyboard-interactive target failed on the jump server's stored password with "vault is locked" although the vault was open — and korTTY kept repeating that failed attempt through the whole retry count. The jump password now works whatever the target's authentication. Failures that another attempt cannot fix — a jump password that is missing, locked in the vault or cannot be decrypted, an incomplete jump setup, a rejected jump-server host key, an SSH key file that is missing or cannot be read — are reported once and no longer retried or reconnected automatically, and with a locked vault korTTY no longer contacts the jump server at all. See <a href="../features/jump-server.html#when-the-jump-server-cannot-be-used">When the jump server cannot be used</a>.</li>
+</ul>
+<h3 id="sftp-file-manager">SFTP file manager<a class="headerlink" href="#sftp-file-manager" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Robust uploads, a responsive server list and Reconnect</strong> — uploading a folder that already existed on the server failed at once; it now merges into the remote folder, and uploads are streamed, so files larger than the available memory or 2 GB no longer fail. Remote folders load in the background behind a <strong>Loading…</strong> indicator, and a folder that cannot be opened keeps the one you were in. A remote copy onto the item itself or into one of its own subfolders is now refused — copying a file to the folder it was in used to empty it. When the connection drops, the status bar shows <strong>Disconnected from</strong> <em>host</em> with <strong>Reconnect</strong> instead of Upload, Download and Refresh silently doing nothing. <strong>Size</strong> now sorts by the real byte count, the permissions fields accept only three octal digits, the menu entry is documented as <em>Connections → SFTP-Client...</em>, and the German UI says <em>Server</em> instead of <em>Fernbedienung</em>. See <a href="../features/sftp.html">SFTP file manager</a>.</li>
+<li><strong>SFTP tabs come back with a project, at their folders</strong> — a saved project referred to its SFTP Manager tabs by connection name while opening it looked them up by id, so with <strong>Auto-Reconnect</strong> no SFTP tab was ever restored, and the saved folders were ignored as well. Tabs are now saved by connection id and reopen at the local and remote folders they showed; a project saved earlier still restores a tab whose connection name is unique. A remote folder that is gone opens the login directory with a note in the status bar. Remote image tabs are saved with the connection they were opened from instead of the first SFTP tab's, so with several SFTP tabs open they no longer reopen from the wrong server. Restored remote image tabs now also connect with a key from the SSH key manager or through a jump server with a stored password, and close their own connection when you close them. See <a href="../features/projects.html#sftp-manager-tabs">SFTP Manager tabs</a>.</li>
+<li><strong>Rename, New Folder, drag and drop and wildcard search in the SFTP Manager</strong> — the guide described all four, but the SFTP Manager tab had none of them, and its search treated <code>*</code> as a plain character. Both panels now rename with <span class="keys"><kbd class="key-f2">F2</kbd></span> or the context menu, create folders from a toolbar button or the context menu, and delete with <span class="keys"><kbd class="key-delete">Del</kbd></span> after confirmation; a rename never replaces an existing entry. Drag local rows or files from the desktop onto the remote panel to upload them and remote rows onto the local panel to download them, also straight into a folder row; up to 20 files with 16 MB together can be dragged from the server to the desktop. The search understands <code>*</code>, <code>?</code>, <code>[abc]</code> and <code>{py,sh}</code> and keeps <code>..</code> visible. See <a href="../features/sftp.html#file-operations">File operations</a> and <a href="../features/sftp.html#search">Search</a>.</li>
+<li><strong>File editor tabs no longer close with unsaved changes</strong> — the editor of a local or remote file asked about unsaved changes only from its own <strong>Close</strong> button and <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-w">W</kbd></span> inside the editor. The tab's close button, <em>File &gt; Close Tab</em> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-w">W</kbd></span> on macOS), <em>File &gt; Close All Tabs</em>, opening a project, closing the window and quitting korTTY closed it at once, and the changes were lost. All of them now ask <strong>Save</strong>, <strong>Discard</strong> or <strong>Cancel</strong> first, and <strong>Cancel</strong> keeps the tab open. A save that fails, for example because the SFTP connection is gone, now keeps the tab open with your changes instead of closing it anyway. See <a href="../features/projects.html#file-editor-tabs">File editor tabs</a>.</li>
+</ul>
+<h3 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Dialogs open noticeably faster</strong> — the WebKit engine is loaded in the background after start instead of on the first dialog that needs it, the AI Manager and the settings dialog build their tabs on first visit, a stored connection's secrets are no longer re-derived on every open, and the snippet editor keeps a ready editor in reserve. Measured on a development build, the first AI Manager open dropped from about 1.4 s to under 0.1 s and the settings dialog from about 350 ms to 45 ms. The spare editor can be switched off with <strong>Keep a pre-warmed editor ready</strong>. See <a href="../reference/settings/snippet-editor/index.html">Snippet Editor settings</a>.</li>
+</ul>
+<h3 id="guide-and-snippets">Guide and snippets<a class="headerlink" href="#guide-and-snippets" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>The built-in guide has a new look and a working offline search</strong> — the guide now uses the Dracula theme, because the previous theme reaches end of life in November 2026. Search works without a network connection and suggests results as you type, and German pages now declare German as their language, so screen readers and hyphenation use the right one.</li>
+<li><strong>Clearer coding-agents diagram and a wider guide search field</strong> — the diagram on the coding-agents page shows one short note per box and no longer routes a line through other boxes, and the search field in the guide header is wide enough for its German placeholder.</li>
+<li><strong>Flow diagrams keep loops a model drew in the wrong shape</strong> — when a model drew a loop's condition as a plain action with two exits, the repair cut the exit after the loop and the whole diagram was replaced by the local fallback. Such a loop head is now turned into the loop decision.</li>
+<li><strong>Flow diagrams from Nemotron and gpt-oss are no longer thrown away</strong> — a model that writes all branches of a decision in one chain through <strong>Stop</strong> (<code>… --&gt; stop_1 --&gt;|no| failure</code>), as Nvidia Nemotron does, now gets that chain read as the decision's next outcome instead of the diagram being rejected, and repeated lines no longer make a complete diagram look hollowed out. Rounded nodes such as <code>setup("Setup" )</code> are read as actions. When a diagram is still rejected — for example because a local model such as gpt-oss derailed into garbled output — korTTY asks once more, naming the reason, before it uses the local fallback.</li>
+<li><strong>Snippet Manager: more columns, resizable and remembered</strong> — the snippet table shows <strong>Lines</strong> and <strong>Last modified</strong>, every column (including <strong>Used</strong>, which was too narrow to read, and <strong>Tags</strong>) can be resized, and korTTY remembers the widths. <strong>Export</strong> now proposes plain text script files first. See <a href="../features/snippets.html">Snippets</a>.</li>
+<li><strong>Import single text files as snippets</strong> — <strong>Import</strong> accepts plain text files such as <code>data_test.pl</code>, several at once; each becomes a snippet named after the file, with the language taken from the file extension. Binary files are skipped. See <a href="../features/snippets.html#importing-text-files">Importing text files</a>.</li>
+<li><strong>Import and export snippet variables</strong> — the Variable Manager exports all or the selected variables as JSON, XML or YAML and imports them again, asking whether existing values are overwritten. Its windows are larger, and the add/edit dialog explains both fields. See <a href="../features/snippets.html#variable-manager">Variable Manager</a>.</li>
+</ul>
+<h3 id="snippet-manager-and-code-analysis">Snippet Manager and code analysis<a class="headerlink" href="#snippet-manager-and-code-analysis" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>One workspace for all snippets</strong> — the Snippet Manager shows the library and the snippets you edit side by side: browse in a read-only preview tab, edit in one tab per snippet, find a snippet with quick open (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-p">P</kbd></span>), hide the library with <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-b">B</kbd></span>, and save or close tabs with <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-w">W</kbd></span>. The open tabs and the window's size and position come back the next time. See <a href="../features/snippets.html#the-snippet-manager-workspace">The Snippet Manager workspace</a>.</li>
+<li><strong>Unsaved snippets are never lost</strong> — every way of closing, including closing a main-window tab, opening a project and quitting, asks about unsaved snippet edits, and an editor's unsaved form is kept as a draft that can be restored after a crash.</li>
+<li><strong>The Full code analysis lives in the editor and is stored</strong> — the analysis is a side panel inside the snippet editor, stored with the snippet the moment it arrives and shown again without a new AI request. A history keeps several analyses per snippet (<strong>Stored analyses per snippet</strong> in the Snippet Editor settings), with pinning, discarding, <strong>Verify</strong> after applying, <strong>Review later</strong>, and an apply run that can be continued even after a restart. The library's new <strong>Analysis</strong> column and filter show which snippets have open findings, a stale analysis or a pending review. See <a href="../features/snippets.html#full-code-analysis">Full code analysis</a>.</li>
+<li><strong>AI changes are reviewed inside the editor</strong> — improvements, security fixes, AI formatting and the analysis's apply result replace the editor area with a side-by-side review instead of a blocking dialog, so terminals and other editors stay usable.</li>
+<li><strong>Stop and retry any snippet AI request</strong> — every AI action in the snippet editor shows its running time with <strong>■ Stop</strong> (also <span class="keys"><kbd class="key-escape">Esc</kbd></span>) and offers <strong>↻ Retry</strong> after a stop or failure; a stopped request really ends on the provider side.</li>
+<li><strong>Before/after analysis reports</strong> — export the stored analysis as PDF, HTML, Markdown or JSON before or after applying, save the analysed or final script as plain text, and export the reports of several snippets at once as one file or a ZIP.</li>
+<li><strong>More reliable flow diagrams, and a zoom window</strong> — a diagram the model got wrong is requested once more — repaired with the exact error where it can be — a fallback diagram says why it was used, and a click on the analysis diagram opens it in its own zoomable window.</li>
+<li><strong>Analyses are part of the backup</strong> — the configuration backup includes the stored snippet analyses, and an unreadable snippet file is moved aside instead of being overwritten.</li>
+<li><strong>Snippet folders</strong> — organise the library in nested folders shown in a tree above the table, drag snippets and folders to move them, and export a whole folder as a ZIP or a directory that keeps its structure. See <a href="../features/snippets.html#folders">Folders</a>.</li>
+<li><strong>Executable flag</strong> — each snippet is exported and copied as an executable (755) or a plain (644) file; scripts with a known extension or a shebang are executable automatically, and the flag can be changed in the Exec column or the editor. See <a href="../features/snippets.html#executable-flag">Executable flag</a>.</li>
+<li><strong>Copy snippets and folders into the terminal directory</strong> — copy selected snippets or a whole folder tree as files into the current directory of an SSH session (over SFTP) or a local shell, with the right file modes and an overwrite/skip choice for existing files. See <a href="../features/snippets.html#copying-files-to-the-terminal-directory">Copying files to the terminal directory</a>.</li>
+<li><strong>Analyse a folder as one project, and modularize</strong> — the Full code analysis can examine a folder of scripts together and report problems between files, and the new <em>Propose modularization</em> option lets the AI split a script into modules that become files in a folder. Results that change several files are reviewed in a window with one tab per file and a directory tree that can be shown or hidden. See <a href="../features/snippets.html#analysing-a-folder-as-one-project">Analysing a folder as one project</a> and <a href="../features/snippets.html#modularization">Modularization</a>.</li>
+<li><strong>Shell expansions stay as written, and typed values are stored only on request</strong> — only the built-in placeholders and the variables declared in the Variable Manager are replaced, so <code>${HOME}</code>, <code>${1:-default}</code> or <code>${#array[@]}</code> reach the shell unchanged instead of being sent empty or asked for, <code>$${name}</code> writes a literal <code>${name}</code>, and <code>${cursor}</code> places the caret when a snippet is inserted into an editor. Send to Terminal asks for a declared variable without a value instead of sending it empty, Send to Terminal with Parameters lists every declared variable pre-filled, and a value you type is kept only when you tick <strong>Remember</strong>. Scheduled and swarm script runs still refuse an undeclared <code>${name}</code>, and a <code>#</code> inside a word such as <code>$#</code> no longer cuts a shell line short when a script is sent as a one-liner. See <a href="../features/snippets.html#placeholder-variables">Placeholder variables</a>.</li>
+</ul>
+<h3 id="credentials">Credentials<a class="headerlink" href="#credentials" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Passwords from an external command work on Windows and no longer freeze korTTY</strong> — a credential that fetches its password from a command such as <code>op</code>, <code>bw</code> or <code>enpass-cli</code> now runs it in PowerShell on Windows (it always failed there) and on the host in the Flatpak package. The 10-second limit now really holds: a tool that waits for input, an unlock or Touch ID is stopped together with the processes it started and reported, where it could hang korTTY forever before, and the connection editor fetches the password in the background while the field shows <em>Retrieving password...</em>. See <a href="../features/security.html#passwords-from-an-external-command">Passwords from an external command</a>.</li>
+<li><strong>Credentials moved to Cmd/Ctrl+Shift+M</strong> — <em>Configuration → Security → Credentials…</em> now opens with <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-m">M</kbd></span> on macOS and <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-m">M</kbd></span> on Windows and Linux; <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-p">P</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-p">P</kbd></span> no longer opens it. The new key works in every tab, also while a terminal has the focus and with the menu bar hidden, and leaves no character behind in the terminal. <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-m">M</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-m">M</kbd></span> still opens the Connection Manager. See <a href="../reference/keyboard-shortcuts.html#general">Keyboard shortcuts</a>.</li>
+<li><strong>Built-in credential environments follow the UI language</strong> — the Credential Manager, the credential editor, the connection editor's credential list and the dashboard showed the four built-in environments as <em>Produktion</em>, <em>Entwicklung</em>, <em>Test</em> and <em>Staging</em> in every language. They are now translated like the rest of the interface. Credentials keep the environment they are assigned to, because only the label changed. See <a href="../features/security.html#credential-management">Credential Management</a>.</li>
+</ul>
+<h3 id="backup-and-restore">Backup and restore<a class="headerlink" href="#backup-and-restore" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>GPG backups can be restored</strong> — a GPG backup was saved under the ZIP name <code>kortty-backup.zip</code>, so importing it asked for a ZIP password and failed, and even a renamed <code>.gpg</code> file could not be restored. GPG backups are now saved as <code>kortty-backup.zip.gpg</code> and import without a ZIP password; korTTY reads the format from the file content, so GPG backups made by earlier versions under the <code>.zip</code> name restore too. See <a href="../features/backup.html#importing-a-backup">Importing a backup</a>.</li>
+<li><strong>A failed backup no longer pushes out the last good one</strong> — the new backup is written completely before the current one is rotated into <code>old-backups/</code>, rotated GPG backups keep their <code>.zip.gpg</code> ending, two backups in the same second no longer overwrite each other, and <strong>Maximum Backups</strong> counts ZIP and GPG backups together. See <a href="../features/backup.html#backup-retention-and-cleanup">Backup retention and cleanup</a>.</li>
+<li><strong>More of your configuration is backed up</strong> — custom terminal themes, credential environments, saved AI Swarm chats and MLX model registrations are now part of the backup, and after an import korTTY reloads them together with SSH keys, snippet variables and AI chats instead of overwriting the restored files with what it had loaded before. A backup with another master password makes korTTY quit after the import, so you unlock the restored data with that password on the next start.</li>
+<li><strong>The backup dialogs show their numbers</strong> — the confirmation after creating or importing a backup showed <code>{0}</code> instead of the file name, size and number of files.</li>
+</ul>
+<h3 id="teamwork-and-terminal-recording">Teamwork and terminal recording<a class="headerlink" href="#teamwork-and-terminal-recording" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>No more options that did nothing</strong> — the Video Manager no longer offers a <strong>Default format</strong>: recordings were always written as korTTY replay files, and WebM or MKV videos come only from <strong>Export</strong>. A setting saved with the old WebM value still loads. The <strong>Read-only</strong> checkbox is gone from the teamwork source dialog as well, because korTTY never writes back to a teamwork source; a value stored earlier is kept. The <a href="../features/teamwork.html">Teamwork</a> page now describes the one-way sync as it works. See <a href="../features/recording.html">Terminal recording</a>.</li>
+</ul>
+<h3 id="local-data-files">Local data files<a class="headerlink" href="#local-data-files" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>A crash or a damaged file no longer costs you your connections</strong> — connections, credentials, SSH and GPG keys, environments, themes, scheduled jobs and <code>master.key</code> are now replaced atomically and flushed to the disk instead of being rewritten in place, and on macOS and Linux <code>~/.kortty</code> and the files holding secrets are made owner-only. A file korTTY cannot parse at startup is moved aside as <code>&lt;name&gt;.corrupt-&lt;timestamp&gt;</code> and listed in a notice instead of being overwritten with an empty list, and a file it cannot read at all is left untouched for the session. See <a href="../features/security.html#stored-security-data">Stored security data</a>.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Earlier releases</p>
+<p>Only the current release is listed here, so the guide stays short in every language it is translated into. Every version is on the <a href="https://github.com/chardonnay/korTTY/releases">GitHub releases page</a>; the curated notes for earlier versions are kept in the repository, in <code>app-docs/release-notes-archive.md</code> and <code>app-docs/RELEASE_NOTES.adoc</code>.</p>
+</div></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+<footer class="kt-footer">
+  <div class="kt-footer__line">MIT-licensed &middot; Developed by Daniel Mengel</div>
+  <div class="kt-footer__line">korTTY <strong>v2.18.0</strong></div>
+</footer>
+
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../assets/javascripts/kt-zoom.js" defer></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>
