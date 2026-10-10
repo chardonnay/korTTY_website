@@ -1,0 +1,1066 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+
+<head>
+        <title>Sichern und wiederherstellen - korTTY Anleitung</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link rel="canonical" href="https://chardonnay.github.io/korTTY/guide/de/features/backup.html">
+        <meta name="author" content="korTTY">
+        <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+        <link href="../assets/stylesheets/kortty.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="../../en/assets/images/favicon.png">
+
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+            <img class="logo" src="../../en/assets/images/favicon.png" height="150px">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">korTTY Anleitung</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../index.html"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Startseite
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#erste-schritte-collapse" aria-expanded="false">
+                    Erste Schritte
+                </a>
+                <div class="collapse" id="erste-schritte-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/installation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Installation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/building-packages.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KorTTY-Pakete erstellen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/first-launch.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Erster Start – Master-Passwort
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/main-window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Übersicht des Hauptfensters
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#referenz-collapse" aria-expanded="false">
+                    Referenz
+                </a>
+                <div class="collapse" id="referenz-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/menu.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Menüreferenz
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/keyboard-shortcuts.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tastaturkürzel
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/architecture.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architektur
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/config-files.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Konfigurationsdateien
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/enterprise-policy.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Richtlinienkonfiguration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/control-api.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Steuerungs-API
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/cli.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Steuerungs-CLI
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#einstellungen-collapse" aria-expanded="false">
+            Einstellungen
+        </a>
+
+        <div class="collapse" id="einstellungen-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Einstellungsreferenz
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/appearance.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Aussehen, Themen und Schriftart
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/colors.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Farben
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Fenster
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/keyboard.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tastatur
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/resources.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Ressourcen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/logging.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Protokollierung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/export.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Exportieren
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/updates.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Aktualisierungen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherheit
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/language.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprache
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/translation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Übersetzung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/video.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Video
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/ai.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/ai-skills.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Skills
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP-Manager
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/editor.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#snippet-editor-collapse" aria-expanded="false">
+            Snippet-Editor
+        </a>
+
+        <div class="collapse" id="snippet-editor-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/snippet-editor/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet-Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/hardening-options.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Härtungsoptionen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/input-hardening.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Eingabe-Härtung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/language-migration.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprachvereinigung
+        </a>
+    </li>
+            </ul>
+        </div>
+    </li>
+            </ul>
+        </div>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover"
+                    data-bs-toggle="collapse" data-bs-target="#funktionen-collapse" aria-expanded="true">
+                    Funktionen
+                </a>
+                <div class="collapse show" id="funktionen-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="connections.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verbindungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminalsitzungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="shell-integration.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Shell-Integration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal-notifications.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal-Benachrichtigungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="highlighting.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Hervorhebung von Schlüsselwörtern
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="command-palette.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Befehlspalette
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="tunnels.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SSH-Tunnel (Portweiterleitung)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="jump-server.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Jump-Server (Bastion Host)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP-Dateimanager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="file-browser.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Dateibrowser
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="snippets.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet-Manager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="jobscheduler.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            JobScheduler
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="projects.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Projekte (Arbeitsbereiche)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="teamwork.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Teamarbeit (gemeinsame Verbindungen)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-assistant.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Assistent
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="local-models.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lokale Modelle (llama.cpp und MLX)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="rag.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            RAG-Wissensspeicher
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-tools.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal-KI-Agent und -Tools
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-swarm.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Schwarm
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherheit – Anmeldeinformationen, Schlüssel und Verschlüsselung
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="session-isolation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sitzungs-Isolation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="backup.html"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sichern und wiederherstellen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="recording.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminalaufzeichnung
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="session-journal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sitzungsjournal
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ascii-art.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            ASCII-Art
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal-effect-plugins.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminaleffekt-Plugins
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="coding-agents.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Coding-Agents
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="i18n.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprachen und dynamische Übersetzung
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#über-kortty-collapse" aria-expanded="false">
+                    Über korTTY
+                </a>
+                <div class="collapse" id="über-kortty-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/release-notes.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Versionshinweise
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/feedback.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Feedback und Support
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/anonymous-data.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Anonyme Daten zur Applikationsoptimierung
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="session-isolation.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="recording.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item">
+
+
+
+
+
+<div role="search" class="search-box kt-search">
+	<form id="rtd-search-form" class="wy-form kt-search-form" action="../search.html" method="get">
+		<input type="text" name="q" id="mkdocs-search-query"
+		class="kt-search-input drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Durchsuchen"
+		autocomplete="off" title="Type search term here" /><button type="button" class="kt-search-clear" hidden
+		        aria-label="Suche zurücksetzen" title="Suche zurücksetzen">&times;</button>
+	</form>
+	<div id="mkdocs-search-results" class="kt-search-suggest"
+	     data-no-results-text="Keine Treffer"
+	     data-preparing-text="Suche wird vorbereitet …"
+	     data-more-text="{n} weitere Treffer anzeigen"></div>
+	<script>
+	  (function () {
+	    var box = document.currentScript.parentNode;
+	    var panel = box.querySelector('.kt-search-suggest');
+	    var input = box.querySelector('#mkdocs-search-query');
+	    var clear = box.querySelector('.kt-search-clear');
+
+	    // Emptying the panel is what hides it (CSS :empty), so closing is just that.
+	    function close () { while (panel.firstChild) { panel.removeChild(panel.firstChild); } }
+	    // The button is only useful once there is something to clear.
+	    function sync () { clear.hidden = !input.value; }
+
+	    input.addEventListener('input', sync);
+	    clear.addEventListener('click', function () {
+	      input.value = '';
+	      sync();
+	      // search/main.js renders on keyup, which a programmatic clear never fires, so
+	      // the panel has to be emptied here or the old hits would outlive the query.
+	      close();
+	      input.focus();
+	    });
+
+	    document.addEventListener('click', function (e) { if (!box.contains(e.target)) { close(); } });
+
+	    // Escape has to be handled on keyUP, and on the document rather than the input.
+	    // search/main.js binds doSearch to the field's keyup, so anything that closed the
+	    // panel on keydown was undone microseconds later by that re-render — which is why
+	    // Escape appeared to do nothing at all. Listening on the document means this runs
+	    // after the field's own handler has already re-rendered, so closing sticks.
+	    // What the panel looked like BEFORE that re-render is the interesting state, so it
+	    // is captured on keydown: the usual two steps, Escape dismisses the suggestions,
+	    // Escape again empties the box.
+	    var panelWasOpen = false;
+	    document.addEventListener('keydown', function (e) {
+	      if (e.key === 'Escape') {
+	        panelWasOpen = !!panel.firstChild;
+	      }
+	    });
+	    document.addEventListener('keyup', function (e) {
+	      if (e.key !== 'Escape') {
+	        return;
+	      }
+	      // Only clear the field while it has focus — Escape elsewhere on the page is not ours.
+	      if (!panelWasOpen && document.activeElement === input && input.value) {
+	        input.value = '';
+	        sync();
+	      }
+	      close();
+	    });
+
+	    sync();  // a ?q= deep link arrives with the field already filled
+	  })();
+	</script>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+<div class="kt-lang-bar">
+  <a class="kt-lang-switch" href="../../en/features/backup.html"
+     title="English" hreflang="en">EN</a>
+</div>
+
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="sichern-und-wiederherstellen">Sichern und Wiederherstellen<a class="headerlink" href="#sichern-und-wiederherstellen" title="Permanent link">&para;</a></h1>
+<p>KorTTY erstellt verschlüsselte Backups aller Ihrer Einstellungen, Verbindungen, Anmeldeinformationen und SSH-Schlüssel. Verwenden Sie Sicherung und Wiederherstellung, um Ihre Konfiguration zu schützen oder sie zwischen Computern zu verschieben.</p>
+<p><img alt="Backup &amp; restore flow" src="../assets/diagrams/backup-restore.svg" /></p>
+<h2 id="eigenschaften">Eigenschaften<a class="headerlink" href="#eigenschaften" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Verschlüsselte Backups</strong> – Alle Backups werden entweder mit passwortgeschützter ZIP- oder GPG-Verschlüsselung verschlüsselt</li>
+<li><strong>Konfigurationssicherung</strong> — Enthält Verbindungen, Anmeldeinformationen, Anmeldeumgebungen, SSH/GPG-Schlüssel, vertrauenswürdige interaktive SSH-Hostschlüssel, globale Einstellungen, benutzerdefinierte Terminalthemen, JobScheduler-Konfiguration, Snippets und deren gespeicherte Codeanalysen, KI-Chatverlauf, KI-Swarm-Chats, lokale Modellregistrierungen (GGUF und MLX) sowie Metadaten der Wissensspeicher-Quellen</li>
+<li><strong>Regenerierbare lokale KI-Daten ausgeschlossen</strong> – GGUF-Gewichte, native llama.cpp-Laufzeiten, signierter Katalog-Cache, temporäre Sidecar-Dateien und HNSW-Snapshots werden absichtlich nicht in das Archiv kopiert</li>
+<li><strong>Projektverzeichnis</strong> – Alle gespeicherten Projektarbeitsbereiche sind in der Sicherung enthalten</li>
+<li><strong>Automatische Rotation</strong> – Alte Backups werden automatisch mit Zeitstempeln in ein <code>old-backups</code>-Unterverzeichnis verschoben</li>
+<li><strong>Konfigurierbare Aufbewahrung</strong> – Legen Sie eine maximale Anzahl der aufzubewahrenden Backups fest (0 = unbegrenzt; älteste Backups werden automatisch gelöscht)</li>
+<li><strong>Importieren/Wiederherstellen</strong> – Wiederherstellung von zuvor erstellten Backups mit optionaler Überschreibkontrolle</li>
+<li><strong>Flexible Entschlüsselung</strong> — Sowohl passwortverschlüsselte ZIP- als auch GPG-verschlüsselte Formate werden für Importe unterstützt; korTTY erkennt das Format aus dem Dateiinhalt, nicht aus seinem Namen</li>
+</ul>
+<h2 id="erstellen-eines-backups">Erstellen eines Backups<a class="headerlink" href="#erstellen-eines-backups" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Öffnen Sie <strong>Bearbeiten → Backup erstellen...</strong> oder drücken Sie <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-b">B</kbd></span> (Befehl+Umschalt+B unter macOS)</li>
+<li>Wählen Sie ein Zielverzeichnis für die Sicherungsdatei</li>
+<li>Das Backup wird mit der unter <strong>Einstellungen → Backup</strong> konfigurierten Verschlüsselungsmethode erstellt.</li>
+</ol>
+<p>KorTTY benennt die aktuelle Sicherung <code>kortty-backup.zip</code> (passwortgeschützte ZIP) oder <code>kortty-backup.zip.gpg</code> (GPG) im Zielverzeichnis. Die neue Sicherung wird zunächst vollständig geschrieben; erst danach wird jede vorhandene aktuelle Sicherung beider Art in ein <code>old-backups</code>-Unterverzeichnis mit angehängtem Zeitstempel rotiert, wobei ihr <code>.zip</code> oder <code>.zip.gpg</code>-Ende (z. B. <code>kortty-backup_2025-06-24_14-30-45.zip.gpg</code>) beibehalten wird. Wenn das Erstellen der Sicherung fehlschlägt, bleibt die vorhandene aktuelle Sicherung unverändert.</p>
+<p>Das Backup umfasst:</p>
+<table>
+<thead>
+<tr>
+<th>Artikel</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Verbindungen</td>
+<td>Alle gespeicherten SSH-Verbindungen und Gruppen</td>
+</tr>
+<tr>
+<td>Anmeldeinformationen</td>
+<td>Gespeicherte Benutzernamen und Passwörter (verschlüsselt)</td>
+</tr>
+<tr>
+<td>Anmeldeumgebungen</td>
+<td>Ihre benutzerdefinierten Anmeldeumgebungen und die Tab-Farben aller Umgebungen (<code>environments.xml</code>); die integrierten Umgebungen selbst benötigen keine Sicherung</td>
+</tr>
+<tr>
+<td>SSH-Schlüssel</td>
+<td>Schlüsselreferenzen mit verschlüsselten Passphrasen sowie die kopierten Schlüsseldateien in <code>~/.kortty/ssh-keys/</code></td>
+</tr>
+<tr>
+<td>Vertrauenswürdige interaktive Hosts</td>
+<td><code>ssh-host-keys.properties</code>, gemeinsam genutzt von Terminal, SFTP und dem Mosh SSH-Bootstrap; der Vergängliche <code>.lock</code> Begleiter ist nicht im Lieferumfang enthalten</td>
+</tr>
+<tr>
+<td>GPG-Schlüssel</td>
+<td>Öffentliche GPG-Schlüssel für die Backup-Verschlüsselung</td>
+</tr>
+<tr>
+<td>Einstellungen</td>
+<td>Globale Anwendungseinstellungen, Terminalkonfigurationen und KI-Profile</td>
+</tr>
+<tr>
+<td>Themen</td>
+<td>Terminalfarbthemen, einschließlich der von Ihnen erstellten (<code>themes.xml</code>)</td>
+</tr>
+<tr>
+<td>JobScheduler-Jobs</td>
+<td>Alle geplanten Jobs, Hostschlüssel-Pins und verschlüsselten Sudo-Passwörter</td>
+</tr>
+<tr>
+<td>Snippets</td>
+<td>Code-Snippets und Skriptvorlagen mit Metadaten</td>
+</tr>
+<tr>
+<td>Snippet-Variablen</td>
+<td>Benutzerdefinierte Variablen für die Snippet-Ersetzung</td>
+</tr>
+<tr>
+<td>Snippet-Analysen</td>
+<td>Die gespeicherten <a href="snippets.html#vollstandige-code-analyse">Vollcodeanalysen</a> jedes Snippets und jedes <a href="snippets.html#ordner-als-ein-projekt-analysieren">analysierten Ordners</a>, mit ihren Apply-Läufen, Diagrammen und Modularisierungsvorschlägen</td>
+</tr>
+<tr>
+<td>KI-Chats</td>
+<td>Gespeicherte KI-Gesprächsverläufe und -Profile</td>
+</tr>
+<tr>
+<td>KI-Swarm-Chats</td>
+<td>Gespeicherte Swarm-Chats, einschließlich der von Ihnen geplanten KI-Swarm-Jobspeicher (<code>swarm-chats.xml</code>)</td>
+</tr>
+<tr>
+<td>Lokale KI-Konfiguration</td>
+<td>Lokale GGUF-Registrierungen und typisierte Starteinstellungen, MLX-Modellregistrierungen, Text/Coding-Rollen, bevorzugtes Laufzeit-Backend/Update-Politik und verschlüsseltes Hugging Face token</td>
+</tr>
+<tr>
+<td>Wissensspeicherkonfiguration</td>
+<td>Speichermetadaten und Quellpfade, Filter, Synchronisierungsmodi und Einbettungskonfiguration; nicht die HNSW-Vektoren</td>
+</tr>
+<tr>
+<td>Projekte</td>
+<td>Alle <code>.kortty</code> Projektarbeitsbereichsdateien</td>
+</tr>
+</tbody>
+</table>
+<h2 id="backup-verschlusselung">Backup-Verschlüsselung<a class="headerlink" href="#backup-verschlusselung" title="Permanent link">&para;</a></h2>
+<h3 id="passwortgeschutzte-zip-datei-standard">Passwortgeschützte ZIP-Datei (Standard)<a class="headerlink" href="#passwortgeschutzte-zip-datei-standard" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Öffnen Sie <strong>Einstellungen → Backup</strong></li>
+<li>Wählen Sie <strong>Verschlüsselungstyp: Passwort</strong></li>
+<li>Wählen oder erstellen Sie Anmeldeinformationen, die als Verschlüsselungskennwort verwendet werden sollen</li>
+<li>Optional <strong>Maximale Backups</strong> festlegen (0 = unbegrenzt)</li>
+<li>Speichern</li>
+</ol>
+<p>Passwortgeschützte Backups werden mit AES-256 verschlüsselt (über die zip4j-Bibliothek); Das Passwort der Anmeldeinformationen verschlüsselt alle Dateien im Archiv. Mit älteren korTTY-Versionen erstellte Backups verwendeten die veraltete ZIP-Verschlüsselung und können weiterhin importiert werden – die Entschlüsselungsmethode wird aus dem Archiv selbst gelesen. Beachten Sie, dass AES-verschlüsselte ZIPs ein AES-fähiges Tool (7-Zip, WinZip, <code>unzip</code> 6+) benötigen, wenn Sie jemals eines außerhalb von korTTY extrahieren.</p>
+<h3 id="gpg-verschlusselung">GPG-Verschlüsselung<a class="headerlink" href="#gpg-verschlusselung" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Öffnen Sie <strong>Einstellungen → Backup</strong></li>
+<li>Wählen Sie <strong>Verschlüsselungstyp: GPG</strong></li>
+<li>Wählen Sie einen GPG-Schlüssel aus <strong>GPG-Schlüssel verwalten...</strong></li>
+<li>Optional <strong>Maximale Backups</strong> festlegen (0 = unbegrenzt)</li>
+<li>Speichern</li>
+</ol>
+<p>GPG-Backups werden für den öffentlichen Schlüssel Ihres ausgewählten GPG-Schlüssels verschlüsselt. KorTTY erstellt ein unverschlüsseltes ZIP in einem privaten temporären Ordner, auf den nur Ihr Benutzer zugreifen kann, verschlüsselt es mit <code>gpg</code>, speichert das Ergebnis als <code>kortty-backup.zip.gpg</code> und löscht anschließend das temporäre ZIP mit seinem Ordner. Ein GPG-Backup zu erstellen erfordert die installierte <code>gpg</code> und den öffentlichen Schlüssel des Empfängers; zur Wiederherstellung wird <code>gpg</code> und der passende <strong>private</strong> Schlüssel benötigt, daher bewahren Sie diesen Schlüssel (und sein Passwort) an einem Ort außerhalb des Backups auf.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Wenn Sie noch keine GPG-Schlüssel eingerichtet haben, verwenden Sie <strong>Verwaltung → GPG-Schlüssel verwalten...</strong>, um Schlüssel aus Ihrem Systemschlüsselbund zu importieren oder sie manuell hinzuzufügen.</p>
+</div>
+<h2 id="ein-backup-wird-importiert">Ein Backup wird importiert<a class="headerlink" href="#ein-backup-wird-importiert" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Öffnen <strong>Bearbeiten → Backup importieren...</strong></li>
+<li>Wählen Sie eine Sicherungsdatei (<code>.zip</code> oder <code>.zip.gpg</code>)</li>
+<li>Falls das Backup ein passwortgeschütztes ZIP ist, geben Sie das Passwort bei Aufforderung ein; GPG-Backups verlangen kein ZIP-Passwort — <code>gpg</code> kann stattdessen die Passphrase Ihres privaten Schlüssels anfordern.</li>
+<li>Wählen Sie aus, ob <strong>vorhandene Dateien überschrieben werden</strong>:</li>
+<li><strong>OK</strong> — Backup-Dateien werden vorhandene Dateien in Ihrer Konfiguration ersetzen</li>
+<li><strong>Abbrechen</strong> — Vorhandene Dateien werden übersprungen; nur fehlende Dateien werden importiert</li>
+<li><strong>Starten Sie die Anwendung neu</strong>, damit alle Änderungen wirksam werden</li>
+</ol>
+<p>KorTTY erkennt das Backup-Format anhand des Dateiinhalts, nicht nach Namen; daher werden GPG-Backups, die ältere Versionen als <code>kortty-backup.zip</code> gespeichert haben, ebenfalls als GPG-Backups importiert. Eine Datei, die weder ein ZIP-Archiv noch GPG-verschlüsselt ist, wird vor jeglicher Wiederherstellung abgelehnt.</p>
+<p>Nach dem Import lädt korTTY die wiederhergestellten Verbindungen, Anmeldeinformationen, Umgebungen, SSH- und GPG-Schlüssel, Einstellungen, Themen, Snippets, Snippet-Variablen sowie gespeicherte KI- und Swarm-Chats neu, sodass ein späteres Speichern sie nicht mit dem zuvor geladenen Inhalt überschreibt. Die offenen Terminal-Tabs zeigen danach die <a href="connections.html#tab-farbe">Tab-Farben</a> der wiederhergestellten Verbindungen und Anmeldeumgebungen.</p>
+<p>Jede wiederhergestellte Datei ersetzt die lokale atomar, sodass ein unterbrochener Import niemals eine halbfertige Datei zurücklässt. Auf macOS und Linux werden <code>connections.xml</code>, <code>credentials.xml</code>, <code>ssh-keys.xml</code>, <code>job-scheduler.xml</code> und <code>master.key</code> nur für den Eigentümer lesbar (<code>rw-------</code>) wiederhergestellt; die anderen Dateien behalten die Berechtigungen der Datei, die sie ersetzen, und eine Datei, die lokal nicht existierte, wird Eigentümer-berechtigt erstellt. Wenn wiederhergestellte Verbindungen, Anmeldeinformationen, SSH-Schlüssel, GPG-Schlüssel oder Umgebungsdateien nicht geparst werden können, wird der Reload sie als <code>&lt;name&gt;.corrupt-&lt;timestamp&gt;</code> seitlich verschieben und korTTY behält das, was es zuvor geladen hatte; die nächste Speicherung schreibt dies in eine neue Datei. Eine Themendatei, die nicht geparst werden kann, wird auf dieselbe Weise seitlich verschoben und durch die eingebauten Themen ersetzt.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Das Importieren eines Backups mit <strong>Überschreiben</strong> aktiviert wird Ihre aktuellen Einstellungen, Verbindungen und Anmeldedaten ersetzen. Wenn Sie unsicher sind, wählen Sie <strong>Abbrechen</strong>, um das Backup zu mergen, ohne zu überschreiben.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Ein Backup mit einem anderen Master-Passwort</p>
+<p>Wenn ein Überschreibungsimport das <code>master.key</code> eines anderen Master-Passworts bringt, gehört alles, was korTTY geladen hat, immer noch zum alten. korTTY fordert Sie auf, neu zu starten und beendet sich ohne die aktuellen Daten zu speichern, sodass die wiederhergestellten Dateien unverändert bleiben. Starten Sie korTTY erneut und entsperren es mit dem Master-Passwort des Backups.</p>
+<p>Ein zusammenführender Import (<strong>Abbrechen</strong> bei der Frage nach dem Überschreiben) behält Ihren eigenen <code>master.key</code>. Wurde das Backup mit einem anderen Master-Passwort erstellt und bringt es Dateien mit Geheimnissen mit — <code>connections.xml</code>, <code>credentials.xml</code>, <code>ssh-keys.xml</code>, <code>global-settings.xml</code>, <code>job-scheduler.xml</code> oder <code>rag/stores.json</code> —, fragt korTTY einmal nach dem Master-Passwort des Backups (maskiert, nie protokolliert) und prüft es gegen den <code>master.key</code> des Backups. Anschließend entschlüsselt es die Passwörter, Passphrasen, Schlüssel und Tokens dieser Dateien mit dem Master-Passwort des Backups und verschlüsselt sie mit Ihrem aktuellen neu, bevor etwas kopiert wird; die Erfolgsmeldung nennt die Anzahl der neu verschlüsselten Geheimnisse. Ein Geheimnis, das sich auch mit dem Master-Passwort des Backups nicht entschlüsseln lässt, bleibt leer, statt unlesbar importiert zu werden. Wenn Sie die Abfrage abbrechen, dreimal ein falsches Passwort eingeben oder der Tresor gesperrt ist, werden die Dateien mit Geheimnissen gar nicht importiert und die Meldung listet sie auf; die übrigen Dateien werden trotzdem importiert, und Sie können das Backup erneut importieren, um das Passwort einzugeben. korTTY schreibt nie ein Geheimnis, das mit einem Master-Passwort verschlüsselt ist, das es nicht kennt.</p>
+</div>
+<h2 id="inhalt-der-sicherungsdatei">Inhalt der Sicherungsdatei<a class="headerlink" href="#inhalt-der-sicherungsdatei" title="Permanent link">&para;</a></h2>
+<p>Sowohl <code>.zip</code>- als auch <code>.zip.gpg</code>-Backups enthalten dieselben Dateien:</p>
+<ul>
+<li><code>connections.xml</code> – Alle SSH-Verbindungen und -Gruppen</li>
+<li><code>credentials.xml</code> – Gespeicherte Anmeldeinformationen (immer noch mit Ihrem Master-Passwort verschlüsselt)</li>
+<li><code>environments.xml</code> — Benutzerdefinierte Anmeldeumgebungen und die Tab-Farben der Umgebungen</li>
+<li><code>ssh-keys.xml</code> – SSH-Schlüsselreferenzen und verschlüsselte Passphrasen</li>
+<li><code>ssh-keys/</code> – Kopierte SSH-Schlüsseldateien (nur Schlüssel, die Sie über <strong>In Benutzerverzeichnis kopieren</strong> dort platziert haben; Schlüssel, auf die an ihren ursprünglichen Speicherorten verwiesen wird, werden nicht erfasst). Wiederhergestellte Schlüsseldateien erhalten nur Besitzerberechtigungen und ein Import wird zusammengeführt – bereits vorhandene Schlüssel werden nie gelöscht oder, ohne <strong>Überschreiben</strong>, ersetzt</li>
+<li><code>ssh-host-keys.properties</code> – Vertrauenswürdige öffentliche Hostschlüssel für interaktive Terminal-, SFTP- und Mosh-Bootstrap-Verbindungen (<code>ssh-host-keys.properties.lock</code> ist absichtlich ausgeschlossen)</li>
+<li><code>gpg-keys.xml</code> – öffentliche GPG-Schlüssel</li>
+<li><code>global-settings.xml</code> — Anwendungseinstellungen, KI-Profile, Terminalstandards</li>
+<li><code>themes.xml</code> — Terminal-Farbschemata, einschließlich Ihrer eigenen</li>
+<li><code>job-scheduler.xml</code> – JobScheduler-Jobs, Host-Key-Pins, verschlüsselte Sudo-Passwörter</li>
+<li><code>snippets.xml</code> – Codeausschnitte und Vorlagen</li>
+<li><code>snippet-variables.xml</code> – Benutzerdefinierte Snippet-Variablen</li>
+<li><code>snippet-analyses/</code> — Gespeicherte Vollcodeanalysen, eine Datei pro Snippet. Ein Import verschmilzt sie: Analysen, die nur lokal existieren, bleiben erhalten; fehlende werden hinzugefügt, und mit <strong>Überschreiben</strong> wird eine lokale Datei nur ersetzt, wenn die Kopie aus dem Backup neuer ist. Nicht gespeicherte Snippet-Entwürfe (<code>snippet-drafts/</code>) sind nicht enthalten</li>
+<li><code>ai-chats.xml</code> – Gespeicherte KI-Gespräche</li>
+<li><code>swarm-chats.xml</code> — Gespeicherte KI-Swarm-Chats</li>
+<li><code>master.key</code> — Salt und Prüfhash Ihres Master-Passworts, damit die wiederhergestellten Geheimnisse damit entsperrt werden können</li>
+<li><code>llm/models.xml</code> – Lokale GGUF-Registrierungen und Laufzeiteinstellungen (Modellgewichte sind nicht enthalten)</li>
+<li><code>llm/mlx-models.json</code> — MLX-Modellregistrierungen (Modellgewichte sind nicht enthalten)</li>
+<li><code>rag/stores.json</code> – Wissensspeicher- und Quellkonfiguration (Vektor-Snapshots sind nicht enthalten)</li>
+<li><code>projects/</code> – Alle gespeicherten Projektarbeitsbereichsdateien (<code>.kortty</code>)</li>
+</ul>
+<p>Die Sitzungs-Snapshots in <code>~/.kortty/session/</code>, die <em>Datei → Vorherige Sitzung wiederherstellen</em> öffnet, sind nicht enthalten: Sie beschreiben die Fenster und Tabs dieses Computers, und die Liste „Zuletzt geschlossen“, die sie enthalten, bleibt mit ihnen auf diesem Computer. Nach dem Wiederherstellen eines Backups öffnet <em>Vorherige Sitzung wiederherstellen</em> weiterhin die Sitzung dieses Computers, und ihre Tabs öffnen sich mit den wiederhergestellten Verbindungen. Siehe <a href="projects.html#vorherige-sitzung">Vorherige Sitzung</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Alle Passwörter und Anmeldeinformationen im Backup bleiben mit Ihrem Master-Passwort verschlüsselt. Wenn Sie ein Backup importieren, müssen Sie korTTY mit dem Master-Passwort entsperren, damit die Anmeldeinformationen entschlüsselt werden können. Ein zusammenführender Import eines Backups, das mit einem anderen Master-Passwort erstellt wurde, verschlüsselt sie mit Ihrem aktuellen neu (siehe <a href="#ein-backup-wird-importiert">Ein Backup mit einem anderen Master-Passwort</a>).</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Erstellen Sie lokale KI-Assets nach einer Wiederherstellung neu</p>
+<p>Die Sicherung schließt <code>llm/models/</code>-, <code>llm/runtime/</code>-, <code>llm/catalog/</code>-, <code>llm/run/</code>- und lokale <code>index.hnsw</code>-Snapshots aus. Stellen Sie nach dem Wechsel auf einen anderen Computer die GGUF-Dateien und eine kompatible Laufzeit wieder her oder laden Sie sie herunter, verbinden Sie alle externen Modell-/Quellpfade erneut und führen Sie dann <strong>Jetzt aktualisieren</strong> in jedem Wissensspeicher aus, um seinen Index neu zu generieren. Der signierte Katalogcache wird automatisch aktualisiert oder greift auf den Bootstrap zurück. Originalquelldokumente und externe Qdrant-Daten sind nicht Teil einer korTTY-Konfigurationssicherung.</p>
+</div>
+<h2 id="backup-aufbewahrung-und-bereinigung">Backup-Aufbewahrung und -Bereinigung<a class="headerlink" href="#backup-aufbewahrung-und-bereinigung" title="Permanent link">&para;</a></h2>
+<p>Wenn Sie ein neues Backup in einem Verzeichnis erstellen, das bereits eines enthält, führt KorTTY Folgendes aus:</p>
+<ol>
+<li>Erstellt die neue Sicherung — <code>kortty-backup.zip</code> für ein passwortgeschütztes ZIP, <code>kortty-backup.zip.gpg</code> für GPG — und stoppt hier, wobei die vorhandene Sicherung unverändert bleibt, falls das fehlschlägt</li>
+<li>Verschiebt jede vorhandene aktuelle Sicherung, egal welcher Art, nach <code>old-backups/kortty-backup_&lt;timestamp&gt;.zip</code> oder <code>old-backups/kortty-backup_&lt;timestamp&gt;.zip.gpg</code>; eine in der gleichen Sekunde rotierte Sicherung erhält <code>-1</code>, <code>-2</code> … angehängt statt die frühere zu ersetzen</li>
+<li>Wenn die Anzahl der alten Backups <strong>Maximale Backups</strong> überschreitet, werden die ältesten gelöscht</li>
+</ol>
+<p><strong>Maximale Backups</strong> zählen ZIP- und GPG-Backups zusammen. Sobald Sie den Verschlüsselungstyp wechseln, rotiert das erste neue Backup auch das aktuelle Backup des anderen Typs, sodass das älteste Backup einen Backup früher gelöscht werden kann, als Sie erwarten würden.</p>
+<p>Um unbegrenzte alte Sicherungen zu behalten, setzen Sie <strong>Maximale Backups</strong> auf <code>0</code> in <strong>Einstellungen → Sicherung</strong>. Um nur eine alte Sicherung neben der aktuellen zu behalten, setzen Sie <strong>Maximale Backups</strong> auf <code>1</code>.</p>
+<h2 id="verwenden-von-backups-auf-mehreren-maschinen">Verwenden von Backups auf mehreren Maschinen<a class="headerlink" href="#verwenden-von-backups-auf-mehreren-maschinen" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Exportieren Sie Ihre aktuelle Konfiguration:</strong></li>
+<li>
+<p>Öffnen Sie auf Computer A <strong>Bearbeiten → Backup erstellen...</strong> und speichern Sie es auf einem USB-Laufwerk oder einem Cloud-Speicher</p>
+</li>
+<li>
+<p><strong>Sicherungsdatei verschieben:</strong></p>
+</li>
+<li>
+<p>Kopieren Sie <code>kortty-backup.zip</code> (oder <code>kortty-backup.zip.gpg</code>) auf Maschine B; für ein GPG-Backup benötigt Maschine B außerdem <code>gpg</code> und den privaten Schlüssel des GPG-Schlüssels des Backups</p>
+</li>
+<li>
+<p><strong>Import auf der neuen Maschine:</strong></p>
+</li>
+<li>Öffnen Sie auf Computer B <strong>Bearbeiten → Backup importieren...</strong></li>
+<li>Wählen Sie die Sicherungsdatei aus Schritt 2 aus</li>
+<li>Geben Sie das Backup-Passwort ein, wenn Sie dazu aufgefordert werden</li>
+<li>Wählen Sie <strong>Abbrechen</strong> bei der Überschreibungsfrage, es sei denn, Sie möchten vorhandene Verbindungen ersetzen</li>
+<li>KorTTY neu starten</li>
+</ol>
+<p>Alle gesicherten Verbindungen, Einstellungen, Snippets, gespeicherten Chats, interaktive Hostschlüssel-Vertrauensentscheidungen, Modellregistrierungen und Wissensquellendefinitionen sind auf Maschine B verfügbar. Wiederhergestellte Hostschlüssel werden weiterhin mit dem normalisierten Hostnamen und Port abgeglichen, sodass ein geänderter Schlüssel nach der Migration blockiert bleibt. Lokale Modellgewichte, Laufzeitpakete, Quelldokumente und HNSW-Vektoren müssen separat wiederhergestellt oder neu generiert werden.</p>
+<h2 id="fehlerbehebung">Fehlerbehebung<a class="headerlink" href="#fehlerbehebung" title="Permanent link">&para;</a></h2>
+<dl>
+<dt><strong>"Sicherungsdatei nicht gefunden"</strong></dt>
+<dd>Überprüfen Sie, ob der Dateipfad korrekt ist und die Datei vorhanden ist. Überprüfen Sie die Verzeichnisberechtigungen.</dd>
+<dt><strong>„Passwort für passwortverschlüsseltes Backup erforderlich“</strong></dt>
+<dd>Passwortgeschützte Backups benötigen das richtige Passwort. Stellen Sie sicher, dass Sie das Anmeldepasswort (aus <strong>Einstellungen → Sicherung</strong>) und nicht Ihr Master-Passwort eingeben.</dd>
+<dt><strong>"… ist kein korTTY-Backup: Die Datei ist weder ein ZIP-Archiv noch GPG-verschlüsselt."</strong></dt>
+<dd>Die ausgewählte Datei ist weder ein ZIP-Archiv noch GPG-verschlüsselte Daten, zum Beispiel eine andere Datei mit einem <code>.zip</code> Namen oder ein Backup, das beim Kopieren abgeschnitten wurde. Wählen Sie die <code>kortty-backup.zip</code> oder <code>kortty-backup.zip.gpg</code> Datei selbst.</dd>
+</dl>
+<p><strong>"GPG-Verschlüsselung fehlgeschlagen"</strong>
+<code>gpg</code> konnte die neue Sicherung nicht verschlüsseln: es ist nicht installiert, oder der öffentliche Schlüssel des ausgewählten Schlüssels befindet sich weder in Ihrem GPG-Schlüsselbund noch als Schlüsseldatei, die mit dem Schlüssel in <strong>GPG-Schlüssel verwalten...</strong> gespeichert ist. Die vorherige Sicherung im Zielverzeichnis bleibt unverändert.</p>
+<dl>
+<dt><strong>"GPG-Entschlüsselung fehlgeschlagen"</strong></dt>
+<dd><code>gpg</code> konnte die Sicherung nicht entschlüsseln: der private Schlüssel, der zum GPG-Schlüssel der Sicherung passt, befindet sich nicht in Ihrem Schlüsselbund, <code>gpg</code> ist nicht installiert oder Sie haben die Passphrase-Eingabe abgebrochen. Importieren Sie den privaten Schlüssel in Ihren GPG-Schlüsselbund (zum Beispiel mit <code>gpg --import</code>) und versuchen Sie es erneut.</dd>
+<dt><strong>„GPG-Schlüssel nicht gefunden“</strong></dt>
+<dd>Der zur Verschlüsselung verwendete GPG-Schlüssel fehlt. Verwenden Sie <strong>Verwaltung → GPG-Schlüssel verwalten...</strong>, um den Schlüssel zu importieren oder hinzuzufügen, und versuchen Sie es dann erneut.</dd>
+<dt><strong>„Kein Passwort für Backup-Verschlüsselung ausgewählt“ oder „Kein GPG-Schlüssel ausgewählt“</strong></dt>
+<dd>Konfigurieren Sie unter <strong>Einstellungen → Backup</strong> ein Passwort oder einen GPG-Schlüssel, bevor Sie ein Backup erstellen.</dd>
+<dt><strong>Eine <code>*.corrupt-&lt;timestamp&gt;</code> Datei erschien in <code>~/.kortty</code></strong></dt>
+<dd>korTTY konnte die Datendatei beim Start oder nach einem Import nicht parsen, daher verschob es das Original unter diesem Namen ohne Änderungen und setzte den Betrieb fort. Reparieren Sie die Datei, und wenn korTTY geschlossen ist, verschieben Sie sie zurück unter ihren ursprünglichen Namen oder stellen die Datei aus einer Sicherung wieder her.</dd>
+<dt><strong>Der Import war erfolgreich, aber die Änderungen wurden nicht wirksam</strong></dt>
+<dd>Starten Sie KorTTY neu, damit importierte Einstellungen aktiv werden. Wenn Sie Anmeldeinformationen importiert haben, müssen Sie nach dem Neustart möglicherweise auch das Master-Passwort entsperren.</dd>
+<dt><strong>Sicherungsdatei ist größer als erwartet</strong></dt>
+<dd>Große Backups können auftreten, wenn Sie viele gespeicherte KI-Chats oder ein großes Projektverzeichnis haben. GGUF-Gewichte, llama.cpp-Laufzeitpakete und HNSW-Snapshots sind ausgeschlossen und können nicht die Ursache sein.</dd>
+</dl></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+<footer class="kt-footer">
+  <div class="kt-footer__line">MIT-lizenziert &middot; Entwickelt von Daniel Mengel</div>
+  <div class="kt-footer__line">korTTY <strong>v2.19.0</strong></div>
+</footer>
+
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../assets/javascripts/kt-zoom.js" defer></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>

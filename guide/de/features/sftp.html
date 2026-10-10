@@ -1,0 +1,1258 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+
+<head>
+        <title>SFTP-Dateimanager - korTTY Anleitung</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link rel="canonical" href="https://chardonnay.github.io/korTTY/guide/de/features/sftp.html">
+        <meta name="author" content="korTTY">
+        <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+        <link href="../assets/stylesheets/kortty.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="../../en/assets/images/favicon.png">
+
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+            <img class="logo" src="../../en/assets/images/favicon.png" height="150px">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">korTTY Anleitung</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../index.html"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Startseite
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#erste-schritte-collapse" aria-expanded="false">
+                    Erste Schritte
+                </a>
+                <div class="collapse" id="erste-schritte-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/installation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Installation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/building-packages.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KorTTY-Pakete erstellen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/first-launch.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Erster Start – Master-Passwort
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/main-window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Übersicht des Hauptfensters
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#referenz-collapse" aria-expanded="false">
+                    Referenz
+                </a>
+                <div class="collapse" id="referenz-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/menu.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Menüreferenz
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/keyboard-shortcuts.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tastaturkürzel
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/architecture.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architektur
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/config-files.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Konfigurationsdateien
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/enterprise-policy.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Richtlinienkonfiguration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/control-api.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Steuerungs-API
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/cli.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Steuerungs-CLI
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#einstellungen-collapse" aria-expanded="false">
+            Einstellungen
+        </a>
+
+        <div class="collapse" id="einstellungen-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Einstellungsreferenz
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/appearance.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Aussehen, Themen und Schriftart
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/colors.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Farben
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Fenster
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/keyboard.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tastatur
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/resources.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Ressourcen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/logging.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Protokollierung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/export.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Exportieren
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/updates.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Aktualisierungen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherheit
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/language.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprache
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/translation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Übersetzung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/video.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Video
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/ai.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/ai-skills.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Skills
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP-Manager
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/editor.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#snippet-editor-collapse" aria-expanded="false">
+            Snippet-Editor
+        </a>
+
+        <div class="collapse" id="snippet-editor-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/snippet-editor/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet-Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/hardening-options.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Härtungsoptionen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/input-hardening.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Eingabe-Härtung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/language-migration.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprachvereinigung
+        </a>
+    </li>
+            </ul>
+        </div>
+    </li>
+            </ul>
+        </div>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover"
+                    data-bs-toggle="collapse" data-bs-target="#funktionen-collapse" aria-expanded="true">
+                    Funktionen
+                </a>
+                <div class="collapse show" id="funktionen-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="connections.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verbindungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminalsitzungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="shell-integration.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Shell-Integration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal-notifications.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal-Benachrichtigungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="highlighting.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Hervorhebung von Schlüsselwörtern
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="command-palette.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Befehlspalette
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="tunnels.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SSH-Tunnel (Portweiterleitung)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="jump-server.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Jump-Server (Bastion Host)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="sftp.html"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP-Dateimanager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="file-browser.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Dateibrowser
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="snippets.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet-Manager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="jobscheduler.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            JobScheduler
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="projects.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Projekte (Arbeitsbereiche)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="teamwork.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Teamarbeit (gemeinsame Verbindungen)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-assistant.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Assistent
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="local-models.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lokale Modelle (llama.cpp und MLX)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="rag.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            RAG-Wissensspeicher
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-tools.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal-KI-Agent und -Tools
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-swarm.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Schwarm
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherheit – Anmeldeinformationen, Schlüssel und Verschlüsselung
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="session-isolation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sitzungs-Isolation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sichern und wiederherstellen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="recording.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminalaufzeichnung
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="session-journal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sitzungsjournal
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ascii-art.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            ASCII-Art
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal-effect-plugins.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminaleffekt-Plugins
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="coding-agents.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Coding-Agents
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="i18n.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprachen und dynamische Übersetzung
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#über-kortty-collapse" aria-expanded="false">
+                    Über korTTY
+                </a>
+                <div class="collapse" id="über-kortty-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/release-notes.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Versionshinweise
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/feedback.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Feedback und Support
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/anonymous-data.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Anonyme Daten zur Applikationsoptimierung
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="jump-server.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="file-browser.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item">
+
+
+
+
+
+<div role="search" class="search-box kt-search">
+	<form id="rtd-search-form" class="wy-form kt-search-form" action="../search.html" method="get">
+		<input type="text" name="q" id="mkdocs-search-query"
+		class="kt-search-input drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Durchsuchen"
+		autocomplete="off" title="Type search term here" /><button type="button" class="kt-search-clear" hidden
+		        aria-label="Suche zurücksetzen" title="Suche zurücksetzen">&times;</button>
+	</form>
+	<div id="mkdocs-search-results" class="kt-search-suggest"
+	     data-no-results-text="Keine Treffer"
+	     data-preparing-text="Suche wird vorbereitet …"
+	     data-more-text="{n} weitere Treffer anzeigen"></div>
+	<script>
+	  (function () {
+	    var box = document.currentScript.parentNode;
+	    var panel = box.querySelector('.kt-search-suggest');
+	    var input = box.querySelector('#mkdocs-search-query');
+	    var clear = box.querySelector('.kt-search-clear');
+
+	    // Emptying the panel is what hides it (CSS :empty), so closing is just that.
+	    function close () { while (panel.firstChild) { panel.removeChild(panel.firstChild); } }
+	    // The button is only useful once there is something to clear.
+	    function sync () { clear.hidden = !input.value; }
+
+	    input.addEventListener('input', sync);
+	    clear.addEventListener('click', function () {
+	      input.value = '';
+	      sync();
+	      // search/main.js renders on keyup, which a programmatic clear never fires, so
+	      // the panel has to be emptied here or the old hits would outlive the query.
+	      close();
+	      input.focus();
+	    });
+
+	    document.addEventListener('click', function (e) { if (!box.contains(e.target)) { close(); } });
+
+	    // Escape has to be handled on keyUP, and on the document rather than the input.
+	    // search/main.js binds doSearch to the field's keyup, so anything that closed the
+	    // panel on keydown was undone microseconds later by that re-render — which is why
+	    // Escape appeared to do nothing at all. Listening on the document means this runs
+	    // after the field's own handler has already re-rendered, so closing sticks.
+	    // What the panel looked like BEFORE that re-render is the interesting state, so it
+	    // is captured on keydown: the usual two steps, Escape dismisses the suggestions,
+	    // Escape again empties the box.
+	    var panelWasOpen = false;
+	    document.addEventListener('keydown', function (e) {
+	      if (e.key === 'Escape') {
+	        panelWasOpen = !!panel.firstChild;
+	      }
+	    });
+	    document.addEventListener('keyup', function (e) {
+	      if (e.key !== 'Escape') {
+	        return;
+	      }
+	      // Only clear the field while it has focus — Escape elsewhere on the page is not ours.
+	      if (!panelWasOpen && document.activeElement === input && input.value) {
+	        input.value = '';
+	        sync();
+	      }
+	      close();
+	    });
+
+	    sync();  // a ?q= deep link arrives with the field already filled
+	  })();
+	</script>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+<div class="kt-lang-bar">
+  <a class="kt-lang-switch" href="../../en/features/sftp.html"
+     title="English" hreflang="en">EN</a>
+</div>
+
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="manager-fur-sftp-dateien">Manager für SFTP-Dateien<a class="headerlink" href="#manager-fur-sftp-dateien" title="Permanent link">&para;</a></h1>
+<p>Der integrierte SFTP-Manager bietet einen grafischen Dateimanager zum Übertragen von Dateien zwischen Ihrem lokalen Computer und Remote-Servern über SFTP. Es verfügt über ein Dual-Panel-Layout, vollständige Unterstützung für Dateivorgänge und eine nahtlose Integration mit dem Snippet-Editor für die Fernbearbeitung von Dateien.</p>
+<h2 id="sftp-manager-offnen">SFTP-Manager öffnen<a class="headerlink" href="#sftp-manager-offnen" title="Permanent link">&para;</a></h2>
+<p>Sie können den SFTP-Manager auf zwei Arten öffnen:</p>
+<ul>
+<li><strong>Menü:</strong> <em>Verbindungen → SFTP-Client...</em> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-u">U</kbd></span>, unter macOS <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-u">U</kbd></span>). Ist ein verbundener Terminal-Tab im Vordergrund, öffnet er sich auf dem fokussierten Bereich dieses Tabs, wie bei <strong>SFTP hier öffnen</strong>; andernfalls wählen Sie zuerst eine Verbindung aus.</li>
+<li><strong>Aus einem Terminal:</strong> <em>Verbindungen → SFTP hier öffnen</em>, <strong>SFTP hier öffnen</strong> im Rechtsklickmenü eines Terminal-Tabs oder <strong>SFTP hier öffnen</strong> im Rechtsklickmenü eines Bereichs. Auch die Befehlspalette findet den Befehl. Siehe <a href="#aus-einem-terminal-tab-offnen">Aus einem Terminal-Tab öffnen</a>.</li>
+<li><strong>Dashboard:</strong> Rechtsklick auf eine verbundene Sitzung &gt; <strong>SFTP-Client...</strong></li>
+</ul>
+<p>Wenn die Verbindung einen temporären SSH-Schlüssel verwendet, der abgelaufen ist, werden Sie aufgefordert, einen neuen Schlüssel einzugeben, bevor die Verbindung fortgesetzt werden kann.</p>
+<h2 id="aus-einem-terminal-tab-offnen">Aus einem Terminal-Tab öffnen<a class="headerlink" href="#aus-einem-terminal-tab-offnen" title="Permanent link">&para;</a></h2>
+<p><strong>SFTP hier öffnen</strong> öffnet den SFTP-Manager über die SSH-Sitzung, die der Terminalbereich bereits hat, sodass keine zweite Anmeldung nötig ist: keine zweite Passwort- oder MFA-Abfrage, kein zweiter Sprung über einen Jump-Server und keine erneute Abfrage des CyberArk-Zugriffsgrunds. Verwendet wird der Bereich, in dem Sie tippen (oder der Bereich, den Sie mit der rechten Maustaste angeklickt haben), und in einem geteilten Tab, dessen Bereich eine andere Verbindung ausführt, öffnet er sich als Benutzer und Server dieses Bereichs, nicht als die des Tabs.</p>
+<p>Die Serverseite startet in dem Ordner, in dem sich die Shell befindet: dem Ordner, den die Shell meldet (OSC 7 oder der korTTY-Agent-Hook), sonst dem im Prompt angezeigten Ordner, sonst dem Ordner Ihres letzten <code>cd</code>. <code>~</code> und relative Ordner werden relativ zu Ihrem Home-Ordner aufgelöst. Existiert dieser Ordner nicht mehr, wird der Anmeldeordner angezeigt, und die Statusleiste weist darauf hin. In zwei Fällen startet er absichtlich im Anmeldeordner, mit einem Hinweis in der Statusleiste: bei einem Bereich, in dem eine andere Sitzung aktiv ist (nach <code>su</code>, <code>sudo -i</code> oder einem verschachtelten <code>ssh</code>), weil dessen Ordner einem anderen Benutzer oder Host gehört, und bei einer Verbindung mit einem Shell-Startbefehl, der vor dem ersten Prompt den Benutzer wechseln kann.</p>
+<p>Jeder Bereich erhält einen eigenen SFTP-Tab, sodass sich zwei Bereiche desselben Servers nebeneinander durchsuchen lassen; wählen Sie für denselben Bereich erneut <strong>SFTP hier öffnen</strong>, wird dessen Tab ausgewählt. Einen Tab, der über <em>Verbindungen → SFTP-Client...</em> mit einer ausgewählten Verbindung geöffnet wurde, gibt es weiterhin einmal pro Verbindung, und die beiden Arten ersetzen einander nie.</p>
+<p>Ein solcher Tab kopiert höchstens zwei Dateien gleichzeitig, auch wenn <em>Einstellungen → SFTP-Manager</em> mehr erlaubt, damit das Terminal auf derselben Sitzung reaktionsfähig bleibt. Das Schließen des Tabs schließt nie das Terminal. Endet die Sitzung des Terminals, wird der Bereich geschlossen oder läuft darin inzwischen ein anderer Benutzer oder Host, zeigt der Tab <strong>Getrennt</strong> mit <strong>Neu verbinden</strong>, das die Sitzung des Bereichs wieder verwendet, sobald sie zurück ist, und <strong>Eigene Anmeldung</strong>, das den Tab schließt und einen Tab mit eigener Anmeldung für die Verbindung des Bereichs öffnet.</p>
+<p>Hat der Bereich keine SSH-Sitzung, die er teilen kann (ein Mosh- oder lokaler Shell-Tab), oder verweigert der Server oder ein Proxy SFTP darüber, öffnet korTTY stattdessen wie bisher einen SFTP-Tab mit eigener Anmeldung für die Verbindung des Bereichs. Ein gespeichertes <a href="projects.html#sftp-manager-tabs">Projekt</a> stellt einen solchen Tab als gewöhnlichen SFTP-Tab mit eigener Anmeldung wieder her, in den Ordnern, in denen er sich befand.</p>
+<h2 id="schnittstelle">Schnittstelle<a class="headerlink" href="#schnittstelle" title="Permanent link">&para;</a></h2>
+<p>Der SFTP-Manager verwendet ein <strong>Zwei-Panel-Layout</strong> für eine einfache Dateiverwaltung nebeneinander:</p>
+<table>
+<thead>
+<tr>
+<th>Linker Bereich (lokale)</th>
+<th>Rechter Bereich (fern)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lokale Dateien durchstöbern</td>
+<td>Ferndateien durchstöbern</td>
+</tr>
+<tr>
+<td>Auf Remote-System hochladen</td>
+<td>Auf lokales System herunterladen</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sortierbare-spalten">Sortierbare Spalten<a class="headerlink" href="#sortierbare-spalten" title="Permanent link">&para;</a></h3>
+<p>Beide Paneele zeigen die gleichen Spalten an, von denen alle durch Klicken auf den Spaltenkopf sortierbar sind:</p>
+<table>
+<thead>
+<tr>
+<th>Spalte</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Name</strong></td>
+<td>Datei oder Verzeichnisaname</td>
+</tr>
+<tr>
+<td><strong>Typ</strong></td>
+<td>Verzeichnis (📁) oder Datei (📄) Hinweis</td>
+</tr>
+<tr>
+<td><strong>Größe</strong></td>
+<td>Dateigröße im menschenlesbaren Format (Verzeichnisse zeigen —); die Sortierung verwendet die exakte Byteanzahl, mit Ordnern zuerst</td>
+</tr>
+<tr>
+<td><strong>Datum</strong></td>
+<td>Letzte Änderungsdatum und -zeit</td>
+</tr>
+<tr>
+<td><strong>Benutzer</strong></td>
+<td>Eigentümername (lokale Umgebung: aus der Dateisystem; remote: aus SFTP oder UID)</td>
+</tr>
+<tr>
+<td><strong>Gruppe</strong></td>
+<td>Gruppenname (lokal: vom Dateisystem; remote: von SFTP oder GID)</td>
+</tr>
+<tr>
+<td><strong>Berechtigungen</strong></td>
+<td>Berechtigungen im Unix-Stil (z. B. <code>rwxr-xr-x</code>)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="standardsortierreihenfolge">Standardsortierreihenfolge<a class="headerlink" href="#standardsortierreihenfolge" title="Permanent link">&para;</a></h2>
+<p>Standardmäßig werden Dateien in der folgenden Reihenfolge nach der Spalte <strong>Typ</strong> sortiert:</p>
+<ol>
+<li><strong>Übergeordnetes Verzeichnis</strong> (<code>..</code>) – immer oben</li>
+<li><strong>Verzeichnisse, die mit „.“</strong> beginnen (z. B. <code>.git</code>, <code>.config</code>) – alphabetisch</li>
+<li><strong>Andere Verzeichnisse</strong> – alphabetisch</li>
+<li><strong>Dateien, die mit „.“</strong> beginnen (z. B. <code>.bashrc</code>) – alphabetisch</li>
+<li><strong>Alle anderen Dateien</strong> – alphabetisch</li>
+</ol>
+<p>Klicken Sie auf eine beliebige Spaltenüberschrift, um nach dieser Spalte zu sortieren. Durch erneutes Klicken der Typ-Spalte wird zwischen aufsteigender und absteigender Reihenfolge umgeschaltet. Das übergeordnete Verzeichnis (<code>..</code>) bleibt immer oben, unabhängig von Spalte und Richtung der Sortierung.</p>
+<h2 id="durchsuchen-des-servers">Durchsuchen des Servers<a class="headerlink" href="#durchsuchen-des-servers" title="Permanent link">&para;</a></h2>
+<p>Remote-Ordner werden im Hintergrund gelesen, sodass das Fenster auch bei Ordnern mit Zehntausenden von Einträgen reaktionsfähig bleibt. Während ein Ordner geladen wird, überdeckt ein <strong>Wird geladen…</strong>-Indikator die Remote-Liste. Das Pfadfeld und die Liste wechseln erst in den neuen Ordner, wenn er gelesen wurde; falls das Lesen fehlschlägt (Ordner existiert nicht oder Sie haben keine Rechte), wird ein Fehler angezeigt und der Ordner, in dem Sie sich befanden, bleibt bestehen.</p>
+<p>Geben Sie einen Pfad in das Remote-<strong>Pfad</strong>-Feld ein und drücken <span class="keys"><kbd class="key-enter">Enter</kbd></span>, um dorthin zu gelangen. <code>~</code> und <code>~/…</code> stehen für Ihr Login-Verzeichnis auf dem Server, und ein Pfad ohne führendes <code>/</code> wird relativ zum angezeigten Ordner interpretiert; <code>..</code> und <code>.</code> werden aufgelöst, sodass <code>../logs</code> den Geschwisterordner <code>logs</code> öffnet.</p>
+<h2 id="verbindung-verloren">Verbindung verloren<a class="headerlink" href="#verbindung-verloren" title="Permanent link">&para;</a></h2>
+<p>Wenn der Server oder das Netzwerk die Sitzung beendet, zeigt die Statusleiste <strong>Getrennt von</strong> <em>host</em> mit einer Schaltfläche <strong>Neu verbinden</strong>, und die Remote-Aktionen sind deaktiviert. Wenn die Verbindung ohne Mitteilung des Servers abbricht, führt die erste Remote-Aktion, die Sie versuchen (Refresh, Upload, Download usw.), wieder denselben Zustand aus, anstatt nichts zu tun.</p>
+<p><strong>Neu verbinden</strong> öffnet eine neue Sitzung mit denselben Anmeldeinformationen und listet den Ordner auf, in dem Sie sich befanden. Der Hostschlüssel des Servers wird wie bei der ersten Verbindung geprüft: ein unveränderter Schlüssel verbindet ohne Aufforderung, ein geänderter Schlüssel bleibt blockiert.</p>
+<h2 id="wieder-offnen-mit-einem-projekt">Wieder öffnen mit einem Projekt<a class="headerlink" href="#wieder-offnen-mit-einem-projekt" title="Permanent link">&para;</a></h2>
+<p>SFTP-Manager-Tabs werden mit einem <a href="projects.html#sftp-manager-tabs">Projekt</a> gespeichert. Das Öffnen des Projekts mit <strong>Automatisches Wiederverbinden</strong> verbindet jeden Tab erneut mit den lokalen und entfernten Ordnern, in denen er sich zum Zeitpunkt des Speicherns befand. Ein Ordner, der nicht mehr existiert, öffnet stattdessen den Home-Ordner; auf der entfernten Seite sagt die Statusleiste dies an.</p>
+<h2 id="dateioperationen">Dateioperationen<a class="headerlink" href="#dateioperationen" title="Permanent link">&para;</a></h2>
+<p>Jedes Panel hat seine eigene Gruppe von Toolbar-Buttons unter den Listen (lokal links, remote rechts) und ein Rechtsklick-Kontextmenü:</p>
+<table>
+<thead>
+<tr>
+<th>Betrieb</th>
+<th>Wie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hochladen</strong></td>
+<td>Wählen Sie lokale Dateien oder Ordner aus und klicken Sie auf <strong>Hochladen</strong>, oder ziehen Sie sie in das Remote-Panel; siehe <a href="#ziehen-und-ablegen">Ziehen und Ablegen</a></td>
+</tr>
+<tr>
+<td><strong>Herunterladen</strong></td>
+<td>Wählen Sie Remote-Dateien oder Ordner aus und klicken Sie auf <strong>Herunterladen</strong>, oder ziehen Sie sie in das lokale Panel</td>
+</tr>
+<tr>
+<td><strong>Umbenennen</strong></td>
+<td>Wählen Sie einen Eintrag aus und drücken Sie <span class="keys"><kbd class="key-f2">F2</kbd></span>, oder wählen Sie <strong>Umbenennen</strong> im Kontextmenü. Ein vorhandener Eintrag mit dem neuen Namen wird niemals ersetzt; stattdessen erhalten Sie einen Fehler</td>
+</tr>
+<tr>
+<td><strong>Neuer Ordner</strong></td>
+<td>Klicken Sie auf die Ordner-Schaltfläche neben <strong>Aktualisieren</strong>, oder wählen Sie <strong>Neuer Ordner</strong> im Kontextmenü, in beiden Panels. Der Ordner wird im angezeigten Verzeichnis erstellt; ein bereits vorhandener Name ist ein Fehler</td>
+</tr>
+<tr>
+<td><strong>Löschen</strong></td>
+<td>Wählen Sie Einträge aus und klicken Sie auf <strong>Löschen</strong>, wählen Sie <strong>Löschen</strong> im Kontextmenü, oder drücken Sie <span class="keys"><kbd class="key-delete">Del</kbd></span> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-backspace">Backspace</kbd></span>, auf macOS <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-backspace">Backspace</kbd></span>). Sie bestätigen vor dem Löschen von etwas</td>
+</tr>
+<tr>
+<td><strong>Kopieren</strong></td>
+<td><strong>Kopieren nach…</strong> im Kontextmenü kopiert innerhalb derselben Seite: lokal in ein von Ihnen ausgewähltes Verzeichnis (im Hintergrund), remote in einen von Ihnen eingegebenen Pfad. Ein Remote-Verzeichnis, das an einer Stelle kopiert wird, an der bereits ein Verzeichnis mit diesem Namen existiert, wird in dieses zusammengeführt; das Kopieren eines Elements auf sich selbst oder in einen seiner eigenen Unterordner wird mit einem Fehler abgelehnt.</td>
+</tr>
+<tr>
+<td><strong>Im Snippet-Editor bearbeiten</strong></td>
+<td>Wählen Sie genau eine lokale oder Remote-Datei aus und verwenden Sie dann das Symbolleistenmenü <em>Bearbeiten</em> oder das Kontextmenü mit der rechten Maustaste</td>
+</tr>
+<tr>
+<td><strong>Archivieren</strong></td>
+<td><strong>Archivieren</strong> in der Remote-Werkzeugleiste, oder <strong>Archivieren...</strong> im jeweiligen Kontextmenü, packt die Auswahl als ZIP, TAR.BZ2 oder 7z, je nach verfügbaren Tools auf dieser Seite. Ein lokales Archiv kann ein Passwort haben, ein Archiv auf dem Server nicht, weil <code>zip</code> und <code>7z</code> das Passwort auf der Befehlszeile des Servers bräuchten, wo andere Benutzer des Servers es lesen können</td>
+</tr>
+<tr>
+<td><strong>Hier entpacken</strong></td>
+<td>Klicken Sie mit der rechten Maustaste auf ein Archiv auf dem Server (<code>.zip</code>, <code>.tar</code>, <code>.tar.gz</code>/<code>.tgz</code>, <code>.tar.bz2</code>, <code>.tar.xz</code> oder <code>.7z</code>) und wählen Sie <strong>Hier entpacken...</strong>. Es wird auf dem Server in einen neuen Ordner daneben entpackt; siehe <a href="#archive-auf-dem-server-entpacken">Archive auf dem Server entpacken</a></td>
+</tr>
+<tr>
+<td><strong>Besitzer/Berechtigungen setzen</strong></td>
+<td>Wählen Sie Einträge aus, klicken dann auf <strong>Rechte</strong> oder wählen <strong>Besitzer/Berechtigungen setzen...</strong> im Kontextmenü. Separate Felder für Benutzer, Gruppe und oktale Berechtigungen (z.B., 755)</td>
+</tr>
+</tbody>
+</table>
+<p>Ein Name für <strong>Umbenennen</strong> oder <strong>Neuer Ordner</strong> muss ein einzelnes Element im angezeigten Ordner sein: er darf nicht leer, <code>.</code> oder <code>..</code> sein, und darf <code>/</code> oder <code>\</code> nicht enthalten. Das Dialogfeld bleibt mit einem Fehler offen, bis der Name nutzbar ist.</p>
+<h3 id="archive-auf-dem-server-entpacken">Archive auf dem Server entpacken<a class="headerlink" href="#archive-auf-dem-server-entpacken" title="Permanent link">&para;</a></h3>
+<p><strong>Hier entpacken...</strong> im Remote-Kontextmenü entpackt das ausgewählte Archiv direkt auf dem Server, sodass nichts heruntergeladen oder hochgeladen wird. Nach Ihrer Bestätigung zeigt ein Fortschrittsfenster jeden Schritt an, und <strong>Abbrechen</strong> stoppt das Entpacken und entfernt, was bereits entpackt wurde.</p>
+<ul>
+<li><strong>Immer ein neuer Ordner</strong> — die Dateien landen in einem neuen Ordner neben dem Archiv, der nach ihm ohne Dateiendung benannt ist (aus <code>site-1.2.tar.gz</code> wird <code>site-1.2</code>). Ist dieser Name vergeben, verwendet korTTY <code>site-1.2 (1)</code>, <code>site-1.2 (2)</code> und so weiter; eine vorhandene Datei oder ein vorhandener Ordner wird nie überschrieben oder zusammengeführt.</li>
+<li><strong>Geprüft, bevor etwas geschrieben wird</strong> — korTTY listet zuerst den Inhalt des Archivs auf und lehnt es als Ganzes ab, wenn ein Eintrag außerhalb des neuen Ordners landen würde: ein absoluter Pfad, <code>..</code>, das über den Ordner hinausführt, ein Laufwerksbuchstabe wie <code>C:</code>, ein Name mit Zeilenumbruch, eine Gerätedatei oder ein Link, dessen Ziel außerhalb liegt. In diesem Fall wird nichts geschrieben.</li>
+<li><strong>Nach dem Entpacken erneut geprüft</strong> — das Archiv wird in einen versteckten Staging-Ordner (<code>.kortty-extract.</code> plus zufällige Zeichen) entpackt, den nur Sie öffnen können, ohne die im Archiv gespeicherten Eigentümer zu übernehmen. korTTY prüft dann jeden symbolischen Link darin; zeigt einer aus dem Ordner hinaus, wird der Staging-Ordner gelöscht und Sie erhalten einen Fehler. Nur ein sauberes Ergebnis wird in den neuen Ordner umbenannt, sodass dieser vollständig oder gar nicht erscheint.</li>
+<li><strong>Werkzeuge auf dem Server</strong> — ZIP benötigt <code>unzip</code>, die tar-Formate <code>tar</code> und 7z <code>7z</code> oder <code>7za</code>. Fehlt das Werkzeug, nennt die Fehlermeldung es. Mit einem anderen tar als GNU tar (zum Beispiel BusyBox) werden Archive mit Hardlinks abgelehnt, weil deren Ziele nicht geprüft werden können.</li>
+<li><strong>Keine Passwörter</strong> — passwortgeschützte Archive werden mit einer Meldung abgelehnt: Die Werkzeuge bräuchten das Passwort auf der Befehlszeile des Servers, wo andere Benutzer des Servers es lesen können.</li>
+</ul>
+<h3 id="ziehen-und-ablegen">Ziehen und Ablegen<a class="headerlink" href="#ziehen-und-ablegen" title="Permanent link">&para;</a></h3>
+<p>Sie können Einträge zwischen den beiden Panels ziehen, von Ihrem Desktop in den SFTP-Manager und in kleinen Mengen vom Server auf Ihren Desktop. Während Sie ziehen, wird das Panel oder die Ordnerzeile, in die der Drop erfolgen würde, hervorgehoben; ein Drop auf eine Ordnerzeile legt die Einträge in diesen Ordner, ein Drop an einer anderen Stelle in den angezeigten Ordner.</p>
+<table>
+<thead>
+<tr>
+<th>Ziehen</th>
+<th>Ergebnis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lokale Zeilen auf das Remote-Panel</td>
+<td>Hochgeladen, wie bei <strong>Hochladen</strong>: Ein Ordner wird zusammengeführt, und eine gleichnamige Datei auf dem Server wird nicht ohne Nachfrage ersetzt (siehe <a href="#wenn-eine-datei-bereits-existiert">Wenn eine Datei bereits existiert</a>)</td>
+</tr>
+<tr>
+<td>Dateien aus Finder, Explorer oder der Dateibrowser-Seitenleiste auf das Remote-Panel</td>
+<td>hochgeladen – dieselbe Methode</td>
+</tr>
+<tr>
+<td>Remote-Zeilen auf das lokale Panel</td>
+<td>Im Hintergrund heruntergeladen, wie bei <strong>Herunterladen</strong>: einschließlich Ordnern, und eine gleichnamige lokale Datei wird nicht ohne Nachfrage ersetzt</td>
+</tr>
+<tr>
+<td>Dateien aus Finder, Explorer oder der Dateibrowser-Seitenleiste auf das lokale Panel</td>
+<td>Kopiert im Hintergrund; ein bereits vorhandener Name bekommt eine Nummer, wie in <code>report (2).txt</code>, und eine Datei, die auf den Ordner fallen gelassen wird, bleibt unverändert</td>
+</tr>
+<tr>
+<td>Lokale Zeilen auf den Desktop oder ein anderes Programm</td>
+<td>Als die Dateien selbst angeboten</td>
+</tr>
+<tr>
+<td>Remote Zeilen auf den Desktop oder ein anderes Programm</td>
+<td>Nur für maximal 20 Dateien mit insgesamt höchstens 16 MB, keine Ordner</td>
+</tr>
+</tbody>
+</table>
+<p>Ein Drag in dasselbe Panel bewirkt nichts; nutzen Sie dort <strong>Kopieren nach...</strong> oder <strong>Umbenennen</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Ziehen vom Server zum Desktop</p>
+<p>Der Desktop kann nur Dateien übernehmen, die bereits existieren, wenn der Drag beginnt. korTTY lädt daher die gezogenen Remote-Dateien zunächst in einen privaten temporären Ordner, was das Fenster bis zu 5 Sekunden blockieren kann. Ordner, mehr als 20 Dateien, mehr als 16 MB oder ein Download, der länger dauert, können nur innerhalb des Fensters abgelegt werden; die Statusleiste weist darauf hin, und Sie legen sie stattdessen auf dem lokalen Panel ab. Ein Download, der die Zeit überschreitet, stoppt mitten in seiner Datei und löscht, was er geschrieben hat, damit er den temporären Ordner nicht im Hintergrund weiter füllt. Ein Link auf dem Server zählt als die Datei, auf die er zeigt, sodass ein Link zu einer großen Datei ebenfalls nicht dem Desktop angeboten wird. Die temporären Kopien werden gelöscht, wenn Sie den nächsten Drag starten oder den Tab schließen.</p>
+</div>
+<h3 id="tasten">Tasten<a class="headerlink" href="#tasten" title="Permanent link">&para;</a></h3>
+<p>Diese Tasten funktionieren in beiden Panels:</p>
+<table>
+<thead>
+<tr>
+<th>Taste</th>
+<th>Aktion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-f2">F2</kbd></span> (in der Liste)</td>
+<td>Den ausgewählten Eintrag umbenennen</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-delete">Del</kbd></span> oder <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-backspace">Backspace</kbd></span> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-backspace">Backspace</kbd></span> auf macOS, in der Liste)</td>
+<td>Löschen der Auswahl, nach Bestätigung</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-enter">Enter</kbd></span> (im <strong>Pfad</strong> Feld)</td>
+<td>Gehe zum eingegebenen Ordner</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dateien-und-ordner-hochladen">Dateien und Ordner hochladen<a class="headerlink" href="#dateien-und-ordner-hochladen" title="Permanent link">&para;</a></h3>
+<p><strong>Hochladen</strong> kopiert die ausgewählten lokalen Dateien und Ordner in den entfernten Ordner, der angezeigt wurde, als Sie <strong>Hochladen</strong> geklickt haben; das Durchsuchen anderer Orte während es läuft ändert das Ziel nicht. <strong>Hochladen</strong> bleibt deaktiviert, bis der erste entfernte Ordner aufgelistet wurde, weil der Server <code>~</code> selbst nicht erweitert.</p>
+<ul>
+<li><strong>Ein erneut hochgeladener Ordner wird zusammengeführt</strong> mit dem vorhandenen Remote-Ordner: Andere Remote-Dateien bleiben erhalten, und für jede bereits vorhandene Datei fragt korTTY, was geschehen soll (siehe unten).</li>
+<li><strong>Dateien werden gestreamt</strong>, sodass ihre Größe nicht durch den Speicher begrenzt ist; Dateien größer als 2 GB werden wie jede andere hochgeladen.</li>
+<li>Bricht die Verbindung während eines Uploads oder Downloads ab, schlagen die unfertigen Einträge mit <strong>Verbindung verloren</strong> fehl, und es erscheint ein einziger Status <strong>Getrennt</strong> statt eines Fehlerdialogs pro Datei; wählen Sie sie nach <strong>Neu verbinden</strong> in der <a href="#ubertragungsliste">Übertragungsliste</a> aus und klicken Sie auf <strong>Wiederholen</strong>.</li>
+<li><strong>Verlinkten Ordnern wird nicht gefolgt.</strong> Ein symbolischer Link auf eine Datei wird mit dem Inhalt der Datei übertragen; ein Link auf einen Ordner wird übersprungen und in der Zusammenfassung am Ende genannt, sodass eine Link-Schleife eine Übertragung nicht endlos laufen lassen kann.</li>
+<li><strong>Heruntergeladene Namen bleiben im Zielordner.</strong> Ein Servername wie <code>..</code> oder <code>a/b</code> wird abgelehnt. Unter Windows werden außerdem Namen abgelehnt, die Windows für Geräte reserviert (<code>CON</code>, <code>PRN</code>, <code>AUX</code>, <code>NUL</code>, <code>COM1</code> bis <code>COM9</code>, <code>LPT1</code> bis <code>LPT9</code>, auch mit einer Endung wie <code>nul.txt</code>), sowie Namen, die auf einen Punkt oder ein Leerzeichen enden oder <code>:</code> enthalten, weil Windows sie an einer anderen Stelle schreiben oder verändern würde.</li>
+</ul>
+<h3 id="ubertragungsliste">Übertragungsliste<a class="headerlink" href="#ubertragungsliste" title="Permanent link">&para;</a></h3>
+<p>Uploads und Downloads laufen im Hintergrund, bis zu drei Dateien gleichzeitig (<em>Einstellungen → SFTP-Manager → <a href="../reference/settings/sftp.html#ubertragungen">Parallele Übertragungen</a></em>, 1 bis 8), jede über einen eigenen SFTP-Kanal. Die erste Übertragung öffnet die Liste <strong>Übertragungen</strong> am unteren Rand des Tabs; der Pfeil links davon klappt sie auf ihre Kopfzeile zusammen. Jede Zeile ist eine Datei oder ein Ordner, den Sie übertragen haben, mit Richtung, Fortschrittsbalken, bisher übertragenen Bytes, Geschwindigkeit und Restzeit; eine Ordnerzeile fasst die darin enthaltenen Dateien zusammen. Die Statusleiste zeigt, wie viele Dateien aller laufenden Übertragungen fertig sind, und die Gesamtgeschwindigkeit an und meldet <strong>Hochgeladen</strong> oder <strong>Heruntergeladen</strong>, wenn ein Stapel abgeschlossen ist.</p>
+<p><img alt="Übertragungsliste mit einem Ordner-Upload, einer fehlgeschlagenen Datei darin, einem laufenden Download und fertigen Zeilen" src="../../en/assets/screenshots/sftp/sftp-transfer-list.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Schaltfläche</th>
+<th>Aktion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Abbrechen</strong></td>
+<td>Stoppt die ausgewählten Zeilen; eine abgebrochene Datei hinterlässt keine Teildatei, es sei denn, die Einstellungen behalten sie für ein späteres Fortsetzen</td>
+</tr>
+<tr>
+<td><strong>Wiederholen</strong></td>
+<td>Startet die ausgewählten fehlgeschlagenen oder abgebrochenen Zeilen erneut; für einen Ordner nur das, was nicht angekommen ist</td>
+</tr>
+<tr>
+<td><strong>Alle abbrechen</strong></td>
+<td>Stoppt alle Übertragungen, einschließlich einer offenen Frage <strong>Datei existiert bereits</strong></td>
+</tr>
+<tr>
+<td><strong>Fertige entfernen</strong></td>
+<td>Entfernt die Zeilen, die fertig, übersprungen oder abgebrochen sind; fehlgeschlagene Zeilen bleiben für einen neuen Versuch stehen</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Fehler öffnen nicht mehr einen Fehlerdialog pro Datei.</strong> Eine fehlgeschlagene Datei erhält eine eigene rote Zeile (auch wenn sie in einem übertragenen Ordner liegt), der Grund steht in ihrer Spalte <strong>Status</strong>, und sobald der Stapel abgeschlossen ist, listet ein einziges Zusammenfassungsfenster die fehlgeschlagenen Dateien und die verlinkten Ordner auf, denen nicht gefolgt wurde. Die Zusammenfassung blockiert den Tab nicht.</li>
+<li><strong>Die Listen folgen den Übertragungen.</strong> Wenn Dateien in dem Ordner ankommen, den ein Panel anzeigt, wird dieses Panel kurz darauf neu eingelesen; ein Ordner, den Sie inzwischen verlassen haben, nicht.</li>
+<li><strong>Dateien kommen vollständig oder gar nicht an.</strong> Eine Datei wird zuerst als <code>name.kortty-part</code> neben dem Ziel geschrieben und erhält ihren echten Namen erst, wenn sie vollständig ist, sodass eine unterbrochene Übertragung nie eine halb geschriebene Datei unter dem echten Namen hinterlässt. Die einzige Ausnahme ist das Ersetzen einer Serverdatei, die einem anderen Benutzer gehört; sie wird direkt an Ort und Stelle geschrieben (siehe <a href="#wenn-eine-datei-bereits-existiert">Wenn eine Datei bereits existiert</a>).</li>
+<li><strong>Unterbrochene Übertragungen setzen dort fort, wo sie aufgehört haben.</strong> Nach einem Fehler oder einem Verbindungsabbruch setzt <strong>Wiederholen</strong> eine unfertige Datei fort, statt von vorn zu beginnen; siehe <a href="#fortsetzen-unterbrochener-ubertragungen">Fortsetzen unterbrochener Übertragungen</a>.</li>
+<li><strong>Das Schließen des Tabs fragt nach, solange Übertragungen laufen.</strong> Die Schließen-Schaltfläche des Tabs, <em>Datei &gt; Tab schließen</em>, <em>Alle Tabs schließen</em>, das Schließen des Fensters und das Beenden von korTTY fragen zuerst <strong><em>n</em> laufende Übertragungen abbrechen und schließen?</strong>; <strong>Tab geöffnet lassen</strong> ist die Vorgabe und lässt alle Übertragungen weiterlaufen. Das Schließen bricht die nicht abgeschlossenen Übertragungen ab und löscht ihre Teildateien, es sei denn, <em>Einstellungen → SFTP-Manager</em> behält die Teildateien abgebrochener Übertragungen. Bei fertigen oder fehlgeschlagenen Zeilen wird nicht nachgefragt, und das automatische Schließen inaktiver Tabs wartet, bis die Übertragungen abgeschlossen sind.</li>
+<li><strong>Übrig gebliebene Teildateien</strong> werden kursiv und mit einem Tooltip angezeigt. <strong>Übrig gebliebene Teildateien entfernen</strong> am Ende des Kontextmenüs beider Panels löscht nach einer Bestätigung die <code>.kortty-part</code>-Dateien im angezeigten Ordner; Teildateien noch laufender Übertragungen bleiben unberührt.</li>
+</ul>
+<h3 id="fortsetzen-unterbrochener-ubertragungen">Fortsetzen unterbrochener Übertragungen<a class="headerlink" href="#fortsetzen-unterbrochener-ubertragungen" title="Permanent link">&para;</a></h3>
+<p>Eine Übertragung, die fehlschlägt oder deren Verbindung abbricht, behält ihre Datei <code>name.kortty-part</code>, und <strong>Wiederholen</strong> (nach <strong>Neu verbinden</strong>, falls die Verbindung verloren ging) setzt sie dort fort, wo sie aufgehört hat. Während sie fortgesetzt wird, zeigt ihre Spalte <strong>Status</strong> <strong>Wird fortgesetzt</strong> an.</p>
+<ul>
+<li><strong>Nur wenn sich nichts geändert hat.</strong> korTTY merkt sich beim Start der Übertragung Größe und Änderungszeit der Quelle. Ist die Quelle beim erneuten Versuch anders, ist die Teildatei größer als die Quelle oder stimmen die letzten 64 KB vor dem Fortsetzungspunkt nicht mehr mit der Quelle überein, wird die Teildatei entfernt und die Datei von Anfang an kopiert.</li>
+<li><strong>Nur Ihre eigenen Teildateien.</strong> Auf dem Server wird eine Teildatei nur fortgesetzt, wenn sie noch eine normale Datei ist, die dem Benutzer gehört, als der Sie angemeldet sind; in einen Link oder eine Datei eines anderen Benutzers unter diesem Namen wird nie geschrieben. Auch auf Ihrem Computer wird der Teildatei nie über einen Link gefolgt. Eine Teildatei, die korTTY nicht für genau diese Übertragung hinterlassen hat (ein anderer Tab, ein anderer Computer oder ein anderer Benutzer schreibt sie vielleicht gerade), wird weder fortgesetzt noch entfernt: Die Übertragung schlägt mit einer Meldung fehl, die die Datei nennt, und einen echten Rest entfernen Sie mit <strong>Übrig gebliebene Teildateien entfernen</strong>.</li>
+<li><strong>Abbrechen entfernt die Teildatei</strong>, es sei denn, <em>Einstellungen → SFTP-Manager → <a href="../reference/settings/sftp.html#ubertragungen">Teildatei behalten, wenn eine Übertragung abgebrochen wird</a></em> ist eingeschaltet. Ist dort <strong>Unterbrochene Übertragungen fortsetzen</strong> ausgeschaltet, wird jede unfertige Teildatei entfernt, und ein erneuter Versuch beginnt immer von vorn.</li>
+<li><strong>Was korTTY speichert.</strong> Die gemerkten Größen und Zeiten liegen in <code>sftp-resume-index.json</code> im Konfigurationsordner von korTTY und sind nur für Sie lesbar. Ein Eintrag enthält einen Fingerabdruck der Verbindung und der beiden Pfade, nicht die Pfade oder Hostnamen selbst und nie Dateiinhalte; Einträge von Übertragungen, die Sie nie wiederholt haben, werden nach 30 Tagen verworfen. Die Datei ist nicht Teil der Konfigurationssicherung, weil die Teildateien, die sie beschreibt, auf diesem Computer und seinen Servern bleiben.</li>
+<li><strong>Übrig gebliebene Teildateien</strong> von Übertragungen, die Sie aufgegeben haben, entfernen Sie mit <strong>Übrig gebliebene Teildateien entfernen</strong> im Kontextmenü beider Panels (siehe <a href="#ubertragungsliste">Übertragungsliste</a>).</li>
+</ul>
+<h3 id="wenn-eine-datei-bereits-existiert">Wenn eine Datei bereits existiert<a class="headerlink" href="#wenn-eine-datei-bereits-existiert" title="Permanent link">&para;</a></h3>
+<p>Ein Upload oder Download ersetzt nie stillschweigend eine vorhandene Datei. Enthält der Zielordner bereits einen Eintrag mit demselben Namen, zeigt korTTY <strong>Datei existiert bereits</strong> mit Größe und Änderungszeit beider Seiten an (die spätere Zeit ist als neuer markiert) und bietet diese Möglichkeiten:</p>
+<table>
+<thead>
+<tr>
+<th>Auswahl</th>
+<th>Ergebnis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ersetzen</strong></td>
+<td>Die vorhandene Datei wird durch die übertragene ersetzt</td>
+</tr>
+<tr>
+<td><strong>Überspringen</strong></td>
+<td>Der vorhandene Eintrag bleibt unverändert, und dieses Element wird nicht übertragen</td>
+</tr>
+<tr>
+<td><strong>Beide behalten</strong></td>
+<td>Das Element wird unter einem freien Namen mit einer Nummer übertragen, etwa <code>report (1).txt</code>; eine doppelte Endung bleibt zusammen (<code>backup (1).tar.gz</code>), und eine Punktdatei erhält die Nummer am Ende (<code>.bashrc (1)</code>)</td>
+</tr>
+<tr>
+<td><strong>Übertragung abbrechen</strong></td>
+<td>Der Rest des Stapels wird gestoppt; das Schließen des Dialogs oder <span class="keys"><kbd class="key-escape">Esc</kbd></span> bewirkt dasselbe</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Dialog Datei existiert bereits bei einem Upload auf eine ältere Datei" src="../../en/assets/screenshots/sftp/sftp-conflict-dialog.png" /></p>
+<ul>
+<li><strong>Für alle weiteren Konflikte dieser Art übernehmen</strong> beantwortet jeden späteren Konflikt derselben Art in diesem Stapel, ohne erneut zu fragen. Die Arten werden auseinandergehalten: Das Ersetzen aller Dateien ersetzt nie einen symbolischen Link oder einen Ordner.</li>
+<li><strong>Ein Ordner wird mit einem gleichnamigen Ordner zusammengeführt</strong>, ohne nachzufragen; nur die darin enthaltenen Dateien können in Konflikt geraten.</li>
+<li><strong>Ein symbolischer Link wird nie ersetzt.</strong> Ist der vorhandene Eintrag ein Link, werden nur <strong>Überspringen</strong> und <strong>Beide behalten</strong> angeboten, sodass eine Übertragung nicht über einen Link in eine Datei an anderer Stelle schreiben kann.</li>
+<li><strong>Eine Datei und ein Ordner können sich nicht gegenseitig ersetzen.</strong> Ist eine Seite eine Datei und die andere ein Ordner, werden nur <strong>Überspringen</strong> und <strong>Beide behalten</strong> angeboten.</li>
+<li><strong>Eine Datei, die einem anderen Benutzer gehört, wird an Ort und Stelle geschrieben.</strong> Gehört die vorhandene Remote-Datei einem anderen Benutzer, weist der Dialog darauf hin; beim Ersetzen wird direkt in die Datei geschrieben, sodass Eigentümer und Berechtigungen erhalten bleiben.</li>
+<li><strong>Immer nur eine Frage.</strong> Geraten mehrere Dateien eines Stapels gleichzeitig in Konflikt, fragt korTTY nach einer davon und lässt die anderen warten, sodass eine Antwort für alle vor der nächsten Frage vorliegt. Das Schließen des Tabs beantwortet eine offene Frage mit <strong>Übertragung abbrechen</strong>.</li>
+<li><strong>Die Frage lässt sich im Voraus beantworten.</strong> <em>Einstellungen → SFTP-Manager → <a href="../reference/settings/sftp.html#ubertragungen">Wenn das Ziel bereits existiert</a></em> kann vorhandene Dateien ohne Nachfrage überspringen oder überschreiben; bei Links und bei Konflikten zwischen Datei und Ordner wird weiterhin nachgefragt. Eine Organisation kann diese Auswahl für Sie festlegen.</li>
+<li>Auf einem Computer, dessen Datenträger nicht zwischen Groß- und Kleinschreibung unterscheidet (die Vorgabe unter macOS und Windows), gilt ein Name, der sich nur in der Groß-/Kleinschreibung unterscheidet, als derselbe Name, sowohl für die Frage als auch für den nummerierten Namen, den <strong>Beide behalten</strong> wählt.</li>
+</ul>
+<h3 id="wenn-ihre-organisation-die-dateiubertragung-abgeschaltet-hat">Wenn Ihre Organisation die Dateiübertragung abgeschaltet hat<a class="headerlink" href="#wenn-ihre-organisation-die-dateiubertragung-abgeschaltet-hat" title="Permanent link">&para;</a></h3>
+<p>Eine Organisation kann die Dateiübertragung mit ihrer <a href="../reference/enterprise-policy.html#rulefeatures">Unternehmensrichtlinie</a> abschalten (<code>file-transfer = "deny"</code>). Der SFTP-Manager öffnet und durchsucht den Server dann weiterhin, und Umbenennen, Löschen, Berechtigungen, Archive, Suche und Kopieren auf dem Server funktionieren weiter, aber <strong>Hochladen</strong>, <strong>Herunterladen</strong> und <strong>Wiederholen</strong> in der Übertragungsliste sind ausgegraut, das Ziehen von Dateien auf das Server-Panel oder von Serverdateien auf das lokale Panel wird nicht angenommen (der Mauszeiger zeigt kein Kopiersymbol), und Remote-Dateien lassen sich nicht auf den Desktop ziehen. Dateien vom Desktop können weiterhin auf dem lokalen Panel abgelegt werden. Das Ablegen von Dateien auf einem Terminalbereich wird ebenso schon beim Ziehen abgelehnt, und <strong>Als Datei(en) ins Terminal-Verzeichnis kopieren</strong> und <strong>Ordner ins Terminal-Verzeichnis kopieren</strong> im Snippet-Manager sind für SSH-Tabs ausgegraut. <strong>SFTP hier öffnen</strong> öffnet den SFTP-Manager weiterhin zum Durchsuchen. JobScheduler-Jobs, die per SFTP hochladen, herunterladen oder synchronisieren, sowie rsync-Jobs schlagen mit derselben Meldung fehl, ohne eine Verbindung aufzubauen. Befehle wie <code>scp</code>, die in ein Terminal eingegeben werden, sind davon nicht betroffen.</p>
+<h3 id="berechtigungen">Berechtigungen<a class="headerlink" href="#berechtigungen" title="Permanent link">&para;</a></h3>
+<p>Das Berechtigungsfeld von <strong>Besitzer/Berechtigungen setzen</strong> und des Remote-Archivdialogs akzeptiert genau drei Oktalziffern, wie <code>755</code> oder <code>644</code>; lassen Sie es leer (oder unverändert), um den aktuellen Modus beizubehalten. Alles andere lässt das Dialogfeld mit einem Fehler offen, sodass kein anderer Text jemals <code>chmod</code> erreicht.</p>
+<h3 id="bearbeiten-von-dateien-mit-dem-snippet-editor">Bearbeiten von Dateien mit dem Snippet-Editor<a class="headerlink" href="#bearbeiten-von-dateien-mit-dem-snippet-editor" title="Permanent link">&para;</a></h3>
+<p>Die Aktion <strong>Im Snippet-Editor bearbeiten</strong> ist nur für eine einzelne ausgewählte Datei aktiviert. Es ist deaktiviert für:</p>
+<ul>
+<li>Ordner</li>
+<li>Der Eintrag im übergeordneten Verzeichnis (<code>..</code>)</li>
+<li>Mehrfachauswahl</li>
+</ul>
+<p>Lokale Dateien werden direkt aus dem lokalen Dateisystem gelesen; Remote-Dateien werden über die aktive SFTP-Sitzung in den Editor heruntergeladen.</p>
+<p>Wenn die Datei im Snippet-Editor geöffnet wird, bleibt die vollständige Symbolleiste verfügbar, einschließlich:</p>
+<ul>
+<li>Formatierung und Syntaxprüfung</li>
+<li>Editor-Profile und Styling</li>
+<li>Zeilennummern und Zeilenumbruch</li>
+<li>Konfigurierte KI-Aktionen</li>
+</ul>
+<p>Die Dateimodus-Schaltflächen bieten folgende Speicheroptionen:</p>
+<ul>
+<li><strong>Datei überschreiben</strong> – schreibt den aktuellen Editorinhalt zurück in die ursprüngliche lokale oder Remote-Datei</li>
+<li><strong>Speichern unter...</strong> – schreibt eine neue lokale Datei über eine Dateiauswahl oder fordert für Remote-Dateien zur Eingabe eines neuen Dateinamens im selben Remote-Verzeichnis auf</li>
+<li><strong>Als Snippet speichern</strong> – speichert den aktuellen Inhalt als neues Snippet-Manager-Snippet, ohne die Quelldatei als gespeichert zu markieren</li>
+</ul>
+<p>Eine Organisation kann das Bearbeiten von Serverdateien mit dem Schlüssel <code>load-into-snippet-editor</code> ihrer <a href="../reference/enterprise-policy.html">Unternehmensrichtlinie</a> einschränken. Mit <code>read-only</code> öffnen sich Remote-Dateien weiterhin im Snippet-Editor und können als Snippet gespeichert werden, aber <strong>Datei überschreiben</strong> und <strong>Speichern unter...</strong> sind gesperrt, und ihr Tooltip nennt die Richtlinie. Mit <code>deny</code> sind <strong>Im Snippet-Editor bearbeiten</strong> und <strong>Bild öffnen</strong> für Remote-Dateien deaktiviert. Lokale Dateien im linken Panel liegen auf Ihrem eigenen Computer und bleiben in jedem Fall bearbeitbar.</p>
+<p><img alt="SFTP dual-panel file manager" src="../../en/assets/screenshots/sftp/sftp-manager.png" /></p>
+<h3 id="im-eigenen-editor-bearbeiten">Im eigenen Editor bearbeiten<a class="headerlink" href="#im-eigenen-editor-bearbeiten" title="Permanent link">&para;</a></h3>
+<p><strong>In externem Editor bearbeiten</strong> (im Rechtsklickmenü einer Serverdatei und im Remote-Menü <strong>Bearbeiten</strong>) öffnet die ausgewählte Serverdatei in Ihrem eigenen Texteditor und kopiert jedes Speichern zurück auf den Server. Den Editor wählen Sie unter <a href="../reference/settings/sftp.html#externer-editor"><em>Einstellungen → SFTP-Manager → Externer Editor</em></a>; ist keiner festgelegt, öffnet sich die Datei als Text im Editor des Systems.</p>
+<ul>
+<li><strong>Lokale Kopie</strong> — die Datei wird in einen privaten Ordner namens <code>kortty-remote-edit-…</code> im temporären Ordner des Systems heruntergeladen, den nur Sie öffnen können, und zwar unter einem bereinigten Namen: Andere Zeichen als Buchstaben, Ziffern, <code>.</code>, <code>_</code>, <code>-</code> und Leerzeichen werden zu <code>_</code>, und Windows-Gerätenamen wie <code>CON</code> erhalten ein vorangestelltes <code>_</code>. Einem symbolischen Link wird einmal gefolgt, und bearbeitet wird die Datei, auf die er zeigt.</li>
+<li><strong>Automatischer Upload</strong> — korTTY prüft die Kopie jede Sekunde. Etwa eine Sekunde nach dem Speichern wird der neue Inhalt hochgeladen, und die Statusleiste meldet <strong>hochgeladen</strong> mit dem Dateinamen; erneutes Speichern desselben Inhalts lädt nichts hoch. Der Upload funktioniert wie jeder andere: über eine <code>.kortty-part</code>-Datei, die die Berechtigungen der Datei beibehält, oder direkt an Ort und Stelle geschrieben, wenn die Datei einem anderen Benutzer gehört, sodass ihr Eigentümer erhalten bleibt.</li>
+<li><strong>Bearbeitete Serverdateien</strong> — die Liste unter der Übertragungsliste zeigt jede bearbeitete Datei, ob sie auf ein Speichern wartet, gerade hochlädt oder hochgeladen wurde (mit Uhrzeit), und bietet <strong>Jetzt hochladen</strong> für Editoren, deren Speichern nicht erkannt wird, sowie <strong>Stoppen</strong>.</li>
+<li><strong>Konflikte</strong> — vor jedem Upload prüft korTTY, ob die Serverdatei noch die ist, die es heruntergeladen hat (Größe, Zeit, Eigentümer und bis 10 MB auch der Inhalt). Hat jemand anderes sie geändert oder gelöscht, fragt es nach: <strong>Serverdatei überschreiben</strong>, <strong>Lokale Kopie speichern unter...</strong> (behält Ihre Version auf diesem Computer und beendet die Beobachtung), <strong>Beobachten beenden</strong> oder <strong>Später entscheiden</strong> (beobachtet weiter; hochgeladen wird erst beim nächsten Speichern oder mit <strong>Jetzt hochladen</strong>).</li>
+<li><strong>Aufräumen</strong> — <strong>Stoppen</strong>, das Schließen des SFTP-Tabs und das Beenden von korTTY löschen die lokale Kopie. Geht die Verbindung verloren, bevor Ihr letztes Speichern hochgeladen wurde, bietet korTTY zuerst <strong>Kopie speichern unter...</strong> an. Ordner, die ein Absturz hinterlassen hat, werden beim nächsten Start entfernt, sobald sie einen Tag alt sind.</li>
+</ul>
+<p>Der Editor wird immer direkt gestartet, nie über eine Shell oder als Standardanwendung der Datei, sodass ein heruntergeladenes Skript nie ausgeführt wird. Mit <code>load-into-snippet-editor = "read-only"</code> in der <a href="../reference/enterprise-policy.html">Unternehmensrichtlinie</a> öffnet sich die Datei, aber gespeicherte Änderungen bleiben auf Ihrem Computer, und die Liste weist darauf hin; <code>load-into-snippet-editor = "deny"</code> oder <code>file-transfer = "deny"</code> graut <strong>In externem Editor bearbeiten</strong> aus.</p>
+<h3 id="als-root-bearbeiten">Als root bearbeiten<a class="headerlink" href="#als-root-bearbeiten" title="Permanent link">&para;</a></h3>
+<p><strong>Öffnen mit → Als root bearbeiten (sudo)...</strong> (im Rechtsklickmenü einer Serverdatei, sowie <strong>Als root bearbeiten (sudo)...</strong> im Remote-Menü <strong>Bearbeiten</strong>) öffnet eine Datei, die nur root ändern darf, etwa eine Konfigurationsdatei unter <code>/etc</code>, in Ihrem eigenen Editor, genauso wie unter <a href="#im-eigenen-editor-bearbeiten">Im eigenen Editor bearbeiten</a>. Die Zeile in <strong>Bearbeitete Serverdateien</strong> trägt ein <strong>sudo</strong>-Badge.</p>
+<p><img alt="Als root bearbeiten: mit sudo cat lesen, lokal bearbeiten, jedes Speichern über stdin in einen root gehörenden Staging-Ordner senden, prüfen, an Ort und Stelle schreiben, aufräumen" src="../assets/diagrams/sftp-sudo-edit-flow.svg" /></p>
+<ul>
+<li><strong>Passwort</strong> — korTTY versucht zuerst <code>sudo -n</code>, sodass mit <code>NOPASSWD</code> oder einem noch gültigen sudo-Ticket nichts abgefragt wird. Andernfalls fragt es in einem maskierten Dialog nach Ihrem Passwort. Hat der <a href="jobscheduler.html">JobScheduler</a> für den Server oder dessen Gruppe ein sudo-Passwort gespeichert, bietet der Dialog an, es ab jetzt für diesen Server zu verwenden; ohne diese Wahl verwendet korTTY es nie, und wenn Sie das Kästchen später abwählen, wird sie zurückgenommen. Das Passwort wird nur so lange aufbewahrt, wie die Datei bearbeitet wird, nur dann an sudo übergeben, wenn sudo tatsächlich danach fragt, und beim Stoppen gelöscht. Es erscheint nie in einer Befehlszeile, im Log, in einer Fehlermeldung oder im Sitzungsjournal.</li>
+<li><strong>Lesen</strong> — die Datei wird mit <code>sudo cat</code> direkt in die private lokale Kopie gelesen; dafür wird auf dem Server nichts geschrieben.</li>
+<li><strong>Speichern</strong> — jedes Speichern wird über die Verbindung auf den Server übertragen, in einen Staging-Ordner, den root anlegt und besitzt, und erst wenn Größe und SHA-256 übereinstimmen, wird es in die Datei selbst geschrieben. Die Datei behält Inode, Eigentümer, Berechtigungen, ACLs und SELinux-Label, und eine abgebrochene Übertragung lässt sie nie halb geschrieben zurück. Der Staging-Ordner wird in jedem Fall entfernt. Vor jedem Speichern liest korTTY die Datei erneut als root; hat jemand anderes sie inzwischen geändert, erscheint dieselbe Konfliktfrage wie oben.</li>
+<li><strong>Links</strong> — ist der Pfad ein symbolischer Link oder führt er durch einen Ordner, der einer ist, zeigt korTTY an, wo die Datei wirklich liegt, und bearbeitet sie dort erst nach Ihrer Bestätigung. Unmittelbar vor jedem Lesen und Schreiben prüft root erneut, dass die Datei kein Link ist und ihr Ordner noch derselbe reale Ordner ist.</li>
+<li><strong>Abgelehnt</strong> — eine Datei in einem Ordner, in den Sie ohne sudo schreiben können, oder irgendwo unterhalb eines solchen Ordners, wird nicht als root bearbeitet, weil alles, was unter Ihrem Benutzer läuft, die Datei oder einen Ordner auf dem Weg dorthin zwischenzeitlich ersetzen könnte; die Meldung nennt diesen Ordner, und Sie bearbeiten die Datei normal. Dateien über 64 MB werden ebenfalls abgelehnt.</li>
+<li><strong>Journal</strong> — zeichnet ein Terminal auf derselben Verbindung ein <a href="session-journal.html">Sitzungsjournal</a> auf, erhält es eine Zeile mit <code>sudo-edit</code> und dem Pfad, nie den Inhalt.</li>
+<li><strong>Was der Server braucht</strong> — <code>sudo</code>, eine POSIX-<code>sh</code> mit <code>mktemp</code>, <code>cat</code> und <code>stat</code> sowie <code>sha256sum</code> oder <code>shasum</code> für die Inhaltsprüfung. Ohne eines der beiden Hash-Werkzeuge vergleicht korTTY vor dem Schreiben weiterhin die Größe, kann aber den Inhalt nicht vergleichen.</li>
+<li><strong>Server mit <code>requiretty</code></strong> — enthält die sudo-Konfiguration des Servers <code>Defaults requiretty</code>, verweigert sudo die Ausführung ohne Terminal, und korTTY meldet <strong>sudo verlangt auf diesem Server ein Terminal (requiretty), und korTTY führt sudo nie mit einem Terminal aus</strong>. korTTY umgeht das nicht, indem es ein Terminal öffnet: Ein Terminal verändert die durchlaufenden Bytes (Zeilenenden, Steuerzeichen) und gibt das Gesendete als Echo zurück, sodass weder die Datei noch das Passwort unverändert und ungesehen ankämen. Ein Administrator kann die Regel für Ihr Konto mit einer Zeile wie <code>Defaults:alice !requiretty</code> (bearbeitet mit <code>visudo</code>) aufheben; bis dahin bearbeiten Sie die Datei in einem Terminal-Tab, zum Beispiel mit <code>sudoedit</code>.</li>
+</ul>
+<p>Die <a href="../reference/enterprise-policy.html">Unternehmensrichtlinie</a> kann die Funktion mit <code>sftp-sudo-edit = "deny"</code> abschalten; sie ist außerdem ausgegraut, solange <code>file-transfer</code> verweigert wird oder <code>load-into-snippet-editor</code> nicht <code>allow</code> ist.</p>
+<h2 id="suche">Suche<a class="headerlink" href="#suche" title="Permanent link">&para;</a></h2>
+<p>Das Suchfeld über jeder Liste filtert den angezeigten Ordner während der Eingabe, ohne ihn zu verlassen; der übergeordnete Eintrag <code>..</code> bleibt sichtbar. korTTY bewertet die Platzhalter selbst, gleichartig für lokale und entfernte Namen. Ein Muster mit einem Platzhalter muss den gesamten Namen entsprechen, ohne Groß-/Kleinschreibung:</p>
+<table>
+<thead>
+<tr>
+<th>Platzhalter</th>
+<th>Trifft auf</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*</code></td>
+<td>Beliebig viele Zeichen</td>
+<td><code>*.log</code> findet alle Logdateien, <code>backup*</code> alle Namen beginnend mit "backup"</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>Genau ein Zeichen</td>
+<td><code>data?.csv</code> findet <code>data1.csv</code>, nicht <code>data10.csv</code></td>
+</tr>
+<tr>
+<td><code>[abc]</code>, <code>[a-z]</code></td>
+<td>Eines der aufgeführten Zeichen; <code>[!abc]</code> oder <code>[^abc]</code> eines, das nicht aufgeführt ist</td>
+<td><code>[ab]*</code> findet Namen beginnend mit a oder b</td>
+</tr>
+<tr>
+<td><code>{py,sh}</code></td>
+<td>Eine der Alternativen</td>
+<td><code>*.{py,sh}</code> findet Python- und Shell-Dateien</td>
+</tr>
+</tbody>
+</table>
+<p>Text ohne Platzhalter passt überall im Namen, Groß-/Kleinschreibung ignorierend: <code>rep</code> findet <code>Report.txt</code>. Ein Muster, das nicht gelesen werden kann, wie ein nicht geschlossenes <code>[</code>, wird als einfacher Text gesucht.</p>
+<h3 id="unterordner-auf-dem-server-durchsuchen">Unterordner auf dem Server durchsuchen<a class="headerlink" href="#unterordner-auf-dem-server-durchsuchen" title="Permanent link">&para;</a></h3>
+<p>Aktivieren Sie <strong>Unterordner einbeziehen</strong> neben dem Remote-Suchfeld und drücken Sie <span class="keys"><kbd class="key-enter">Enter</kbd></span>, um den angezeigten Remote-Ordner und jeden Ordner darunter zu durchsuchen, mit denselben Platzhaltern und ebenfalls ohne Unterscheidung von Groß- und Kleinschreibung. Die Remote-Liste wechselt zu den Ergebnissen: Jeder Treffer zeigt seinen Pfad unterhalb des durchsuchten Ordners, und die Zeile über der Liste zählt die Treffer, während die Suche läuft, und meldet, wie sie endete, zum Beispiel <em>120 Treffer</em> oder <em>5000 Treffer, am Limit gestoppt</em>. Doppelklicken Sie auf einen Treffer oder wählen Sie ihn aus und drücken Sie <span class="keys"><kbd class="key-enter">Enter</kbd></span>, um seinen Ordner mit dem ausgewählten Treffer zu öffnen. <strong>Zurück zum Ordner</strong> kehrt zur Ordnerliste zurück, und <span class="keys"><kbd class="key-escape">Esc</kbd></span> im Suchfeld stoppt eine laufende Suche (ein zweites <span class="keys"><kbd class="key-escape">Esc</kbd></span> verlässt die Ergebnisse).</p>
+<table>
+<thead>
+<tr>
+<th>Limit</th>
+<th>Wert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ordnerebenen unterhalb des durchsuchten Ordners</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Treffer</td>
+<td>5000</td>
+</tr>
+<tr>
+<td>Zeit</td>
+<td>60 Sekunden</td>
+</tr>
+</tbody>
+</table>
+<p>Wenn der Server korTTY Befehle ausführen lässt und <code>find</code> vorhanden ist, läuft die Suche dort, und nur die passenden Pfade werden über die Verbindung übertragen; andernfalls durchläuft korTTY die Ordner per SFTP, was langsamer ist und nach 200.000 gelesenen Einträgen stoppt. Symbolische Links werden aufgelistet, aber nie verfolgt, sodass ein Link, der im Baum nach oben zurückzeigt, die Suche nicht in eine Schleife schicken kann. <strong>Auf diesem Dateisystem bleiben</strong> (standardmäßig aktiviert) hält <code>find</code> aus anderen eingehängten Dateisystemen wie Netzwerkfreigaben und <code>/proc</code> heraus; der Durchlauf per SFTP kann Dateisysteme nicht unterscheiden. Ordner, die Sie nicht lesen können, werden übersprungen. Die Suche liest auf dem Server nur Namen, daher bleibt sie verfügbar, wenn eine Unternehmensrichtlinie Dateiübertragungen blockiert.</p>
+<hr /></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+<footer class="kt-footer">
+  <div class="kt-footer__line">MIT-lizenziert &middot; Entwickelt von Daniel Mengel</div>
+  <div class="kt-footer__line">korTTY <strong>v2.19.0</strong></div>
+</footer>
+
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../assets/javascripts/kt-zoom.js" defer></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>

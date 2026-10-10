@@ -1,0 +1,1214 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+
+<head>
+        <title>JobScheduler - korTTY Anleitung</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link rel="canonical" href="https://chardonnay.github.io/korTTY/guide/de/features/jobscheduler.html">
+        <meta name="author" content="korTTY">
+        <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+        <link href="../assets/stylesheets/kortty.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="../../en/assets/images/favicon.png">
+
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+            <img class="logo" src="../../en/assets/images/favicon.png" height="150px">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">korTTY Anleitung</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../index.html"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Startseite
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#erste-schritte-collapse" aria-expanded="false">
+                    Erste Schritte
+                </a>
+                <div class="collapse" id="erste-schritte-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/installation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Installation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/building-packages.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KorTTY-Pakete erstellen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/first-launch.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Erster Start – Master-Passwort
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/main-window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Übersicht des Hauptfensters
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#referenz-collapse" aria-expanded="false">
+                    Referenz
+                </a>
+                <div class="collapse" id="referenz-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/menu.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Menüreferenz
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/keyboard-shortcuts.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tastaturkürzel
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/architecture.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architektur
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/config-files.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Konfigurationsdateien
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/enterprise-policy.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Richtlinienkonfiguration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/control-api.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Steuerungs-API
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/cli.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Steuerungs-CLI
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#einstellungen-collapse" aria-expanded="false">
+            Einstellungen
+        </a>
+
+        <div class="collapse" id="einstellungen-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Einstellungsreferenz
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/appearance.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Aussehen, Themen und Schriftart
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/colors.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Farben
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Fenster
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/keyboard.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tastatur
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/resources.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Ressourcen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/logging.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Protokollierung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/export.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Exportieren
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/updates.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Aktualisierungen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherheit
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/language.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprache
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/translation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Übersetzung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/video.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Video
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/ai.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/ai-skills.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Skills
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP-Manager
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/editor.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#snippet-editor-collapse" aria-expanded="false">
+            Snippet-Editor
+        </a>
+
+        <div class="collapse" id="snippet-editor-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/snippet-editor/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet-Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/hardening-options.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Härtungsoptionen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/input-hardening.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Eingabe-Härtung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/language-migration.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprachvereinigung
+        </a>
+    </li>
+            </ul>
+        </div>
+    </li>
+            </ul>
+        </div>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover"
+                    data-bs-toggle="collapse" data-bs-target="#funktionen-collapse" aria-expanded="true">
+                    Funktionen
+                </a>
+                <div class="collapse show" id="funktionen-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="connections.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verbindungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminalsitzungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="shell-integration.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Shell-Integration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal-notifications.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal-Benachrichtigungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="highlighting.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Hervorhebung von Schlüsselwörtern
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="command-palette.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Befehlspalette
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="tunnels.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SSH-Tunnel (Portweiterleitung)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="jump-server.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Jump-Server (Bastion Host)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP-Dateimanager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="file-browser.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Dateibrowser
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="snippets.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet-Manager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="jobscheduler.html"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            JobScheduler
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="projects.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Projekte (Arbeitsbereiche)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="teamwork.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Teamarbeit (gemeinsame Verbindungen)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-assistant.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Assistent
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="local-models.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lokale Modelle (llama.cpp und MLX)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="rag.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            RAG-Wissensspeicher
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-tools.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal-KI-Agent und -Tools
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-swarm.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Schwarm
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherheit – Anmeldeinformationen, Schlüssel und Verschlüsselung
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="session-isolation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sitzungs-Isolation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sichern und wiederherstellen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="recording.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminalaufzeichnung
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="session-journal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sitzungsjournal
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ascii-art.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            ASCII-Art
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal-effect-plugins.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminaleffekt-Plugins
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="coding-agents.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Coding-Agents
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="i18n.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprachen und dynamische Übersetzung
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#über-kortty-collapse" aria-expanded="false">
+                    Über korTTY
+                </a>
+                <div class="collapse" id="über-kortty-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/release-notes.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Versionshinweise
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/feedback.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Feedback und Support
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/anonymous-data.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Anonyme Daten zur Applikationsoptimierung
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="snippets.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="projects.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item">
+
+
+
+
+
+<div role="search" class="search-box kt-search">
+	<form id="rtd-search-form" class="wy-form kt-search-form" action="../search.html" method="get">
+		<input type="text" name="q" id="mkdocs-search-query"
+		class="kt-search-input drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Durchsuchen"
+		autocomplete="off" title="Type search term here" /><button type="button" class="kt-search-clear" hidden
+		        aria-label="Suche zurücksetzen" title="Suche zurücksetzen">&times;</button>
+	</form>
+	<div id="mkdocs-search-results" class="kt-search-suggest"
+	     data-no-results-text="Keine Treffer"
+	     data-preparing-text="Suche wird vorbereitet …"
+	     data-more-text="{n} weitere Treffer anzeigen"></div>
+	<script>
+	  (function () {
+	    var box = document.currentScript.parentNode;
+	    var panel = box.querySelector('.kt-search-suggest');
+	    var input = box.querySelector('#mkdocs-search-query');
+	    var clear = box.querySelector('.kt-search-clear');
+
+	    // Emptying the panel is what hides it (CSS :empty), so closing is just that.
+	    function close () { while (panel.firstChild) { panel.removeChild(panel.firstChild); } }
+	    // The button is only useful once there is something to clear.
+	    function sync () { clear.hidden = !input.value; }
+
+	    input.addEventListener('input', sync);
+	    clear.addEventListener('click', function () {
+	      input.value = '';
+	      sync();
+	      // search/main.js renders on keyup, which a programmatic clear never fires, so
+	      // the panel has to be emptied here or the old hits would outlive the query.
+	      close();
+	      input.focus();
+	    });
+
+	    document.addEventListener('click', function (e) { if (!box.contains(e.target)) { close(); } });
+
+	    // Escape has to be handled on keyUP, and on the document rather than the input.
+	    // search/main.js binds doSearch to the field's keyup, so anything that closed the
+	    // panel on keydown was undone microseconds later by that re-render — which is why
+	    // Escape appeared to do nothing at all. Listening on the document means this runs
+	    // after the field's own handler has already re-rendered, so closing sticks.
+	    // What the panel looked like BEFORE that re-render is the interesting state, so it
+	    // is captured on keydown: the usual two steps, Escape dismisses the suggestions,
+	    // Escape again empties the box.
+	    var panelWasOpen = false;
+	    document.addEventListener('keydown', function (e) {
+	      if (e.key === 'Escape') {
+	        panelWasOpen = !!panel.firstChild;
+	      }
+	    });
+	    document.addEventListener('keyup', function (e) {
+	      if (e.key !== 'Escape') {
+	        return;
+	      }
+	      // Only clear the field while it has focus — Escape elsewhere on the page is not ours.
+	      if (!panelWasOpen && document.activeElement === input && input.value) {
+	        input.value = '';
+	        sync();
+	      }
+	      close();
+	    });
+
+	    sync();  // a ?q= deep link arrives with the field already filled
+	  })();
+	</script>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+<div class="kt-lang-bar">
+  <a class="kt-lang-switch" href="../../en/features/jobscheduler.html"
+     title="English" hreflang="en">EN</a>
+</div>
+
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="jobscheduler">JobScheduler<a class="headerlink" href="#jobscheduler" title="Permanent link">&para;</a></h1>
+<p>Der JobScheduler führt unbeaufsichtigte Hintergrundjobs aus, während KorTTY geöffnet ist. Es ist kein Betriebssystemdienst oder eine aktive SSH-Terminalregisterkarte erforderlich. Jobs werden automatisch nach einem konfigurierten Zeitplan mithilfe gespeicherter SSH-Verbindungen aus dem Connection-Manager ausgeführt.</p>
+<p>Unter macOS und Windows verhindert ein aktivierter Job mit einer zukünftigen Ausführung, dass der Computer in den Systemschlaf wechselt, während korTTY ausgeführt wird, wenn <strong>Konfiguration &gt; Systemschlaf verhindern</strong> aktiviert ist, sodass die geplante Zeit erreichbar bleibt. Der Scheduler verwendet einen einzigen Weckvorgang für den nächsten fälligen Lauf und verfügt über keinen Abfrage-Timer, wenn kein aktivierter zukünftiger Job vorhanden ist. Ohne Terminalverbindung, zukünftiger oder laufender Scheduler-Auftrag oder aktive KI-Anfrage bleibt der Systemschlaf auch dann verfügbar, wenn die Einstellung überprüft wird. Während ein Job ausgeführt wird, fügt macOS korTTY nicht in App Nap ein. Der Display-Ruhezustand ist nicht blockiert. Die Linux-Stromunterdrückung wird noch nicht unterstützt.</p>
+<p>Öffnen Sie es mit <strong>Tools &gt; JobScheduler...</strong>. Der Dialog merkt sich seine Fensterposition und -größe. Die deutsche Benutzeroberfläche übersetzt jetzt alle Beschriftungen, Aktionsnamen, Statuswerte, Validierungsmeldungen, Zielselektoren und unterstützenden Eingabeaufforderungen. Technische Protokoll- und Formatnamen wie SFTP, Rsync, ZIP, TAR, stdout und stderr bleiben unverändert.</p>
+<p><img alt="JobScheduler execution" src="../assets/diagrams/jobscheduler-execution.svg" /></p>
+<h2 id="ubersicht">Übersicht<a class="headerlink" href="#ubersicht" title="Permanent link">&para;</a></h2>
+<p>JobScheduler unterstützt sechs Arten von Aktionen:</p>
+<ul>
+<li><strong>COMMAND</strong> – Führen Sie einen nicht interaktiven Remote-Shell-Befehl aus</li>
+<li><strong>SNIPPET_SCRIPT</strong> – Führen Sie ein SnippetManager-Skript auf dem Ziel mit optionalen Parametern aus</li>
+<li><strong>AI_AGENT</strong> – Führen Sie einen Headless-KI-Agenten mit expliziter automatischer Genehmigung aus</li>
+<li><strong>AI_SWARM</strong> – Senden Sie eine KI-Agent-Aufgabe parallel an alle ausgewählten Ziele und speichern Sie die kombinierte Antwort als gespeicherten Schwarm-Chat</li>
+<li><strong>SFTP</strong> – Hochladen, Herunterladen, Synchronisieren, Löschen, Umbenennen, Verzeichnisse erstellen, Berechtigungen festlegen, Eigentümer ändern, Remote-Kopieren oder Archive erstellen</li>
+<li><strong>RSYNC_SYNC</strong> – Verzeichnisse über externes <code>rsync</code> über SSH synchronisieren</li>
+</ul>
+<h2 id="job-konfiguration">Job-Konfiguration<a class="headerlink" href="#job-konfiguration" title="Permanent link">&para;</a></h2>
+<p>Das JobScheduler-Dialogfeld verfügt über drei Registerkarten: <strong>Job</strong>, <strong>Aktion</strong> und <strong>Journal</strong>.</p>
+<h3 id="job-registerkarte-ziele-und-zeitplane">Job-Registerkarte: Ziele und Zeitpläne<a class="headerlink" href="#job-registerkarte-ziele-und-zeitplane" title="Permanent link">&para;</a></h3>
+<p>Verwenden Sie die Registerkarte <strong>Job</strong>, um zu definieren, wo und wann ein Job ausgeführt wird.</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Aktiviert</strong></td>
+<td>Aktiviert oder deaktiviert den Job.</td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td>Anzeigename, der in der Auftragsliste, im Journal und im Menüleistenstatus angezeigt wird.</td>
+</tr>
+<tr>
+<td><strong>Verbindung</strong></td>
+<td>Öffnet den Connection-Manager-Auswahldialog. Wählen Sie einzelne SSH-TCP-Server, ganze Gruppen oder beides aus. Mosh-Verbindungen werden nicht unterstützt.</td>
+</tr>
+<tr>
+<td><strong>Arbeitsverzeichnis</strong></td>
+<td>Optionales Remote-Verzeichnis. Verwenden Sie <strong>Durchsuchen...</strong>, um eine Verbindung zum Ziel herzustellen und ein Verzeichnis auszuwählen, wenn der Pfad nicht bekannt ist.</td>
+</tr>
+<tr>
+<td><strong>Journal</strong></td>
+<td><code>LIMITED_REDACTED</code> speichert begrenzte, geschwärzte Auszüge. <code>FULL</code> speichert die vollständige Ausgabe/Transkripte (von KorTTY verwaltete Geheimnisse werden weiterhin geschwärzt).</td>
+</tr>
+<tr>
+<td><strong>Aktiv von</strong> / <strong>Aktiv bis</strong></td>
+<td>Optionaler Datumsbereich für den Job. Außerhalb dieses Bereichs wird der Job nicht ausgeführt.</td>
+</tr>
+<tr>
+<td><strong>Fensteranfang</strong> / <strong>Fensterende</strong></td>
+<td>Zeitfenster für den Job (z. B. 09:00 bis 17:00 Uhr). Die Werte werden aus validierten Zeitlisten ausgewählt.</td>
+</tr>
+<tr>
+<td><strong>Intervallminuten</strong></td>
+<td>Optionales wiederholtes Intervall innerhalb des aktiven Fensters. Wenn festgelegt, wird der Job alle N Minuten zwischen Fensterstart und -ende ausgeführt.</td>
+</tr>
+<tr>
+<td><strong>Feste Zeiten</strong></td>
+<td>Optionale explizite Startzeiten (z. B. 09:30, 12:00, 15:30). Die Werte werden aus validierten Zeitlisten ausgewählt.</td>
+</tr>
+<tr>
+<td><strong>Wochentage</strong></td>
+<td>Optionaler Wochentagsfilter. Mit der „Alle“-Taste können Sie alle Wochentage auf einmal auswählen oder löschen.</td>
+</tr>
+</tbody>
+</table>
+<p>Zeitplanberechnungen verwenden die Zeitzone des lokalen Systems. Wenn keine feste Zeit und kein Intervall konfiguriert sind, ist der nächste Lauf der Fensterstart an einem erlaubten Datum.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Scheduler-Jobs unterstützen nur gespeicherte SSH-TCP-Verbindungen. Mosh-Ziele werden als nicht unterstützt blockiert und der Grund wird in das Journal geschrieben.</p>
+</div>
+<h3 id="sitzungsjournal-pro-ausfuhrung">Sitzungsjournal pro Ausführung<a class="headerlink" href="#sitzungsjournal-pro-ausfuhrung" title="Permanent link">&para;</a></h3>
+<p>Der einklappbare <strong>Session-Journal pro Lauf</strong>-Bereich am unteren Rand des <strong>Job</strong>-Tabs zeichnet ein vollständiges <a href="session-journal.html">Session-Journal</a> für jeden Lauf des Jobs auf – ein Journal pro Zielserver, mit jedem Befehl, den der Job gesendet hat, dessen Ausgabe, dem Zusammenfassung des Jobs und dem Ergebnis auf diesem Server. Im Gegensatz zur kurzen Laufhistorie im <strong>Journal</strong>-Tab behält er die komplette Ausgabe bei, kann von der KI zusammengefasst, durchsucht, exportiert und <a href="session-journal.html#die-ki-nach-einem-journal-fragen">gestellte Fragen</a> wie jedes interaktive Journal behandelt werden, und wird automatisch gelöscht, sobald seine Aufbewahrungsfrist endet. SFTP- und rsync-Aktionen senden keinen Shell-Befehl; ihr Journal protokolliert stattdessen die Aktion und deren Ergebnis.</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Für jeden Lauf ein Session-Journal erstellen</strong></td>
+<td>Schaltet die Journale für diesen Job ein.</td>
+</tr>
+<tr>
+<td><strong>KI-Zusammenfassungen</strong></td>
+<td><strong>Aus (nur Protokoll, keine Tokens)</strong>, <strong>Für jeden behaltenen Lauf</strong> (Standard) oder <strong>Nur bei fehlgeschlagenen Läufen</strong>. Die Zusammenfassungen laufen einmal, nachdem der Lauf beendet ist, sodass ein Lauf, dessen Journal verworfen wird, keine Tokens kostet. Sie müssen außerdem KI-Zusammenfassungen in <em>Einstellungen → Logs → Sitzungsjournal</em> aktivieren.</td>
+</tr>
+<tr>
+<td><strong>KI-Profil</strong></td>
+<td>Das Profil für die Zusammenfassungen. <strong>Aus den Einstellungen</strong> verwendet das <em>KI-Profil für Automations-Journale</em> (siehe <a href="session-journal.html#journale-der-automatisierungsdurchlaufe">Session-Journal</a>); wählen Sie ein günstiges oder lokales Profil, um unbeaufsichtigte Läufe erschwinglich zu halten. Die Liste zeigt den Preis pro 1 M Tokens jedes Profils oder anzeigt, dass es lokal läuft.</td>
+</tr>
+<tr>
+<td><strong>Journale behalten</strong></td>
+<td><strong>Immer</strong>, oder <strong>Nur bei Fehler</strong> — das Journal eines erfolgreichen Laufs wird dann sofort gelöscht; fehlgeschlagene, blockierte und abgebrochene Läufe werden behalten. In einem Job mit mehreren Zielen wird die Entscheidung pro Server getroffen.</td>
+</tr>
+<tr>
+<td><strong>Automatisch löschen</strong></td>
+<td>Nach einer bestimmten Anzahl von Tagen (Standard 14), an einem festen Datum oder niemals.</td>
+</tr>
+<tr>
+<td><strong>Max. Läufe</strong> / <strong>Max. Speicher</strong></td>
+<td>Behalten Sie höchstens diese Anzahl Läufe oder diesen Speicherplatz (MB) der Journale dieses Jobs; die ältesten Läufe werden zuerst gelöscht, und der neueste Lauf wird nie gelöscht. <code>0</code> bedeutet unbegrenzt.</td>
+</tr>
+<tr>
+<td><strong>Verwerfen eines Laufs, der identisch mit dem vorherigen ist (Bezug behalten)</strong></td>
+<td>Wenn ein Lauf exakt die gleichen Befehle, Ausgaben und Ergebnisse auf einem Server wie der vorher beibehaltenen Lauf dieses Servers zeichnet, wird sein Journal gelöscht und die Laufhistorie verweist stattdessen auf das frühere Journal („= identisch mit einem früheren Lauf“). Das frühere Journal wird dann mindestens so lange aufbewahrt, wie der neue Lauf gewesen wäre. Standardmäßig aktiviert.</td>
+</tr>
+<tr>
+<td><strong>Gesendete Befehle aufzeichnen</strong></td>
+<td>Aufzeichnet die Befehle zusätzlich zu ihrer Ausgabe.</td>
+</tr>
+</tbody>
+</table>
+<p>Unter den Einstellungen zeigt eine Statuszeile die Tokens und Kosten des letzten Durchlaufs sowie aller gespeicherten Durchläufe an, ebenso den Speicherplatz, den die Journale des Auftrags verbrauchen. Die Auftragsliste verfügt über eine Spalte <strong>Journal-Tokens</strong> mit der Gesamtsumme pro Auftrag.</p>
+<div class="admonition warning">
+<p class="admonition-title">Session-Journale von Automatisierungen können sehr teuer werden</p>
+<p>Schalten Sie das Journal ein — und die KI-Zusammenfassungen ein — zeigt zunächst eine Warnung: Das Journal wird bei jedem Lauf und für jeden Server ohne Beobachtung geschrieben, und mit KI-Zusammenfassungen macht jedes gespeicherte Journal mindestens zwei KI-Aufrufe. Die Warnung schätzt die Tokens pro Lauf (aus den früheren Läufen des Jobs oder eine grobe Obergrenze, wenn es keine gibt), pro Tag und pro Monat aus dem Zeitplan und der Anzahl der Ziele, die Kosten in Geld, wenn das KI-Profil einen <a href="../reference/settings/ai.html#token-quoten-verwaltung">Preis pro 1 M Tokens</a> hat, und was von der Quote des Profils übrig bleibt. Günstigere Optionen: ein lokales KI-Profil, <strong>Nur bei fehlgeschlagenen Läufen</strong>, <strong>Nur bei Fehler</strong>, und das Wegwerfen identischer Läufe. Abbrechen lässt das Journal (oder seine KI-Zusammenfassungen) ausfallen.</p>
+</div>
+<p>Gepinnte Journale (Rechtsklick im Journal-Manager → <strong>Behalten (Pin)</strong>) werden nie automatisch gelöscht. Ein Administrator kann Automationsjournale verbieten oder deren Aufbewahrungszeit, Speicherplatz und Anzahl der Durchläufe begrenzen; die Sektion gibt dann an und ihre Steuerungen sind eingeschränkt — siehe <a href="../reference/enterprise-policy.html#rulesession-journal">Unternehmensrichtlinie</a>.</p>
+<h3 id="host-schlussel-sudo-und-geheimnisse">Host-Schlüssel, Sudo und Geheimnisse<a class="headerlink" href="#host-schlussel-sudo-und-geheimnisse" title="Permanent link">&para;</a></h3>
+<p>Die Überprüfung des Hostschlüssels ist standardmäßig sicher. Wählen Sie vor der unbeaufsichtigten SSH/SFTP/Rsync-Ausführung das Ziel aus und klicken Sie auf <strong>Hostschlüssel bestätigen</strong>, damit KorTTY den angehefteten Fingerabdruck und das öffentliche OpenSSH-Schlüsselmaterial speichert.</p>
+<p>Das Kontrollkästchen <strong>Hostschlüsselüberprüfung für diesen Job deaktivieren</strong> deaktiviert die Hostschlüsselüberprüfung nur für den ausgewählten Job. Dies ist unsicher und sollte nur verwendet werden, wenn das Risiko bekannt ist.</p>
+<p>Sudo-Passwörter können für einen Server oder für eine Servergruppe gespeichert werden:</p>
+<ul>
+<li>Serverspezifische Sudo-Passwörter werden zuerst verwendet.</li>
+<li>Gruppen-Sudo-Passwörter werden als Fallback verwendet.</li>
+<li>Gespeicherte Sudo-Passwörter werden mit dem Master-Passwort verschlüsselt.</li>
+<li>Wenn das Hauptkennwort gesperrt ist und ein Job SSH-, Sudo-, API- oder Archivgeheimnisse benötigt, wird der Job blockiert und protokolliert.</li>
+</ul>
+<p>Bei Rsync-Jobs bedeutet <strong>Sudo verwenden</strong> passwortloses Remote-Sudo nur über <code>sudo -n rsync</code>. Gespeicherte Sudo-Passwörter werden von der aktuellen Rsync-Integration nicht verwendet.</p>
+<h3 id="aktionsregisterkarte-jobtypen-und-konfiguration">Aktionsregisterkarte: Jobtypen und Konfiguration<a class="headerlink" href="#aktionsregisterkarte-jobtypen-und-konfiguration" title="Permanent link">&para;</a></h3>
+<p>Verwenden Sie die Registerkarte <strong>Aktion</strong>, um auszuwählen, was der Job tun soll. Auf der Registerkarte werden nur die Felder angezeigt, die die ausgewählte Aktion verwenden kann. Nicht verwandte Felder werden daher ausgeblendet. Der Aktionsselektor umfasst:</p>
+<table>
+<thead>
+<tr>
+<th>Aktion</th>
+<th>Zweck</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>BEFEHL</strong></td>
+<td>Führen Sie einen nicht interaktiven Remote-Befehl aus.</td>
+</tr>
+<tr>
+<td><strong>SNIPPET_SCRIPT</strong></td>
+<td>Führen Sie ein SnippetManager-Skript auf dem ausgewählten Ziel aus. Das Feld <strong>Snippet-Suche</strong> filtert das Skript-Dropdown nach Snippet-Name, Kategorie, Sprache oder ID; <strong>Snippet-Parameter</strong> übergibt zusätzliche Argumente als einen argv-Wert pro Zeile.</td>
+</tr>
+<tr>
+<td><strong>AI_AGENT</strong></td>
+<td>Führen Sie den Headless-Scheduler-KI-Agenten aus. Die unbeaufsichtigte Befehlsausführung erfordert die Option <strong>Der KI-Agent kann den Server ohne Laufzeitbestätigung ändern</strong> am Job.</td>
+</tr>
+<tr>
+<td><strong>AI_SWARM</strong></td>
+<td>Führen Sie das aus <a href="ai-swarm.html">KI-Schwarm</a> kopflos auf jedes ausgewählte Ziel parallel und fassen die Antworten in einer Vergleichstabelle zusammen.</td>
+</tr>
+<tr>
+<td><strong>SFTP_UPLOAD</strong></td>
+<td>Laden Sie einen lokalen Pfad auf einen Remote-Pfad hoch.</td>
+</tr>
+<tr>
+<td><strong>SFTP_DOWNLOAD</strong></td>
+<td>Laden Sie einen Remote-Pfad auf einen lokalen Pfad herunter.</td>
+</tr>
+<tr>
+<td><strong>SFTP_SYNC</strong></td>
+<td>Lokale und Remote-Pfade in der ausgewählten Upload-/Download-Richtung synchronisieren.</td>
+</tr>
+<tr>
+<td><strong>SFTP_DELETE</strong></td>
+<td>Einen Remote-Pfad löschen.</td>
+</tr>
+<tr>
+<td><strong>SFTP_RENAME</strong></td>
+<td>Benennen Sie einen Remote-Pfad um.</td>
+</tr>
+<tr>
+<td><strong>SFTP_MKDIR</strong></td>
+<td>Erstellen Sie ein Remote-Verzeichnis.</td>
+</tr>
+<tr>
+<td><strong>SFTP_CHMOD</strong></td>
+<td>Berechtigungen ändern. Es werden numerische Modi wie <code>755</code> und symbolische Modi wie <code>u+rw,o-w</code> akzeptiert.</td>
+</tr>
+<tr>
+<td><strong>SFTP_CHOWN</strong></td>
+<td>Besitzer und/oder Gruppe ändern. Besitzer- und Gruppenschaltflächen können das Ziel abfragen und verfügbare Werte anzeigen.</td>
+</tr>
+<tr>
+<td><strong>SFTP_COPY_REMOTE</strong></td>
+<td>Kopieren Sie einen Remote-Pfad in einen anderen Remote-Pfad auf demselben Ziel.</td>
+</tr>
+<tr>
+<td><strong>SFTP_ARCHIVE</strong></td>
+<td>Erstellen Sie ein Remote-Archiv.</td>
+</tr>
+<tr>
+<td><strong>RSYNC_SYNC</strong></td>
+<td>Synchronisieren Sie ein oder mehrere Verzeichnisse über externes <code>rsync</code> über SSH.</td>
+</tr>
+</tbody>
+</table>
+<p>Pfadfelder bieten eine lokale Finder-/Explorer-Auswahl, wenn der Pfad lokal ist, und das Durchsuchen von Remote-Verzeichnissen, wenn der Pfad remote ist. Remote-Browsing erfordert eine ausgewählte Ziel- und Hostschlüsselüberprüfung, es sei denn, der Job deaktiviert die Hostschlüsselüberprüfung ausdrücklich.</p>
+<h4 id="virtuelles-terminal-und-screenshots">Virtuelles Terminal und Screenshots<a class="headerlink" href="#virtuelles-terminal-und-screenshots" title="Permanent link">&para;</a></h4>
+<p><strong>Befehl</strong> und <strong>Snippet-Skript</strong> Aktionen können in einem unsichtbaren <strong>virtuellen Terminal</strong> ausgeführt werden: der Befehl erhält auf dem Server ein Pseudo-Terminal, korTTY interpretiert dessen Ausgabe lokal mit demselben Terminal-Emulator, den ein Terminal-Tab verwendet, und Screenshots dieses Bildschirms werden dem <a href="#sitzungsjournal-pro-ausfuhrung">Sitzungsjournal</a> hinzugefügt. Kein Fenster öffnet sich und kein Terminal, in dem Sie arbeiten, wird berührt, sodass Fortschrittsbalken, <code>top</code> oder KI-Codierungswerkzeuge im nicht-interaktiven Modus (zum Beispiel <code>claude -p …</code> oder <code>codex exec …</code>) im Journal sichtbar werden.</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>In einem unsichtbaren virtuellen Terminal (PTY) ausführen und Screenshots für das Sitzungsjournal aufnehmen</strong></td>
+<td>Schaltet das virtuelle Terminal für diese Aktion ein. Benötigt das Sitzungsjournal des Jobs; ohne es läuft der Befehl wie üblich.</td>
+</tr>
+<tr>
+<td><strong>Größe</strong></td>
+<td>Spalten × Zeilen des virtuellen Terminals (Standard 120 × 40).</td>
+</tr>
+<tr>
+<td><strong>Screenshot alle … s (0 = aus)</strong> / <strong>und bei Bildschirmänderung</strong></td>
+<td>Ein Screenshot wird in festem Intervall (Standard 10 s) und/oder jedes Mal, wenn sich der Bildschirm geändert hat, höchstens alle zwei Sekunden aufgenommen. Ein unveränderter Bildschirm wird nie zweimal erfasst; der letzte Bildschirm wird immer erfasst.</td>
+</tr>
+<tr>
+<td><strong>Max. Screenshots pro Befehl</strong></td>
+<td>Obergrenze pro Befehl, einschließlich des letzten Bildschirms (Standard 30).</td>
+</tr>
+<tr>
+<td><strong>Laufzeit-Limit … s (0 = keins)</strong> / <strong>Erreichen des Limits als Erfolg werten</strong></td>
+<td>Stoppt den Befehl mit Ctrl+C nach dieser Anzahl Sekunden — für Monitore wie <code>top</code>, die nie von selbst beenden. Ohne die zweite Option zählt ein durch das Limit gestoppter Lauf als abgebrochen.</td>
+</tr>
+</tbody>
+</table>
+<p>Die Laufhistorie behält den letzten Bildschirm als Ausgabe bei. Die KI beschreibt die Screenshots im Abschlussdurchlauf, wenn der KI-Modus des Journals angewendet wird (bei jedem gespeicherten Lauf oder nur bei fehlgeschlagenen Läufen), mit dem KI-Profil des Journals – so zählt die Kostenwarnung die Screenshots in ihrer Schätzung.</p>
+<div class="admonition note">
+<p class="admonition-title">Ein Job kann kein Programm ausführen.</p>
+<p>Nichts wird in das Programm eingegeben, außer was der Befehl selbst sendet. Interaktive Programme (Midnight Commander, ein Editor, ein Prompt, der auf eine Antwort wartet) laufen daher nur bis zur Laufzeitbegrenzung – Sie erhalten ihre Screenshots, aber der Job kann sie nicht nutzen. Ein Befehl, der ein gespeichertes sudo-Passwort sendet, läuft immer <strong>ohne</strong> das virtuelle Terminal: ein Passwort, das an ein Pseudo-Terminal gesendet wird, kann auf dem Bildschirm wiedergegeben werden und würde in einem Screenshot landen.</p>
+</div>
+<h4 id="snippet-skriptjobs">Snippet-Skriptjobs<a class="headerlink" href="#snippet-skriptjobs" title="Permanent link">&para;</a></h4>
+<p>Snippet-Skript-Jobs verwenden den ausgewählten Snippet-Manager-Eintrag, ohne einen offenen Terminal-Tab zu benötigen. KorTTY löst die Platzhalter des Snippets vor der Ausführung mit denselben Regeln wie der Snippet-Manager auf: eingebaute Variablen und deklarierte Variablen mit einem gespeicherten Wert werden ersetzt, und Shell-Formen wie <code>${1:-default}</code> oder <code>${HOME}</code> werden der Shell unverändert übergeben. Fehlende Snippets, eine deklarierte Variable ohne gespeicherten Wert, ein nicht deklarierter einfacher Name wie <code>${target}</code> (schreiben Sie <code>$${target}</code>, um es an die Shell zu übergeben), und nicht unterstützte Snippet-Sprachen blockieren den Job und schreiben den Grund ins Journal; Siehe <a href="snippets.html#geplante-und-swarm-ausfuhrungen">Geplante und Swarm-Läufe</a>. Zusätzliche Snippet-Parameter werden je Zeile eingegeben, sodass Werte mit Leerzeichen als einzelne Skriptargumente übergeben werden.</p>
+<h4 id="ai-schwarmjobs">AI Schwarmjobs<a class="headerlink" href="#ai-schwarmjobs" title="Permanent link">&para;</a></h4>
+<p>AI Swarm-Jobs führen über Hintergrund-SSH-Sitzungen eine KI-Agent-Eingabeaufforderung auf <strong>allen ausgewählten Zielen parallel</strong> aus – es werden keine Terminal-Registerkarten geöffnet. Über die gemeinsamen Felder <strong>KI-Profil</strong>, <strong>KI-Eingabeaufforderung</strong> und <strong>Der KI-Agent kann den Server ohne Laufzeitbestätigung ändern</strong> hinaus gelten zwei schwarmspezifische Felder:</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Schwarmparallelität</strong></td>
+<td>Wie viele Ziele gleichzeitig ausgeführt werden (1–16, Standard 4).</td>
+</tr>
+<tr>
+<td><strong>Schwarm schreibgeschützt</strong></td>
+<td>Beschränkt jeden Agenten auf nicht mutierende Befehle. Standardmäßig aktiviert.</td>
+</tr>
+</tbody>
+</table>
+<p>Die Ergebnisse werden zweimal gespeichert: Das <strong>Journal</strong> zeichnet das Laufergebnis auf, und die vollständige Konversation – einschließlich der kombinierten Vergleichstabelle pro Server – wird als <strong>Schwarm-Chat</strong> gespeichert, der über den Abschnitt <em>Schwarm-Chats</em> des KI-Managers erneut geöffnet werden kann.</p>
+<p>Der schnellste Weg, einen KI-Swarm-Job zu erstellen, ist der <strong>Schedule…</strong> Button im <a href="ai-swarm.html#schwarmlaufe-planen-jobscheduler">KI-Swarm Tab</a>: Er füllt einen neuen Job mit den aktuellen Zielen, Prompt, KI-Profil und der schreibgeschützten Einstellung des Tabs vor. Sehen Sie sich diese Seite für empfohlene Swarm/Scheduler-Verwendungsszenarien an.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Ein geplanter Schwarm, bei dem <strong>Schwarm schreibgeschützt</strong> deaktiviert und <strong>Der KI-Agent kann den Server ohne Laufzeitbestätigung ändern</strong> aktiviert ist, verändert Systeme unbeaufsichtigt. Testen Sie die Eingabeaufforderung interaktiv auf der Registerkarte „AI Swarm“, bevor Sie einen solchen Job aktivieren.</p>
+</div>
+<h4 id="sftp-archivierungsjobs">SFTP-Archivierungsjobs<a class="headerlink" href="#sftp-archivierungsjobs" title="Permanent link">&para;</a></h4>
+<p>SFTP-Archivierungsjobs unterstützen ZIP, passwortgeschütztes ZIP, TAR und TAR.BZ2. Archivquellen und Ausschlussmuster akzeptieren einen Pfad oder ein Muster pro Zeile. Das Archiv kann optional nach der Erstellung heruntergeladen werden.</p>
+<p>Wenn <strong>Sudo-Staging für SFTP-Pfade verwenden</strong> aktiviert ist, stellt KorTTY Dateien an einem temporären Speicherort bereit und verwendet Sudo-unterstützte Remote-Befehle wie <code>mv</code>, <code>cp</code>, <code>tar</code>, <code>chmod</code> und <code>chown</code>, wenn erhöhte Rechte erforderlich sind. Bereinigungsfehler werden in das Journal geschrieben.</p>
+<h2 id="rsync-jobs">Rsync-Jobs<a class="headerlink" href="#rsync-jobs" title="Permanent link">&para;</a></h2>
+<p><code>RSYNC_SYNC</code> unterstützt den Upload und Download zwischen dem lokalen Dateisystem und gespeicherten SSH-TCP-Verbindungen.</p>
+<ul>
+<li><strong>Upload</strong>: Lokale Quellverzeichnisse werden unter dem Remote-Zielstamm synchronisiert.</li>
+<li><strong>Download</strong>: Remote-Quellverzeichnisse werden unter dem lokalen Zielstamm synchronisiert.</li>
+<li><strong>Mehrere Quellen</strong> werden unterstützt.</li>
+<li><strong>Fehlende Dateien löschen</strong> fügt <code>--delete</code> hinzu; es ist standardmäßig deaktiviert.</li>
+<li>Bei Downloads von mehreren Gruppenzielen schreibt KorTTY jedes Ziel in sein eigenes Unterverzeichnis unterhalb des lokalen Zielstammverzeichnisses, um ein Überschreiben von Dateien von einem anderen Server zu vermeiden.</li>
+</ul>
+<p>KorTTY erstellt die Rsync-Ausführung als <code>ProcessBuilder</code>-Argumentliste, anstatt den Befehl per Shell zu verketten. Der Befehl verwendet <code>-a --itemize-changes</code>; <code>--delete</code> wird nur hinzugefügt, wenn das Job-Kontrollkästchen aktiviert ist.</p>
+<h3 id="rsync-voraussetzungen">Rsync-Voraussetzungen<a class="headerlink" href="#rsync-voraussetzungen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>rsync</code> wird von <code>PATH</code> übernommen, es sei denn, unter <strong>Einstellungen &gt; SFTP &gt; JobScheduler Rsync</strong> ist ein expliziter Binärpfad konfiguriert.</li>
+<li><code>ssh</code> muss in <code>PATH</code> verfügbar sein.</li>
+<li>Das Fixieren des Hostschlüssels ist erforderlich, es sei denn, der Job deaktiviert die Hostschlüsselüberprüfung ausdrücklich.</li>
+<li>Passwort- und privater-Schlüssel-Authentifizierung verwenden einen temporären, nur für den Benutzer bestimmt <code>SSH_ASKPASS</code>Hilfeprozess. Geheime Informationen, Pfade der Hilfeprozesse und temporäre Pfade von Geheimdateien werden vor der Protokollierung gelöscht.</li>
+<li>Eine <a href="../reference/settings/security.html">temporäre SSH-Schlüssel</a> wird in einer nur für den Besitzer lesbaren Datei im System-Temp-Ordner für die externe <code>ssh</code> geschrieben und gelöscht, wenn der Job endet oder seine Verbindung fehlschlägt.</li>
+</ul>
+<h2 id="journal-tab">Journal-Tab<a class="headerlink" href="#journal-tab" title="Permanent link">&para;</a></h2>
+<p>Der <strong>Journal</strong> Tab listet Jobläufe mit lokalen KorTTY-Zeitstempeln, Status, Jobname, Session-Journal und Zusammenfassung.  </p>
+<p>Für Jobs mit einem <a href="#sitzungsjournal-pro-ausfuhrung">Sitzungsjournal pro Durchlauf</a>, die <strong>Session-Journal</strong>-Spalte zeigt an, wie viele Journale der Lauf beibehalten hat und deren KI-Tokens sowie Kosten. "= identisch mit einem früheren Lauf" erscheint, wenn der Lauf als Duplikat verworfen wurde, oder "gelöscht (Aufbewahrung)", sobald die Journale verschwunden sind. Der Detailbereich listet jedes Journal mit seinem Status, der Tokenaufteilung und dem Löschdatum auf, und <strong>Session-Journal öffnen</strong> öffnet die Journale des Laufs (oder der identischen früheren Lauf) im Journal-Viewer.</p>
+<p>Die Suchzeile kann mit allen persistenten Journalfeldern oder nur mit ausgewählten Spalten wie Status, Job, Zusammenfassung, Stdout, Stdderr und Detail übereinstimmen. Geben Sie mehrere durch Leerzeichen getrennte Begriffe ein, wenn jeder Begriff irgendwo im ausgewählten Suchbereich vorkommen muss; Verwenden Sie <code>*</code> innerhalb eines Begriffs als Platzhalter, zum Beispiel <code>backup*fail</code>.</p>
+<p>Wenn Sie eine Zeile auswählen, werden stdout, stderr und Detailtext angezeigt. Verwenden Sie <strong>Ausgewählte löschen</strong>, um ausgewählte Journaleinträge zu entfernen. Standardmäßig löscht KorTTY automatisch Planer-Journaleinträge, die älter als 14 Tage sind; Legen Sie den Aufbewahrungswert auf <code>0</code> fest, um Einträge auf unbestimmte Zeit aufzubewahren.</p>
+<p>Der Protokoll-/Detailbereich unterhalb der Tabelle ist durch einen vertikalen Splitter getrennt. Ändern Sie die Größe, um der Ausgabe mehr oder weniger Höhe zu verleihen. KorTTY speichert diese Teilerposition in den globalen Einstellungen. Markieren Sie im Detailtextbereich den Text und klicken Sie mit der rechten Maustaste, um den ausgewählten Text in die Zwischenablage zu kopieren.</p>
+<p>Zu den Journalstatus gehören erfolgreiche, fehlgeschlagene, blockierte, abgebrochene und ausgeführte/Systemeinträge. Gründe wie gesperrtes Master-Passwort, fehlende Hostschlüssel-PIN, fehlender <code>rsync</code>/<code>ssh</code>, nicht unterstütztes Mosh-Ziel oder Shutdown-Drain werden als Journaldetails geschrieben.</p>
+<h2 id="lauf-benachrichtigungen">Lauf-Benachrichtigungen<a class="headerlink" href="#lauf-benachrichtigungen" title="Permanent link">&para;</a></h2>
+<p>Wenn ein Joblauf fehlschlägt oder blockiert wird, zeigt korTTY eine Desktop-Benachrichtigung an, auch wenn das JobScheduler-Fenster geschlossen ist. Die Benachrichtigung trägt den Titel <em>korTTY · Job</em>, gefolgt vom Namen des Jobs, und ihr Text nennt nur, wie der Lauf endete, seinen Exit-Code, falls es einen gab, und ob er manuell oder durch seinen Zeitplan gestartet wurde, zum Beispiel <em>Fehlgeschlagen · Exit-Code 2 · Geplanter Lauf</em>. Sie enthält niemals die Ausgabe, die Details oder die Zusammenfassung des Laufs, weil diese Server, Pfade oder Geheimnisse nennen können und eine Benachrichtigung auf dem Sperrbildschirm erscheinen kann. Steuerzeichen und unsichtbare Zeichen, die die Schreibrichtung ändern, werden aus dem Jobnamen entfernt.</p>
+<p>Erfolgreiche Läufe und Erholungen (ein erfolgreicher Lauf direkt nach einem fehlgeschlagenen oder blockierten) benachrichtigen standardmäßig nicht, abgebrochene Läufe nie. Ein Job zeigt höchstens eine Benachrichtigung pro Minute, sodass ein Job, der jede Minute fehlschlägt, den Desktop nicht überflutet; sein Journal hält trotzdem jeden Lauf fest. Benachrichtigungen nutzen denselben Desktop-Benachrichtigungsdienst wie das Terminal; bietet das Betriebssystem keinen an, wird nichts angezeigt.</p>
+<h3 id="festlegen-wann-ein-job-benachrichtigt">Festlegen, wann ein Job benachrichtigt<a class="headerlink" href="#festlegen-wann-ein-job-benachrichtigt" title="Permanent link">&para;</a></h3>
+<p>Jeder Job hat auf seinem Tab <strong>Job</strong> einen Abschnitt <strong>Benachrichtigungen</strong>, direkt über dem Abschnitt zum Sitzungsjournal. Kreuzen Sie die Laufergebnisse an, die benachrichtigen sollen: <strong>fehlschlägt</strong> und <strong>blockiert wird</strong> sind für jeden Job eingeschaltet, <strong>sich erholt (nach einem Fehler erfolgreich ist)</strong> und <strong>erfolgreich ist</strong> bleiben aus, bis Sie sie ankreuzen. <strong>Desktop-Benachrichtigung anzeigen</strong> schaltet die Desktop-Benachrichtigung für diesen Job ab, zum Beispiel für einen Job, der nur an einen Team-Kanal berichtet. Darunter kreuzen Sie die Webhook-Ziele an, an die dieser Job sendet; kein Job sendet an einen Webhook, bevor Sie eines ankreuzen. Der Abschnitt warnt, wenn nichts angekreuzt ist oder wenn die Unternehmensrichtlinie die angekreuzten Webhooks blockiert. Klicken Sie auf <strong>Speichern</strong>, um die Änderungen zu übernehmen.</p>
+<h3 id="webhook-ziele">Webhook-Ziele<a class="headerlink" href="#webhook-ziele" title="Permanent link">&para;</a></h3>
+<p>Ein Webhook-Ziel ist ein Empfänger, der für jeden passenden Lauf eine Nachricht erhält, auch wenn korTTY im Hintergrund läuft: ein Slack-Kanal, ein Microsoft-Teams-Kanal oder ein beliebiger Dienst, der JSON über HTTPS annimmt. Klicken Sie in der Jobliste oder im Abschnitt <strong>Benachrichtigungen</strong> auf <strong>Webhook-Ziele...</strong>, um Ziele hinzuzufügen, zu bearbeiten oder zu löschen. Jedes Ziel hat einen <strong>Name</strong>, ein <strong>Format</strong> und eine <strong>URL</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Sendet</th>
+<th>Einzufügende URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Slack</strong></td>
+<td>eine Slack-Nachricht mit dem Jobnamen sowie Status, Exit-Code und Startgrund des Laufs</td>
+<td>eine Slack-Incoming-Webhook-URL, die mit <code>https://hooks.slack.com/services/</code> beginnt</td>
+</tr>
+<tr>
+<td><strong>Microsoft Teams (Workflows)</strong></td>
+<td>eine Adaptive Card der Version 1.4 (Schema <code>http://adaptivecards.io/schemas/adaptive-card.json</code>) für einen Teams-Workflows-Webhook</td>
+<td>die URL eines Teams-Workflows, der beim Empfang einer Webhook-Anfrage eine Karte in einem Kanal veröffentlicht; die eingestellten Office-365-Connectors werden nicht unterstützt</td>
+</tr>
+<tr>
+<td><strong>Generisches JSON</strong></td>
+<td>korTTYs eigenes JSON-Dokument, Schema <code>kortty.job-run/1</code>, mit ID und Namen des Jobs, <code>status</code>, <code>recovered</code>, <code>exitCode</code>, <code>trigger</code> (<code>manual</code> oder <code>scheduled</code>) und <code>finishedAt</code></td>
+<td>ein beliebiger eigener HTTPS-Endpunkt</td>
+</tr>
+</tbody>
+</table>
+<p>Webhook-URLs tragen ihre Anmeldeinformationen im Pfad, daher behandelt korTTY sie als Geheimnisse. Die URL wird mit dem Master-Passwort verschlüsselt gespeichert, das URL-Feld ist maskiert und zeigt nie eine gespeicherte URL an (lassen Sie es leer, um die gespeicherte zu behalten), und weder das Journal noch das Log von korTTY enthalten je mehr davon als den Host. Nur <code>https://</code>-URLs werden akzeptiert, <code>http://</code> nur für einen Empfänger auf <code>localhost</code> oder einer Loopback-Adresse; URLs mit Benutzername oder Passwort werden abgelehnt. Solange das Master-Passwort gesperrt ist, werden Webhooks übersprungen und das Journal vermerkt <em>notification skipped: master password locked</em>. Ein Ziel lässt sich mit <strong>Aktiviert</strong> ausschalten, ohne es zu löschen, und das Löschen eines Ziels entfernt es aus jedem Job.</p>
+<p>Nachrichten enthalten niemals die Ausgabe des Laufs, stdout, stderr oder Details. <strong>Zusammenfassung des Laufs mitsenden (maskiert)</strong> fügt die einzeilige Zusammenfassung des Laufs hinzu; die Option ist standardmäßig aus, weil eine Zusammenfassung Server, Pfade oder von einer KI geschriebenen Text nennen kann und an einen Drittanbieterdienst gesendet wird. Ist sie eingeschaltet, werden bekannte Geheimnismuster und die eigenen Geheimnisse des Jobs maskiert, Steuerzeichen entfernt und die Zusammenfassung auf 1.000 Zeichen gekürzt, doch die Maskierung erkennt nicht alles.</p>
+<p><strong>Test senden</strong> sendet einen erfolgreichen Beispiellauf, benannt nach dem ausgewählten Job, an das Ziel in dem Zustand, in dem es im Editor steht, auch mit einer eingegebenen, aber noch nicht gespeicherten URL, und meldet das Ergebnis unter den Schaltflächen: zugestellt, mit dem HTTP-Status abgelehnt oder blockiert. Der Test läuft im Hintergrund und ist die einzige Nachricht, die Sie von Hand senden.</p>
+<p>Die Zustellung läuft im Hintergrund und hält weder den Job noch das Fenster auf. Eine Nachricht, die nach 10 Sekunden in eine Zeitüberschreitung läuft, den Empfänger nicht erreicht oder mit HTTP 429 oder einem 5xx-Status beantwortet wird, wird bis zu insgesamt 3 Versuche lang wiederholt, wobei ein <code>Retry-After</code> des Empfängers bis zu 60 Sekunden beachtet wird; andere Ablehnungen werden nicht wiederholt, und Weiterleitungen werden nie verfolgt. Eine Nachricht, die weiterhin fehlschlägt, wird im Journal als <em>notification failed: webhook delivery unsuccessful</em> mit dem Job, dem Namen des Ziels, dem Host, der Anzahl der Versuche und dem HTTP-Status festgehalten. Webhooks werden nicht gedrosselt: Jeder passende Lauf sendet eine Nachricht.</p>
+<p>Administratoren können Job-Webhooks mit der Richtlinienfunktion <code>job-webhooks</code> verbieten und die Hosts, die sie erreichen dürfen, mit <code>webhook-host-allowlist</code> einschränken; eine blockierte Nachricht wird als <em>notification blocked by policy</em> festgehalten. Siehe <a href="../reference/enterprise-policy.html#rulejob-scheduler"><code>[rule.job-scheduler]</code></a>.</p>
+<h2 id="menuleistenstatus-und-stornierung">Menüleistenstatus und Stornierung<a class="headerlink" href="#menuleistenstatus-und-stornierung" title="Permanent link">&para;</a></h2>
+<p>Wenn <strong>Jobstatus in Menüleiste anzeigen</strong> aktiviert ist, zeigt KorTTY den Scheduler-Status nach <strong>Hilfe</strong> nur an, wenn ein aktivierter Scheduler-Eintrag vorhanden ist oder ein Job gerade ausgeführt wird. Der Status zeigt den laufenden Auftrag, den Abbruchstatus oder den nächsten Auftrag mit einem Live-Countdown an.</p>
+<p>Klicken Sie auf das Statusmenü, um Folgendes anzuzeigen:</p>
+<ul>
+<li><strong>JobScheduler öffnen...</strong></li>
+<li>Jobs ausführen und Einträge abbrechen</li>
+<li>bis zu fünf nächste Aufträge in der Warteschlange mit Startzeit und Live-Countdown</li>
+</ul>
+<p>Klicken Sie mit der rechten Maustaste auf die Statusbezeichnung, um ein kompaktes Menü mit Abbruchaktionen für laufende Jobs und einer Verknüpfung zum Öffnen von JobScheduler anzuzeigen. Stornierungsanfragen werden protokolliert und die Ausführung von SSH/Rsync-Arbeiten wird nach Möglichkeit sauber unterbrochen.</p>
+<h2 id="kortty-wird-wahrend-der-ausfuhrung-von-jobs-beendet">KorTTY wird während der Ausführung von Jobs beendet<a class="headerlink" href="#kortty-wird-wahrend-der-ausfuhrung-von-jobs-beendet" title="Permanent link">&para;</a></h2>
+<p>Wenn KorTTY kurz vor dem Beenden steht, während JobScheduler-Jobs ausgeführt werden, wird eine Warnung mit den aktiven Jobnamen angezeigt. Wenn Sie <strong>Abbrechen</strong> wählen, läuft KorTTY weiter. Wenn Sie <strong>Warten und beenden</strong> auswählen, wird der Shutdown-Drain-Modus gestartet:</p>
+<ul>
+<li>neue geplante oder manuelle Jobstarts sind blockiert;</li>
+<li>Die Wartezeit beim Herunterfahren wird in das Journal geschrieben.</li>
+<li>KorTTY wartet darauf, dass laufende Jobs abgeschlossen oder abgebrochen werden;</li>
+<li>KorTTY wird automatisch beendet, nachdem der Entleerungsvorgang abgeschlossen ist.</li>
+</ul>
+<h2 id="sicherheit-und-geheimnisse">Sicherheit und Geheimnisse<a class="headerlink" href="#sicherheit-und-geheimnisse" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Host-Schlüssel sind standardmäßig fixiert, um Man-in-the-Middle-Angriffe auf die unbeaufsichtigte Ausführung zu verhindern.</li>
+<li>Sudo-Passwörter werden verschlüsselt mit dem Master-Passwort gespeichert.</li>
+<li>SSH-Schlüsselpassphrasen und Archivpasswörter werden verschlüsselt gespeichert.</li>
+<li>KorTTY geschwärzt verwaltete Geheimnisse (Passwörter, Passphrasen, Archivanmeldeinformationen) aus der Journalausgabe vor der Persistenz.</li>
+<li>In einem KI-Swarm-Job wird das Passwort jedes Servers aus den Journalen entfernt, sobald dessen Hintergrundsitzung verbunden ist, sodass auch Ausgaben abgedeckt sind, die erfasst werden, während der Swarm noch läuft.</li>
+<li>Was KI-Jobs an ein Cloud-KI-Profil senden, wird maskiert: die KI-Swarm-Agenten und die Anfrage, die ihre Antworten zusammenführt (siehe <a href="ai-tools.html#maskieren-dessen-was-der-agent-sendet">Maskieren dessen, was der Agent sendet</a>), sowie die Anfrage eines KI-Agent-Jobs, bei der das gespeicherte Passwort des Servers und das sudo-Passwort des Jobs zu <code>***</code> werden. Die Anfrage eines KI-Agent-Jobs enthält nur den Servernamen, das Arbeitsverzeichnis und den Job-Prompt, daher erfasst die Maskierung dort nur ein Geheimnis, das in den Prompt eingegeben wurde. Integrierte Modelle und ein vertrauenswürdiger lokaler Endpunkt erhalten den Originaltext.</li>
+<li>Wenn das Hauptkennwort gesperrt ist, wenn ein Job SSH-, Sudo-, API- oder Archivgeheimnisse benötigt, wird der Job blockiert.</li>
+<li>Webhook-URLs werden mit dem Master-Passwort verschlüsselt gespeichert und nie in das Journal oder das Log geschrieben; dort steht nur ihr Host.</li>
+<li>KI-Agent- und KI-Swarm-Jobs folgen der <a href="../reference/enterprise-policy.html#rulefeatures">Unternehmensrichtlinie</a> Ihrer Organisation. Wenn die Richtlinie KI, den KI-Agenten oder (bei Swarm-Jobs) den KI-Swarm verweigert oder <code>ai-agent-execution</code> auf <code>read-only</code> setzt, endet der Job als <strong>BLOCKED</strong>, bevor er sich mit einem Server verbindet, und das Journal nennt den Grund. Unter <code>ai-agent-execution = "confirm"</code> muss eine Person jeden serverändernden Befehl genehmigen, was ein unbeaufsichtigter Job nicht anfordern kann: Ein KI-Agent-Job blockiert beim ersten geplanten serverändernden Befehl und führt nichts davon aus, und ein KI-Swarm-Agent, der einen solchen Befehl plant, wird gestoppt und als blockiert gezählt, selbst wenn <strong>Der KI-Agent kann den Server ohne Laufzeitbestätigung ändern</strong> aktiviert ist. Schreibgeschützte Befehle laufen weiterhin.</li>
+</ul>
+<h2 id="fehlerbehebung">Fehlerbehebung<a class="headerlink" href="#fehlerbehebung" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>JobScheduler-Job ist blockiert:</strong> Öffnen Sie <strong>Extras &gt; JobScheduler... &gt; Journal</strong> und überprüfen Sie den Detailtext des ausgewählten Eintrags. Häufige Ursachen sind:
+- Master-Passwort gesperrt
+- Fehlende Hostschlüssel-PIN
+- Nicht unterstütztes Mosh-Ziel
+- Fehlendes <code>rsync</code> oder <code>ssh</code> im PATH
+- Alte Hostschlüssel-PIN ohne OpenSSH-Public-Key-Material für Rsync
+- Ein KI-Agent- oder KI-Swarm-Job, den die <a href="../reference/enterprise-policy.html#rulefeatures">Unternehmensrichtlinie</a> Ihrer Organisation nicht zulässt: Der Detailtext gibt an, ob KI, der KI-Agent oder der KI-Swarm deaktiviert ist, ob der Agent auf schreibgeschützte Befehle beschränkt ist oder welche serverändernden Befehle blockiert wurden, weil die Richtlinie verlangt, dass eine Person sie genehmigt</p>
+<p><strong>JobScheduler Rsync kann nicht gestartet werden:</strong> Überprüfen Sie die lokalen Werte <code>rsync --version</code> und <code>ssh -V</code> oder konfigurieren Sie den Rsync-Binärpfad unter <strong>Einstellungen &gt; SFTP &gt; JobScheduler Rsync</strong>.</p>
+<p><strong>JobScheduler-Remotebrowser kann nicht geöffnet werden:</strong> Wählen Sie genau ein Ziel aus und bestätigen Sie zuerst den Hostschlüssel, es sei denn, der Job deaktiviert die Hostschlüsselüberprüfung ausdrücklich.</p>
+</div>
+<hr /></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+<footer class="kt-footer">
+  <div class="kt-footer__line">MIT-lizenziert &middot; Entwickelt von Daniel Mengel</div>
+  <div class="kt-footer__line">korTTY <strong>v2.19.0</strong></div>
+</footer>
+
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../assets/javascripts/kt-zoom.js" defer></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>
