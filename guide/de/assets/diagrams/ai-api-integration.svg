@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">KorTTY AI request, local inference, RAG, and rendered-response integration</title>
+  <desc id="desc">AI requests flow from terminal, chat, snippet and agent entry points through deterministic role routing, profile policy, optional bounded RAG, model presets and remote, CLI, LM Studio, or embedded llama.cpp transport, then through safe response handling.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#67e8f9"/>
+    </marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#e6f3ff;font-size:16px}
+      .bg{fill:#07111d}
+      .grid{stroke:#14243a;stroke-width:1}
+      .panel{fill:#0d1a2b;stroke:#263f5c;stroke-width:2;rx:18}
+      .header{fill:#14243a;rx:18}
+      .box{fill:#13243a;stroke:#38bdf8;stroke-width:2;rx:10}
+      .ai{stroke:#a78bfa}
+      .store{stroke:#34d399}
+      .secure{stroke:#f59e0b}
+      .external{stroke:#fb7185}
+      .render{stroke:#60a5fa}
+      .title{font-size:30px;font-weight:700;fill:#f8fafc}
+      .subtitle{font-size:14px;fill:#b9c8da}
+      .panelTitle{font-size:18px;font-weight:700;fill:#7dd3fc}
+      .label{font-size:15px;font-weight:700;fill:#f8fafc}
+      .detail{font-size:12px;fill:#b9c8da}
+      .note{font-size:13px;fill:#93a8bd}
+      .line{stroke:#67e8f9;stroke-width:2.2;fill:none;marker-end:url(#arrow)}
+      .dash{stroke:#64748b;stroke-width:1.8;stroke-dasharray:7 6;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1280" height="720"/>
+  <path class="grid" d="M 0 120 H 1280 M 0 240 H 1280 M 0 360 H 1280 M 0 480 H 1280 M 0 600 H 1280 M 160 0 V 720 M 320 0 V 720 M 480 0 V 720 M 640 0 V 720 M 800 0 V 720 M 960 0 V 720 M 1120 0 V 720" opacity="0.25"/>
+
+  <text class="title" x="42" y="52">AI Request + Rendered Response Flow</text>
+  <text class="subtitle" x="42" y="80">Profiles, Text/Coding roles, RAG limits, prompts and quotas stay in korTTY; embedded GGUF inference uses an isolated local sidecar.</text>
+
+  <rect class="panel" x="35" y="125" width="245" height="430"/>
+  <rect class="header" x="35" y="125" width="245" height="50"/>
+  <text class="panelTitle" x="62" y="157">1. Entry points</text>
+  <rect class="box" x="65" y="198" width="185" height="54"/>
+  <text class="label" x="86" y="222">Terminal selection</text>
+  <text class="detail" x="90" y="241">analysis and follow-up</text>
+  <rect class="box" x="65" y="274" width="185" height="54"/>
+  <text class="label" x="105" y="298">AI chat</text>
+  <text class="detail" x="88" y="317">new or saved conversation</text>
+  <rect class="box" x="65" y="350" width="185" height="54"/>
+  <text class="label" x="91" y="374">Snippet editor AI</text>
+  <text class="detail" x="89" y="393">code and diagram actions</text>
+  <rect class="box" x="65" y="426" width="185" height="54"/>
+  <text class="label" x="85" y="450">Agent + workflow</text>
+  <text class="detail" x="87" y="469">planned terminal actions</text>
+
+  <rect class="panel" x="320" y="125" width="275" height="430"/>
+  <rect class="header" x="320" y="125" width="275" height="50"/>
+  <text class="panelTitle" x="347" y="157">2. korTTY request</text>
+  <rect class="box store" x="350" y="198" width="215" height="62"/>
+  <text class="label" x="394" y="222">AI profile</text>
+  <text class="detail" x="375" y="242">endpoint, model, reasoning</text>
+  <rect class="box secure" x="350" y="282" width="215" height="62"/>
+  <text class="label" x="382" y="306">Prompt + policy</text>
+  <text class="detail" x="366" y="326">skills, RAG, privacy, internet gate</text>
+  <rect class="box ai" x="350" y="366" width="215" height="62"/>
+  <text class="label" x="378" y="390">Role + model preset</text>
+  <text class="detail" x="369" y="410">explicit → role → default</text>
+  <rect class="box store" x="350" y="450" width="215" height="62"/>
+  <text class="label" x="394" y="474">Quota gate</text>
+  <text class="detail" x="376" y="494">estimate and record usage</text>
+
+  <rect class="panel" x="635" y="125" width="270" height="430"/>
+  <rect class="header" x="635" y="125" width="270" height="50"/>
+  <text class="panelTitle" x="662" y="157">3. Provider</text>
+  <rect class="box external" x="665" y="198" width="210" height="62"/>
+  <text class="label" x="697" y="222">Remote compatible API</text>
+  <text class="detail" x="692" y="242">HTTP chat completions API</text>
+  <rect class="box external" x="665" y="282" width="210" height="62"/>
+  <text class="label" x="707" y="306">Anthropic</text>
+  <text class="detail" x="700" y="326">native Messages endpoint</text>
+  <rect class="box external" x="665" y="366" width="210" height="62"/>
+  <text class="label" x="694" y="390">Embedded llama.cpp</text>
+  <text class="detail" x="684" y="410">leased loopback GGUF server</text>
+  <rect class="box external" x="665" y="450" width="210" height="62"/>
+  <text class="label" x="690" y="474">LM Studio / Local CLI</text>
+  <text class="detail" x="688" y="494">local endpoint or command</text>
+
+  <rect class="panel" x="945" y="125" width="300" height="430"/>
+  <rect class="header" x="945" y="125" width="300" height="50"/>
+  <text class="panelTitle" x="972" y="157">4. Response handling</text>
+  <rect class="box secure" x="975" y="198" width="240" height="62"/>
+  <text class="label" x="1011" y="222">Parse + sanitize</text>
+  <text class="detail" x="997" y="242">text, SVG and raster images</text>
+  <rect class="box render" x="975" y="282" width="240" height="62"/>
+  <text class="label" x="997" y="306">MermaidRenderService</text>
+  <text class="detail" x="991" y="326">strict local SVG/PNG render</text>
+  <rect class="box render" x="975" y="366" width="240" height="62"/>
+  <text class="label" x="1017" y="390">MathJax host</text>
+  <text class="detail" x="996" y="410">separate lazy formula render</text>
+  <rect class="box store" x="975" y="450" width="240" height="62"/>
+  <text class="label" x="1008" y="474">Display + persist</text>
+  <text class="detail" x="992" y="494">result tab, saved chat, usage</text>
+
+  <path class="line" d="M 280 340 H 320"/>
+  <path class="line" d="M 595 340 H 635"/>
+  <path class="line" d="M 905 340 H 945"/>
+  <path class="dash" d="M 1095 260 V 282"/>
+  <path class="dash" d="M 1215 229 H 1230 V 397 H 1215"/>
+  <path class="dash" d="M 995 344 H 960 V 481 H 975"/>
+  <path class="dash" d="M 1095 428 V 450"/>
+
+  <rect class="panel" x="155" y="595" width="970" height="68"/>
+  <text class="note" x="190" y="622">Role-matched requests can add six bounded, cited, untrusted RAG excerpts before the model preset; autonomous flows stay opt-in.</text>
+  <text class="note" x="190" y="645">Embedded llama.cpp is loopback-only and authenticated. Mermaid and MathJax never use a remote renderer.</text>
+</svg>
