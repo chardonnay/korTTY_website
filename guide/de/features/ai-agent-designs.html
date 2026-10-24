@@ -1,0 +1,1067 @@
+<!doctype html>
+<html lang="de" data-bs-theme="dark">
+
+<head>
+        <title>KI-Agent-Designs - korTTY Anleitung</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link rel="canonical" href="https://chardonnay.github.io/korTTY/guide/de/features/ai-agent-designs.html">
+        <meta name="author" content="korTTY">
+        <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+        <link href="../assets/stylesheets/kortty.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="../../en/assets/images/favicon.png">
+
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+            <img class="logo" src="../../en/assets/images/favicon.png" height="150px">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">korTTY Anleitung</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../index.html"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Startseite
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#erste-schritte-collapse" aria-expanded="false">
+                    Erste Schritte
+                </a>
+                <div class="collapse" id="erste-schritte-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/installation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Installation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/building-packages.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KorTTY-Pakete erstellen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/first-launch.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Erster Start – Master-Passwort
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../getting-started/main-window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Übersicht des Hauptfensters
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#referenz-collapse" aria-expanded="false">
+                    Referenz
+                </a>
+                <div class="collapse" id="referenz-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/menu.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Menüreferenz
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/keyboard-shortcuts.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tastaturkürzel
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/architecture.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architektur
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/config-files.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Konfigurationsdateien
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/enterprise-policy.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Richtlinienkonfiguration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/control-api.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Steuerungs-API
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/cli.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Steuerungs-CLI
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#einstellungen-collapse" aria-expanded="false">
+            Einstellungen
+        </a>
+
+        <div class="collapse" id="einstellungen-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Einstellungsreferenz
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/appearance.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Aussehen, Themen und Schriftart
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/colors.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Farben
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/messaging.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Messaging
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/window.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Fenster
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/keyboard.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tastatur
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/resources.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Ressourcen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/logging.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Protokollierung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/export.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Exportieren
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/updates.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Aktualisierungen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherheit
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/language.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprache
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/translation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Übersetzung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/video.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Video
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/ai.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/ai-skills.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Skills
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP-Manager
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/editor.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="#" class="
+            drac-anchor-secondary btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+            data-bs-toggle="collapse" data-bs-target="#snippet-editor-collapse" aria-expanded="false">
+            Snippet-Editor
+        </a>
+
+        <div class="collapse" id="snippet-editor-collapse">
+            <ul class="mb-5 drac-list drac-list-none">
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/settings/snippet-editor/index.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet-Editor
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/hardening-options.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Härtungsoptionen
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/input-hardening.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Eingabe-Härtung
+        </a>
+    </li>
+                    
+    <li class="drac-box-ternary">
+        <a href="../reference/language-migration.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprachvereinigung
+        </a>
+    </li>
+            </ul>
+        </div>
+    </li>
+            </ul>
+        </div>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover"
+                    data-bs-toggle="collapse" data-bs-target="#funktionen-collapse" aria-expanded="true">
+                    Funktionen
+                </a>
+                <div class="collapse show" id="funktionen-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="connections.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verbindungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminalsitzungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="shell-integration.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Shell-Integration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal-notifications.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal-Benachrichtigungen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="highlighting.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Hervorhebung von Schlüsselwörtern
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="command-palette.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Befehlspalette
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="tunnels.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SSH-Tunnel (Portweiterleitung)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="jump-server.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Jump-Server (Bastion Host)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="sftp.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SFTP-Dateimanager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="file-browser.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Dateibrowser
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="snippets.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Snippet-Manager
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="jobscheduler.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            JobScheduler
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="projects.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Projekte (Arbeitsbereiche)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="teamwork.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Teamarbeit (gemeinsame Verbindungen)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-assistant.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Assistent
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="local-models.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lokale Modelle (llama.cpp und MLX)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="rag.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            RAG-Wissensspeicher
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-tools.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminal-KI-Agent und -Tools
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-agent-designs.html"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Agent-Designs
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ai-swarm.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            KI-Schwarm
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="security.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sicherheit – Anmeldeinformationen, Schlüssel und Verschlüsselung
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="session-isolation.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sitzungs-Isolation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="backup.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sichern und wiederherstellen
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="recording.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminalaufzeichnung
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="session-journal.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sitzungsjournal
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="ascii-art.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            ASCII-Art
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="terminal-effect-plugins.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Terminaleffekt-Plugins
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="coding-agents.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Coding-Agents
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="i18n.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Sprachen und dynamische Übersetzung
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#über-kortty-collapse" aria-expanded="false">
+                    Über korTTY
+                </a>
+                <div class="collapse" id="über-kortty-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/release-notes.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Versionshinweise
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/feedback.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Feedback und Support
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/anonymous-data.html"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Anonyme Daten zur Applikationsoptimierung
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="ai-tools.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="ai-swarm.html"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item">
+
+
+
+
+
+<div role="search" class="search-box kt-search">
+	<form id="rtd-search-form" class="wy-form kt-search-form" action="../search.html" method="get">
+		<input type="text" name="q" id="mkdocs-search-query"
+		class="kt-search-input drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Durchsuchen"
+		autocomplete="off" title="Type search term here" /><button type="button" class="kt-search-clear" hidden
+		        aria-label="Suche zurücksetzen" title="Suche zurücksetzen">&times;</button>
+	</form>
+	<div id="mkdocs-search-results" class="kt-search-suggest"
+	     data-no-results-text="Keine Treffer"
+	     data-preparing-text="Suche wird vorbereitet …"
+	     data-more-text="{n} weitere Treffer anzeigen"></div>
+	<script>
+	  (function () {
+	    var box = document.currentScript.parentNode;
+	    var panel = box.querySelector('.kt-search-suggest');
+	    var input = box.querySelector('#mkdocs-search-query');
+	    var clear = box.querySelector('.kt-search-clear');
+
+	    // Emptying the panel is what hides it (CSS :empty), so closing is just that.
+	    function close () { while (panel.firstChild) { panel.removeChild(panel.firstChild); } }
+	    // The button is only useful once there is something to clear.
+	    function sync () { clear.hidden = !input.value; }
+
+	    input.addEventListener('input', sync);
+	    clear.addEventListener('click', function () {
+	      input.value = '';
+	      sync();
+	      // search/main.js renders on keyup, which a programmatic clear never fires, so
+	      // the panel has to be emptied here or the old hits would outlive the query.
+	      close();
+	      input.focus();
+	    });
+
+	    document.addEventListener('click', function (e) { if (!box.contains(e.target)) { close(); } });
+
+	    // Escape has to be handled on keyUP, and on the document rather than the input.
+	    // search/main.js binds doSearch to the field's keyup, so anything that closed the
+	    // panel on keydown was undone microseconds later by that re-render — which is why
+	    // Escape appeared to do nothing at all. Listening on the document means this runs
+	    // after the field's own handler has already re-rendered, so closing sticks.
+	    // What the panel looked like BEFORE that re-render is the interesting state, so it
+	    // is captured on keydown: the usual two steps, Escape dismisses the suggestions,
+	    // Escape again empties the box.
+	    var panelWasOpen = false;
+	    document.addEventListener('keydown', function (e) {
+	      if (e.key === 'Escape') {
+	        panelWasOpen = !!panel.firstChild;
+	      }
+	    });
+	    document.addEventListener('keyup', function (e) {
+	      if (e.key !== 'Escape') {
+	        return;
+	      }
+	      // Only clear the field while it has focus — Escape elsewhere on the page is not ours.
+	      if (!panelWasOpen && document.activeElement === input && input.value) {
+	        input.value = '';
+	        sync();
+	      }
+	      close();
+	    });
+
+	    sync();  // a ?q= deep link arrives with the field already filled
+	  })();
+	</script>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+<div class="kt-lang-bar">
+  <a class="kt-lang-switch" href="../../en/features/ai-agent-designs.html"
+     title="English" hreflang="en">EN</a>
+</div>
+
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="ki-agent-designs">KI-Agent-Designs<a class="headerlink" href="#ki-agent-designs" title="Permanent link">&para;</a></h1>
+<p><em>Plugins → KI-Agent Design</em> bestimmt, wie die Ausführungen des <a href="ai-tools.html">KI-Agent</a> im Terminal angezeigt werden: als Zeilen im Terminal selbst, in einer schmalen Leiste darunter oder darüber, auf einer Schiene oder in einer Spalte daneben, als Karte, die darüber schwebt, im klassischen Aktivitäts-Panel oder in einer Kombination davon. Eine <strong>Kombination</strong> wählt für jede Rolle ein Design aus, und Sie können eine Kombination als Standard festlegen und einzelnen Verbindungen eine andere zuweisen.</p>
+<p><img alt="AI Agent Design with the standard combination: the live preview shows a sample run as a block in the terminal, waiting for an approval, with the metro line and the approval row below" src="../../en/assets/screenshots/plugins/ai-agent-design.png" /></p>
+<p>Öffnen Sie es über <em>Plugins → KI-Agent Design</em> oder <em>Ansicht → KI-Agent-Panel → Design...</em>. Wenn <em>Tool-Fenster als Tabs öffnen</em> aktiviert ist, wird es als Tab des Hauptfensters geöffnet. Eine Organisationsrichtlinie, die Plugins nicht zulässt, sperrt beide Einträge.</p>
+<h2 id="rollen-und-designs">Rollen und Designs<a class="headerlink" href="#rollen-und-designs" title="Permanent link">&para;</a></h2>
+<p>Die Tabelle listet jedes Design mit seiner Nummer, gruppiert nach Rolle. Ein Haken in <strong>Aktiv</strong> wählt das Design für seine Rolle in der angezeigten Kombination aus, sodass jede Rolle immer genau einen Haken hat.</p>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Was es entscheidet</th>
+<th>Designs, die Sie wählen können</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Verlauf</td>
+<td>Hier werden die Schritte eines Laufs aufgelistet</td>
+<td><strong>Blöcke im Terminal</strong> (03), <strong>Zeitachse an der Seite</strong> (02), <strong>Plan und Ausführung</strong> (06), <strong>Kartenstapel</strong> (07), <strong>tmux-Bereich</strong> (09), <strong>Gesprächsverlauf</strong> (13), <strong>Protokoll-Tabelle</strong> (16), <strong>Fokus-Modus</strong> (17), <strong>Klassisches Panel</strong></td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Eine kompakte Anzeige des aktuellen Standes der Ausführung, neben dem Verlauf</td>
+<td><strong>Linienplan</strong> (08), <strong>Powerline-Statuszeile</strong> (01), <strong>Minimap-Schiene</strong> (11), <strong>Kopfleiste mit Schublade</strong> (12), <strong>Neon-Laufschrift</strong> (18), <strong>Milchglas-HUD</strong> (04), <strong>Spotlight und Pille</strong> (05), <strong>Meldungen am Rand</strong> (10), <strong>Orbit-Anzeige</strong> (15), <strong>Keine Statusanzeige</strong></td>
+</tr>
+<tr>
+<td>Freigabe</td>
+<td>Wo Freigabe-Anfragen beantwortet werden</td>
+<td><strong>Im Verlauf</strong>, <strong>Vorschlag an der Cursorzeile</strong> (14)</td>
+</tr>
+<tr>
+<td>Anordnung</td>
+<td>Wo die Teile platziert werden</td>
+<td><strong>Fest</strong>, <strong>Bild im Bild</strong> (19), <strong>Mitdenkendes Dock</strong> (20)</td>
+</tr>
+</tbody>
+</table>
+<p>Eine von einer neueren korTTY-Version gespeicherte Kombination, die ein Design benennt, das diese Version nicht kennt, verwendet stattdessen das Design der Standardkombination für diese Rolle.</p>
+<h2 id="kombinationen">Kombinationen<a class="headerlink" href="#kombinationen" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Kombination</th>
+<th>Verlauf</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard (Blöcke + Linienplan)</td>
+<td>Blöcke im Terminal</td>
+<td>Linienplan</td>
+</tr>
+<tr>
+<td>Klassisch</td>
+<td>Klassisches Panel</td>
+<td>Keine Statusanzeige</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Standard</strong> ist die Vorgabe für jede Verbindung, die keine eigene Kombination wählt; die Vorgabe ist in der Liste mit ★ markiert. Die beiden eingebauten Kombinationen können nicht geändert werden: Wenn Sie ein anderes Design auswählen, während eine dieser angezeigt wird, erstellen Sie Ihre eigene Kopie mit dieser Änderung. <strong>Neu</strong> startet eine Kopie der Standardkombination, <strong>Duplizieren</strong> kopiert die angezeigte, <strong>Umbenennen</strong> und <strong>Löschen</strong> wirken sich auf Ihre eigenen Kombinationen aus, und <strong>Als Standard verwenden</strong> macht die angezeigte Kombination zur Vorgabe. Das Löschen der Vorgabe lässt <strong>Standard</strong> erneut als Vorgabe gelten. Jede Änderung wird sofort gespeichert.</p>
+<h2 id="vorschau">Vorschau<a class="headerlink" href="#vorschau" title="Permanent link">&para;</a></h2>
+<p>Die Vorschau ist ein echtes Terminalpaneel mit einer kurzen Shell-Sitzung, in der eine Beispielausführung abgespielt wird: Der Agent untersucht die Sitzung, analysiert sie, führt zwei Befehle aus, bittet darum, das Journal zu verkleinern, erhält die Antwort <strong>1</strong> und beendet sich mit seiner Antwort. Er verwendet Ihre Standardterminalfarben und Schrift, etwas kleiner. Das Auswählen einer Zeile in der Tabelle zeigt dieses Design in der aktuellen Kombination an, ohne es zu speichern; <strong>Erneut abspielen</strong> startet die Ausführung erneut.</p>
+<p><img alt="The preview after the sample run: the block in the terminal collapsed to the answer, the metro line with every station reached" src="../../en/assets/screenshots/plugins/ai-agent-design-finished.png" /></p>
+<h2 id="blocke-im-terminal-03">Blöcke im Terminal (03)<a class="headerlink" href="#blocke-im-terminal-03" title="Permanent link">&para;</a></h2>
+<p>Der Lauf erscheint als Block direkt über der Promptzeile des Shells. Sein Header nennt den Agenten und Ihre Frage, zeigt die vergangene Zeit sowie die gemeldeten Tokens; darunter gibt es eine Zeile pro Schritt mit dessen Ergebnis, und der laufende Schritt zeigt einen kleinen Spinner. korTTY schreibt den Block direkt in das Terminal und sendet nichts an den Server, und die Promptzeile, in der Sie tippen, wird nie neu geschrieben, sodass Sie den nächsten Befehl eingeben können, während der Agent arbeitet.</p>
+<ul>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-r">R</kbd></span> zeigt oder verbirgt die Details der Schritte, <span class="keys"><kbd class="key-escape">Esc</kbd></span> oder <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> bricht den Lauf ab.</li>
+<li>Eine Genehmigung listet die geplanten Befehle mit den Tasten <strong>1</strong> (einmal erlauben), <strong>2</strong> (immer erlauben) und <strong>3</strong> (abbrechen); während sie geöffnet ist, beantworten diese Ziffern die Genehmigung und erreichen die Shell nicht.</li>
+<li>Wenn die Ausführung endet, wird der Block zu einer Überschrift mit ✓ (oder <em>abgebrochen</em>, <em>fehlgeschlagen</em>), der Anzahl der Schritte, der Zeit und den Tokens zusammengeklappt, gefolgt von der Antwort. Der Block bleibt dann im Scrollback wie jede andere Ausgabe und wird in das Sitzungsjournal aufgenommen.</li>
+<li>Die Antwort ist Teil des Blocks, daher gilt die Option <strong>Endergebnis auch im Terminal anzeigen</strong> der Ausführungsdialog nur für Kombinationen ohne Blöcke.</li>
+<li>Solange ein Vollbildprogramm wie <code>less</code> oder <code>vim</code> geöffnet ist, wartet der Block und holt anschließend auf. Ein Block, der während der Ausführung vom Bildschirm gescrollt wurde, setzt in einem neuen Block über dem Prompt fort.</li>
+</ul>
+<h2 id="linienplan-08">Linienplan (08)<a class="headerlink" href="#linienplan-08" title="Permanent link">&para;</a></h2>
+<p>Eine schmale Leiste unter dem Terminal zeigt die Ausführung als Metro-Linie: eine Station pro Befehl, Analyse und Frage sowie eine <strong>Antwort</strong>-Station am Ende. Erreichte Stationen sind ausgefüllt, die aktuelle pulsiert, eine Station, die auf Ihre Eingabe wartet, leuchtet amberfarben und ein Licht bewegt sich entlang der Linie, während die Ausführung fortschreitet; wenn es mehr Stationen gibt als passen, werden die ältesten zusammengefasst als <em>+N</em>. Die Leiste zeigt außerdem die Frage, die Tokens und die Zeit an und verfügt über Schaltflächen zum Pausieren, Abbrechen und Ausblenden.</p>
+<p>Die Leiste blendet sich einige Sekunden nach dem Ende der letzten Ausführung aus; die Verzögerung wird im Dialog festgelegt. <em>Ansicht → KI-Agent-Panel → Statusleiste ein- oder ausblenden</em> blendet sie wieder ein oder aus.</p>
+<h2 id="weitere-statusanzeigen">Weitere Statusanzeigen<a class="headerlink" href="#weitere-statusanzeigen" title="Permanent link">&para;</a></h2>
+<p>Wie der <strong>Linienplan</strong> (08) folgt jede Anzeige hier der Terminal-Ausführung, die auf Eingabe wartet, oder andernfalls deren neuester noch laufender Ausführung, und blendet nach dem Ende der letzten Ausführung aus. <em>Ansicht → KI-Agent-Panel → Statusleiste ein- oder ausblenden</em> blendet eine davon wieder ein oder aus. Eine Anzeige oberhalb oder neben dem Terminal nimmt dem Terminal Platz weg, während sie angezeigt wird.</p>
+<p><img alt="The four status displays beside the blocks in the terminal, each waiting for an approval: the Powerline status line with its steps unfolded, the top bar with its drawer, the minimap rail with a lens and the neon ticker" src="../../en/assets/screenshots/plugins/ai-agent-status-designs.png" /></p>
+<ul>
+<li><strong>Powerline-Statuszeile (01)</strong> — Eine Zeile unter dem Terminal im Powerline-Stil: der Agent, der Schritt, an dem er arbeitet (mit Spinner), wie viele Befehle er ausgeführt hat, die Tokens und die Zeit. ▴ faltet die Schritte der Ausführung über die untersten Terminalzeilen auf und ▾ faltet sie wieder zusammen; eine offene Genehmigung faltet sie von selbst auf.</li>
+<li><strong>Kopfleiste mit Schublade (12)</strong> — Eine Leiste über dem Terminal, die nicht im Weg des Prompts und der neuesten Ausgabe steht. Eine schimmernde Linie zeigt an, dass der Agent arbeitet, und wird grün oder rot, wenn die Ausführung endet; darunter die Anzahl der Befehle und der aktuelle Schritt. ▾ klappt die Schritte über die ältere Ausgabe.</li>
+<li><strong>Minimap-Schiene (11)</strong> — Eine schmale Schiene am rechten Rand des Terminals mit einem farbigen Segment pro Schritt: blau für Befehle, violett für Analysen, bernsteinfarben für Fragen, rot für Fehler. Der laufende Schritt leuchtet. Beim Zeigen auf ein Segment wird eine Linse mit dem Schritt, seinem Ergebnis und den ersten Zeilen seiner Details angezeigt. Die Schiene hat keine Schaltflächen; <span class="keys"><kbd class="key-escape">Esc</kbd></span> bricht die Ausführung ab.</li>
+<li><strong>Neon-Laufschrift (18)</strong> — Eine Leiste im Stil einer Fallblattanzeige unterhalb des Terminals im Neon-Look des korTTY-Logos: Jeder neue Schritt rollt in sein Fenster, eine offene Frage leuchtet bernsteinfarben mit ihren Tasten, und das Licht links pulsiert, während der Agent arbeitet. Bei einem hellen Theme verwendet die Leiste die Farben dieses Themes.</li>
+</ul>
+<h2 id="verlaufs-panels">Verlaufs-Panels<a class="headerlink" href="#verlaufs-panels" title="Permanent link">&para;</a></h2>
+<p>Statt Zeilen im Terminal listen diese Designs den Lauf in einem Panel unter oder neben dem Terminal auf. Ein Panel bleibt nach dem Ende des Laufs erhalten, sodass sein Ergebnis weiterhin gelesen werden kann; ✕ blendet es bis zum nächsten Lauf aus, und <em>Ansicht → KI-Agent-Panel → Statusleiste ein- oder ausblenden</em> blendet es wieder ein. Jedes Panel zeigt eine offene Genehmigung mit ihren Schaltflächen, und die Tasten <strong>1</strong>, <strong>2</strong> und <strong>3</strong> beantworten sie ebenfalls im Terminal. Die Antwort wird wie zuvor auch in das Terminal geschrieben.</p>
+<p><img alt="The six history panels, each waiting for an approval: the side timeline, plan and execution, the card stack, the tmux pane, the conversation and the log table" src="../../en/assets/screenshots/plugins/ai-agent-history-panels.png" /></p>
+<ul>
+<li><strong>Zeitachse an der Seite (02)</strong> — Eine Spalte rechts neben dem Terminal mit einer vertikalen Linie und einem Knoten pro Schritt: Befehle in Blau, Analysen in Violett, eine offene Genehmigung in Bernstein mit ihren Buttons direkt am Knoten, die Antwort am Ende. Die Linie zeichnet sich zu jedem neuen Knoten und der laufende Knoten pulsiert. Das Terminal behält seine volle Höhe bei.</li>
+<li><strong>Plan und Ausführung (06)</strong> — Zwei Spalten unter dem Terminal. Links die Schritte des Laufs als Checkliste, deren Häkchen sich selbst zeichnen; rechts nur das, was gerade läuft: der Befehl mit seinem Exit-Code und seinen letzten Ausgabezeilen, eine offene Genehmigung oder nach dem Lauf die Antwort. Eine dünne Leiste oben füllt sich mit dem Fortschritt.</li>
+<li><strong>Kartenstapel (07)</strong> — Unterhalb des Terminals befindet sich eine schmale Spalte mit der Frage, dem Fortschritt und den Schaltflächen, und daneben ein Kartenstapel: der aktuelle Schritt ganz vorne, die beiden vorherigen schauen von hinten hervor. Das Mausrad blättert durch die älteren Schritte; eine Genehmigung ist die vordere Karte mit ihren Schaltflächen.</li>
+<li><strong>tmux-Bereich (09)</strong> — Ein Bereich rechts neben dem Terminal in der Schriftart und den Farben des Terminals, von Linien gerahmt: eine Zeile pro Schritt mit dessen Art (<code>ssh</code>, <code>read</code>, <code>run</code>, <code>think</code>), die Antwort, die hinter einem Block-Cursor ausgegeben wird, und eine blaue Statuszeile am unteren Rand. Er nimmt etwa 40 % der Breite ein.</li>
+<li><strong>Gesprächsverlauf (13)</strong> — Ein Chat in einer Spalte rechts neben dem Terminal: Ihre Frage rechts, der Agent links mit seinen Gedanken als Text und seinen Befehlen als Codeblöcke mit deren Exit-Code, die sich mit einem Klick zu ihrer Ausgabe aufklappen. Drei Punkte hüpfen, während er arbeitet. Das Feld unten stellt eine Anschlussfrage, die einen neuen Lauf im selben Terminal startet, sobald der aktuelle beendet ist.</li>
+<li><strong>Protokoll-Tabelle (16)</strong> — Eine dichte Tabelle unter dem Terminal mit der Zeit, Art, Schritt, Ergebnis, Dauer und Tokenzahl jedes Schritts. Eine neue Zeile blinkt blau, die laufende Zeile hat einen kleinen Spinner, und eine offene Genehmigung verschiebt ihre Schaltflächen in die Kopfzeile. Ein Doppelklick auf eine Zeile zeigt deren Ausgabe, auf der letzten Zeile die Antwort.</li>
+</ul>
+<h2 id="im-terminal-fokus-modus-und-die-cursorzeile">Im Terminal: Fokus-Modus und die Cursorzeile<a class="headerlink" href="#im-terminal-fokus-modus-und-die-cursorzeile" title="Permanent link">&para;</a></h2>
+<p><img alt="On the left focus mode, the agent's lines marked by a glowing bar while the rest of the terminal is dimmed; on the right the suggestion at the cursor line with its keys and the waiting line at the bottom" src="../../en/assets/screenshots/plugins/ai-agent-terminal-designs.png" /></p>
+<ul>
+<li><strong>Fokus-Modus (17)</strong> — Ein Verlaufs-Design, das in das Terminal schreibt, was der Agent tut, als hätte er es selbst eingegeben: jeder Befehl als <code>$ command</code> mit seinen letzten Ausgabezeilen, seine Schlussfolgerungen, eine offene Genehmigung mit ihren Tasten und nach dem Lauf die Antwort. Ein leuchtender Balken markiert diese Zeilen, ein Licht läuft darunter entlang, während der Agent arbeitet, und der Rest des Terminals wird abgedunkelt; die Zeile, die Sie eingeben, bleibt hell. Wenn der Lauf endet, wird das Terminal wieder heller und die Zeilen bleiben im Scrollback.</li>
+<li><strong>Vorschlag an der Cursorzeile (14)</strong> — Ein Genehmigungsdesign: Der Befehl, den der Agent ausführen möchte, erscheint als Geister-Text genau dort, wo Sie tippen, mit einem Hinweis darunter, und eine Zeile am unteren Rand des Terminals zeigt an, dass der Agent wartet. <span class="keys"><kbd class="key-enter">Enter</kbd></span> führt ihn einmal aus; <span class="keys"><kbd class="key-tab">Tab</kbd></span> übernimmt: Die Ausführung endet und der Befehl wird am Prompt eingegeben, damit Sie ihn bearbeiten können; <span class="keys"><kbd class="key-escape">Esc</kbd></span> lehnt ab. Die Tasten <strong>1</strong>, <strong>2</strong> und <strong>3</strong> antworten wie überall. Eine Passwortanfrage verwendet weiterhin die Zeile unter dem Terminal.</li>
+</ul>
+<h2 id="schwebende-anzeigen">Schwebende Anzeigen<a class="headerlink" href="#schwebende-anzeigen" title="Permanent link">&para;</a></h2>
+<p>Diese Status-Designs schweben über dem Terminal, das seine volle Größe beibehält. Sie bleiben von den Zeilen unterhalb des Terminals fern und werden nach Beendigung der letzten Ausführung ausgeblendet, wie die Balken.</p>
+<p><img alt="The four floating displays: the frosted glass HUD, the status pill, the toasts with an approval and the orbit" src="../../en/assets/screenshots/plugins/ai-agent-floating-designs.png" /></p>
+<ul>
+<li><strong>Milchglas-HUD (04)</strong> — Eine halbtransparente Karte über der unteren rechten Ecke mit der Frage, dem gerade ausgeführten Schritt, dem Fortschritt in Segmenten und den Tokens. Während Sie im Terminal tippen, blendet sie sich auf 35 % ab, damit der Text darunter lesbar bleibt. ⤢ faltet die Schritte der Ausführung darüber auf.</li>
+<li><strong>Spotlight und Pille (05)</strong> — Eine kleine Pille in der oberen rechten Ecke mit dem aktuellen Schritt, wie weit der Lauf fortgeschritten ist und der Zeit; ein Klick faltet die Schritte darunter aus. <em>Ansicht → KI-Agent-Panel → In Spotlight fragen …</em> öffnet ein Feld in der Mitte des Terminals, in dem Sie den Agenten befragen, mit dem zu verwendenden Profil und Ihren früheren Fragen auf <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> und <span class="keys"><kbd class="key-arrow-down">Down</kbd></span>. <span class="keys"><kbd class="key-enter">Enter</kbd></span> startet den Lauf so, wie <code>agent …</code> es in der Shell würde, und das Feld schrumpft zur Pille.</li>
+<li><strong>Meldungen am Rand (10)</strong> — Jeder abgeschlossene Schritt erscheint als kurze Benachrichtigung unten rechts und verschwindet nach wenigen Sekunden wieder; ein Balken in jedem zeigt an, wann. Eine Genehmigung bleibt bis sie beantwortet wurde, mit ihren Schaltflächen. Ein Abzeichen zählt die Schritte; ein Klick darauf zeigt sie alle an.</li>
+<li><strong>Orbit-Anzeige (15)</strong> — Ein 72-Pixel-Kreis in der unteren rechten Ecke: Sein Ring füllt sich mit dem Fortschritt des Laufs, Punkte kreisen darum, während der Agent arbeitet, und in der Mitte werden die Schrittzahl und die Zeit angezeigt; ein Label daneben benennt den aktuellen Befehl. Ein Klick lässt die Schritte aus dem Kreis herausblühen.</li>
+</ul>
+<h2 id="anordnungen">Anordnungen<a class="headerlink" href="#anordnungen" title="Permanent link">&para;</a></h2>
+<p><img alt="On the left picture in picture with the run's steps and an approval, on the right picture in picture holding the log table" src="../../en/assets/screenshots/plugins/ai-agent-arrangements.png" /></p>
+<ul>
+<li><strong>Bild im Bild (19)</strong> — Ein kleines Fenster, das über dem Terminal schwebt. Ziehen Sie es am Titel, und es zeigt die vier Ecken, in die es sich bewegen kann, und springt beim Loslassen in die nächstgelegene. ⧉ macht es zu einem eigenen Fenster, beispielsweise für einen zweiten Bildschirm, und dockt es zurück; – faltet es auf seinen Titel zusammen, × blendet es bis zum nächsten Lauf aus. Mit einem Verlaufs-Panel in der Kombination hält das Fenster dieses Panel; andernfalls listet es die Schritte des Laufs und eine offene Genehmigung mit ihren Schaltflächen. Mehrere Läufe im selben Terminal werden zu Tabs.</li>
+<li><strong>Mitdenkendes Dock (20)</strong> — Wählt die Statusanzeige anhand der Terminalgröße: ein breites und hohes Terminal (ab 150 Spalten und 30 Zeilen) erhält die Zeitachse an der Seite, ein kleines (unter 70 Spalten oder 16 Zeilen) die Statuspille, alles dazwischen die Powerline-Statuszeile. Eine einmal gewählte Anzeige bleibt bestehen, bis die Größe eindeutig auf der anderen Seite liegt, sodass das Ziehen einer Aufteilung nicht zum Flackern führt. Nach dem letzten Lauf zeigt ein Countdown-Ring an, wie lange das Ergebnis bleibt.</li>
+</ul>
+<h2 id="genehmigungen-und-passworter">Genehmigungen und Passwörter<a class="headerlink" href="#genehmigungen-und-passworter" title="Permanent link">&para;</a></h2>
+<p>Eine Genehmigung wird im Terminal mit den Tasten <strong>1</strong> (einmal erlauben), <strong>2</strong> (immer erlauben) und <strong>3</strong> (abbrechen) oder mit Buttons beantwortet. Designs mit eigenen Buttons zeigen diese an: die Verlaufs-Panels, die Meldungen am Rand und das Bild-im-Bild-Fenster. Bei Blöcken im Terminal, im Fokus-Modus oder im Verlauf des klassischen Panels öffnet eine Genehmigung eine Zeile unter dem Terminal mit den Befehlen und den Buttons <strong>1 Einmal erlauben</strong>, <strong>2 Immer erlauben</strong> und <strong>3 Abbrechen</strong>. Eine Passwortanfrage öffnet diese Zeile immer, mit einem maskierten Feld, <strong>Für diese SSH-Sitzung verwenden</strong> und <strong>OK</strong>; <span class="keys"><kbd class="key-enter">Enter</kbd></span> sendet ab und <span class="keys"><kbd class="key-escape">Esc</kbd></span> bricht ab. Das klassische Panel behält seine eigenen Prompts bei.</p>
+<h2 id="lauf-menu-und-schritt-menu">Lauf-Menü und Schritt-Menü<a class="headerlink" href="#lauf-menu-und-schritt-menu" title="Permanent link">&para;</a></h2>
+<p>Jedes Design bietet das, was die Buttons des klassischen Panels tun. Die Leisten, die Verlaufs-Panels, das Milchglas-HUD und das Bild-im-Bild-Fenster haben einen ⋯-Button; die Statuspille, die Orbit-Anzeige, die Minimap-Schiene und das Abzeichen der Meldungen am Rand öffnen dasselbe Menü per Rechtsklick. Es funktioniert bei dem Lauf, den das Design zeigt:</p>
+<table>
+<thead>
+<tr>
+<th>Eintrag</th>
+<th>Effekt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arbeitsablauf …</td>
+<td>Wandelt die fertige Ausführung in ein wiederverwendbares Skript um, siehe <a href="ai-tools.html#workflow-skript-generieren">Workflow-Skript erzeugen</a></td>
+</tr>
+<tr>
+<td>Diesen Lauf exportieren</td>
+<td>Speichert den fertigen Lauf als Markdown, Text, YAML, XML, JSON, PDF oder Asciidoctor</td>
+</tr>
+<tr>
+<td>Alle Läufe exportieren</td>
+<td>Speichert jeden abgeschlossenen Lauf, den das Terminal aufbewahrt, in einer Datei</td>
+</tr>
+<tr>
+<td>Erneut ausführen</td>
+<td>Führt denselben Agent-Befehl erneut aus</td>
+</tr>
+<tr>
+<td>Antwort kopieren</td>
+<td>Kopiert die Antwort der Ausführung</td>
+</tr>
+<tr>
+<td>Läufe dieses Terminals</td>
+<td>Zeigt einen anderen Lauf des Terminals: die noch laufenden und die letzten fünf beendeten</td>
+</tr>
+</tbody>
+</table>
+<p>Die in das Terminal gezeichneten Designs (Blöcke, Fokus-Modus, der Vorschlag an der Cursorzeile) bieten dieselben Einträge im Kontextmenü des Terminals unter <em>KI → Letzter Agent-Lauf</em>.</p>
+<p>Ein Rechtsklick auf einen Schritt öffnet ein eigenes Menü mit <strong>Befehl kopieren</strong>, <strong>Ausgabe kopieren</strong>, <strong>Eintrag kopieren</strong> und <strong>Im Snippet-Editor öffnen</strong>. Das funktioniert auf einem Knoten der Zeitachse an der Seite, einer Zeile des Plans oder der Protokoll-Tabelle, einer Karte des Kartenstapels, einem Block des Gesprächsverlaufs, einer Zeile des tmux-Bereichs, einem Segment der Minimap-Schiene, einer Meldung am Rand und einem Schritt im Bild-im-Bild-Fenster.</p>
+<h2 id="optionen">Optionen<a class="headerlink" href="#optionen" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Wirkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Statusleiste nach einem Lauf ausblenden, nach (Sekunden, 0 = beibehalten)</td>
+<td>Wie lange die Statusanzeige nach dem letzten Lauf verbleibt; 0 behält sie bei, bis Sie sie ausblenden. Standard: 6 Sekunden.</td>
+</tr>
+<tr>
+<td>Animationen reduzieren</td>
+<td>Schaltet die bewegten Elemente aller Designs ab: das Pulsieren der Station und das bewegte Licht des <strong>Linienplans</strong>, die Ladeindikatoren, das Schimmern der <strong>Kopfleiste mit Schublade</strong>, das Rollen und Leuchten der <strong>Neon-Laufschrift</strong>, die Linsen-Animation der <strong>Minimap-Schiene</strong>, das Gleiten, Ploppen und Blühen der Verlaufs-Panel und schwebenden Anzeigen, das Tippen im <strong>tmux-Bereich</strong> und der Geistertext, das Glas des <strong>Milchglas-HUD</strong> und das Verblassen des <strong>Fokus-Modus</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ein-design-pro-verbindung">Ein Design pro Verbindung<a class="headerlink" href="#ein-design-pro-verbindung" title="Permanent link">&para;</a></h2>
+<p>Der <strong>KI</strong> Tab des <a href="connections.html#verbindung-erstellenbearbeiten">Verbindungseditors</a> enthält eine Liste mit <strong>KI-Agent Design</strong>: <strong>Standard verwenden</strong> (mit dem Namen des aktuellen Standards) oder jede Kombination. Die Auswahl gilt ab dem nächsten Lauf dieser Verbindung. Da Ihre eigenen Kombinationen in den Einstellungen dieses Computers gespeichert sind, ist die Auswahl nicht Teil einer exportierten Verbindung; eine Verbindung, deren Kombination gelöscht wurde, zeigt <strong>Gespeicherte Kombination (derzeit nicht verfügbar)</strong> und verwendet den Standard.</p>
+<h2 id="farben">Farben<a class="headerlink" href="#farben" title="Permanent link">&para;</a></h2>
+<p>Die Designs übernehmen ihre Farben aus den <strong>Terminal-KI-Agent-Fenster</strong> Farben des Terminal-Themas der Verbindung, die der Theme-Editor auf dem <a href="../reference/settings/appearance.html#themes-tab">Themes Tab</a> anzeigt. Ein Thema, dessen Cursor weiß oder grau ist, erhält einen blauen Akzent, ein helleres auf dunklen Themen und ein dunkleres auf hellen Themen; der Hintergrund des Panels folgt dem eigenen Hintergrund des Terminals mit nur einer dezenten Tönung. Agentenpanel-Farben, die korTTY für ein Thema vor dem blauen Akzent abgeleitet hat, werden erneut einmal abgeleitet; Farben, die Sie selbst ausgewählt haben, bleiben erhalten. Grün bleibt für abgeschlossene Schritte.</p>
+<h2 id="an-den-rand-angedockt">An den Rand angedockt<a class="headerlink" href="#an-den-rand-angedockt" title="Permanent link">&para;</a></h2>
+<p><em>Ansicht → KI-Agent-Panel → Links andocken</em> oder <em>Rechts andocken</em> zeigt das klassische Panel im Seitendock; Blöcke erscheinen weiterhin im Terminal, und die Metro-Linie bewegt sich in das Dock mit dem Panel.</p>
+<h2 id="gespeicherte-einstellungen">Gespeicherte Einstellungen<a class="headerlink" href="#gespeicherte-einstellungen" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Datei</th>
+<th>Element</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>global-settings.xml</code></td>
+<td><code>aiAgentDesignDefaultId</code></td>
+<td>Die Standardkombination; fehlt für <strong>Standard</strong></td>
+</tr>
+<tr>
+<td><code>global-settings.xml</code></td>
+<td><code>aiAgentDesignCombinations</code></td>
+<td>Ihre eigenen Kombinationen, jeweils ein <code>combination</code>-Element</td>
+</tr>
+<tr>
+<td><code>global-settings.xml</code></td>
+<td><code>aiAgentDesignAutoHideSeconds</code></td>
+<td>Die Statusleistenverzögerung; fehlt für 6 Sekunden</td>
+</tr>
+<tr>
+<td><code>global-settings.xml</code></td>
+<td><code>aiAgentDesignReducedAnimations</code></td>
+<td>Animationen reduzieren</td>
+</tr>
+<tr>
+<td><code>connections.xml</code></td>
+<td><code>aiAgentDesignId</code></td>
+<td>Die eigene Kombination der Verbindung; bei der Standardverbindung nicht vorhanden</td>
+</tr>
+</tbody>
+</table></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+<footer class="kt-footer">
+  <div class="kt-footer__line">MIT-lizenziert &middot; Entwickelt von Daniel Mengel</div>
+  <div class="kt-footer__line">korTTY <strong>v2.22.0</strong></div>
+</footer>
+
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../assets/javascripts/kt-zoom.js" defer></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>
