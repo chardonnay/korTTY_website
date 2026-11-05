@@ -1,0 +1,579 @@
+/* ===========================================================================
+   korTTY Guide theme — dark "terminal" aesthetic.
+   Palette matches the app-docs SVG diagrams so site + diagrams read as one
+   design system:
+     bg #07111d · surface #0d1b2a / #102132 · primary #38bdf8 · accent #67e8f9
+     hairlines rgba(103,232,249,.18) · text #e6f3ff / muted #b9c8da
+   All fonts self-hosted-free (system stacks) so the site stays 100% offline
+   inside korTTY's WebView (theme.font:false → no Google Fonts).
+   =========================================================================== */
+
+:root {
+  --kt-bg: #07111d;
+  --kt-bg-2: #0a1726;
+  --kt-surface: #0d1b2a;
+  --kt-surface-2: #102132;
+  --kt-primary: #38bdf8;
+  --kt-accent: #67e8f9;
+  --kt-text: #e6f3ff;
+  --kt-muted: #b9c8da;
+  --kt-line: rgba(103, 232, 249, 0.18);
+  --kt-line-strong: rgba(103, 232, 249, 0.32);
+  --kt-mono: ui-monospace, "JetBrains Mono", "SF Mono", "Fira Code", "Cascadia Code", Menlo, Consolas, monospace;
+  --kt-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Map korTTY palette onto Material's slate scheme variables. */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: var(--kt-bg);
+  --md-default-fg-color: var(--kt-text);
+  --md-default-fg-color--light: var(--kt-muted);
+  --md-default-fg-color--lighter: rgba(185, 200, 218, 0.6);
+  --md-primary-fg-color: var(--kt-bg);
+  --md-primary-bg-color: var(--kt-text);
+  --md-accent-fg-color: var(--kt-accent);
+  --md-typeset-a-color: var(--kt-primary);
+  --md-code-bg-color: #061320;
+  --md-code-fg-color: #d7ecff;
+  --md-footer-bg-color: #050d16;
+  --md-footer-bg-color--dark: #040a11;
+}
+
+body,
+.md-typeset {
+  font-family: var(--kt-sans);
+}
+
+/* Subtle radial glow behind the content, echoing the diagrams' dark canvas. */
+.md-main {
+  background:
+    radial-gradient(1200px 480px at 80% -10%, rgba(56, 189, 248, 0.07), transparent 60%),
+    radial-gradient(900px 420px at 0% 0%, rgba(103, 232, 249, 0.05), transparent 55%),
+    var(--kt-bg);
+}
+
+/* Header / nav accents */
+.md-header {
+  background: linear-gradient(180deg, #08141f, #07111d);
+  border-bottom: 1px solid var(--kt-line);
+}
+.md-tabs {
+  background: transparent;
+  border-bottom: 1px solid var(--kt-line);
+}
+.md-nav__link--active,
+.md-nav__link:focus,
+.md-nav__link:hover {
+  color: var(--kt-accent);
+}
+
+/* Links: cyan with a glow on hover. */
+.md-typeset a {
+  color: var(--kt-primary);
+  text-decoration-color: var(--kt-line-strong);
+  transition: color 0.15s ease, text-shadow 0.15s ease;
+}
+.md-typeset a:hover {
+  color: var(--kt-accent);
+  text-shadow: 0 0 10px rgba(103, 232, 249, 0.35);
+}
+
+/* Headings */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  color: #f3fbff;
+  letter-spacing: 0.2px;
+}
+.md-typeset h2 {
+  border-bottom: 1px solid var(--kt-line);
+  padding-bottom: 0.3em;
+}
+
+/* ---- Tables (the settings/menu references lean on these heavily) ---------- */
+.md-typeset table:not([class]) {
+  background: var(--kt-surface);
+  border: 1px solid var(--kt-line);
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 0.78rem;
+}
+.md-typeset table:not([class]) th {
+  background: var(--kt-surface-2);
+  color: var(--kt-accent);
+  font-weight: 700;
+  border-bottom: 1px solid var(--kt-line-strong);
+}
+.md-typeset table:not([class]) tr:hover {
+  background: rgba(56, 189, 248, 0.06);
+}
+
+/* ---- Code & "terminal window" fenced blocks ------------------------------ */
+.md-typeset code,
+.md-typeset pre > code {
+  font-family: var(--kt-mono);
+}
+.md-typeset pre > code {
+  border: 1px solid var(--kt-line);
+  border-radius: 10px;
+}
+/* Give shell/bash/console blocks a terminal-window chrome (title dots). */
+.md-typeset .highlight:has(> pre > code.language-bash),
+.md-typeset .highlight:has(> pre > code.language-shell),
+.md-typeset .highlight:has(> pre > code.language-console),
+.md-typeset .highlight:has(> pre > code.language-sh) {
+  position: relative;
+  border-radius: 12px;
+  padding-top: 1.6rem;
+  background: #061320;
+  border: 1px solid var(--kt-line);
+  box-shadow: 0 0 0 1px rgba(7, 17, 29, 0.6), 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+.md-typeset .highlight:has(> pre > code.language-bash)::before,
+.md-typeset .highlight:has(> pre > code.language-shell)::before,
+.md-typeset .highlight:has(> pre > code.language-console)::before,
+.md-typeset .highlight:has(> pre > code.language-sh)::before {
+  content: "● ● ●";
+  position: absolute;
+  top: 0.35rem;
+  left: 0.75rem;
+  letter-spacing: 0.25rem;
+  font-size: 0.7rem;
+  color: #2a4a63;
+}
+
+/* ---- Admonitions: cyan glow left border ---------------------------------- */
+/* Dracula emits <div class="admonition warning"><p class="admonition-title">
+   inside a bare <article>; Material wrapped the same markup in .md-typeset.
+   The theme ships its own admonition styling, so these rules have to win on
+   specificity — hence the `article` scope rather than a bare `.admonition`. */
+article .admonition,
+article details {
+  background: var(--kt-surface);
+  border: 1px solid var(--kt-line);
+  border-left: 0.25rem solid var(--kt-primary);
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  margin: 1.2rem 0;
+}
+article .admonition-title,
+article summary {
+  color: var(--kt-accent);
+  font-family: var(--kt-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0 0 0.4rem;
+}
+/* The six types the guide actually uses (note 80, warning 46, tip 15,
+   important 6, info 3, danger 2), keyed off the korTTY palette rather than
+   Dracula's purple/pink defaults. note/info/important keep the cyan default. */
+article .admonition.tip { border-left-color: #4ade80; }
+article .admonition.tip > .admonition-title { color: #4ade80; }
+article .admonition.warning { border-left-color: #fbbf24; }
+article .admonition.warning > .admonition-title { color: #fbbf24; }
+article .admonition.danger { border-left-color: #f87171; }
+article .admonition.danger > .admonition-title { color: #f87171; }
+article .admonition > :last-child { margin-bottom: 0; }
+
+/* ---- Diagrams: frame the embedded SVGs ----------------------------------- */
+.md-typeset img[src*="assets/diagrams/"],
+.md-typeset img[src*="assets/screenshots/"] {
+  border: 1px solid var(--kt-line);
+  border-radius: 10px;
+  background: var(--kt-bg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* ---- Click-to-enlarge overlay (assets/javascripts/kt-zoom.js) ------------ */
+/* The framed pictures above are the zoomable ones — same selector, so the two
+   halves of the feature can never drift apart. */
+.md-typeset img[data-kt-zoomable] {
+  cursor: zoom-in;
+}
+.md-typeset img[data-kt-zoomable]:focus-visible {
+  outline: 2px solid var(--kt-primary);
+  outline-offset: 3px;
+}
+
+/* Locks the page behind the overlay so a wheel gesture pans the picture
+   instead of scrolling the article underneath it. */
+body.kt-zoom-open {
+  overflow: hidden;
+}
+
+.kt-zoom {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: rgba(4, 10, 17, 0.92);
+  backdrop-filter: blur(2px);
+}
+.kt-zoom[hidden] {
+  display: none;
+}
+.kt-zoom__bar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.4rem;
+  flex: 0 0 auto;
+}
+.kt-zoom__btn {
+  min-width: 2.2rem;
+  padding: 0.25rem 0.6rem;
+  font-family: var(--kt-sans);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--kt-text);
+  background: var(--kt-surface-2);
+  border: 1px solid var(--kt-line);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.kt-zoom__btn:hover {
+  color: var(--kt-accent);
+  border-color: var(--kt-primary);
+}
+.kt-zoom__level {
+  min-width: 4rem;
+}
+.kt-zoom__close {
+  font-size: 1rem;
+}
+/* The stage owns the leftover height so "fit" really means "fits the window",
+   and it is the scroll container once the picture grows past it. */
+.kt-zoom__stage {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  min-height: 0;
+}
+.kt-zoom__img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  background: var(--kt-bg);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  cursor: zoom-in;
+}
+.kt-zoom__img--zoomed {
+  /* margin:auto keeps a picture smaller than the stage centred while scrolling. */
+  margin: auto;
+  cursor: grab;
+}
+.kt-zoom__caption {
+  flex: 0 0 auto;
+  margin: 0;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--kt-muted);
+}
+
+/* ---- Hero landing -------------------------------------------------------- */
+.kt-hero {
+  text-align: center;
+  padding: 2.5rem 1rem 1.5rem;
+  border: 1px solid var(--kt-line);
+  border-radius: 16px;
+  background:
+    radial-gradient(700px 260px at 50% -20%, rgba(56, 189, 248, 0.12), transparent 60%),
+    linear-gradient(180deg, var(--kt-bg-2), var(--kt-bg));
+  margin-bottom: 1.5rem;
+}
+.kt-hero-video {
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  border: 1px solid var(--kt-line);
+  background: #000;
+  object-fit: cover;
+  box-shadow: 0 0 44px rgba(56, 189, 248, 0.28), 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+.kt-hero-video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.kt-hero h1 {
+  margin: 0.6rem 0 0.2rem;
+  font-size: 2.1rem;
+}
+.kt-hero .kt-tagline {
+  color: var(--kt-muted);
+  font-size: 1rem;
+  max-width: 46rem;
+  margin: 0.2rem auto 0.8rem;
+}
+.kt-badge {
+  display: inline-block;
+  font-family: var(--kt-mono);
+  font-size: 0.8rem;
+  color: var(--kt-accent);
+  border: 1px solid var(--kt-line-strong);
+  border-radius: 999px;
+  padding: 0.15rem 0.7rem;
+  background: rgba(56, 189, 248, 0.08);
+}
+
+/* Material "grid cards" recolored to the korTTY surface. */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid > .card {
+  border: 1px solid var(--kt-line);
+  border-radius: 12px;
+  background: var(--kt-surface);
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--kt-line-strong);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+}
+
+/* Header language switcher (EN <-> DE), rendered by overrides/main.html.
+   Its own bar under the navbar rather than a navbar item: Dracula builds the
+   header from a Bootstrap <ul class="navbar-nav">, and injecting a list item
+   into an included module would mean overriding the whole header template. */
+.kt-lang-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.35rem 1rem;
+  background: var(--kt-bg-2);
+  border-bottom: 1px solid var(--kt-line);
+}
+.kt-lang-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.05rem 0.55rem;
+  border: 1px solid var(--kt-line-strong);
+  border-radius: 999px;
+  color: var(--kt-accent) !important;
+  text-decoration: none;
+  font-family: var(--kt-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.kt-lang-switch:hover {
+  background: rgba(56, 189, 248, 0.12);
+}
+
+/* Footer (overrides/main.html) — replaces the theme's own credit band. */
+.kt-footer {
+  padding: 1.1rem 1rem 1.6rem;
+  text-align: center;
+  color: var(--kt-muted);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--kt-line);
+}
+.kt-footer strong {
+  color: var(--kt-accent);
+  font-family: var(--kt-mono);
+}
+
+/* ---- Offline substitutes for the theme's Font Awesome icons -------------- */
+/* overrides/main.html drops Dracula's unconditional CDN <link> to Font Awesome
+   (assert_offline in build-docs-site.py rejects it, and it would not load from
+   a jar:/file: origin anyway). Only three of the theme's `fa-*` classes reach
+   the built pages — the repo star/fork/tag icons need a repo_url this site does
+   not set — so three Unicode glyphs replace the font outright. */
+.fa {
+  font-style: normal;
+  font-family: var(--kt-sans);
+}
+.fa-bars::before { content: "\2630"; }        /* ☰ */
+.fa-arrow-left::before { content: "\2190"; }  /* ← */
+.fa-arrow-right::before { content: "\2192"; } /* → */
+
+/* ---- Heading permalinks -------------------------------------------------- */
+/* toc.permalink emits a ¶ anchor after every heading. Material hid it until the
+   heading was hovered; Dracula ships no such rule, so all 114 pages would carry
+   a visible pilcrow on every heading. Same behaviour restored here. */
+article .headerlink {
+  opacity: 0;
+  margin-left: 0.4rem;
+  color: var(--kt-accent) !important;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+article h1:hover .headerlink,
+article h2:hover .headerlink,
+article h3:hover .headerlink,
+article h4:hover .headerlink,
+article h5:hover .headerlink,
+article h6:hover .headerlink {
+  opacity: 1;
+}
+
+/* ---- Live search suggestions (overrides/searchbox.html) ------------------ */
+/* MkDocs' search/main.js renders straight into #mkdocs-search-results; this makes
+   that element a panel hanging under the header box instead of a block in the
+   page flow. :empty is what hides it — main.js clears the element for queries
+   below min_search_length, and the inline script empties it on Escape / click
+   outside, so no extra show/hide state is needed. */
+.kt-search {
+  position: relative;
+}
+/* The reset button sits inside the field's right edge, so the form is the positioning
+   context and the input reserves room for it. .kt-search itself must stay the context
+   for the suggestion panel below, which anchors to the whole box rather than the form. */
+.kt-search-form {
+  position: relative;
+}
+/* Dracula leaves the field at the browser's default width, which next to the
+   Previous/Next buttons cut the placeholder off mid-word. The width fits the short
+   placeholder ("Durchsuchen" is the longer one) plus the reset button's room. */
+.kt-search .kt-search-input {
+  width: 13rem;
+  max-width: 100%;
+  padding-right: 1.9rem;
+}
+.kt-search-clear {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.15rem;
+  height: 1.15rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--kt-muted);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.kt-search-clear:hover,
+.kt-search-clear:focus-visible {
+  background: rgba(56, 189, 248, 0.16);
+  color: var(--kt-accent);
+}
+
+.kt-search-suggest {
+  position: absolute;
+  z-index: 60;
+  top: calc(100% + 0.35rem);
+  right: 0;
+  width: min(30rem, 80vw);
+  max-height: min(26rem, 60vh);
+  overflow-y: auto;
+  padding: 0.35rem;
+  text-align: left;
+  background: var(--kt-surface);
+  border: 1px solid var(--kt-line-strong);
+  border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+.kt-search-suggest:empty {
+  display: none;
+}
+.kt-search-suggest article {
+  padding: 0.4rem 0.55rem;
+  border-radius: 7px;
+}
+.kt-search-suggest article:hover {
+  background: rgba(56, 189, 248, 0.1);
+}
+.kt-search-suggest h3 {
+  margin: 0;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+.kt-search-suggest h3 a {
+  color: var(--kt-accent);
+  text-decoration: none;
+}
+/* The panel scrolls, so an ordinary trailing line would sit below the fold and the
+   reader would never learn there are more hits. Pinned to the bottom edge instead. */
+.kt-search-suggest .kt-search-more {
+  position: sticky;
+  bottom: -0.35rem;
+  margin: 0.3rem -0.35rem -0.35rem;
+  padding: 0.4rem 0.55rem 0.45rem;
+  border-top: 1px solid var(--kt-line);
+  background: var(--kt-surface);
+  font-size: 0.76rem;
+  display: block;
+  text-align: center;
+}
+.kt-search-suggest .kt-search-more a {
+  color: var(--kt-accent);
+  text-decoration: none;
+}
+.kt-search-suggest .kt-search-more a:hover {
+  text-decoration: underline;
+}
+.kt-search-suggest p {
+  margin: 0.1rem 0 0;
+  font-size: 0.74rem;
+  line-height: 1.45;
+  color: var(--kt-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---- Theme chrome recoloured to the korTTY palette ---------------------- */
+/* Dracula drives its accents and gradients from a handful of custom properties
+   (--purple #9580ff, --pink #ff80bf, --cyan #80ffea), so remapping those three is
+   what turns the sidebar chevrons, the menu tab and every *-gradient cyan at once —
+   far better than chasing the individual selectors that consume them. */
+:root {
+  --purple: var(--kt-primary);
+  --pink: var(--kt-accent);
+  --cyan: var(--kt-accent);
+  --purple-transparent: rgba(56, 189, 248, 0.1);
+  --pink-transparent: rgba(103, 232, 249, 0.1);
+  --cyan-transparent: rgba(103, 232, 249, 0.1);
+}
+
+/* The surfaces that must stay dark rather than take the accent as a fill: the
+   navbar is `drac-bg-purple`, i.e. a solid var(--purple) background, and remapping
+   the variable alone would turn it into a bright blue band. */
+.navbar.drac-bg-purple {
+  background: linear-gradient(180deg, #08141f, var(--kt-bg)) !important;
+  border-bottom: 1px solid var(--kt-line);
+}
+nav.divider.drac-bg-purple-cyan {
+  background: linear-gradient(180deg, var(--kt-primary), var(--kt-accent)) !important;
+}
+.custom-menu .dot-li.drac-bg-purple {
+  background: linear-gradient(135deg, var(--kt-primary), var(--kt-accent)) !important;
+  color: var(--kt-bg) !important;
+}
+body.drac-scrollbar-purple {
+  scrollbar-color: var(--kt-line-strong) transparent;
+}
+body.drac-scrollbar-purple::-webkit-scrollbar-thumb,
+.content::-webkit-scrollbar-thumb {
+  background: var(--kt-line-strong);
+}
+/* The navbar's Previous/Next buttons and search field inherit Dracula's purple
+   borders through .drac-btn / .drac-input. */
+.navbar .drac-btn {
+  border-color: var(--kt-line-strong) !important;
+  color: var(--kt-accent) !important;
+}
+.navbar .drac-btn:hover {
+  background: rgba(56, 189, 248, 0.12) !important;
+}
+.navbar .drac-input {
+  border-color: var(--kt-line-strong) !important;
+}
+.navbar .drac-input:focus {
+  border-color: var(--kt-primary) !important;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.18) !important;
+}

@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Coding agents — from the pane to dashboard, panel, strip, badge and notifier</title>
+  <desc id="desc">A local shell pane is watched by a per-pane monitor; the detection service passes state changes to the registry, which computes the effective state and per-tab rollups. The registry updates the dashboard, the Coding Agents panel, the status strip and tab titles, the app-icon badge and the desktop notifier. Quick keys and prompts from the dashboard and the panel go through the agent actions back into the pane. The UI bridge connects the registry to all open windows.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#67e8f9"/></marker>
+    <marker id="arrowdash" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#a78bfa"/></marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#e6f3ff;font-size:16px}
+      .bg{fill:#07111d}
+      .box{fill:#13243a;stroke:#38bdf8;stroke-width:2;rx:12}
+      .title{font-size:28px;font-weight:700;fill:#f8fafc}
+      .subtitle{font-size:15px;fill:#b9c8da}
+      .small{font-size:14px;fill:#b9c8da}
+      .label{font-size:18px;font-weight:700;fill:#f8fafc;text-anchor:middle}
+      .note{font-size:14px;fill:#b9c8da;text-anchor:middle}
+      .line{stroke:#67e8f9;stroke-width:2.6;fill:none;marker-end:url(#arrow)}
+      .bus{stroke:#67e8f9;stroke-width:2.6;fill:none}
+      .back{stroke:#a78bfa;stroke-width:2.4;stroke-dasharray:8 6;fill:none;marker-end:url(#arrowdash)}
+      .link{stroke:#64748b;stroke-width:2.2;stroke-dasharray:6 6;fill:none}
+      .secure{stroke:#f59e0b}
+      .state{stroke:#34d399}
+      .ai{stroke:#a78bfa}
+      .service{stroke:#60a5fa}
+    </style>
+  </defs>
+  <rect class="bg" width="1280" height="720"/>
+
+  <text class="title" x="40" y="52">Coding agents — from the pane to every surface</text>
+  <text class="subtitle" x="40" y="80">Detection runs in the background; the registry updates every window.</text>
+
+  <!-- Row A: pane → monitor → service → registry -->
+  <rect class="box secure" x="60" y="120" width="240" height="84"/>
+  <text class="label" x="180" y="155">Shell pane</text>
+  <text class="note" x="180" y="180">Claude Code · Codex · Gemini</text>
+
+  <rect class="box service" x="380" y="120" width="230" height="84"/>
+  <text class="label" x="495" y="155">Monitor</text>
+  <text class="note" x="495" y="180">one per pane</text>
+
+  <rect class="box service" x="690" y="120" width="230" height="84"/>
+  <text class="label" x="805" y="155">Detection</text>
+  <text class="note" x="805" y="180">recognises the state</text>
+
+  <rect class="box state" x="1000" y="120" width="240" height="84"/>
+  <text class="label" x="1120" y="155">Registry</text>
+  <text class="note" x="1120" y="180">state · tab rollups</text>
+
+  <path class="line" d="M300 162 H378"/>
+  <path class="line" d="M610 162 H688"/>
+  <path class="line" d="M920 162 H998"/>
+
+  <!-- Bus from the registry to the surfaces -->
+  <path class="bus" d="M1120 204 V270 H170"/>
+  <path class="line" d="M170 270 V328"/>
+  <path class="line" d="M410 270 V328"/>
+  <path class="line" d="M650 270 V328"/>
+  <path class="line" d="M890 270 V328"/>
+  <path class="line" d="M1120 270 V328"/>
+  <text class="small" x="200" y="256">every change reaches all windows</text>
+
+  <!-- Row B: surfaces -->
+  <rect class="box" x="70" y="330" width="200" height="80"/>
+  <text class="label" x="170" y="364">Dashboard</text>
+  <text class="note" x="170" y="388">chips · rollups</text>
+
+  <rect class="box" x="310" y="330" width="200" height="80"/>
+  <text class="label" x="410" y="364">Agents panel</text>
+  <text class="note" x="410" y="388">quick keys · prompt</text>
+
+  <rect class="box" x="550" y="330" width="200" height="80"/>
+  <text class="label" x="650" y="364">Status strip</text>
+  <text class="note" x="650" y="388">✋ ⚡ ⏸ ✓ · tab title</text>
+
+  <rect class="box" x="790" y="330" width="200" height="80"/>
+  <text class="label" x="890" y="364">App badge</text>
+  <text class="note" x="890" y="388">Dock · taskbar</text>
+
+  <rect class="box" x="1030" y="330" width="180" height="80"/>
+  <text class="label" x="1120" y="364">Notifier</text>
+  <text class="note" x="1120" y="388">decision · done</text>
+
+  <!-- Row C: actions back into the pane, UI bridge -->
+  <rect class="box ai" x="310" y="500" width="200" height="80"/>
+  <text class="label" x="410" y="534">Actions</text>
+  <text class="note" x="410" y="558">y · n · Enter · Esc · prompt</text>
+
+  <path class="line" d="M410 410 V498"/>
+  <path class="line" d="M170 410 V540 H308"/>
+
+  <!-- Keys go back into the pane: around the outside, clear of every box -->
+  <path class="back" d="M410 580 V625 H30 V162 H58"/>
+  <text class="small" x="50" y="650">keys and prompts go back into the pane, like a key press</text>
+
+  <rect class="box state" x="740" y="500" width="470" height="80"/>
+  <text class="label" x="975" y="534">UI bridge</text>
+  <text class="note" x="975" y="558">focus · find pane · badge on every window</text>
+
+  <path class="link" d="M890 410 V500"/>
+  <path class="link" d="M1120 410 V500"/>
+  <path class="link" d="M510 540 H740"/>
+
+  <text class="small" x="40" y="690">Done until seen: an agent that finishes in a pane you are not looking at stays ✓ until you look at it.</text>
+</svg>
