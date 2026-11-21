@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Snippet Manager workspace and Full code analysis workflow</title>
+  <desc id="desc">Flow from the Snippet Manager workspace (library, preview, quick open) to a snippet's editor tab, then to the analysis panel inside the editor, which stores every result per snippet the moment it arrives. Apply selected shows its staged progress in the panel with Stop and Retry, and a finished run replaces the editor area with a non-blocking review offering Accept and apply, Reject or Review later. The stored history supports pinning, discarding, verifying and before/after report export, also for several snippets at once. Below, the separate diagram request is validated, repaired once if needed, otherwise replaced by a labelled local fallback, rendered by the offline Mermaid renderer and opened in a zoom window. The storage lane lists snippets.xml, snippet-analyses and snippet-drafts.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#67e8f9"/>
+    </marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#e6f3ff;font-size:16px}
+      .bg{fill:#07111d}
+      .grid{stroke:#14243a;stroke-width:1}
+      .panel{fill:#0d1a2b;stroke:#263f5c;stroke-width:2;rx:18}
+      .header{fill:#14243a;rx:18}
+      .box{fill:#13243a;stroke:#38bdf8;stroke-width:2;rx:10}
+      .editor{stroke:#60a5fa}
+      .ai{stroke:#a78bfa}
+      .render{stroke:#34d399}
+      .secure{stroke:#f59e0b}
+      .state{stroke:#fb7185}
+      .title{font-size:30px;font-weight:700;fill:#f8fafc}
+      .subtitle{font-size:14px;fill:#b9c8da}
+      .panelTitle{font-size:16px;font-weight:700;fill:#7dd3fc}
+      .label{font-size:14px;font-weight:700;fill:#f8fafc}
+      .detail{font-size:12px;fill:#b9c8da}
+      .note{font-size:13px;fill:#93a8bd}
+      .line{stroke:#67e8f9;stroke-width:2.2;fill:none;marker-end:url(#arrow)}
+      .dash{stroke:#64748b;stroke-width:1.8;stroke-dasharray:7 6;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1280" height="720"/>
+  <path class="grid" d="M 0 120 H 1280 M 0 240 H 1280 M 0 360 H 1280 M 0 480 H 1280 M 0 600 H 1280 M 160 0 V 720 M 320 0 V 720 M 480 0 V 720 M 640 0 V 720 M 800 0 V 720 M 960 0 V 720 M 1120 0 V 720" opacity="0.25"/>
+
+  <text class="title" x="42" y="52">Snippet Manager + Full Code Analysis</text>
+  <text class="subtitle" x="42" y="80">One workspace: the analysis, its apply progress and the change review all stay inside the snippet's editor tab and are stored per snippet.</text>
+
+  <!-- 1. Workspace -->
+  <rect class="panel" x="25" y="110" width="190" height="300"/>
+  <rect class="header" x="25" y="110" width="190" height="44"/>
+  <text class="panelTitle" x="42" y="138">1. Workspace</text>
+  <rect class="box editor" x="40" y="168" width="160" height="64"/>
+  <text class="label" x="52" y="192">Library</text>
+  <text class="detail" x="52" y="210">search, category and</text>
+  <text class="detail" x="52" y="224">analysis filters</text>
+  <rect class="box editor" x="40" y="246" width="160" height="64"/>
+  <text class="label" x="52" y="270">Preview tab</text>
+  <text class="detail" x="52" y="288">read-only; type or</text>
+  <text class="detail" x="52" y="302">Enter to edit</text>
+  <rect class="box editor" x="40" y="324" width="160" height="64"/>
+  <text class="label" x="52" y="348">Quick open</text>
+  <text class="detail" x="52" y="366">Ctrl/Cmd+P, tabs</text>
+  <text class="detail" x="52" y="380">restored on reopen</text>
+
+  <!-- 2. Editor tab -->
+  <rect class="panel" x="232" y="110" width="190" height="300"/>
+  <rect class="header" x="232" y="110" width="190" height="44"/>
+  <text class="panelTitle" x="249" y="138">2. Editor tab</text>
+  <rect class="box editor" x="247" y="168" width="160" height="64"/>
+  <text class="label" x="259" y="192">Monaco code</text>
+  <text class="detail" x="259" y="210">one tab per snippet,</text>
+  <text class="detail" x="259" y="224">Ctrl/Cmd+S and +W</text>
+  <rect class="box ai" x="247" y="246" width="160" height="64"/>
+  <text class="label" x="259" y="270">AI Text + AI Code</text>
+  <text class="detail" x="259" y="288">every request: Stop,</text>
+  <text class="detail" x="259" y="302">Esc and Retry</text>
+  <rect class="box state" x="247" y="324" width="160" height="64"/>
+  <text class="label" x="259" y="348">Draft autosave</text>
+  <text class="detail" x="259" y="366">unsaved form kept;</text>
+  <text class="detail" x="259" y="380">Restore after a crash</text>
+
+  <!-- 3. Analysis panel -->
+  <rect class="panel" x="439" y="110" width="190" height="300"/>
+  <rect class="header" x="439" y="110" width="190" height="44"/>
+  <text class="panelTitle" x="456" y="138">3. Analysis panel</text>
+  <rect class="box ai" x="454" y="168" width="160" height="64"/>
+  <text class="label" x="466" y="192">Analysis request</text>
+  <text class="detail" x="466" y="210">summary, dependencies,</text>
+  <text class="detail" x="466" y="224">improvements</text>
+  <rect class="box state" x="454" y="246" width="160" height="64"/>
+  <text class="label" x="466" y="270">Stored at once</text>
+  <text class="detail" x="466" y="288">with diagram, ticks</text>
+  <text class="detail" x="466" y="302">and every apply run</text>
+  <rect class="box editor" x="454" y="324" width="160" height="64"/>
+  <text class="label" x="466" y="348">Side panel</text>
+  <text class="detail" x="466" y="366">badge, resizable,</text>
+  <text class="detail" x="466" y="380">reopens without AI</text>
+
+  <!-- 4. Apply progress -->
+  <rect class="panel" x="646" y="110" width="190" height="300"/>
+  <rect class="header" x="646" y="110" width="190" height="44"/>
+  <text class="panelTitle" x="663" y="138">4. Apply progress</text>
+  <rect class="box ai" x="661" y="168" width="160" height="64"/>
+  <text class="label" x="673" y="192">Bounded stages</text>
+  <text class="detail" x="673" y="210">findings, hardening;</text>
+  <text class="detail" x="673" y="224">one repair per stage</text>
+  <rect class="box editor" x="661" y="246" width="160" height="64"/>
+  <text class="label" x="673" y="270">Checklist + time</text>
+  <text class="detail" x="673" y="288">tokens, Stop, run</text>
+  <text class="detail" x="673" y="302">summary</text>
+  <rect class="box secure" x="661" y="324" width="160" height="64"/>
+  <text class="label" x="673" y="348">Recovery</text>
+  <text class="detail" x="673" y="366">continue, partial</text>
+  <text class="detail" x="673" y="380">preview, start over</text>
+
+  <!-- 5. Review -->
+  <rect class="panel" x="853" y="110" width="190" height="300"/>
+  <rect class="header" x="853" y="110" width="190" height="44"/>
+  <text class="panelTitle" x="870" y="138">5. Review in editor</text>
+  <rect class="box render" x="868" y="168" width="160" height="64"/>
+  <text class="label" x="880" y="192">Side-by-side diff</text>
+  <text class="detail" x="880" y="210">replaces editor area,</text>
+  <text class="detail" x="880" y="224">never blocks</text>
+  <rect class="box render" x="868" y="246" width="160" height="64"/>
+  <text class="label" x="880" y="270">Accept and apply</text>
+  <text class="detail" x="880" y="288">only onto unchanged</text>
+  <text class="detail" x="880" y="302">content; or Reject</text>
+  <rect class="box state" x="868" y="324" width="160" height="64"/>
+  <text class="label" x="880" y="348">Review later</text>
+  <text class="detail" x="880" y="366">result kept; shown</text>
+  <text class="detail" x="880" y="380">again after restart</text>
+
+  <!-- 6. History + reports -->
+  <rect class="panel" x="1060" y="110" width="195" height="300"/>
+  <rect class="header" x="1060" y="110" width="195" height="44"/>
+  <text class="panelTitle" x="1077" y="138">6. History + reports</text>
+  <rect class="box state" x="1075" y="168" width="165" height="64"/>
+  <text class="label" x="1087" y="192">History</text>
+  <text class="detail" x="1087" y="210">pin, discard, Verify,</text>
+  <text class="detail" x="1087" y="224">stale banner</text>
+  <rect class="box render" x="1075" y="246" width="165" height="64"/>
+  <text class="label" x="1087" y="270">Report export</text>
+  <text class="detail" x="1087" y="288">before / after apply</text>
+  <text class="detail" x="1087" y="302">PDF, HTML, MD, JSON</text>
+  <rect class="box render" x="1075" y="324" width="165" height="64"/>
+  <text class="label" x="1087" y="348">Batch export</text>
+  <text class="detail" x="1087" y="366">several snippets:</text>
+  <text class="detail" x="1087" y="380">combined file or ZIP</text>
+
+  <path class="line" d="M 215 260 H 232"/>
+  <path class="line" d="M 422 260 H 439"/>
+  <path class="line" d="M 629 260 H 646"/>
+  <path class="line" d="M 836 260 H 853"/>
+  <path class="line" d="M 1043 260 H 1060"/>
+
+  <!-- Diagram lane -->
+  <rect class="panel" x="25" y="435" width="1230" height="120"/>
+  <text class="panelTitle" x="42" y="462">Flow diagram — a separate request, drawn offline</text>
+  <rect class="box ai" x="45" y="478" width="210" height="60"/>
+  <text class="label" x="58" y="502">Diagram request</text>
+  <text class="detail" x="58" y="521">flowchart + code references</text>
+  <rect class="box secure" x="290" y="478" width="210" height="60"/>
+  <text class="label" x="303" y="502">Validate + repair once</text>
+  <text class="detail" x="303" y="521">exact error sent back</text>
+  <rect class="box secure" x="535" y="478" width="210" height="60"/>
+  <text class="label" x="548" y="502">Labelled fallback</text>
+  <text class="detail" x="548" y="521">if still unusable, with reason</text>
+  <rect class="box render" x="780" y="478" width="210" height="60"/>
+  <text class="label" x="793" y="502">Mermaid renderer</text>
+  <text class="detail" x="793" y="521">sanitized SVG, no network</text>
+  <rect class="box editor" x="1025" y="478" width="210" height="60"/>
+  <text class="label" x="1038" y="502">Zoom window</text>
+  <text class="detail" x="1038" y="521">click a node → code lines</text>
+  <path class="line" d="M 255 508 H 290"/>
+  <path class="line" d="M 500 508 H 535"/>
+  <path class="line" d="M 745 508 H 780"/>
+  <path class="line" d="M 990 508 H 1025"/>
+  <path class="dash" d="M 470 410 V 469 H 150 V 478"/>
+
+  <!-- Storage lane -->
+  <rect class="panel" x="25" y="575" width="1230" height="90"/>
+  <rect class="box state" x="45" y="598" width="370" height="48"/>
+  <text class="label" x="60" y="619">snippets.xml</text>
+  <text class="detail" x="60" y="636">snippets; atomic save, unreadable file moved aside</text>
+  <rect class="box state" x="455" y="598" width="370" height="48"/>
+  <text class="label" x="470" y="619">snippet-analyses/&lt;id&gt;.json</text>
+  <text class="detail" x="470" y="636">analysis history per snippet; part of the backup</text>
+  <rect class="box state" x="865" y="598" width="370" height="48"/>
+  <text class="label" x="880" y="619">snippet-drafts/</text>
+  <text class="detail" x="880" y="636">unsaved editor forms; private, not backed up</text>
+
+  <text class="note" x="42" y="694">Reports use the interface language; rewritten code keeps the script's own text language unless one is chosen explicitly.</text>
+</svg>
